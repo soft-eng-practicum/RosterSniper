@@ -3,7 +3,7 @@ A utility for monitoring course availability at Georgia Gwinnett College
 
 ## TODO
 
-- [ ] Format this README :p
+- [x] Format this README :p
 - [ ] Decide on platform(s)
   - [ ] Web
   - [ ] Mobile
