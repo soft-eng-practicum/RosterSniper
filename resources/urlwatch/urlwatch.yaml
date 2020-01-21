@@ -1,0 +1,45 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+report:
+  email:
+    enabled: true
+    from: 'info@shitchell.com'
+    html: false
+    method: smtp
+    sendmail:
+      path: /usr/bin/mail
+    smtp:
+      host: localhost
+      keyring: false
+      port: 25
+      starttls: true
+    subject: '{count} changes: {jobs}'
+    to: 'shauniedude@gmail.com'
+  html:
+    diff: unified
+  mailgun:
+    api_key: ''
+    domain: ''
+    enabled: false
+    from_mail: ''
+    from_name: ''
+    subject: '{count} changes: {jobs}'
+    to: ''
+  pushbullet:
+    api_key: ''
+    enabled: false
+  pushover:
+    app: ''
+    device: ''
+    enabled: false
+    sound: spacealarm
+    user: ''
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: true
+    footer: true
+    line_length: 75
