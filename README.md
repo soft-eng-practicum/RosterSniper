@@ -1,4 +1,4 @@
-# ggc-class-monitor
+# ggc-coursicle
 A utility for monitoring course availability at Georgia Gwinnett College
 
 ## TODO
