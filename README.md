@@ -13,5 +13,5 @@ A utility for monitoring course availability at Georgia Gwinnett College
 5. Client liaison
 
 ### Tools
-1. GitHub Issue Tracker
+1. [GitHub Issue Tracker](https://github.com/issues)
 2. Discord
