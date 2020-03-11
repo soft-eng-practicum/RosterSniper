@@ -1,0 +1,10 @@
+{% if courses %}
+{% for course in courses %}
+<tr>
+	<td>{{ course.CRN }}</td>
+	<td>{{ course.subject }}-{{course.number}} {{course.section}}</td>
+	<td>{{ course.title }}</td>
+	<td class="text-right">{{ course.actual }}/{{ course.capacity }}</td>
+</tr>
+{% endfor %}
+{% endif %}

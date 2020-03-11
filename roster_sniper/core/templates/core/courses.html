@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<h2>Courses</h2>{# stackoverflow.com/a/4457905 #}
+	<table class="table" style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 15%;">
+		<col style="width: 20%;">
+		<col>
+		<col style="width: 100px;">{# when this was specified as a percent, once the table got too small, the width would be slightly smaller than the width of the title 'Students' and would hang off the edge #}
+	</colgroup>
+	<thead class="thead-light">
+	<tr class="table-borderless">
+		<td><input id="search-crn" class="form-control form-control-sm" type="text" placeholder="CRN"></td>
+		<td><input id="search-code" class="form-control form-control-sm" type="text" placeholder="Code"></td>
+		<td><input id="search-title" class="form-control form-control-sm" type="text" placeholder="Title"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th scope="col">CRN</th>
+		<th scope="col">Code</th>
+		<th scope="col">Title</th>
+		<th scope="col" class="text-right">Students</th>
+	</tr>
+	</thead>
+	<tbody id="replaceable-content">
+		{% include 'courses_search_rows.html' %}
+	</tbody>
+	</table>
+{% endblock content %}
+{% block end %}
+<script type="text/javascript" src="{% static "search.js" %}"></script>
+{% endblock end %}

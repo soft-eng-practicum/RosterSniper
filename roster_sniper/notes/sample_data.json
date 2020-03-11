@@ -1,0 +1,134 @@
+[
+{
+	"model": "core.course",
+	"pk": "50080",
+	"fields": {
+		"title": "Digital Media",
+		"subject": "ITEC",
+		"number": "2110",
+		"section": "01",
+		"actual": 10,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50081",
+	"fields": {
+		"title": "Digital Media",
+		"subject": "ITEC",
+		"number": "2110",
+		"section": "02",
+		"actual": 0,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50082",
+	"fields": {
+		"title": "Digital Media",
+		"subject": "ITEC",
+		"number": "2110",
+		"section": "02",
+		"actual": 0,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50088",
+	"fields": {
+		"title": "Analog Media",
+		"subject": "ITEC",
+		"number": "2111",
+		"section": "02",
+		"actual": 25,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50145",
+	"fields": {
+		"title": "Intro to Computing - Hybrid",
+		"subject": "ITEC",
+		"number": "1001",
+		"section": "06",
+		"actual": 7,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50178",
+	"fields": {
+		"title": "Intro to Programming",
+		"subject": "ITEC",
+		"number": "2120",
+		"section": "02",
+		"actual": 0,
+		"capacity": 24
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50250",
+	"fields": {
+		"title": "Web Technologies - Hybrid",
+		"subject": "ITEC",
+		"number": "2130",
+		"section": "01",
+		"actual": 5,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50368",
+	"fields": {
+		"title": "Intro to Computing",
+		"subject": "ITEC",
+		"number": "1001",
+		"section": "01",
+		"actual": 10,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50369",
+	"fields": {
+		"title": "Intro to Computing",
+		"subject": "ITEC",
+		"number": "1001",
+		"section": "02",
+		"actual": 0,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50370",
+	"fields": {
+		"title": "Intro to Computing",
+		"subject": "ITEC",
+		"number": "1001",
+		"section": "03",
+		"actual": 1,
+		"capacity": 26
+	}
+},
+{
+	"model": "core.course",
+	"pk": "50493",
+	"fields": {
+		"title": "Calculus I",
+		"subject": "MATH",
+		"number": "2200",
+		"section": "01",
+		"actual": 26,
+		"capacity": 26
+	}
+}
+]
