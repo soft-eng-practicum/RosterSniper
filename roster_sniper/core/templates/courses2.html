@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+	<link rel="stylesheet" href="{% static 'tablesorter/theme.bootstrap_4.css' %}">
+{% endblock head %}
+
+{% block content %}
+	<h2>Courses</h2>
+	<table class="table" style="table-layout: fixed;">
+	<colgroup>
+		<col style="width: 15%;">
+		<col style="width: 20%;">
+		<col>
+		<col style="width: 22%;">
+		<col style="width: 100px;">
+	</colgroup>
+	<thead class="table-borderless">
+	<tr id="search-parent">
+		<td class="sorter-false"><input id="search-crn" class="form-control form-control-sm" type="text" placeholder="CRN"></td>
+		<td class="sorter-false"><input id="search-code" class="form-control form-control-sm" type="text" placeholder="Code"></td>
+		<td class="sorter-false"><input id="search-title" class="form-control form-control-sm" type="text" placeholder="Title"></td>
+		<td class="sorter-false"><input id="search-professor" class="form-control form-control-sm" type="text" placeholder="Professor"></td>
+		<td class="sorter-false"><button type="button" class="btn btn-primary btn-sm btn-block" onclick="update_courses()">Search</button></td>
+	</tr>
+	<tr>
+		<th class="pl-2">CRN</th>
+		<th class="pl-2">Code</th>
+		<th class="pl-2">Title</th>
+		<th class="pl-2">Professor</th>
+		<th class="text-right">Students</th>
+	</tr>
+	</thead>
+	<tbody id="course_rows">
+		{% include 'courses_rows.html' %}
+	</tbody>
+	<tfoot><tr><th colspan="5" class="ts-pager"><div class="form-inline">
+		<div class="btn-group btn-group-sm mx-1" role="group">
+			<button type="button" class="btn btn-secondary first" title="first">⇤</button>
+			<button type="button" class="btn btn-secondary prev" title="previous">←</button>
+		</div>
+		<span class="pagedisplay"></span>
+		<div class="btn-group btn-group-sm mx-1" role="group">
+			<button type="button" class="btn btn-secondary next" title="next">→</button>
+			<button type="button" class="btn btn-secondary last" title="last">⇥</button>
+		</div>
+		<select class="form-control-sm custom-select px-1 pagesize" style="width: 100px;" title="Select page size">
+			<option selected="selected" value="10">10</option>
+			<option value="20">20</option>
+			<option value="all">All Rows</option>
+		</select>
+		<select class="form-control-sm custom-select px-4 mx-2 pagenum" title="Select page number"></select>
+	</div></th></tr></tfoot>
+	</table>
+{% endblock content %}
+
+{% block extrajs %}
+	<script type="text/javascript" src="{% static 'search2.js' %}"></script>
+	<script type="text/javascript" src="{% static 'tablesorter/jquery.tablesorter.min.js' %}"></script>
+
+	<!-- pager plugin -->
+	<link rel="stylesheet" href="{% static 'tablesorter/pager/jquery.tablesorter.pager.css' %}">
+	<script src="{% static 'tablesorter/pager/jquery.tablesorter.pager.js' %}"></script>
+	<style>
+		/* make pager arrows more visible */
+		.tablesorter-pager .btn-group-sm .btn { font-size: 1.2em; }
+	</style>
+{% endblock extrajs %}

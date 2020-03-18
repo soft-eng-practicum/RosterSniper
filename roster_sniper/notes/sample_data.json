@@ -1,134 +1,94 @@
-[
-{
-	"model": "core.course",
-	"pk": "50080",
-	"fields": {
-		"title": "Digital Media",
-		"subject": "ITEC",
-		"number": "2110",
-		"section": "01",
-		"actual": 10,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50081",
-	"fields": {
-		"title": "Digital Media",
-		"subject": "ITEC",
-		"number": "2110",
-		"section": "02",
-		"actual": 0,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50082",
-	"fields": {
-		"title": "Digital Media",
-		"subject": "ITEC",
-		"number": "2110",
-		"section": "02",
-		"actual": 0,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50088",
-	"fields": {
-		"title": "Analog Media",
-		"subject": "ITEC",
-		"number": "2111",
-		"section": "02",
-		"actual": 25,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50145",
-	"fields": {
-		"title": "Intro to Computing - Hybrid",
-		"subject": "ITEC",
-		"number": "1001",
-		"section": "06",
-		"actual": 7,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50178",
-	"fields": {
-		"title": "Intro to Programming",
-		"subject": "ITEC",
-		"number": "2120",
-		"section": "02",
-		"actual": 0,
-		"capacity": 24
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50250",
-	"fields": {
-		"title": "Web Technologies - Hybrid",
-		"subject": "ITEC",
-		"number": "2130",
-		"section": "01",
-		"actual": 5,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50368",
-	"fields": {
-		"title": "Intro to Computing",
-		"subject": "ITEC",
-		"number": "1001",
-		"section": "01",
-		"actual": 10,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50369",
-	"fields": {
-		"title": "Intro to Computing",
-		"subject": "ITEC",
-		"number": "1001",
-		"section": "02",
-		"actual": 0,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50370",
-	"fields": {
-		"title": "Intro to Computing",
-		"subject": "ITEC",
-		"number": "1001",
-		"section": "03",
-		"actual": 1,
-		"capacity": 26
-	}
-},
-{
-	"model": "core.course",
-	"pk": "50493",
-	"fields": {
-		"title": "Calculus I",
-		"subject": "MATH",
-		"number": "2200",
-		"section": "01",
-		"actual": 26,
-		"capacity": 26
-	}
-}
-]
+[ {
+	"model": "core.course", "pk": "50080",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "01", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50081",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "02", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50082",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "03", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50083",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "04", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50084",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "05", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50085",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "06", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50086",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "07", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50087",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "08", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50088",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "09", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50089",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "10", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50090",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "11", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50091",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "12", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50092",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "13", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50093",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "14", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50094",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "15", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50095",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "16", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50096",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "17", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50097",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "18", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50098",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "19", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50099",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "20", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50100",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "21", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50101",
+	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "22", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50102",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "01", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50103",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "02", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50104",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "03", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50105",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "04", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50106",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "05", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50107",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "06", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50108",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "07", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50109",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "08", "actual": 10, "capacity": 26}
+},{
+	"model": "core.course", "pk": "50110",
+	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "09", "actual": 10, "capacity": 26}
+} ]

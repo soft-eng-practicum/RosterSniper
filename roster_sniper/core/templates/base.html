@@ -7,79 +7,53 @@
 	<link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
 
 	<!-- Copied from Bootstrap starter template -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- what does this line do?? -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 
-	{% if title %}
-		<title>Roster Sniper - {{ title }}</title>
-	{% else %}
-		<title>Roster Sniper</title>
-	{% endif %}
+	{% block head %}{% endblock %}
+
+	<title>Roster Sniper{% if title %} - {{ title }}{% endif %}</title>
 </head>
+
 <body>
-	<header class="site-header">
-		<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-		<div class="container">
-			<a class="navbar-brand mr-4" href="{% url 'home' %}">Roster Snipper</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+	<header class="myheader">
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #816099;"><div class="container">
+			<a class="navbar-brand" href="{% url 'home' %}">Roster Snipper</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+				<span class="navbar-toggler-icon"></span>
 			</button>
+
 			<div class="collapse navbar-collapse" id="navbarToggle">
 			<div class="navbar-nav mr-auto">
-				<a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-				<a class="nav-item nav-link" href="{% url 'about' %}">About</a>
-				<a class="nav-item nav-link" href="{% url 'courses' %}">Courses</a>
+				{% url 'about' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">About</a>
+				{% url 'courses' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Courses</a>
+				{% url 'courses2' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Courses2</a>
+				<a class="nav-item nav-link" href="/admin/">Admin</a>
 			</div>
-			<!-- Navbar Right Side -->
 			<div class="navbar-nav">
 				{% if user.is_authenticated %}
-				<a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-				<a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+				{% url 'profile' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Profile</a>
+				{% url 'logout' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Logout</a>
 				{% else %}
-				<a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-				<a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+				{% url 'register' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Register</a>
+				{% url 'login' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Login</a>
 				{% endif %}
 			</div>
 			</div>
-		</div>
-		</nav>
+		</div></nav>
 	</header>
+
 	<main role="main" class="container">
-		<div class="row">
-		<div class="col-md-8">
-			{% if messages %}
-				{% for message in messages %}
-					<div class="alert alert-{{ message.tags }}">
-						{{ message }}
-					</div>
-				{% endfor %}
-			{% endif %}
-			{% block content %}{% endblock %}
-		</div>
-		<div class="col-md-4">
-			<div class="content-section">
-			<h3>Our Sidebar</h3>
-			<p class='text-muted'>Hi
-				<ul class="list-group">
-				<li class="list-group-item list-group-item-light">Latest Posts</li>
-				<li class="list-group-item list-group-item-light">Announcements</li>
-				<li class="list-group-item list-group-item-light">Calendars</li>
-				<li class="list-group-item list-group-item-light">etc</li>
-				</ul>
-			</p>
-			</div>
-		</div>
-		</div>
+		{% block content %}{% endblock %}
 	</main>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- Copied from Bootstrap starter template -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- integrity -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	{% block end %}{% endblock %}
+	{% block extrajs %}{% endblock %}
 </body>
 </html>

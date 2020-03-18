@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 class Course(models.Model):
 	CRN = models.CharField(primary_key=True, max_length=5)
 	title = models.CharField(max_length=50)
+	professor = models.CharField(max_length=50)
 
 	subject = models.CharField(max_length=4)
 	number = models.CharField(max_length=4)

@@ -13,6 +13,11 @@ To delete all regular data (e.g. not the django_migrations table) run
 You could also delete the the sqlite file and rerun migrations if you want to
 start from scratch
 
+To delete all rows for a particular model, first run
+`python manage.py shell`
+then import the model and run
+`<Model>.objects.all().delete()`
+
 To export all data from a particular app, run
 `python manage.py dumpdata <appname> --indent=4 > appdata.json`
 
