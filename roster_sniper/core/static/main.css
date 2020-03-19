@@ -20,10 +20,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 }
 
-.myform {
+.mycontainer {
 	background: #ffffff;
 	padding: 10px 20px;
 	border: 1px solid #dddddd;
 	border-radius: 3px;
 	margin-bottom: 20px;
+}
+
+.myactimg {
+	height: 125px;
+	width: 125px;
+	margin-right: 20px;
+	margin-bottom: 16px;
 }

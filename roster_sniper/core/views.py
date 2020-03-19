@@ -50,7 +50,7 @@ def courses(request):
 
     else:
 
-        return render(request, 'courses.html', {'title': 'Courses'})
+        return render(request, 'courses.html', {'hide_sidebar': True})
 
 
 def courses2(request):
@@ -64,7 +64,7 @@ def courses2(request):
             'more': more
         }, safe=False)
             
-    return render(request, 'courses2.html', {'title': 'Courses'})
+    return render(request, 'courses2.html', {'hide_sidebar': True})
 
 
 def base_search(request):

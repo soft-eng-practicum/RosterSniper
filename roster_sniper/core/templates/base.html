@@ -14,7 +14,7 @@
 
 	{% block head %}{% endblock %}
 
-	<title>Roster Sniper{% if title %} - {{ title }}{% endif %}</title>
+	<title>{% block title %}{% endblock %}Roster Sniper</title>
 </head>
 
 <body>
@@ -45,8 +45,29 @@
 		</div></nav>
 	</header>
 
-	<main role="main" class="container">
-		{% block content %}{% endblock %}
+	<main role="main" class="container">{% if not hide_sidebar %}
+		<div class="row row-cols-2">
+		<div class="col-md-8">{% endif %}
+			{% if messages %}{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+			{% endfor %}{% endif %}
+			{% block content %}{% endblock %}
+		{% if not hide_sidebar %}</div>
+		<div class="col-md-4">
+			<div class="mycontainer">
+			<h3>Our Sidebar</h3>
+			<p class='text-muted'>Hi
+				<ul class="list-group">
+				<li class="list-group-item list-group-item-light">Latest Posts</li>
+				<li class="list-group-item list-group-item-light">Announcements</li>
+				<li class="list-group-item list-group-item-light">Calendars</li>
+				</ul>
+			</p>
+			</div>
+		</div>
+		</div>{% endif %}
 	</main>
 
 	<!-- Copied from Bootstrap starter template -->

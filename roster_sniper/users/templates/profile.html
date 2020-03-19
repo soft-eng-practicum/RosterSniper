@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+
+{% block title %}{{ user.username }} - {% endblock title %}
+
 {% block content %}
-	<div class="myform">
+	<div class="mycontainer">
 		<div class="media">
-			<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+			<img class="rounded-circle myactimg" src="{{ user.profile.image.url }}">
 			<div class="media-body">
 				<h2>{{ user.username }} - {{ user.profile.school }}</h2>
 				<p class="text-secondary">{{ user.email }}</p>

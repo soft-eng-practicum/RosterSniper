@@ -4,9 +4,9 @@ from PIL import Image
 
 
 class Profile(models.Model):
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	user = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
 	image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-	school = models.CharField(max_length=50)
+	school = models.CharField(max_length=50, blank=True)
 
 	# TODO: change file name to username, convert to jpg, compress i.e. jpegoptim 
 	def save(self, *args, **kwargs):
