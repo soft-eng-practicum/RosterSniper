@@ -4,7 +4,8 @@
 {% block title %}Courses - {% endblock title %}
 
 {% block content %}
-	<h2>Courses</h2>{# stackoverflow.com/a/4457905 #}
+	<h2>Courses</h2>
+	{# stackoverflow.com/a/4457905 #}
 	<table class="table" style="table-layout: fixed;">
 	<colgroup>
 		<col style="width: 15%;">
@@ -12,6 +13,7 @@
 		<col>
 		<col style="width: 22%;">
 		<col style="width: 100px;">{# when this was specified as a percent, once the table got too small, the width would be slightly smaller than the width of the title 'Students' and would hang off the edge #}
+		<col style="width: 33px;">
 	</colgroup>
 	<thead class="thead-light">
 	<tr class="table-borderless" id="search-parent">
@@ -20,6 +22,7 @@
 		<td><input id="search-title" class="form-control form-control-sm" type="text" placeholder="Title"></td>
 		<td><input id="search-professor" class="form-control form-control-sm" type="text" placeholder="Professor"></td>
 		<td></td>
+		<td></td>
 	</tr>
 	<tr>
 		<th scope="col">CRN</th>
@@ -27,6 +30,7 @@
 		<th scope="col">Title</th>
 		<th scope="col" style="min-width: 100px;">Professor</th>
 		<th scope="col" class="text-right">Students</th>
+		<th></th>
 	</tr>
 	</thead>
 	<tbody id="course_rows">
@@ -34,7 +38,7 @@
 	</tbody>
 	</table>
 	<div class="text-center" id="howtosearch" style="padding-top: 0.5cm; display: none;">
-		<img width=400px src="{% static 'howtosearch.png' %}">
+		<img width=400px src="{% static 'img/howtosearch.png' %}">
 	</div>
 	<div class="text-center" id="morebtns" style="padding-bottom: 0.5cm; display: none;">
 		<button type="button" class="btn btn-primary" onclick="update_courses('more')">Show More</button>
@@ -43,5 +47,7 @@
 {% endblock content %}
 
 {% block extrajs %}
-<script type="text/javascript" src="{% static 'search.js' %}"></script>
+	{% if user.is_authenticated %}<script type="text/javascript" src="{% static 'js/course_favorite.js' %}"></script>
+	{% else %}<script type="text/javascript" src="{% static 'js/course_favorite_anon.js' %}"></script>{% endif %}
+	<script type="text/javascript" src="{% static 'js/course_search.js' %}"></script>
 {% endblock extrajs %}
