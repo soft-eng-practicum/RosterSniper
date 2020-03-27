@@ -31,9 +31,9 @@
 			{# figure out a better way to do this.. #}
 			<div class="navbar-nav mr-auto">
 				{% url 'about' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">About</a>
-				{% url 'courses' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Add Course</a>
+				{% url 'add_course' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">Add Course</a>
 				{% if user.is_authenticated %}
-				{% url 'mycourses' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">My Courses</a>
+				{% url 'my_courses' as url %}<a class="nav-item nav-link {% if request.path == url %} active{% endif %}" href="{{ url }}">My Courses</a>
 				{% endif %}
 			</div>
 			<div class="navbar-nav">
@@ -78,6 +78,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- integrity -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		logedin = {% if user.is_authenticated %}true{% else %}false{% endif %};
+	</script>
 
 	{% block extrajs %}{% endblock %}
 </body>

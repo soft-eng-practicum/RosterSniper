@@ -31,8 +31,7 @@ class Course(models.Model):
 
 class Favorite(models.Model):
 	''' Manually specified intermediary table for the many-to-many User-Course
-	relationship. See docs.djangoproject.com/en/3.0/ref/models/fields
-	/#django.db.models.ManyToManyField.through for more details. '''
+	relationship '''
 
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -42,6 +41,7 @@ class Favorite(models.Model):
 
 	class Meta:
 		unique_together = ['course', 'user']
+		ordering = ['course']
 
 	def __str__(self):
 		return self.user.username + " watching " + self.course.title \

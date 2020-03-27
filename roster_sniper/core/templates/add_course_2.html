@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="{% static 'tablesorter/theme.bootstrap_4.css' %}">
 {% endblock head %}
 
-{% block title %}Courses2 - {% endblock title %}
+{% block title %}Add Course - {% endblock title %}
 
 {% block content %}
 	<h2>Courses</h2>
@@ -36,9 +36,7 @@
 		<th class="sorter-false"></th>
 	</tr>
 	</thead>
-	<tbody id="course_rows">
-		{% include 'courses_rows.html' %}
-	</tbody>
+	<tbody id="course_rows"></tbody>
 	<tfoot><tr><th colspan="6" class="ts-pager"><div class="form-inline">
 		<div class="btn-group btn-group-sm mx-1" role="group">
 			<button type="button" class="btn btn-secondary first" title="first">⇤</button>
@@ -60,17 +58,18 @@
 {% endblock content %}
 
 {% block extrajs %}
-
-	{% if user.is_authenticated %}<script type="text/javascript" src="{% static 'js/course_favorite.js' %}"></script>
-	{% else %}<script type="text/javascript" src="{% static 'js/course_favorite_anon.js' %}"></script>{% endif %}
-	<script type="text/javascript" src="{% static 'js/course_search2.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course_favorite.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course_2.js' %}"></script>
 
 	<script type="text/javascript" src="{% static 'tablesorter/jquery.tablesorter.min.js' %}"></script>
 
 	<!-- pager plugin -->
 	<link rel="stylesheet" href="{% static 'tablesorter/pager/jquery.tablesorter.pager.css' %}">
 	<script src="{% static 'tablesorter/pager/jquery.tablesorter.pager.js' %}"></script>
-	<style>
+
+	<style type="text/css">
+		table td:nth-child(5) { text-align: right; }
+
 		/* make pager arrows more visible */
 		.tablesorter-pager .btn-group-sm .btn { font-size: 1.2em; }
 	</style>

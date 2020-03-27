@@ -5,11 +5,11 @@ __pycache__/
 # Django
 db.sqlite3
 
-# While I'm not interested in tracking migrations during development, the
-# initial makemigrations needs each app to contain a migrations python package.
-**/migrations/*
-!**/migrations/__init__.py
+# Once the DB becomes more stable we should start to track migrations
+# The initial makemigrations command needs each app to contain a migrations
+# python package.
+migrations/
+!migrations/__init__.py
 
-# User uploaded media is not usually tracked, however git doesn't let you track
-# empty directories so some folders will be recreated by Django.
-**/media/*/
+# User uploaded media is not usually tracked
+**/media/profile_pics/*.jpg

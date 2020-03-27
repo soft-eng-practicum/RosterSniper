@@ -7,8 +7,12 @@ function favorite() {
 	// Solid -> favorited
 	clicked.toggleClass('far fas');
 
-	$.get('/favorite/', {
-		crn: clicked.attr('id'),
-		fav: clicked.hasClass('fas')
-	});
+	if (logedin) {
+		$.get('/my-courses/', {
+			crn: clicked.attr('id'),
+			favorite: clicked.hasClass('fas')
+		});
+	} else {
+		window.location.href = '/login/'
+	}
 }

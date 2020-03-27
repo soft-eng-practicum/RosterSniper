@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Courses - {% endblock title %}
+{% block title %}Add Course - {% endblock title %}
 
 {% block content %}
 	<h2>Courses</h2>
@@ -25,17 +25,15 @@
 		<td></td>
 	</tr>
 	<tr>
-		<th scope="col">CRN</th>
-		<th scope="col">Code</th>
-		<th scope="col">Title</th>
-		<th scope="col" style="min-width: 100px;">Professor</th>
-		<th scope="col" class="text-right">Students</th>
+		<th>CRN</th>
+		<th>Code</th>
+		<th>Title</th>
+		<th style="min-width: 100px;">Professor</th>
+		<th class="text-right">Students</th>
 		<th></th>
 	</tr>
 	</thead>
-	<tbody id="course_rows">
-		{% include 'courses_rows.html' %}
-	</tbody>
+	<tbody id="course_rows"></tbody>
 	</table>
 	<div class="text-center" id="howtosearch" style="padding-top: 0.5cm; display: none;">
 		<img width=400px src="{% static 'img/howtosearch.png' %}">
@@ -47,7 +45,10 @@
 {% endblock content %}
 
 {% block extrajs %}
-	{% if user.is_authenticated %}<script type="text/javascript" src="{% static 'js/course_favorite.js' %}"></script>
-	{% else %}<script type="text/javascript" src="{% static 'js/course_favorite_anon.js' %}"></script>{% endif %}
-	<script type="text/javascript" src="{% static 'js/course_search.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course_favorite.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course.js' %}"></script>
+
+	<style type="text/css">
+		table td:nth-child(5) { text-align: right; }
+	</style>
 {% endblock extrajs %}

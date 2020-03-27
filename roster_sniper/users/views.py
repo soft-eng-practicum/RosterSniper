@@ -17,7 +17,7 @@ def register(request):
                                     password=form.cleaned_data['password1'])
 
             login(request, new_user)
-            return redirect('courses')
+            return redirect('add_course')
     else:
         form = MyUserCreationForm()
 

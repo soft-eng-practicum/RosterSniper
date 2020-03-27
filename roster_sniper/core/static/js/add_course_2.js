@@ -29,7 +29,7 @@ function update_courses() {
 		return;
 	} // else..
 
-	$.getJSON('/courses/', search_params).done(
+	$.getJSON('/add-course-2/', search_params).done(
 		response => { 
 			$('#course_rows').html(response['course_rows']);
 			$('table').trigger('update');

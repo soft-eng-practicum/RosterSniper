@@ -41,7 +41,7 @@ function update_courses(btn='') {
 		updt_func = response => { $('#course_rows').html(response['course_rows']); }
 	}
 
-	$.getJSON('/courses/', search_params).done(updt_func,
+	$.getJSON('/add-course/', search_params).done(updt_func,
 		response => { 
 			if (response['more']) $('#morebtns').show();
 			else $('#morebtns').hide();
