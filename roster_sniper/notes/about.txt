@@ -1,5 +1,8 @@
-This project was created using Python 3.8.1 and Django 3.0.3
-in addition to django-crispy-forms 1.8.1 and pillow 7.0.0
+  ,---.  ,--.                    ,--.   
+ /  O  \ |  |-.  ,---. ,--.,--.,-'  '-. 
+|  .-.  || .-. '| .-. ||  ||  |'-.  .-' 
+|  | |  || `-' |' '-' ''  ''  '  |  |   
+`--' `--' `---'  `---'  `----'   `--' 
 
 The django project was created by running
 `django-admin startproject roster_sniper`
@@ -7,10 +10,6 @@ The django project was created by running
 Django apps, such as users, were created by executing the command
 `python manage.py startapp appname`
 in the project's base directory.
-
-An admin can be created using the command
-`python manage.py createsuperuser`
-which prompts you for a username, email, and password.
 
 To run, execute
 `python manage.py runserver`

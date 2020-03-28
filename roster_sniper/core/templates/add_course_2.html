@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="{% static 'tablesorter/theme.bootstrap_4.css' %}">
 {% endblock head %}
 
-{% block title %}Courses2 - {% endblock title %}
+{% block title %}Add Course - {% endblock title %}
 
 {% block content %}
 	<h2>Courses</h2>
@@ -16,6 +16,7 @@
 		<col>
 		<col style="width: 22%;">
 		<col style="width: 100px;">
+		<col style="width: 33px;">
 	</colgroup>
 	<thead class="table-borderless">
 	<tr id="search-parent">
@@ -24,6 +25,7 @@
 		<td class="sorter-false"><input id="search-title" class="form-control form-control-sm" type="text" placeholder="Title"></td>
 		<td class="sorter-false"><input id="search-professor" class="form-control form-control-sm" type="text" placeholder="Professor"></td>
 		<td class="sorter-false"><button type="button" class="btn btn-primary btn-sm btn-block" onclick="update_courses()">Search</button></td>
+		<td class="sorter-false"></td>
 	</tr>
 	<tr>
 		<th class="pl-2">CRN</th>
@@ -31,12 +33,11 @@
 		<th class="pl-2">Title</th>
 		<th class="pl-2">Professor</th>
 		<th class="text-right">Students</th>
+		<th class="sorter-false"></th>
 	</tr>
 	</thead>
-	<tbody id="course_rows">
-		{% include 'courses_rows.html' %}
-	</tbody>
-	<tfoot><tr><th colspan="5" class="ts-pager"><div class="form-inline">
+	<tbody id="course_rows"></tbody>
+	<tfoot><tr><th colspan="6" class="ts-pager"><div class="form-inline">
 		<div class="btn-group btn-group-sm mx-1" role="group">
 			<button type="button" class="btn btn-secondary first" title="first">⇤</button>
 			<button type="button" class="btn btn-secondary prev" title="previous">←</button>
@@ -57,13 +58,18 @@
 {% endblock content %}
 
 {% block extrajs %}
-	<script type="text/javascript" src="{% static 'search2.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course_favorite.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/add_course_2.js' %}"></script>
+
 	<script type="text/javascript" src="{% static 'tablesorter/jquery.tablesorter.min.js' %}"></script>
 
 	<!-- pager plugin -->
 	<link rel="stylesheet" href="{% static 'tablesorter/pager/jquery.tablesorter.pager.css' %}">
 	<script src="{% static 'tablesorter/pager/jquery.tablesorter.pager.js' %}"></script>
-	<style>
+
+	<style type="text/css">
+		table td:nth-child(5) { text-align: right; }
+
 		/* make pager arrows more visible */
 		.tablesorter-pager .btn-group-sm .btn { font-size: 1.2em; }
 	</style>

@@ -1,3 +1,9 @@
+,--.          ,--.                 
+|  |,--,--, ,-'  '-.,--.--. ,---.  
+|  ||      \'-.  .-'|  .--'| .-. | 
+|  ||  ||  |  |  |  |  |   ' '-' ' 
+`--'`--''--'  `--'  `--'    `---'
+
 To make django turn the models into tables, first run
 `python manage.py makemigrations`
 
@@ -7,19 +13,36 @@ To see the actual SQL, run
 To make the migrations, run
 `python manage.py migrate`
 
+,------.            ,--.           
+|  .-.  \  ,--,--.,-'  '-. ,--,--. 
+|  |  \  :' ,-.  |'-.  .-'' ,-.  | 
+|  '--'  /\ '-'  |  |  |  \ '-'  | 
+`-------'  `--`--'  `--'   `--`--' 
 
 To delete all regular data (e.g. not the django_migrations table) run
 `python manage.py flush`
 You could also delete the the sqlite file and rerun migrations if you want to
 start from scratch
 
-To delete all rows for a particular model, first run
+To delete all Courses, first run
 `python manage.py shell`
-then import the model and run
-`<Model>.objects.all().delete()`
+then import the model via
+`from core.models import Course`
+and run
+`Course.objects.all().delete()`
+
+To import Course sample data, run
+`python manage.py loaddata notes/sample_data.json`
 
 To export all data from a particular app, run
 `python manage.py dumpdata <appname> --indent=4 > appdata.json`
 
-To import Course sample data, run
-`python manage.py loaddata notes/sample_data.json`
+,--. ,--.                             
+|  | |  | ,---.  ,---. ,--.--. ,---.  
+|  | |  |(  .-' | .-. :|  .--'(  .-'  
+'  '-'  '.-'  `)\   --.|  |   .-'  `) 
+ `-----' `----'  `----'`--'   `----'
+
+An admin can be created using the command
+`python manage.py createsuperuser`
+which prompts you for a username, email, and password.

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ user.username }}'s Courses - {% endblock title %}
+
+{% block content %}
+	<h2>Your Courses</h2>
+	{# stackoverflow.com/a/4457905 #}
+	<table class="table" style="table-layout: fixed; margin-top: 20px;">
+	<colgroup>
+		<col style="width: 20%;">
+		<col>
+		<col style="width: 22%;">
+		<col style="width: 100px;">{# when this was specified as a percent, once the table got too small, the width would be slightly smaller than the width of the title 'Students' and would hang off the edge #}
+		<col style="width: 40px;">
+		<col style="width: 40px;">
+	</colgroup>
+	<thead class="thead-light"><tr>
+		<th>Code</th>
+		<th>Title</th>
+		<th style="min-width: 100px;">Professor</th>
+		<th>Students</th>
+		<th colspan="2">Options</th>
+	</tr></thead>
+	<tbody id="course_rows">
+		{% include 'my_courses_rows.html' %}
+	</tbody>
+	</table>
+{% endblock content %}
+
+{% block extrajs %}
+	<script type="text/javascript" src="{% static 'js/my_courses.js' %}"></script>
+	<style type="text/css">
+		table td:nth-child(4) { text-align: right; }
+	</style>
+{% endblock extrajs %}
