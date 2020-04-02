@@ -20,12 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^vb=_m2$*bv1*@ssrw@d37dqfryj_q-l7kr7ve(khu4^x5j)4k'
+#SECRET_KEY = '^vb=_m2$*bv1*@ssrw@d37dqfryj_q-l7kr7ve(khu4^x5j)4k'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '^vb=_m2$*bv1*@ssrw@d37dqfryj_q-l7kr7ve(khu4^x5j)4k')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shitchell.com', 'localhost']
 
 
 # Application definition
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'roster_sniper.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+   'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
@@ -121,3 +122,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'add_course'
 LOGIN_URL = 'login'
+
+# Email
+# https://docs.djangoproject.com/en/3.0/topics/email/
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = '127.0.0.1'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Roster Sniper <no-reply@shitchell.com>'

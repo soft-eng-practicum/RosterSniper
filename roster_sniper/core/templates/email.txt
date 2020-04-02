@@ -1,0 +1,11 @@
+RosterSniper
+------------
+
+{name}, your course just became available!
+
+Course:     {title}
+Professor:  {professor}
+CRN:        {crn}
+
+Follow the link to register:
+https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration

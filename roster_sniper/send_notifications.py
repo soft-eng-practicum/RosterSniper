@@ -4,10 +4,12 @@ import os
 import re
 import sys
 import time
-import django
 import requests
 
 # Set up django
+import django
+from django.template.loader import get_template
+from django.core.mail import EmailMultiAlternatives
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings")
 django.setup()
 from core.models import Favorite, Course
@@ -46,12 +48,13 @@ def is_newly_available(course):
 
     # Check to see if the new availability matches the old
     actual = capacity - available
-#    print(f"{available} vs {course.available} for {course.CRN}")
     if available != course.available:
         # No match, so update the old course info
         course.actual = actual
         course.capacity = capacity
         course.available = available
+        # mixing requests with saving doesn't work in dev mode
+        #course.save()
 
         # Cache the result
         crn_cache[favorite.course.CRN] = True
@@ -59,6 +62,25 @@ def is_newly_available(course):
         return True
     else:
         return False
+
+def send_notification(favorite):
+    context = {
+        'name': favorite.user.username,
+        'title': favorite.course.title,
+        'professor': favorite.course.professor,
+        'crn': favorite.course.CRN
+    }
+    email_text = get_template('email.txt')
+    email_html = get_template('email.html')
+    email_text = email_text.render(context)
+    email_html = email_html.render(context)
+    
+    subject = f"{favorite.course.title} is available!"
+    addr_to = favorite.user.email
+    addr_from = "Roster Sniper <no-reply@shitchell.com>"
+    msg = EmailMultiAlternatives(subject, email_text, addr_from, [addr_to])
+    msg.attach_alternative(email_html, "text/html")
+    msg.send()
 
 # Loop over the list of enabled favorites
 for favorite in Favorite.objects.filter(emailNotify=True):
@@ -77,4 +99,5 @@ for favorite in Favorite.objects.filter(emailNotify=True):
             favorite.course.title,
             favorite.course.section
         ))
-        # send_email()
+        send_notification(favorite)
+        time.sleep(2)
