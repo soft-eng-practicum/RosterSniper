@@ -15,8 +15,11 @@ class Course(models.Model):
 	number = models.CharField(max_length=4)
 	section = models.CharField(max_length=3)
 
+	term = models.CharField(max_length=6)
+
 	actual = models.SmallIntegerField()
 	capacity = models.SmallIntegerField()
+	available = models.SmallIntegerField()
 
 	# docs.djangoproject.com
 	# /en/3.0/ref/models/fields/#django.db.models.ManyToManyField.through
