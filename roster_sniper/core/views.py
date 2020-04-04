@@ -4,12 +4,14 @@ from django.db.models import Value as V
 from django.db.models.functions import Concat
 
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
 from .models import Course, Favorite
+from users.models import Profile
 
 
 def home(request):
@@ -31,8 +33,6 @@ def about(request):
 def add_course(request):
     ''' First course search page that was developed '''
 
-    # if request.user.is_authenticated: for adding a track option
-
     if request.is_ajax():
 
         courses = base_search(request)
@@ -47,12 +47,12 @@ def add_course(request):
             more = False
 
         return JsonResponse(data={
-            "course_rows": render_to_string('add_course_rows.html', {
+            'course_rows': render_to_string('add_course_rows.html', {
                 'courses': courses,
                 'CRNs': request.user.course_set.values_list('CRN', flat=True)
                     if request.user.is_authenticated else None
             }),
-            "more": more
+            'more': more
         }, safe=False)
 
     else:
@@ -63,13 +63,12 @@ def add_course_2(request):
     ''' Developed after courses(), this view uses the tablesorter jQuery plugin
     to display courses in a nice sortable table '''
 
-
     if request.is_ajax():
 
         courses = base_search(request)
 
         return JsonResponse(data={
-            "course_rows": render_to_string('add_course_rows.html', {
+            'course_rows': render_to_string('add_course_rows.html', {
                 'courses': courses,
                 'CRNs': request.user.course_set.values_list('CRN', flat=True)
                     if request.user.is_authenticated else None
@@ -107,11 +106,12 @@ def base_search(request):
 
 @login_required
 def my_courses(request):
-    ''' WIP '''
+    ''' Shows all of the user's favorited courses and lets them enable / disable
+    email notifications and unfavorite courses. '''
 
     if request.is_ajax() and (crn := request.GET.get('crn')):
 
-        if (favorite := request.GET.get('favorite')):
+        if favorite := request.GET.get('favorite'):
             if favorite == 'true':
                 request.user.course_set.add(crn)
             elif favorite == 'false':
@@ -121,7 +121,6 @@ def my_courses(request):
             and (email == 'true' or email == 'false'):
 
             f = Favorite.objects.get(user=request.user, course__CRN=crn)
-
             f.emailNotify = email == 'true'
             f.save()
 
@@ -132,3 +131,45 @@ def my_courses(request):
             'hide_sidebar': True,
             'favorites': request.user.favorite_set.all()
         })
+
+
+def unsubscribe(request, unsubType, unsubID):
+    '''
+    Unsubscribe requests contain an unsubType and an unsubID. The unsubID is
+    used to safely allow users to unsubscribe without logging in by clicking a
+    link sent within an email, accessing a URL unique to the particular
+    unsubscribe request. Because there are 2^122 different version 4 UUIDs it is
+    unlikely that someone would guess a correct one or even want to.
+    '''
+        
+    try:
+        if unsubType == 'favorite':
+            unsubObject = Favorite.objects.get(emailUnsubID=unsubID)
+            text = f'emails related to {unsubObject.course}'
+
+        elif unsubType == 'all':
+            unsubObject = Profile.objects.get(emailUnsubID=unsubID)
+            text = 'all emails'
+
+        else:
+            return render(request, 'unsubscribe_error.html')
+
+        # Ordinarily unsubscribe links sent in emails will not have the
+        # 'subscribe' parameter in the query string so the following will
+        # evaluate to False.
+        #
+        # This is meant to be used by a button on the unsubscribe page that lets
+        # users re subscribe by making a GET request in the background. It
+        # doesn't actually matter what the argument is, as long as it exists.
+        if request.is_ajax():
+            unsubObject.emailNotify = request.GET.get('subscribe') is not None
+            unsubObject.save()
+            return HttpResponse('')
+
+        else:
+            unsubObject.emailNotify = False
+            unsubObject.save()
+            return render(request, 'unsubscribe.html', { 'text': text })
+
+    except ObjectDoesNotExist:
+        return render(request, 'unsubscribe_error.html')

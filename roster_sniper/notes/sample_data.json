@@ -1,94 +1,8123 @@
-[ {
-	"model": "core.course", "pk": "50080",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "01", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50081",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "02", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50082",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "03", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50083",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "04", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50084",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "05", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50085",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "06", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50086",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "07", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50087",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "08", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50088",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "09", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50089",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "10", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50090",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "11", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50091",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "12", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50092",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "13", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50093",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "14", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50094",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "15", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50095",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "16", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50096",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "17", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50097",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "18", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50098",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "19", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50099",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "20", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50100",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "21", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50101",
-	"fields": {"title": "Digital Media", "subject": "ITEC", "number": "2110", "section": "22", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50102",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "01", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50103",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "02", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50104",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "03", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50105",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "04", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50106",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "05", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50107",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "06", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50108",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "07", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50109",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "08", "actual": 10, "capacity": 26}
-},{
-	"model": "core.course", "pk": "50110",
-	"fields": {"title": "Analog Media", "subject": "ITEC", "number": "2111", "section": "09", "actual": 10, "capacity": 26}
-} ]
+[
+{
+	"model": "core.course",
+	"pk": "50001",
+	"fields": {
+		"subject": "EDUC",
+		"number": "2110",
+		"title": "Crit &amp; Cont Issues-INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50002",
+	"fields": {
+		"subject": "EDUC",
+		"number": "2120",
+		"title": "Exp Socio-Cult Persp",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 5,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50003",
+	"fields": {
+		"subject": "EDUC",
+		"number": "2130",
+		"title": "Teaching &amp; Learning",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 19,
+		"available": 9,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50004",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Heath, Kay",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50005",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "09",
+		"professor": "Graf, Anthony",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50006",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "12",
+		"professor": "Beall, Joshua",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50007",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Writing about Literature",
+		"term": "202005",
+		"section": "01",
+		"professor": "Harmon, Geraldine",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50008",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "02",
+		"professor": "McCarthy, Jeanne",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50009",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "04",
+		"professor": "Liu, Rong",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50010",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Exploring Reasons Behind Everyday Choices",
+		"term": "202005",
+		"section": "06",
+		"professor": "Hoarau, Brigitte",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50011",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Researching Linguistic Diversity",
+		"term": "202005",
+		"section": "10",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50012",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "11",
+		"professor": "McClure, Kristene",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50013",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Yoga",
+		"term": "202005",
+		"section": "15",
+		"professor": "Sepulveda, Amanda",
+		"enrolled": 20,
+		"available": 2,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50015",
+	"fields": {
+		"subject": "FILM",
+		"number": "1005",
+		"title": "Introduction to Film",
+		"term": "202005",
+		"section": "01",
+		"professor": "Resnick, Kevin",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50016",
+	"fields": {
+		"subject": "FILM",
+		"number": "1005",
+		"title": "Introduction to Film",
+		"term": "202005",
+		"section": "04",
+		"professor": "Cottrel, Adam",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50017",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Lowry, James",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50018",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50019",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50020",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "07",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50021",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Suvey of US History II",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50022",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "01",
+		"professor": "Boykin, Scott",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50023",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "02",
+		"professor": "Kantack, Ben",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50024",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "06",
+		"professor": "Gunning, Matthew",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50025",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "11",
+		"professor": "Grant, Paul",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50026",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2400",
+		"title": "Abnormal Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Brown, Kristina",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50027",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2500",
+		"title": "Lifespan Developmental Psyc",
+		"term": "202005",
+		"section": "01",
+		"professor": "Williams, Vickie",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50028",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3020",
+		"title": "Statistics for Beh. Sci",
+		"term": "202005",
+		"section": "01",
+		"professor": "Wright, Stephanie",
+		"enrolled": 12,
+		"available": 8,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50029",
+	"fields": {
+		"subject": "SPAN",
+		"number": "1001",
+		"title": "Elementary Spanish I - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Mora, Luis",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50030",
+	"fields": {
+		"subject": "PHED",
+		"number": "1010",
+		"title": "Introduction to Badminton",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50031",
+	"fields": {
+		"subject": "PHED",
+		"number": "1010",
+		"title": "Introduction to Badminton",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 12,
+		"available": 12,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50032",
+	"fields": {
+		"subject": "PHED",
+		"number": "1060",
+		"title": "Weight Training",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50033",
+	"fields": {
+		"subject": "PHED",
+		"number": "1080",
+		"title": "Fitness for Life Walking",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 16,
+		"available": 12,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50034",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 25,
+		"available": 3,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50035",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2101",
+		"title": "Intro to Financial Accounting",
+		"term": "202005",
+		"section": "01",
+		"professor": "Berry, Reanna",
+		"enrolled": 23,
+		"available": 17,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50036",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2101",
+		"title": "Intro to Financial Accounting",
+		"term": "202005",
+		"section": "03",
+		"professor": "Berry, Reanna",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50037",
+	"fields": {
+		"subject": "ACCT",
+		"number": "3101",
+		"title": "Financial Acct &amp; Reporting I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Park, Taewoo",
+		"enrolled": 33,
+		"available": 7,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50039",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2106",
+		"title": "Legal Environment of Business",
+		"term": "202005",
+		"section": "01",
+		"professor": "Akins, Benjamin",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50040",
+	"fields": {
+		"subject": "ECON",
+		"number": "2105",
+		"title": "Principles of Macroeconomics",
+		"term": "202005",
+		"section": "02",
+		"professor": "Vinson, Philip",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50041",
+	"fields": {
+		"subject": "ECON",
+		"number": "2106",
+		"title": "Principles of Microeconomics",
+		"term": "202005",
+		"section": "03",
+		"professor": "Wilsker, Amanda",
+		"enrolled": 36,
+		"available": 4,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50042",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2000",
+		"title": "Statistical Analysis for Busin",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 36,
+		"available": 4,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50043",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3100",
+		"title": "Management Information Systems",
+		"term": "202005",
+		"section": "01",
+		"professor": "Young, Brett",
+		"enrolled": 26,
+		"available": 14,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50044",
+	"fields": {
+		"subject": "FINA",
+		"number": "3000",
+		"title": "Financial Management I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Saxena, Atul",
+		"enrolled": 23,
+		"available": 17,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50045",
+	"fields": {
+		"subject": "MKTG",
+		"number": "3000",
+		"title": "Principles of Marketing - INTL",
+		"term": "202005",
+		"section": "03",
+		"professor": "Torres, Luis",
+		"enrolled": 34,
+		"available": 6,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50046",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3000",
+		"title": "Principles of Management",
+		"term": "202005",
+		"section": "03",
+		"professor": "Saunders, Mary",
+		"enrolled": 25,
+		"available": 15,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50047",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3040",
+		"title": "Human Resource Management",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gresch, Eric",
+		"enrolled": 31,
+		"available": 9,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50048",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3040",
+		"title": "Human Resource Management",
+		"term": "202005",
+		"section": "02",
+		"professor": "Gresch, Eric",
+		"enrolled": 32,
+		"available": 8,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50049",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3400",
+		"title": "Ethics &amp; Corp. Social Responsi",
+		"term": "202005",
+		"section": "02",
+		"professor": "Brown, Steven",
+		"enrolled": 0,
+		"available": 40,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50050",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4100",
+		"title": "Organizational Behavior - INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Johnson, C.",
+		"enrolled": 24,
+		"available": 16,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50051",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4700",
+		"title": "Strategic Management Capstone",
+		"term": "202005",
+		"section": "01",
+		"professor": "Song, Pingping",
+		"enrolled": 8,
+		"available": 32,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50052",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1101K",
+		"title": "Biological Sciences I w/Lab",
+		"term": "202005",
+		"section": "03",
+		"professor": "Hammonds-Odie, Latanya",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50053",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1102",
+		"title": "Biological Sciences II",
+		"term": "202005",
+		"section": "03",
+		"professor": "Fernandez, Maria",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50054",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1107K",
+		"title": "Principles of Biology I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Darr, Pratima",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50055",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1107K",
+		"title": "Principles of Biology I w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Higgins, Rebecca",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50056",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1108K",
+		"title": "Principles of Biology II w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Sakaris, Peter",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50057",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1108K",
+		"title": "Principles of Biology II w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Fernandez, Maria",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50058",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2451K",
+		"title": "Human Anatomy &amp; Physiology I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Brandon, Christopher",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50059",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2451K",
+		"title": "Human Anatomy &amp; Physiology I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Cisse, Ramata",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50060",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2452K",
+		"title": "Human Anatomy &amp; Physiology II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gilad, Oranit",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50061",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2452K",
+		"title": "Human Anatomy &amp; Physiology II",
+		"term": "202005",
+		"section": "02",
+		"professor": "George, Bagie",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50062",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2516K",
+		"title": "Microbiology-Health Sciences",
+		"term": "202005",
+		"section": "01",
+		"professor": "Dustman, Wendy",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50063",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3400K",
+		"title": "Cell Biology w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Barrera, Alessandra",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50064",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3200K",
+		"title": "Genetics with Laboratory",
+		"term": "202005",
+		"section": "01",
+		"professor": "Penn, Jill",
+		"enrolled": 6,
+		"available": 18,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50065",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1151K",
+		"title": "Survey of Chemistry I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Forlemu, Neville",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50066",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1211K",
+		"title": "Principles Chemistry I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Mwongela, Simon",
+		"enrolled": 45,
+		"available": 3,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50067",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1211K",
+		"title": "Principles Chemistry I w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Forlemu, Neville",
+		"enrolled": 44,
+		"available": 4,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50068",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1211K",
+		"title": "Principles Chemistry I w/Lab",
+		"term": "202005",
+		"section": "03",
+		"professor": "Jenkins, Sharron",
+		"enrolled": 45,
+		"available": 3,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50070",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1212K",
+		"title": "Principles Chemistry II w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Jenkins, Sharron",
+		"enrolled": 43,
+		"available": 5,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50071",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1212K",
+		"title": "Principles Chemistry II w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Shuler, Shelby",
+		"enrolled": 40,
+		"available": 8,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50073",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2211K",
+		"title": "Organic Chemistry I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Mallia, Ajay",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50074",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2212K",
+		"title": "Organic Chemistry II w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Rudd, Gillian",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50075",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2212K",
+		"title": "Organic Chemistry II w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Paredes, Julia",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50076",
+	"fields": {
+		"subject": "ISCI",
+		"number": "2001",
+		"title": "IS-Life and Earth Science",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cooper, Rebecca",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50077",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing-Hybrid",
+		"term": "202005",
+		"section": "09",
+		"professor": "Tran, Binh",
+		"enrolled": 42,
+		"available": 8,
+		"capacity": 50
+	}
+}{
+	"model": "core.course",
+	"pk": "50080",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media",
+		"term": "202005",
+		"section": "01",
+		"professor": "Jin, Wei",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50081",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media",
+		"term": "202005",
+		"section": "02",
+		"professor": "Xu, Yaquan",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50082",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media - Hybrid",
+		"term": "202005",
+		"section": "03",
+		"professor": "Long, Cherie",
+		"enrolled": 41,
+		"available": 7,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50084",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media-Hybrid",
+		"term": "202005",
+		"section": "05",
+		"professor": "Yang, Sean",
+		"enrolled": 41,
+		"available": 7,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50086",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media",
+		"term": "202005",
+		"section": "07",
+		"professor": "Iken, Mark",
+		"enrolled": 37,
+		"available": 11,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50088",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3300",
+		"title": "Information Security",
+		"term": "202005",
+		"section": "01",
+		"professor": "Ding, Yan",
+		"enrolled": 15,
+		"available": 13,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50089",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3450",
+		"title": "Comp Graphics and Multimedia",
+		"term": "202005",
+		"section": "01",
+		"professor": "Wang, Cuilan",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50090",
+	"fields": {
+		"subject": "ITEC",
+		"number": "4900",
+		"title": "Info Technology Internship",
+		"term": "202005",
+		"section": "01",
+		"professor": "Pollacia, Lissa",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50091",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "01",
+		"professor": "Alves, Janice",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50093",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "04",
+		"professor": "Clark, Holly",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50094",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "06",
+		"professor": "Agbegha, Gerald",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50095",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "09",
+		"professor": "Choi, Eric",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50096",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "01",
+		"professor": "Krone, Paula",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50097",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "02",
+		"professor": "Lively, Angela",
+		"enrolled": 50,
+		"available": 6,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50098",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "03",
+		"professor": "Annan, Kodwo",
+		"enrolled": 54,
+		"available": 2,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50099",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "04",
+		"professor": "Curry Savage, Jamye",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50100",
+	"fields": {
+		"subject": "MATH",
+		"number": "2000",
+		"title": "Statistics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Park, Junkoo",
+		"enrolled": 50,
+		"available": 6,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50102",
+	"fields": {
+		"subject": "MATH",
+		"number": "2008",
+		"title": "Foundations of Numbers &amp; Op.",
+		"term": "202005",
+		"section": "01",
+		"professor": "Savage, Kendrick",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50103",
+	"fields": {
+		"subject": "MATH",
+		"number": "2200",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "03",
+		"professor": "Boindala, Priya",
+		"enrolled": 21,
+		"available": 7,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50105",
+	"fields": {
+		"subject": "MATH",
+		"number": "2210",
+		"title": "Calculus II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Pinzon, Daniel",
+		"enrolled": 25,
+		"available": 3,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50106",
+	"fields": {
+		"subject": "MATH",
+		"number": "2220",
+		"title": "Calculus III",
+		"term": "202005",
+		"section": "01",
+		"professor": "Annan, Kodwo",
+		"enrolled": 21,
+		"available": 7,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50107",
+	"fields": {
+		"subject": "MATH",
+		"number": "2300",
+		"title": "Discrete Math",
+		"term": "202005",
+		"section": "01",
+		"professor": "Jamaloodeen, Mohamed",
+		"enrolled": 18,
+		"available": 10,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50108",
+	"fields": {
+		"subject": "MATH",
+		"number": "3311",
+		"title": "Prob, Stats, &amp; Problem Solving",
+		"term": "202005",
+		"section": "02",
+		"professor": "Howse, Tashana",
+		"enrolled": 15,
+		"available": 13,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50109",
+	"fields": {
+		"subject": "PHYS",
+		"number": "2211K",
+		"title": "Principles of Physics I w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Khan, Neelam",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50110",
+	"fields": {
+		"subject": "PHYS",
+		"number": "2212K",
+		"title": "Principles of Physics II w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50111",
+	"fields": {
+		"subject": "STEC",
+		"number": "4500",
+		"title": "Undergraduate Research Project",
+		"term": "202005",
+		"section": "01",
+		"professor": "Dustman, Wendy",
+		"enrolled": 60,
+		"available": 0,
+		"capacity": 60
+	}
+}{
+	"model": "core.course",
+	"pk": "50112",
+	"fields": {
+		"subject": "BUSA",
+		"number": "4500",
+		"title": "Studies Abroad-Europe-INTL",
+		"term": "202005",
+		"section": "1S",
+		"professor": "TBA",
+		"enrolled": 25,
+		"available": 0,
+		"capacity": 25
+	}
+}{
+	"model": "core.course",
+	"pk": "50113",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4500",
+		"title": "Studies Abroad-INTL-Europe",
+		"term": "202005",
+		"section": "1S",
+		"professor": "TBA",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50114",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50115",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 8,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50116",
+	"fields": {
+		"subject": "BIOL",
+		"number": "4800",
+		"title": "Internship",
+		"term": "202005",
+		"section": "01",
+		"professor": "Hammonds-Odie, Latanya",
+		"enrolled": 11,
+		"available": 0,
+		"capacity": 11
+	}
+}{
+	"model": "core.course",
+	"pk": "50117",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50118",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "04",
+		"professor": "Henderson, Joseph",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50119",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "05",
+		"professor": "Connor, Georgeta",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50120",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2451K",
+		"title": "Human Anatomy &amp; Physiology I",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50121",
+	"fields": {
+		"subject": "SPAN",
+		"number": "1001",
+		"title": "Elementary Spanish I",
+		"term": "202005",
+		"section": "03",
+		"professor": "Choi, Myung",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50123",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1102",
+		"title": "Introduction to Psychology",
+		"term": "202005",
+		"section": "03",
+		"professor": "Kelly, Andrew",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50124",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "08",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50125",
+	"fields": {
+		"subject": "MATH",
+		"number": "2000",
+		"title": "Statistics",
+		"term": "202005",
+		"section": "04",
+		"professor": "Jones, Stacy",
+		"enrolled": 46,
+		"available": 10,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50126",
+	"fields": {
+		"subject": "ANTH",
+		"number": "1102",
+		"title": "Intro to Anthropology - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Andrews-Swann, Jenna",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50127",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "05",
+		"professor": "Fournier, Michael",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50128",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Gender and Sexuality Construction in/on Film and Text",
+		"term": "202005",
+		"section": "22",
+		"professor": "Walker, Antiwan",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50129",
+	"fields": {
+		"subject": "FILM",
+		"number": "1005",
+		"title": "Introduction to Film",
+		"term": "202005",
+		"section": "03",
+		"professor": "Resnick, Kevin",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50130",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "06",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50131",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1160",
+		"title": "Intro to Social Problems",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cavalier, Elizabeth",
+		"enrolled": 5,
+		"available": 19,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50132",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Suvey of US History II",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50133",
+	"fields": {
+		"subject": "COMM",
+		"number": "1110",
+		"title": "Public Speaking",
+		"term": "202005",
+		"section": "01",
+		"professor": "Khan, Niaz",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50134",
+	"fields": {
+		"subject": "ACCT",
+		"number": "4751",
+		"title": "Business Internship-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gordon, Jason",
+		"enrolled": 7,
+		"available": 1,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50136",
+	"fields": {
+		"subject": "BUSA",
+		"number": "4751",
+		"title": "Business Internship-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gordon, Jason",
+		"enrolled": 3,
+		"available": 5,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50137",
+	"fields": {
+		"subject": "FINA",
+		"number": "4751",
+		"title": "Internship in Finance-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gordon, Jason",
+		"enrolled": 8,
+		"available": 0,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50138",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4751",
+		"title": "Business Internship-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gordon, Jason",
+		"enrolled": 3,
+		"available": 5,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50140",
+	"fields": {
+		"subject": "BCHM",
+		"number": "3100K",
+		"title": "Biochemistry with Laboratory",
+		"term": "202005",
+		"section": "01",
+		"professor": "Huey, Patricia",
+		"enrolled": 8,
+		"available": 16,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50141",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1101K",
+		"title": "Biological Sciences I w/Lab",
+		"term": "202005",
+		"section": "05",
+		"professor": "Malloy, Mia",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50142",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3400K",
+		"title": "Cell Biology w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Barrera, Alessandra",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50144",
+	"fields": {
+		"subject": "ISCI",
+		"number": "2001",
+		"title": "IS-Life and Earth Science",
+		"term": "202005",
+		"section": "02",
+		"professor": "Cottrell-Yongye, Adrienne",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50145",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing - Hybrid",
+		"term": "202005",
+		"section": "06",
+		"professor": "Benson, Karen",
+		"enrolled": 47,
+		"available": 3,
+		"capacity": 50
+	}
+}{
+	"model": "core.course",
+	"pk": "50147",
+	"fields": {
+		"subject": "MATH",
+		"number": "2210",
+		"title": "Calculus II-Hybrid",
+		"term": "202005",
+		"section": "02",
+		"professor": "Shahbaz, Rabia",
+		"enrolled": 55,
+		"available": 1,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50149",
+	"fields": {
+		"subject": "PHYS",
+		"number": "1111K",
+		"title": "Introduction to Physics I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Iken, Mark",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50150",
+	"fields": {
+		"subject": "PHYS",
+		"number": "1112K",
+		"title": "Introduction to Physics II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Battles, Amy",
+		"enrolled": 1,
+		"available": 23,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50152",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2212K",
+		"title": "Organic Chemistry II w/Lab",
+		"term": "202005",
+		"section": "03",
+		"professor": "Villanueva, Omar",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50153",
+	"fields": {
+		"subject": "PHED",
+		"number": "1060",
+		"title": "Weight Training",
+		"term": "202005",
+		"section": "07",
+		"professor": "TBA",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50154",
+	"fields": {
+		"subject": "PHED",
+		"number": "1080",
+		"title": "Fitness for Life Walking",
+		"term": "202005",
+		"section": "07",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50155",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "14",
+		"professor": "TBA",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50159",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "13",
+		"professor": "TBA",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50161",
+	"fields": {
+		"subject": "ISCI",
+		"number": "2002",
+		"title": "IS-Physical Science",
+		"term": "202005",
+		"section": "02",
+		"professor": "Tangirala, Sairam",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50164",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2102",
+		"title": "Intro to Managerial Accounting",
+		"term": "202005",
+		"section": "04",
+		"professor": "Bradley, Cassie",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50165",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2106",
+		"title": "Legal Environment of Business",
+		"term": "202005",
+		"section": "02",
+		"professor": "Bursuc, Vlad",
+		"enrolled": 33,
+		"available": 7,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50166",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4100",
+		"title": "Organizational Behavior - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Bontrager, Marvin",
+		"enrolled": 0,
+		"available": 40,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50167",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4220",
+		"title": "Project Management",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cline, Melinda",
+		"enrolled": 16,
+		"available": 24,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50168",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4300",
+		"title": "Advertising",
+		"term": "202005",
+		"section": "01",
+		"professor": "Anservitz, Robert",
+		"enrolled": 20,
+		"available": 20,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50169",
+	"fields": {
+		"subject": "LEAD",
+		"number": "3000",
+		"title": "Essentials of Leadership",
+		"term": "202005",
+		"section": "01",
+		"professor": "Saunders, Mary",
+		"enrolled": 32,
+		"available": 8,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50170",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3600",
+		"title": "Statistics for Social Sciences",
+		"term": "202005",
+		"section": "01",
+		"professor": "Quinn, Susan",
+		"enrolled": 6,
+		"available": 12,
+		"capacity": 18
+	}
+}{
+	"model": "core.course",
+	"pk": "50171",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "14",
+		"professor": "Sena, Mandi",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50172",
+	"fields": {
+		"subject": "PHIL",
+		"number": "2010",
+		"title": "Introduction to Philosophy",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cicura, Donatien",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50173",
+	"fields": {
+		"subject": "SPAN",
+		"number": "1002",
+		"title": "Elem Spanish II INTL-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Choi, Myung",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50174",
+	"fields": {
+		"subject": "SPAN",
+		"number": "1001",
+		"title": "Elementary Spanish I-Hybrid",
+		"term": "202005",
+		"section": "04",
+		"professor": "Choi, Myung",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50175",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3300K",
+		"title": "Microbiology with Laboratory",
+		"term": "202005",
+		"section": "01",
+		"professor": "Ward, Rebekah",
+		"enrolled": 4,
+		"available": 20,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50176",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1152K",
+		"title": "Survey of Chemistry II w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Bell, Patrice",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50178",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2120",
+		"title": "Intro to Programming",
+		"term": "202005",
+		"section": "02",
+		"professor": "Im, Tacksoo",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50179",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2201",
+		"title": "Introduction to Info Systems",
+		"term": "202005",
+		"section": "02",
+		"professor": "Lawson, Victor",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50180",
+	"fields": {
+		"subject": "PHED",
+		"number": "1025",
+		"title": "Power Stretch",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 12,
+		"available": 12,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50182",
+	"fields": {
+		"subject": "PHED",
+		"number": "1040",
+		"title": "Volleyball",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50183",
+	"fields": {
+		"subject": "PHED",
+		"number": "1040",
+		"title": "Volleyball",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50186",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "12",
+		"professor": "Flynn, Rebecca",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50187",
+	"fields": {
+		"subject": "EXSC",
+		"number": "3800",
+		"title": "Nutrition in Health &amp; Exercise",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 11,
+		"available": 17,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50189",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "10",
+		"professor": "Grant, Paul",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50191",
+	"fields": {
+		"subject": "PHYS",
+		"number": "1112K",
+		"title": "Introduction to Physics II",
+		"term": "202005",
+		"section": "02",
+		"professor": "Chen, Zengjun",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50192",
+	"fields": {
+		"subject": "COMM",
+		"number": "1110",
+		"title": "Public Speaking",
+		"term": "202005",
+		"section": "02",
+		"professor": "Khan, Niaz",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50193",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3000",
+		"title": "Quant Analysis for Business",
+		"term": "202005",
+		"section": "01",
+		"professor": "Delaney, Jason",
+		"enrolled": 30,
+		"available": 10,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50194",
+	"fields": {
+		"subject": "FINA",
+		"number": "3000",
+		"title": "Financial Management I",
+		"term": "202005",
+		"section": "01",
+		"professor": "D&#39;Souza, Juliet",
+		"enrolled": 17,
+		"available": 23,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50195",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2211K",
+		"title": "Organic Chemistry I w/Lab",
+		"term": "202005",
+		"section": "04",
+		"professor": "Lee, Seungjin",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50196",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1108K",
+		"title": "Principles of Biology II w/Lab",
+		"term": "202005",
+		"section": "04",
+		"professor": "Sun, Fengjie",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50197",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2452K",
+		"title": "Human Anatomy &amp; Physiology II",
+		"term": "202005",
+		"section": "03",
+		"professor": "Bali, Victoria",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50198",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1151K",
+		"title": "Survey of Chemistry I w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Anagho, Leonard",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50199",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2120",
+		"title": "Intro to Programming",
+		"term": "202005",
+		"section": "03",
+		"professor": "Soares, Carlos",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50200",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2150",
+		"title": "Intermediate Programming",
+		"term": "202005",
+		"section": "01",
+		"professor": "Park, Hyesung",
+		"enrolled": 43,
+		"available": 5,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50201",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2201",
+		"title": "Introduction to Info Systems",
+		"term": "202005",
+		"section": "01",
+		"professor": "Banerjee, Madhushri",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50202",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3100",
+		"title": "Introduction to Networks",
+		"term": "202005",
+		"section": "01",
+		"professor": "Tran, Binh",
+		"enrolled": 10,
+		"available": 18,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50203",
+	"fields": {
+		"subject": "MATH",
+		"number": "2000",
+		"title": "Statistics",
+		"term": "202005",
+		"section": "05",
+		"professor": "Thomas, Anthony",
+		"enrolled": 49,
+		"available": 7,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50204",
+	"fields": {
+		"subject": "MATH",
+		"number": "3100",
+		"title": "Differential Equations I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Ortiz, Alvaro",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50206",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4000",
+		"title": "Special Topics: WCC: A Documentary Approach - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "McDowell, Lana",
+		"enrolled": 3,
+		"available": 21,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50207",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4930",
+		"title": "CJCR Internship",
+		"term": "202005",
+		"section": "01",
+		"professor": "McDowell, Lana",
+		"enrolled": 15,
+		"available": 0,
+		"capacity": 15
+	}
+}{
+	"model": "core.course",
+	"pk": "50208",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Hum Geog-INTL-Hybrid",
+		"term": "202005",
+		"section": "03",
+		"professor": "Lindley, Todd",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50209",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "06",
+		"professor": "Lindley, Todd",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50210",
+	"fields": {
+		"subject": "RELN",
+		"number": "1100",
+		"title": "World Religions - INTL",
+		"term": "202005",
+		"section": "03",
+		"professor": "Green, Andrea",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50211",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1102",
+		"title": "Introduction to Psychology",
+		"term": "202005",
+		"section": "04",
+		"professor": "Platek, Steven",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50212",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2500",
+		"title": "Lifespan Developmental Psyc",
+		"term": "202005",
+		"section": "02",
+		"professor": "Kalavar, Jyotsna",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50213",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3000",
+		"title": "Applications in Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Robbins, Michelle",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50214",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "03",
+		"professor": "Quinones-Reyes, Clemente",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50215",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "15",
+		"professor": "Lewkowicz, Michael",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50216",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Ashour, Ibrahim",
+		"enrolled": 8,
+		"available": 0,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50218",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2000",
+		"title": "Statistical Analysis for Busin",
+		"term": "202005",
+		"section": "02",
+		"professor": "Uvet, Hasan",
+		"enrolled": 35,
+		"available": 5,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50220",
+	"fields": {
+		"subject": "MATH",
+		"number": "3311",
+		"title": "Prob, Stats, &amp; Problem Solving",
+		"term": "202005",
+		"section": "03",
+		"professor": "Menon, Ramakrishnan",
+		"enrolled": 18,
+		"available": 10,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50221",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3700",
+		"title": "Systems Analysis and Design",
+		"term": "202005",
+		"section": "01",
+		"professor": "Nicklas, Richard",
+		"enrolled": 6,
+		"available": 22,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50222",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2451K",
+		"title": "Human Anatomy &amp; Physiology I",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50224",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2212K",
+		"title": "Organic Chemistry II w/Lab",
+		"term": "202005",
+		"section": "04",
+		"professor": "Paredes, Julia",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50226",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1151K",
+		"title": "Survey of Chemistry I w/Lab",
+		"term": "202005",
+		"section": "04",
+		"professor": "Park, Sang",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50227",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2516K",
+		"title": "Microbiology-Health Sciences",
+		"term": "202005",
+		"section": "02",
+		"professor": "Keller, Sharon",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50228",
+	"fields": {
+		"subject": "BCHM",
+		"number": "3100K",
+		"title": "Biochemistry with Laboratory",
+		"term": "202005",
+		"section": "02",
+		"professor": "Haining, Robert",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50229",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1102",
+		"title": "Biological Sciences II",
+		"term": "202005",
+		"section": "04",
+		"professor": "Cain, Patrick",
+		"enrolled": 22,
+		"available": 6,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50230",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2452K",
+		"title": "Human Anatomy &amp; Physiology II",
+		"term": "202005",
+		"section": "04",
+		"professor": "George, Bagie",
+		"enrolled": 49,
+		"available": 7,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50231",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1212K",
+		"title": "Principles Chemistry II w/Lab",
+		"term": "202005",
+		"section": "05",
+		"professor": "Burch, Charmita",
+		"enrolled": 9,
+		"available": 15,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50232",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2211K",
+		"title": "Organic Chemistry I w/Lab",
+		"term": "202005",
+		"section": "05",
+		"professor": "Villanueva, Omar",
+		"enrolled": 5,
+		"available": 19,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50234",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2140",
+		"title": "Programming Fundamentals",
+		"term": "202005",
+		"section": "02",
+		"professor": "Heinz, Adrian",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50235",
+	"fields": {
+		"subject": "MATH",
+		"number": "1001",
+		"title": "Quant Skills and Reasoning",
+		"term": "202005",
+		"section": "01",
+		"professor": "Harmon, Henry",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50237",
+	"fields": {
+		"subject": "ARTS",
+		"number": "1100",
+		"title": "Art Appreciation",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cook, David",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50238",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3200",
+		"title": "Criminology",
+		"term": "202005",
+		"section": "01",
+		"professor": "de Guzman, Melchor",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50239",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Social Justice",
+		"term": "202005",
+		"section": "07",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50240",
+	"fields": {
+		"subject": "ENGL",
+		"number": "3800",
+		"title": "Intro to Creative Writing",
+		"term": "202005",
+		"section": "01",
+		"professor": "Denny, Stephanie",
+		"enrolled": 5,
+		"available": 15,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50241",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50243",
+	"fields": {
+		"subject": "PSYC",
+		"number": "4600",
+		"title": "Hist &amp; Systems of Psyc.-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Hutcheson, Adam",
+		"enrolled": -1,
+		"available": 17,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50244",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2102",
+		"title": "Intro to Managerial Accounting",
+		"term": "202005",
+		"section": "02",
+		"professor": "Bradley, Cassie",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50245",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3200",
+		"title": "Global Business-INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Hartley, Phillip",
+		"enrolled": 22,
+		"available": 18,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50246",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3400",
+		"title": "Ethics &amp; Corp. Social Responsi",
+		"term": "202005",
+		"section": "01",
+		"professor": "Brown, Steven",
+		"enrolled": 0,
+		"available": 40,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50247",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4300",
+		"title": "Entrepreneurship &amp; New Venture",
+		"term": "202005",
+		"section": "01",
+		"professor": "Anservitz, Robert",
+		"enrolled": 2,
+		"available": 18,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50248",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4301",
+		"title": "Entrepreneurship &amp; New Venture",
+		"term": "202005",
+		"section": "01",
+		"professor": "Anservitz, Robert",
+		"enrolled": 14,
+		"available": 6,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50249",
+	"fields": {
+		"subject": "MKTG",
+		"number": "3000",
+		"title": "Principles of Marketing - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Sleep, Stefan",
+		"enrolled": 30,
+		"available": 10,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50250",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2130",
+		"title": "Web Technologies - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Lai, Shuhua",
+		"enrolled": 5,
+		"available": 19,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50251",
+	"fields": {
+		"subject": "FINA",
+		"number": "4101",
+		"title": "International Finance",
+		"term": "202005",
+		"section": "01",
+		"professor": "Saxena, Atul",
+		"enrolled": 29,
+		"available": 11,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50252",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4940",
+		"title": "Senior Seminar-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Carroll, Bruce",
+		"enrolled": 16,
+		"available": 0,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50253",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "18",
+		"professor": "TBA",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50254",
+	"fields": {
+		"subject": "STEC",
+		"number": "2500",
+		"title": "Intro to Undergrad Research",
+		"term": "202005",
+		"section": "01",
+		"professor": "Dustman, Wendy",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50256",
+	"fields": {
+		"subject": "ARTS",
+		"number": "2010",
+		"title": "Drawing I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Moore, Catherine",
+		"enrolled": 3,
+		"available": 13,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50257",
+	"fields": {
+		"subject": "ARTS",
+		"number": "2020",
+		"title": "Two-Dimens Design",
+		"term": "202005",
+		"section": "02",
+		"professor": "Moore, Catherine",
+		"enrolled": 10,
+		"available": 6,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50258",
+	"fields": {
+		"subject": "HNRS",
+		"number": "3000",
+		"title": "Honors Special Topics",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50260",
+	"fields": {
+		"subject": "BIOL",
+		"number": "1107K",
+		"title": "Principles of Biology I w/Lab",
+		"term": "202005",
+		"section": "04",
+		"professor": "Talley, Jennell",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50261",
+	"fields": {
+		"subject": "CHEM",
+		"number": "1152K",
+		"title": "Survey of Chemistry II w/Lab",
+		"term": "202005",
+		"section": "03",
+		"professor": "Kirberger, Michael",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50262",
+	"fields": {
+		"subject": "EXSC",
+		"number": "3000",
+		"title": "Intro Ex. Sci &amp; Wellness Prom.",
+		"term": "202005",
+		"section": "01",
+		"professor": "Wludyga, Joshua",
+		"enrolled": 24,
+		"available": 4,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50263",
+	"fields": {
+		"subject": "EXSC",
+		"number": "3200",
+		"title": "Psychsoc Aspects Health &amp; Well",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 8,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50264",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing",
+		"term": "202005",
+		"section": "04",
+		"professor": "Liu, Wei",
+		"enrolled": 48,
+		"available": 2,
+		"capacity": 50
+	}
+}{
+	"model": "core.course",
+	"pk": "50266",
+	"fields": {
+		"subject": "MATH",
+		"number": "1001*",
+		"title": "Quantative Skill &amp; Reasoning",
+		"term": "202005",
+		"section": "02",
+		"professor": "Whitney, MaryGeorge",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50267",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111*",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "01",
+		"professor": "Perrine, Stanley",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50269",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50270",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "03",
+		"professor": "Huang, Hsi-Ling",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50271",
+	"fields": {
+		"subject": "FILM",
+		"number": "1005",
+		"title": "Introduction to Film-Hybrid",
+		"term": "202005",
+		"section": "02",
+		"professor": "Williams, Danielle",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50272",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Survey of U.S. History II",
+		"term": "202005",
+		"section": "06",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50273",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Survey of U.S. History II",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50274",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation - INTL",
+		"term": "202005",
+		"section": "03",
+		"professor": "Mueller, Todd",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50275",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2500",
+		"title": "Lifespan Developmental Psyc",
+		"term": "202005",
+		"section": "03",
+		"professor": "Williams, Vickie",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50276",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2400",
+		"title": "Abnormal Psychology",
+		"term": "202005",
+		"section": "02",
+		"professor": "Shim, Young",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50277",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3100",
+		"title": "Psychology of Learning",
+		"term": "202005",
+		"section": "01",
+		"professor": "Hutcheson, Adam",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50278",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3110",
+		"title": "Cognitive Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Ludden, David",
+		"enrolled": 8,
+		"available": 16,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50279",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3210",
+		"title": "Introduction to Neuroscience",
+		"term": "202005",
+		"section": "01",
+		"professor": "Platek, Steven",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50280",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "13",
+		"professor": "AZARVAN, AMIR",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50281",
+	"fields": {
+		"subject": "FINA",
+		"number": "4105",
+		"title": "Financial Planning",
+		"term": "202005",
+		"section": "01",
+		"professor": "D&#39;Souza, Juliet",
+		"enrolled": 17,
+		"available": 23,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50282",
+	"fields": {
+		"subject": "EXSC",
+		"number": "3101K",
+		"title": "Exercise Physiology",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 18,
+		"capacity": 18
+	}
+}{
+	"model": "core.course",
+	"pk": "50283",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3860",
+		"title": "Software Development I - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Price, Richard",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50284",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing-Online",
+		"term": "202005",
+		"section": "16",
+		"professor": "Smith, Stella",
+		"enrolled": 23,
+		"available": 3,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50285",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life-Online",
+		"term": "202005",
+		"section": "20",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 28,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50286",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life-Online",
+		"term": "202005",
+		"section": "21",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 4,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50287",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2105",
+		"title": "Communicating in the Business",
+		"term": "202005",
+		"section": "01",
+		"professor": "Marinan, John",
+		"enrolled": 32,
+		"available": 8,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50288",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3000",
+		"title": "Quant Analysis for Business",
+		"term": "202005",
+		"section": "02",
+		"professor": "Uvet, Hasan",
+		"enrolled": 27,
+		"available": 13,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50289",
+	"fields": {
+		"subject": "ECON",
+		"number": "2105",
+		"title": "Principles of Macroeconomics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Vinson, Philip",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50290",
+	"fields": {
+		"subject": "ECON",
+		"number": "2106",
+		"title": "Principles of Microeconomics",
+		"term": "202005",
+		"section": "02",
+		"professor": "Partridge, Mark",
+		"enrolled": 32,
+		"available": 8,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50295",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2211K",
+		"title": "Organic Chemistry I w/Lab",
+		"term": "202005",
+		"section": "06",
+		"professor": "Coppock, Patrick",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50296",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3000",
+		"title": "Principles of Management",
+		"term": "202005",
+		"section": "02",
+		"professor": "Bontrager, Marvin",
+		"enrolled": 2,
+		"available": 38,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50299",
+	"fields": {
+		"subject": "ANTH",
+		"number": "1102",
+		"title": "Intro to Anthropology - INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Gullette, Gregory",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50301",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3100",
+		"title": "Research Methods",
+		"term": "202005",
+		"section": "01",
+		"professor": "White, Maryann",
+		"enrolled": 7,
+		"available": 13,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50302",
+	"fields": {
+		"subject": "ENGL",
+		"number": "0999",
+		"title": "Support English Composition",
+		"term": "202005",
+		"section": "S07",
+		"professor": "Sepulveda, David",
+		"enrolled": 14,
+		"available": 0,
+		"capacity": 14
+	}
+}{
+	"model": "core.course",
+	"pk": "50303",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101*",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "S07",
+		"professor": "Sepulveda, David",
+		"enrolled": 14,
+		"available": 0,
+		"capacity": 14
+	}
+}{
+	"model": "core.course",
+	"pk": "50305",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "07",
+		"professor": "Lowry, James",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50306",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50307",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "16",
+		"professor": "Kantack, Ben",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50308",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "17",
+		"professor": "Bourland, Laura",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50312",
+	"fields": {
+		"subject": "RELN",
+		"number": "1100",
+		"title": "World Religions - INTL",
+		"term": "202005",
+		"section": "04",
+		"professor": "Green, Andrea",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50315",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing-Online",
+		"term": "202005",
+		"section": "18",
+		"professor": "Pollacia, Lissa",
+		"enrolled": 21,
+		"available": 5,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50316",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing-Online",
+		"term": "202005",
+		"section": "19",
+		"professor": "Kasay, Valerie",
+		"enrolled": 26,
+		"available": 0,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50317",
+	"fields": {
+		"subject": "ITEC",
+		"number": "4450",
+		"title": "Web Development",
+		"term": "202005",
+		"section": "01",
+		"professor": "Lai, Shuhua",
+		"enrolled": 5,
+		"available": 23,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50320",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life-Online",
+		"term": "202005",
+		"section": "22",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 5,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50321",
+	"fields": {
+		"subject": "PHED",
+		"number": "1101",
+		"title": "Choices for Life-Online",
+		"term": "202005",
+		"section": "23",
+		"professor": "TBA",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50322",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50323",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50324",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2101",
+		"title": "Intro to Financial Accounting",
+		"term": "202005",
+		"section": "05",
+		"professor": "McCarron, Karen",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50325",
+	"fields": {
+		"subject": "ACCT",
+		"number": "4700",
+		"title": "Special Topics in Acct-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 5,
+		"available": 1,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50326",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3200",
+		"title": "Global Business-INTL",
+		"term": "202005",
+		"section": "03",
+		"professor": "Griffin, Carroll",
+		"enrolled": 23,
+		"available": 17,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50327",
+	"fields": {
+		"subject": "ECON",
+		"number": "4700",
+		"title": "Special Topics in Economics: Urban Economics",
+		"term": "202005",
+		"section": "02",
+		"professor": "Wilsker, Amanda",
+		"enrolled": 36,
+		"available": 4,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50328",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4101",
+		"title": "International Management-INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Griffin, Carroll",
+		"enrolled": 30,
+		"available": 10,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50329",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3000",
+		"title": "Evolution",
+		"term": "202005",
+		"section": "01",
+		"professor": "Rogers, Theus",
+		"enrolled": 12,
+		"available": 16,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50331",
+	"fields": {
+		"subject": "BUSA",
+		"number": "4700",
+		"title": "Selected Topics in Busi-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 3,
+		"available": 3,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50333",
+	"fields": {
+		"subject": "FINA",
+		"number": "4700",
+		"title": "Special Topics in Fina-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 3,
+		"available": 3,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50334",
+	"fields": {
+		"subject": "ECON",
+		"number": "4700",
+		"title": "Selected Topics in Econ-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 6,
+		"available": 0,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50335",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101*",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "S02",
+		"professor": "Ashour, Ibrahim",
+		"enrolled": 14,
+		"available": 0,
+		"capacity": 14
+	}
+}{
+	"model": "core.course",
+	"pk": "50336",
+	"fields": {
+		"subject": "ENGL",
+		"number": "0999",
+		"title": "Support English Composition",
+		"term": "202005",
+		"section": "S02",
+		"professor": "Ashour, Ibrahim",
+		"enrolled": 14,
+		"available": 0,
+		"capacity": 14
+	}
+}{
+	"model": "core.course",
+	"pk": "50341",
+	"fields": {
+		"subject": "PHYS",
+		"number": "2212K",
+		"title": "Principles of Physics II w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Lee, Tae",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50342",
+	"fields": {
+		"subject": "MATH",
+		"number": "2200",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "08",
+		"professor": "Sun, Liang",
+		"enrolled": 22,
+		"available": 6,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50348",
+	"fields": {
+		"subject": "ENGL",
+		"number": "4210",
+		"title": "Selected Authors",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stearns, Jennie",
+		"enrolled": 17,
+		"available": 3,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50349",
+	"fields": {
+		"subject": "FILM",
+		"number": "1005",
+		"title": "Introduction to Film - INTL",
+		"term": "202005",
+		"section": "05",
+		"professor": "Mauldin, June",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50351",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation - INTL",
+		"term": "202005",
+		"section": "04",
+		"professor": "Escalante-Chernova, Irina",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50352",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "04",
+		"professor": "Lewkowicz, Michael",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50353",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "09",
+		"professor": "Gunning, Matthew",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50354",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2400",
+		"title": "Abnormal Psychology",
+		"term": "202005",
+		"section": "03",
+		"professor": "Shim, Young",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50355",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4700",
+		"title": "Special Topics in Mktg-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Routon, Philip",
+		"enrolled": 5,
+		"available": 1,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50356",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3900",
+		"title": "Biotechnology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Ricks Jr., Ernest",
+		"enrolled": 6,
+		"available": 22,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50357",
+	"fields": {
+		"subject": "MATH",
+		"number": "1001",
+		"title": "Quant Skills and Reasoning",
+		"term": "202005",
+		"section": "02",
+		"professor": "Kerven, Jenny",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50358",
+	"fields": {
+		"subject": "PHYS",
+		"number": "2211K",
+		"title": "Principles of Physics I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Camp, Paul",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50359",
+	"fields": {
+		"subject": "PSCI",
+		"number": "1101K",
+		"title": "Physical Sciences I w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Morris, Joshua",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50360",
+	"fields": {
+		"subject": "PSCI",
+		"number": "1102",
+		"title": "Physical Sciences II",
+		"term": "202005",
+		"section": "02",
+		"professor": "Pang, Lijun",
+		"enrolled": 22,
+		"available": 6,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50361",
+	"fields": {
+		"subject": "NURS",
+		"number": "4001",
+		"title": "Cult Explr Health INTL-Ecuador",
+		"term": "202005",
+		"section": "1S",
+		"professor": "TBA",
+		"enrolled": 16,
+		"available": 0,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50362",
+	"fields": {
+		"subject": "MATH",
+		"number": "0997A",
+		"title": "Support Quant Reason Access",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kim, Jaechun",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50368",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing",
+		"term": "202005",
+		"section": "01",
+		"professor": "Xu, Shuting",
+		"enrolled": 23,
+		"available": 3,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50369",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing",
+		"term": "202005",
+		"section": "02",
+		"professor": "Khokhar, Umar",
+		"enrolled": 24,
+		"available": 2,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50370",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing",
+		"term": "202005",
+		"section": "03",
+		"professor": "Shin, Hyun",
+		"enrolled": 26,
+		"available": 0,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50371",
+	"fields": {
+		"subject": "ITEC",
+		"number": "1001",
+		"title": "Intro to Computing-Online",
+		"term": "202005",
+		"section": "05",
+		"professor": "Kakish, Kamal",
+		"enrolled": 15,
+		"available": 11,
+		"capacity": 26
+	}
+}{
+	"model": "core.course",
+	"pk": "50372",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2211K",
+		"title": "Organic Chemistry I w/Lab",
+		"term": "202005",
+		"section": "02",
+		"professor": "Pursell, David",
+		"enrolled": 15,
+		"available": 9,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50373",
+	"fields": {
+		"subject": "CHEM",
+		"number": "2212K",
+		"title": "Organic Chemistry II w/Lab",
+		"term": "202005",
+		"section": "05",
+		"professor": "Coppock, Patrick",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50374",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "13",
+		"professor": "Donegan, Rachel",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50376",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Writing and Game Design",
+		"term": "202005",
+		"section": "03",
+		"professor": "Reed, Scott",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50377",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50378",
+	"fields": {
+		"subject": "HDAS",
+		"number": "2000",
+		"title": "Intro Hum Dev and Aging Ser",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kalavar, Jyotsna",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50379",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "19",
+		"professor": "Jones, Steven",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50380",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media - Hybrid",
+		"term": "202005",
+		"section": "09",
+		"professor": "Abraham, Sherly",
+		"enrolled": 32,
+		"available": 16,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50382",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2110",
+		"title": "Digital Media-Hybrid",
+		"term": "202005",
+		"section": "11",
+		"professor": "Chen, Kairui",
+		"enrolled": 36,
+		"available": 12,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50384",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "03",
+		"professor": "Atkinson, Alvina",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50385",
+	"fields": {
+		"subject": "ARTS",
+		"number": "2010",
+		"title": "Drawing I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stone Collins, Alice",
+		"enrolled": 4,
+		"available": 12,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50387",
+	"fields": {
+		"subject": "EXSC",
+		"number": "4700",
+		"title": "Internship in Exercise Science",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50388",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2106",
+		"title": "Legal Environment of Business",
+		"term": "202005",
+		"section": "03",
+		"professor": "Gordon, Jason",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50389",
+	"fields": {
+		"subject": "MATH",
+		"number": "2000",
+		"title": "Statistics",
+		"term": "202005",
+		"section": "02",
+		"professor": "Jamaloodeen, Mohamed",
+		"enrolled": 46,
+		"available": 10,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50390",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4220",
+		"title": "Project Management",
+		"term": "202005",
+		"section": "02",
+		"professor": "Cline, Melinda",
+		"enrolled": 32,
+		"available": 8,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50392",
+	"fields": {
+		"subject": "BIOL",
+		"number": "2451K",
+		"title": "Human Anatomy &amp; Physiology I",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50393",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1102",
+		"title": "Introduction to Psychology",
+		"term": "202005",
+		"section": "02",
+		"professor": "Ludden, David",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50395",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II: Writing about Work",
+		"term": "202005",
+		"section": "09",
+		"professor": "O&#39;Dell, Benjamin",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50397",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3900",
+		"title": "Professional Pract &amp; Ethics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Jonassen, Lorraine",
+		"enrolled": 5,
+		"available": 23,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50398",
+	"fields": {
+		"subject": "MATH",
+		"number": "0997B",
+		"title": "Support Quant Reason Access",
+		"term": "202005",
+		"section": "02",
+		"professor": "Whitney, MaryGeorge",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50399",
+	"fields": {
+		"subject": "MATH",
+		"number": "0998A",
+		"title": "Support Math Modeling",
+		"term": "202005",
+		"section": "01",
+		"professor": "Roberts, Joshua",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50400",
+	"fields": {
+		"subject": "MATH",
+		"number": "0998A",
+		"title": "Support Math Modeling",
+		"term": "202005",
+		"section": "02",
+		"professor": "DeGeorge, Tonya",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50402",
+	"fields": {
+		"subject": "MATH",
+		"number": "0999B",
+		"title": "Support College Algebra Access",
+		"term": "202005",
+		"section": "01",
+		"professor": "Perrine, Stanley",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50404",
+	"fields": {
+		"subject": "MATH",
+		"number": "1001^",
+		"title": "Quant Skills and Reasoning",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kim, Jaechun",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50405",
+	"fields": {
+		"subject": "MATH",
+		"number": "1101*",
+		"title": "Intro Mathematical Modeling",
+		"term": "202005",
+		"section": "01",
+		"professor": "Roberts, Joshua",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50406",
+	"fields": {
+		"subject": "MATH",
+		"number": "1101*",
+		"title": "Intro Mathematical Modeling",
+		"term": "202005",
+		"section": "02",
+		"professor": "DeGeorge, Tonya",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50408",
+	"fields": {
+		"subject": "GEOG",
+		"number": "1101",
+		"title": "Intro to Human Geography- INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Connor, Georgeta",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50410",
+	"fields": {
+		"subject": "HIST",
+		"number": "3135",
+		"title": "American Since 1945",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 17,
+		"available": 5,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50411",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Survey of U.S. History II",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50413",
+	"fields": {
+		"subject": "SPAN",
+		"number": "1001",
+		"title": "Elementary Spanish I-Hybrid",
+		"term": "202005",
+		"section": "02",
+		"professor": "Mora, Luis",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50415",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Apprec - INTL - Hybrid",
+		"term": "202005",
+		"section": "05",
+		"professor": "Holley, Whitney",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50417",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "07",
+		"professor": "Young, Laura",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50418",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50419",
+	"fields": {
+		"subject": "HIST",
+		"number": "2112",
+		"title": "Survey of U.S. History II",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50424",
+	"fields": {
+		"subject": "FILM",
+		"number": "3280",
+		"title": "Film Genres: Science Fiction",
+		"term": "202005",
+		"section": "01",
+		"professor": "Rusnak, Stacy",
+		"enrolled": 0,
+		"available": 24,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50426",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "04",
+		"professor": "Embry, Jason",
+		"enrolled": 22,
+		"available": 0,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50427",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "07",
+		"professor": "Sepulveda, David",
+		"enrolled": 6,
+		"available": 2,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50431",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "02",
+		"professor": "Cochran-Jackson, Emmie",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50432",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "03",
+		"professor": "Sweatman, William",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50434",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2102",
+		"title": "Intro to Managerial Accounting",
+		"term": "202005",
+		"section": "01",
+		"professor": "Weisel, James",
+		"enrolled": 11,
+		"available": 29,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50436",
+	"fields": {
+		"subject": "BUSA",
+		"number": "2105",
+		"title": "Communicating in the Business",
+		"term": "202005",
+		"section": "03",
+		"professor": "Marinan, John",
+		"enrolled": 36,
+		"available": 4,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50437",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3200",
+		"title": "Global Business-INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Hartley, Phillip",
+		"enrolled": 29,
+		"available": 11,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50442",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3150",
+		"title": "Management Science",
+		"term": "202005",
+		"section": "01",
+		"professor": "Nath, Anupam",
+		"enrolled": 19,
+		"available": 21,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50443",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3150",
+		"title": "Management Science",
+		"term": "202005",
+		"section": "02",
+		"professor": "Nath, Anupam",
+		"enrolled": 0,
+		"available": 40,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50444",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4700",
+		"title": "Strategic Management Capstone",
+		"term": "202005",
+		"section": "03",
+		"professor": "Wu, Jun",
+		"enrolled": 27,
+		"available": 13,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50445",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4700",
+		"title": "Strategic Management Capstone",
+		"term": "202005",
+		"section": "02",
+		"professor": "Song, Pingping",
+		"enrolled": 6,
+		"available": 34,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50446",
+	"fields": {
+		"subject": "MKTG",
+		"number": "3050",
+		"title": "Consumer Behavior",
+		"term": "202005",
+		"section": "01",
+		"professor": "Schaller, Tracey",
+		"enrolled": 24,
+		"available": 16,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50448",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4400",
+		"title": "International Marketing-INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Torres, Luis",
+		"enrolled": 25,
+		"available": 15,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50452",
+	"fields": {
+		"subject": "CHEM",
+		"number": "3000K",
+		"title": "Analytical Chemistry w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Simmons, Rashad",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50454",
+	"fields": {
+		"subject": "PHYS",
+		"number": "1111K",
+		"title": "Introduction to Physics I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Moses, Sherita",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50462",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3310K",
+		"title": "Botany w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Caspary, Melissa",
+		"enrolled": 17,
+		"available": 7,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50464",
+	"fields": {
+		"subject": "PHED",
+		"number": "1015",
+		"title": "Beginning Tennis",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50465",
+	"fields": {
+		"subject": "PHED",
+		"number": "1015",
+		"title": "Beginning Tennis",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50469",
+	"fields": {
+		"subject": "PSYC",
+		"number": "2010",
+		"title": "Writing in Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Robbins, Michelle",
+		"enrolled": 10,
+		"available": 10,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50471",
+	"fields": {
+		"subject": "ECON",
+		"number": "2100",
+		"title": "Introduction to Economics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Matti, Joshua",
+		"enrolled": 31,
+		"available": 9,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50472",
+	"fields": {
+		"subject": "RELN",
+		"number": "1100",
+		"title": "World Religions - INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Cicura, Donatien",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50473",
+	"fields": {
+		"subject": "RELN",
+		"number": "1100",
+		"title": "World Religions - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stoltzfus, Michael",
+		"enrolled": 23,
+		"available": 5,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50474",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2101",
+		"title": "Intro to Financial Accounting",
+		"term": "202005",
+		"section": "02",
+		"professor": "McCarron, Karen",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50483",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3300",
+		"title": "American Courts and Legal Sys.",
+		"term": "202005",
+		"section": "01",
+		"professor": "Carroll, Bruce",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50484",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3030",
+		"title": "Research Methods &amp; Design - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Wright, Stephanie",
+		"enrolled": 0,
+		"available": 20,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50493",
+	"fields": {
+		"subject": "MATH",
+		"number": "2200",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Nathanson, Ekaterina",
+		"enrolled": 52,
+		"available": 4,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50494",
+	"fields": {
+		"subject": "MATH",
+		"number": "2200",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "02",
+		"professor": "Pinzon, Katherine",
+		"enrolled": 51,
+		"available": 5,
+		"capacity": 56
+	}
+}{
+	"model": "core.course",
+	"pk": "50496",
+	"fields": {
+		"subject": "PHED",
+		"number": "1060",
+		"title": "Weight Training",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50497",
+	"fields": {
+		"subject": "PHED",
+		"number": "1080",
+		"title": "Fitness for Life Walking",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 8,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50498",
+	"fields": {
+		"subject": "PHED",
+		"number": "1080",
+		"title": "Fitness for Life Walking",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 6,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50514",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3250",
+		"title": "Management of Non-Profit Org",
+		"term": "202005",
+		"section": "01",
+		"professor": "Johnson, C.",
+		"enrolled": 34,
+		"available": 6,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50523",
+	"fields": {
+		"subject": "HDAS",
+		"number": "2010",
+		"title": "Writing in Social Sciences",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kirschner, David",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50524",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "04",
+		"professor": "Cochran-Jackson, Emmie",
+		"enrolled": 21,
+		"available": 3,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50525",
+	"fields": {
+		"subject": "SOCI",
+		"number": "3201",
+		"title": "Social Inequality",
+		"term": "202005",
+		"section": "01",
+		"professor": "Brown, Marni",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50526",
+	"fields": {
+		"subject": "FILM",
+		"number": "2700",
+		"title": "Film History",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50527",
+	"fields": {
+		"subject": "FILM",
+		"number": "3020",
+		"title": "Video Production II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Balsley, Katherine",
+		"enrolled": 15,
+		"available": 5,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50528",
+	"fields": {
+		"subject": "FILM",
+		"number": "4000K",
+		"title": "Special Topics in Film: Global Cinema",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cottrel, Adam",
+		"enrolled": 9,
+		"available": 15,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50529",
+	"fields": {
+		"subject": "THEA",
+		"number": "1100",
+		"title": "Theatre Appreciation",
+		"term": "202005",
+		"section": "01",
+		"professor": "Faircloth, Jaclyn",
+		"enrolled": 25,
+		"available": 3,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50532",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3700",
+		"title": "Criminal Procedure",
+		"term": "202005",
+		"section": "01",
+		"professor": "Quinn, Susan",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50534",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4250",
+		"title": "Crime Prevention - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "White, Maryann",
+		"enrolled": 0,
+		"available": 24,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50535",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4000",
+		"title": "Special Topics: Prisoner Reentry",
+		"term": "202005",
+		"section": "02",
+		"professor": "Morris, Patrice",
+		"enrolled": 6,
+		"available": 18,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50537",
+	"fields": {
+		"subject": "CJCR",
+		"number": "2400",
+		"title": "Ethics in Criminal Justice",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gillespie, Fred",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50538",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "08",
+		"professor": "Bourland, Laura",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50539",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "12",
+		"professor": "Boykin, Scott",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50540",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "14",
+		"professor": "AZARVAN, AMIR",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50541",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "18",
+		"professor": "Gedamu, Yohannes",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50542",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "20",
+		"professor": "Gedamu, Yohannes",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50543",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "21",
+		"professor": "Young, Laura",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50544",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "22",
+		"professor": "Jones, Steven",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50545",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "23",
+		"professor": "Quinones-Reyes, Clemente",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50546",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3301",
+		"title": "Social Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Desrochers, Stephen",
+		"enrolled": 9,
+		"available": 15,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50547",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3420",
+		"title": "Health Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Friday, Jennifer",
+		"enrolled": 10,
+		"available": 14,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50548",
+	"fields": {
+		"subject": "PSYC",
+		"number": "4690",
+		"title": "Sp. Topics General Psychology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kelly, Andrew",
+		"enrolled": 9,
+		"available": 13,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50549",
+	"fields": {
+		"subject": "COMM",
+		"number": "2100",
+		"title": "Media and Society - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Williams, Danielle",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50552",
+	"fields": {
+		"subject": "MUSC",
+		"number": "3050",
+		"title": "Music Theory I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Escalante-Chernova, Irina",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50553",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gilley, Marc",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50554",
+	"fields": {
+		"subject": "MUSC",
+		"number": "3550",
+		"title": "Music Prod &amp; Sound Design",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gilley, Marc",
+		"enrolled": 14,
+		"available": 6,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50555",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2001",
+		"title": "Interm Span I - INTL - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Mora, Luis",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50582",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kelly, Alan",
+		"enrolled": 17,
+		"available": 5,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50583",
+	"fields": {
+		"subject": "ENGL",
+		"number": "3332",
+		"title": "Major Movements Am. Lit II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Bussey, Susan",
+		"enrolled": 13,
+		"available": 9,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50584",
+	"fields": {
+		"subject": "AFAM",
+		"number": "2100",
+		"title": "Intro African American Studies",
+		"term": "202005",
+		"section": "01",
+		"professor": "Lewis, Brandon",
+		"enrolled": 19,
+		"available": 3,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50585",
+	"fields": {
+		"subject": "AFAM",
+		"number": "4800",
+		"title": "Portfolio Requirement",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gibson, Ebony",
+		"enrolled": 10,
+		"available": 0,
+		"capacity": 10
+	}
+}{
+	"model": "core.course",
+	"pk": "50586",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2801",
+		"title": "Intro to Rhetorical Studies",
+		"term": "202005",
+		"section": "01",
+		"professor": "Dantzler, Perry",
+		"enrolled": 18,
+		"available": 4,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50587",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2866",
+		"title": "Intro Professions in Writing",
+		"term": "202005",
+		"section": "01",
+		"professor": "Vollaro, Daniel",
+		"enrolled": 17,
+		"available": 3,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50588",
+	"fields": {
+		"subject": "ENGL",
+		"number": "3880",
+		"title": "Writing and Digital Media",
+		"term": "202005",
+		"section": "01",
+		"professor": "Wilson-Bates, Tobias",
+		"enrolled": 13,
+		"available": 9,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50589",
+	"fields": {
+		"subject": "ENGL",
+		"number": "4201",
+		"title": "ST: History of Hip",
+		"term": "202005",
+		"section": "01",
+		"professor": "Mosser, Jason",
+		"enrolled": 12,
+		"available": 10,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50590",
+	"fields": {
+		"subject": "HDAS",
+		"number": "3010",
+		"title": "Research Methods",
+		"term": "202005",
+		"section": "01",
+		"professor": "Sweatman, William",
+		"enrolled": 21,
+		"available": 1,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50591",
+	"fields": {
+		"subject": "HDAS",
+		"number": "4000",
+		"title": "Work, Aging and Retirement",
+		"term": "202005",
+		"section": "01",
+		"professor": "Cavalier, Elizabeth",
+		"enrolled": 7,
+		"available": 17,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50592",
+	"fields": {
+		"subject": "HDAS",
+		"number": "4020",
+		"title": "Birth and Parenthood",
+		"term": "202005",
+		"section": "01",
+		"professor": "Brown, Marni",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50593",
+	"fields": {
+		"subject": "ACCT",
+		"number": "3401",
+		"title": "Accounting Analysis &amp; Modeling",
+		"term": "202005",
+		"section": "01",
+		"professor": "Weisel, James",
+		"enrolled": 16,
+		"available": 16,
+		"capacity": 32
+	}
+}{
+	"model": "core.course",
+	"pk": "50594",
+	"fields": {
+		"subject": "ACCT",
+		"number": "3102",
+		"title": "Financial Account &amp; Report II",
+		"term": "202005",
+		"section": "01",
+		"professor": "Park, Taewoo",
+		"enrolled": 28,
+		"available": 12,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50595",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2102",
+		"title": "Intro to Managerial Accounting",
+		"term": "202005",
+		"section": "03",
+		"professor": "Kooti, Ali",
+		"enrolled": 36,
+		"available": 4,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50596",
+	"fields": {
+		"subject": "ACCT",
+		"number": "2101",
+		"title": "Intro to Financial Accounting",
+		"term": "202005",
+		"section": "04",
+		"professor": "Kooti, Ali",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50597",
+	"fields": {
+		"subject": "BUSA",
+		"number": "3000",
+		"title": "Quant Analysis for Business",
+		"term": "202005",
+		"section": "03",
+		"professor": "Partridge, Mark",
+		"enrolled": 6,
+		"available": 34,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50598",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4650",
+		"title": "International Management of IT",
+		"term": "202005",
+		"section": "01",
+		"professor": "Young, Brett",
+		"enrolled": 23,
+		"available": 17,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50599",
+	"fields": {
+		"subject": "MGMT",
+		"number": "4100",
+		"title": "Organizational Behavior - INTL",
+		"term": "202005",
+		"section": "03",
+		"professor": "Huff, Kyle",
+		"enrolled": 24,
+		"available": 16,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50600",
+	"fields": {
+		"subject": "MGMT",
+		"number": "3040",
+		"title": "Human Resource Management",
+		"term": "202005",
+		"section": "03",
+		"professor": "Huff, Kyle",
+		"enrolled": 20,
+		"available": 20,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50602",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4025",
+		"title": "Marketing Research",
+		"term": "202005",
+		"section": "01",
+		"professor": "Collins, Alice",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50603",
+	"fields": {
+		"subject": "MKTG",
+		"number": "3000",
+		"title": "Principles of Marketing - INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Collins, Alice",
+		"enrolled": 39,
+		"available": 1,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50605",
+	"fields": {
+		"subject": "ECON",
+		"number": "2106",
+		"title": "Principles of Microeconomics",
+		"term": "202005",
+		"section": "04",
+		"professor": "Stephenson, Andrew",
+		"enrolled": 40,
+		"available": 0,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50606",
+	"fields": {
+		"subject": "ECON",
+		"number": "2106",
+		"title": "Principles of Microeconomics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stephenson, Andrew",
+		"enrolled": 35,
+		"available": 5,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50607",
+	"fields": {
+		"subject": "ECON",
+		"number": "2105",
+		"title": "Principles of Macroeconomics",
+		"term": "202005",
+		"section": "03",
+		"professor": "Matti, Joshua",
+		"enrolled": 30,
+		"available": 10,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50608",
+	"fields": {
+		"subject": "MKTG",
+		"number": "4100",
+		"title": "Marketing Management",
+		"term": "202005",
+		"section": "01",
+		"professor": "Sleep, Stefan",
+		"enrolled": 17,
+		"available": 23,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50609",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3510",
+		"title": "Child Development",
+		"term": "202005",
+		"section": "01",
+		"professor": "Bramstedt, Brian",
+		"enrolled": 0,
+		"available": 22,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50610",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3520",
+		"title": "Adolescence",
+		"term": "202005",
+		"section": "01",
+		"professor": "Bramstedt, Brian",
+		"enrolled": 0,
+		"available": 22,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50611",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3210",
+		"title": "Organized Crime - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gillespie, Fred",
+		"enrolled": 7,
+		"available": 17,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50612",
+	"fields": {
+		"subject": "HIST",
+		"number": "1112",
+		"title": "Survey of World History II",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50613",
+	"fields": {
+		"subject": "HIST",
+		"number": "3112",
+		"title": "Revolutionary America",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 16,
+		"available": 6,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50614",
+	"fields": {
+		"subject": "HIST",
+		"number": "3310",
+		"title": "Greece and Ancient Near East",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 17,
+		"available": 5,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50615",
+	"fields": {
+		"subject": "HIST",
+		"number": "3540",
+		"title": "History of China and Japan",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 11,
+		"available": 11,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50616",
+	"fields": {
+		"subject": "HIST",
+		"number": "3225",
+		"title": "US Social &amp; Cultural History",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 9,
+		"available": 15,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50617",
+	"fields": {
+		"subject": "RELN",
+		"number": "4700",
+		"title": "Special Topics in Religion: Mediation and Transformation",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stoltzfus, Michael",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50619",
+	"fields": {
+		"subject": "CJCR",
+		"number": "4410",
+		"title": "Police &amp; The Community -Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "de Guzman, Melchor",
+		"enrolled": 15,
+		"available": 13,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50620",
+	"fields": {
+		"subject": "ACCT",
+		"number": "4103",
+		"title": "Auditing",
+		"term": "202005",
+		"section": "01",
+		"professor": "McCarron, Karen",
+		"enrolled": 31,
+		"available": 9,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50621",
+	"fields": {
+		"subject": "ENGL",
+		"number": "4000",
+		"title": "Engl Exper/Service Lrning",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 18,
+		"available": 0,
+		"capacity": 18
+	}
+}{
+	"model": "core.course",
+	"pk": "50622",
+	"fields": {
+		"subject": "ENGL",
+		"number": "4850",
+		"title": "Senior Seminar",
+		"term": "202005",
+		"section": "01",
+		"professor": "Kelly, Alan",
+		"enrolled": 10,
+		"available": 5,
+		"capacity": 15
+	}
+}{
+	"model": "core.course",
+	"pk": "50628",
+	"fields": {
+		"subject": "ITEC",
+		"number": "2140",
+		"title": "Programming Fundamentals - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Heinz, Adrian",
+		"enrolled": 39,
+		"available": 9,
+		"capacity": 48
+	}
+}{
+	"model": "core.course",
+	"pk": "50629",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3200",
+		"title": "Intro to Databases",
+		"term": "202005",
+		"section": "01",
+		"professor": "Dekhane, Sonal",
+		"enrolled": 18,
+		"available": 10,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50630",
+	"fields": {
+		"subject": "ITEC",
+		"number": "4550",
+		"title": "Mobile Application Development",
+		"term": "202005",
+		"section": "01",
+		"professor": "Lutz, Robert",
+		"enrolled": 24,
+		"available": 4,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50631",
+	"fields": {
+		"subject": "ITEC",
+		"number": "3350",
+		"title": "Digital Commerce",
+		"term": "202005",
+		"section": "01",
+		"professor": "Lawson, Victor",
+		"enrolled": 17,
+		"available": 11,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50632",
+	"fields": {
+		"subject": "ARTS",
+		"number": "1100",
+		"title": "Art Appreciation",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 3,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50633",
+	"fields": {
+		"subject": "ARTS",
+		"number": "1100",
+		"title": "Art Appreciation",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 1,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50634",
+	"fields": {
+		"subject": "ARTS",
+		"number": "1100",
+		"title": "Art Appreciation",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50635",
+	"fields": {
+		"subject": "COMM",
+		"number": "1100",
+		"title": "Human Communications",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 3,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50636",
+	"fields": {
+		"subject": "COMM",
+		"number": "1100",
+		"title": "Human Communications",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50637",
+	"fields": {
+		"subject": "COMM",
+		"number": "1100",
+		"title": "Human Communications",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50638",
+	"fields": {
+		"subject": "COMM",
+		"number": "1100",
+		"title": "Human Communications",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50639",
+	"fields": {
+		"subject": "COMM",
+		"number": "1100",
+		"title": "Human Communications",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50640",
+	"fields": {
+		"subject": "ECON",
+		"number": "2105",
+		"title": "Principles of Macroeconomics",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 3,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50641",
+	"fields": {
+		"subject": "ECON",
+		"number": "2105",
+		"title": "Principles of Macroeconomics",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50642",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50643",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50644",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50645",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50646",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1101",
+		"title": "English Composition I",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50647",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50648",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50649",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50650",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50651",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50652",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1KG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50653",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1MG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50654",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1OG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50655",
+	"fields": {
+		"subject": "ENGL",
+		"number": "1102",
+		"title": "English Composition II",
+		"term": "202005",
+		"section": "1QG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50656",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 3,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50657",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50658",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50659",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50660",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2111",
+		"title": "World Literature I",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50661",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2112",
+		"title": "World Literature II",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50662",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2112",
+		"title": "World Literature II",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50663",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2131",
+		"title": "American Literature I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50664",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2131",
+		"title": "American Literature I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 2,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50665",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2132",
+		"title": "American Literature II",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50666",
+	"fields": {
+		"subject": "ENGL",
+		"number": "2132",
+		"title": "American Literature II",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50667",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 6,
+		"capacity": 6
+	}
+}{
+	"model": "core.course",
+	"pk": "50668",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 1,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50669",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50670",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50671",
+	"fields": {
+		"subject": "HIST",
+		"number": "1111",
+		"title": "Survey of World History I",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 3,
+		"capacity": 5
+	}
+}{
+	"model": "core.course",
+	"pk": "50672",
+	"fields": {
+		"subject": "HIST",
+		"number": "1112",
+		"title": "Survey of World History II",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50673",
+	"fields": {
+		"subject": "HIST",
+		"number": "1112",
+		"title": "Survey of World History II",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50674",
+	"fields": {
+		"subject": "HIST",
+		"number": "1112",
+		"title": "Survey of World History II",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50675",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 1,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50676",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 2,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50677",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 1,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50678",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50679",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50680",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1KG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50681",
+	"fields": {
+		"subject": "HIST",
+		"number": "2111",
+		"title": "Survey of U.S. History I",
+		"term": "202005",
+		"section": "1MG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50682",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50684",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50685",
+	"fields": {
+		"subject": "MATH",
+		"number": "1111",
+		"title": "College Algebra",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50686",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 2,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50687",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50688",
+	"fields": {
+		"subject": "MATH",
+		"number": "1113",
+		"title": "Precalculus",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50689",
+	"fields": {
+		"subject": "MATH",
+		"number": "1401",
+		"title": "Introduction to Statistics",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50690",
+	"fields": {
+		"subject": "MATH",
+		"number": "1401",
+		"title": "Introduction to Statistics",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 2,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50691",
+	"fields": {
+		"subject": "MATH",
+		"number": "1401",
+		"title": "Introduction to Statistics",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50692",
+	"fields": {
+		"subject": "MATH",
+		"number": "1401",
+		"title": "Introduction to Statistics",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50693",
+	"fields": {
+		"subject": "MATH",
+		"number": "1501",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 3,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50694",
+	"fields": {
+		"subject": "MATH",
+		"number": "1501",
+		"title": "Calculus I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50695",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50696",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50697",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50698",
+	"fields": {
+		"subject": "PHIL",
+		"number": "2010",
+		"title": "Introduction to Philosophy",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50699",
+	"fields": {
+		"subject": "PHIL",
+		"number": "2010",
+		"title": "Introduction to Philosophy",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50700",
+	"fields": {
+		"subject": "PHIL",
+		"number": "2010",
+		"title": "Introduction to Philosophy",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50701",
+	"fields": {
+		"subject": "PHIL",
+		"number": "2010",
+		"title": "Introduction to Philosophy",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50702",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50703",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 2,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50704",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50705",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50706",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50707",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1KG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50708",
+	"fields": {
+		"subject": "POLS",
+		"number": "1101",
+		"title": "American Government",
+		"term": "202005",
+		"section": "1MG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50709",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1101",
+		"title": "Intro to General Psychology",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 4,
+		"capacity": 5
+	}
+}{
+	"model": "core.course",
+	"pk": "50710",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1101",
+		"title": "Intro to General Psychology",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50711",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1101",
+		"title": "Intro to General Psychology",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50712",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1101",
+		"title": "Intro to General Psychology",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50713",
+	"fields": {
+		"subject": "PSYC",
+		"number": "1101",
+		"title": "Intro to General Psychology",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50714",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 3,
+		"capacity": 4
+	}
+}{
+	"model": "core.course",
+	"pk": "50715",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50716",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "1EG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50717",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "1GG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 0,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50718",
+	"fields": {
+		"subject": "SOCI",
+		"number": "1101",
+		"title": "Introduction to Sociology",
+		"term": "202005",
+		"section": "1IG",
+		"professor": "TBA",
+		"enrolled": 2,
+		"available": 1,
+		"capacity": 3
+	}
+}{
+	"model": "core.course",
+	"pk": "50719",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2001",
+		"title": "Intermediate Spanish I",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50720",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2001",
+		"title": "Intermediate Spanish I",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50721",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2002",
+		"title": "Intermediate Spanish II",
+		"term": "202005",
+		"section": "1AG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50722",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2002",
+		"title": "Intermediate Spanish II",
+		"term": "202005",
+		"section": "1CG",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50725",
+	"fields": {
+		"subject": "SCM",
+		"number": "4751",
+		"title": "Intern Sup Chain Mgmt-Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gordon, Jason",
+		"enrolled": 7,
+		"available": 1,
+		"capacity": 8
+	}
+}{
+	"model": "core.course",
+	"pk": "50726",
+	"fields": {
+		"subject": "POLS",
+		"number": "3700",
+		"title": "Intro to Paralegal Studies",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 4,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50727",
+	"fields": {
+		"subject": "EXSC",
+		"number": "4700",
+		"title": "Internship in Exercise Science",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50728",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3500K",
+		"title": "Ecology w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Sakaris, Peter",
+		"enrolled": 6,
+		"available": 18,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50729",
+	"fields": {
+		"subject": "CJCR",
+		"number": "3810",
+		"title": "Juvenile Justice - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Morris, Patrice",
+		"enrolled": 0,
+		"available": 28,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50731",
+	"fields": {
+		"subject": "USGG",
+		"number": "4024",
+		"title": "Death on Iberian Peninsula",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 7,
+		"available": 0,
+		"capacity": 7
+	}
+}{
+	"model": "core.course",
+	"pk": "50732",
+	"fields": {
+		"subject": "ANTH",
+		"number": "4900",
+		"title": "Sp. Topic:  Death on the Iberian Peninsual USG Global Madrid",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50733",
+	"fields": {
+		"subject": "USGG",
+		"number": "3030",
+		"title": "Immigration/Assimilation Spain",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50734",
+	"fields": {
+		"subject": "SOCI",
+		"number": "3050",
+		"title": "Race/Ethnicity St Brd. Madrid",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50735",
+	"fields": {
+		"subject": "USGG",
+		"number": "3009",
+		"title": "Spanish Conversation",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 5,
+		"available": 0,
+		"capacity": 5
+	}
+}{
+	"model": "core.course",
+	"pk": "50736",
+	"fields": {
+		"subject": "SPAN",
+		"number": "3010",
+		"title": "Span Conver St Abr Madrid",
+		"term": "202005",
+		"section": "05",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50737",
+	"fields": {
+		"subject": "MUSC",
+		"number": "1100",
+		"title": "Music Appreciation - INTL",
+		"term": "202005",
+		"section": "02",
+		"professor": "Gilley, Marc",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50738",
+	"fields": {
+		"subject": "EXSC",
+		"number": "4200",
+		"title": "Epidemiology &amp; Physical Act.",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 12,
+		"available": 16,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50739",
+	"fields": {
+		"subject": "PHED",
+		"number": "1025",
+		"title": "Power Stretch",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 5,
+		"available": 19,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50740",
+	"fields": {
+		"subject": "PHED",
+		"number": "1025",
+		"title": "Power Stretch",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50741",
+	"fields": {
+		"subject": "PHED",
+		"number": "1050",
+		"title": "Body Sculpting and Core",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50742",
+	"fields": {
+		"subject": "PHED",
+		"number": "1050",
+		"title": "Body Sculpting and Core",
+		"term": "202005",
+		"section": "03",
+		"professor": "TBA",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50743",
+	"fields": {
+		"subject": "PHED",
+		"number": "1050",
+		"title": "Body Sculpting and Core",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 11,
+		"available": 13,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50744",
+	"fields": {
+		"subject": "PHED",
+		"number": "1090",
+		"title": "Cardio Kickboxing",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50745",
+	"fields": {
+		"subject": "PHED",
+		"number": "1090",
+		"title": "Cardio Kickboxing",
+		"term": "202005",
+		"section": "04",
+		"professor": "TBA",
+		"enrolled": 19,
+		"available": 5,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50746",
+	"fields": {
+		"subject": "PHED",
+		"number": "1090",
+		"title": "Cardio Kickboxing",
+		"term": "202005",
+		"section": "06",
+		"professor": "TBA",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50747",
+	"fields": {
+		"subject": "PHED",
+		"number": "1090",
+		"title": "Cardio Kickboxing",
+		"term": "202005",
+		"section": "07",
+		"professor": "TBA",
+		"enrolled": 13,
+		"available": 11,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50749",
+	"fields": {
+		"subject": "FINA",
+		"number": "3000",
+		"title": "Financial Management I",
+		"term": "202005",
+		"section": "03",
+		"professor": "Guo, Rong",
+		"enrolled": 23,
+		"available": 17,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50750",
+	"fields": {
+		"subject": "FINA",
+		"number": "4103",
+		"title": "Investment Analysis",
+		"term": "202005",
+		"section": "01",
+		"professor": "Guo, Rong",
+		"enrolled": 37,
+		"available": 3,
+		"capacity": 40
+	}
+}{
+	"model": "core.course",
+	"pk": "50751",
+	"fields": {
+		"subject": "FILM",
+		"number": "2100",
+		"title": "Acting for the Screen",
+		"term": "202005",
+		"section": "01",
+		"professor": "Faircloth, Jaclyn",
+		"enrolled": 22,
+		"available": 2,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50753",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - Pinewood Location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50754",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - Pinewood Location",
+		"term": "202005",
+		"section": "2",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50755",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - OFS Location",
+		"term": "202005",
+		"section": "4",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50756",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - OFS Location",
+		"term": "202005",
+		"section": "5",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50757",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - OFS Location",
+		"term": "202005",
+		"section": "6",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50758",
+	"fields": {
+		"subject": "GFA",
+		"number": "1000",
+		"title": "Intro On-Set Film Production - OFS Location",
+		"term": "202005",
+		"section": "7",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50759",
+	"fields": {
+		"subject": "GFA",
+		"number": "2010",
+		"title": "Set Construction/Scenic Plan - Pinewood Location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50760",
+	"fields": {
+		"subject": "GFA",
+		"number": "2010",
+		"title": "Set Construction/Scenic Plan - OFS Location",
+		"term": "202005",
+		"section": "2",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50761",
+	"fields": {
+		"subject": "GFA",
+		"number": "2020",
+		"title": "GFA Electric &amp; Lighting - Pinewood Location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50762",
+	"fields": {
+		"subject": "GFA",
+		"number": "2020",
+		"title": "GFA Electric &amp; Lighting - OFS location",
+		"term": "202005",
+		"section": "2",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 1,
+		"capacity": 2
+	}
+}{
+	"model": "core.course",
+	"pk": "50763",
+	"fields": {
+		"subject": "GFA",
+		"number": "2030",
+		"title": "GFA Grip &amp; Rigging - Pinewood location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50764",
+	"fields": {
+		"subject": "GFA",
+		"number": "2030",
+		"title": "GFA Grip &amp; Rigging - OFS Location",
+		"term": "202005",
+		"section": "2",
+		"professor": "TBA",
+		"enrolled": 1,
+		"available": 0,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50765",
+	"fields": {
+		"subject": "GFA",
+		"number": "2040",
+		"title": "Post Prod:Film/TV Avid Edit. - Pinewood Location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50766",
+	"fields": {
+		"subject": "GFA",
+		"number": "2040",
+		"title": "Post Prod:Film/TV Avid Edit. - Pinewood Location",
+		"term": "202005",
+		"section": "2",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 0,
+		"capacity": 0
+	}
+}{
+	"model": "core.course",
+	"pk": "50767",
+	"fields": {
+		"subject": "GFA",
+		"number": "2050",
+		"title": "Intro Special Makeup Effects - Pinewood Location",
+		"term": "202005",
+		"section": "1",
+		"professor": "TBA",
+		"enrolled": 0,
+		"available": 1,
+		"capacity": 1
+	}
+}{
+	"model": "core.course",
+	"pk": "50768",
+	"fields": {
+		"subject": "HIST",
+		"number": "2550",
+		"title": "Intro to the Atlantic World",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 13,
+		"available": 9,
+		"capacity": 22
+	}
+}{
+	"model": "core.course",
+	"pk": "50769",
+	"fields": {
+		"subject": "FILM",
+		"number": "3480",
+		"title": "Art of Cinematography",
+		"term": "202005",
+		"section": "01",
+		"professor": "Rusnak, Stacy",
+		"enrolled": 4,
+		"available": 20,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50770",
+	"fields": {
+		"subject": "PSYC",
+		"number": "3210",
+		"title": "Introduction to Neuroscience - Hybrid",
+		"term": "202005",
+		"section": "02",
+		"professor": "Schmolesky, Matthew",
+		"enrolled": 18,
+		"available": 6,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50771",
+	"fields": {
+		"subject": "ARTS",
+		"number": "2020",
+		"title": "Two-Dimensional Design",
+		"term": "202005",
+		"section": "01",
+		"professor": "Stone Collins, Alice",
+		"enrolled": 12,
+		"available": 4,
+		"capacity": 16
+	}
+}{
+	"model": "core.course",
+	"pk": "50772",
+	"fields": {
+		"subject": "BIOL",
+		"number": "4100",
+		"title": "Advanced Special Topics: Animal Behavior",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50773",
+	"fields": {
+		"subject": "BIOL",
+		"number": "4700",
+		"title": "Interdisc Appl of Biol",
+		"term": "202005",
+		"section": "01",
+		"professor": "Caspary, Melissa",
+		"enrolled": 12,
+		"available": 12,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50774",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3050",
+		"title": "Tropical Biology - INTL",
+		"term": "202005",
+		"section": "01",
+		"professor": "Harrison, Elizabeth",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50775",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3055",
+		"title": "Natural History of Africa",
+		"term": "202005",
+		"section": "01",
+		"professor": "Schlueter, Mark",
+		"enrolled": 14,
+		"available": 10,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50776",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3450",
+		"title": "Conservation Biology",
+		"term": "202005",
+		"section": "01",
+		"professor": "Harrison, Elizabeth",
+		"enrolled": 16,
+		"available": 8,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50777",
+	"fields": {
+		"subject": "BIOL",
+		"number": "3600K",
+		"title": "Zoology w/Lab",
+		"term": "202005",
+		"section": "01",
+		"professor": "Schlueter, Mark",
+		"enrolled": 8,
+		"available": 16,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50778",
+	"fields": {
+		"subject": "MATH",
+		"number": "2000",
+		"title": "Statistics",
+		"term": "202005",
+		"section": "10",
+		"professor": "Gyurov, Boyko",
+		"enrolled": 24,
+		"available": 0,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50779",
+	"fields": {
+		"subject": "MATH",
+		"number": "2200",
+		"title": "Calculus I - Hybrid",
+		"term": "202005",
+		"section": "09",
+		"professor": "Gyurov, Boyko",
+		"enrolled": 23,
+		"available": 1,
+		"capacity": 24
+	}
+}{
+	"model": "core.course",
+	"pk": "50780",
+	"fields": {
+		"subject": "MATH",
+		"number": "3000",
+		"title": "Applied Statistics",
+		"term": "202005",
+		"section": "01",
+		"professor": "Gyurov, Boyko",
+		"enrolled": 20,
+		"available": 0,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50781",
+	"fields": {
+		"subject": "PHED",
+		"number": "1130",
+		"title": "Basics of Hiking",
+		"term": "202005",
+		"section": "01",
+		"professor": "TBA",
+		"enrolled": 18,
+		"available": 2,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50783",
+	"fields": {
+		"subject": "PHED",
+		"number": "1130",
+		"title": "Basics of Hiking",
+		"term": "202005",
+		"section": "02",
+		"professor": "TBA",
+		"enrolled": 10,
+		"available": 10,
+		"capacity": 20
+	}
+}{
+	"model": "core.course",
+	"pk": "50784",
+	"fields": {
+		"subject": "MATH",
+		"number": "2450",
+		"title": "Linear Algebra",
+		"term": "202005",
+		"section": "01",
+		"professor": "Uko, Livinus",
+		"enrolled": 26,
+		"available": 2,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50786",
+	"fields": {
+		"subject": "SPAN",
+		"number": "3010",
+		"title": "Span Convers &amp; Composi-INTL- Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Goldoni, Federica",
+		"enrolled": 28,
+		"available": 0,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50788",
+	"fields": {
+		"subject": "SPAN",
+		"number": "2002",
+		"title": "Intermediate Spanish II INTL - Hybrid",
+		"term": "202005",
+		"section": "01",
+		"professor": "Goldoni, Federica",
+		"enrolled": 27,
+		"available": 1,
+		"capacity": 28
+	}
+}{
+	"model": "core.course",
+	"pk": "50789",
+	"fields": {
+		"subject": "FILM",
+		"number": "3280",
+		"title": "Film Genres: Science Fiction",
+		"term": "202005",
+		"section": "02",
+		"professor": "Rusnak, Stacy",
+		"enrolled": 20,
+		"available": 4,
+		"capacity": 24
+	}
+}
+]
