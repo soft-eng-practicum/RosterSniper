@@ -141,7 +141,7 @@ def unsubscribe(request, unsubType, unsubID):
     unsubscribe request. Because there are 2^122 different version 4 UUIDs it is
     unlikely that someone would guess a correct one or even want to.
     '''
-        
+
     try:
         if unsubType == 'favorite':
             unsubObject = Favorite.objects.get(emailUnsubID=unsubID)
