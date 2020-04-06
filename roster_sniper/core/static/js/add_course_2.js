@@ -33,7 +33,7 @@ function update_courses() {
 		response => { 
 			$('#course_rows').html(response['course_rows']);
 			$('table').trigger('update');
-			$('#course_rows td span.fa-heart').on('click', favorite);
+			$('#course_rows td span.fa-star').on('click', favorite);
 		}
 	)
 }

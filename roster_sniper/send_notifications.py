@@ -47,10 +47,10 @@ def is_newly_available(course):
         raise ParseException(f"[CRN: {favorite.course.CRN}-{favorite.course.term}] Error parsing updated enrollment info!")
 
     # Check to see if the new availability matches the old
-    actual = capacity - available
+    enrolled = capacity - available
     if available != course.available:
         # No match, so update the old course info
-        course.actual = actual
+        course.enrolled = enrolled
         course.capacity = capacity
         course.available = available
         # mixing requests with saving doesn't work in dev mode

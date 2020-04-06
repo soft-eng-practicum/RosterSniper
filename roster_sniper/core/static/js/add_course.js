@@ -45,7 +45,7 @@ function update_courses(btn='') {
 		response => { 
 			if (response['more']) $('#morebtns').show();
 			else $('#morebtns').hide();
-			$('#course_rows td span.fa-heart').on('click', favorite);
+			$('#course_rows td span.fa-star').on('click', favorite);
 		}
 	)
 }

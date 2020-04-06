@@ -29,23 +29,26 @@ for c in classes:
             crn = c['faculty'][0]['courseReferenceNumber']
         except:
             crn = c['meetingsFaculty'][0]['courseReferenceNumber']
+
+        subject = c['subject']
+        number = c['courseNumber']
         title = c['courseTitle']
+
+        term = c['term']
+        section = c['sequenceNumber']
         try:
             professor = c['faculty'][0]['displayName']
         except:
             professor = "TBA"
             print("[{}] Failed to find a professor".format(c['id']))
-        subject = c['subject']
-        number = c['courseNumber']
-        section = c['sequenceNumber']
-        actual = c['seatsAvailable']
-        capacity = c['enrollment'] + actual
+
+        enrolled = c['seatsAvailable']
         available = c['enrollment']
-        term = c['term']
+        capacity = enrolled + available
 
         # Add it to the database hopefully
         try:
-            Course.objects.create(CRN=crn, title=title, professor=professor, subject=subject, number=number, section=section, actual=actual, capacity=capacity, available=available, term=term)
+            Course.objects.create(CRN=crn, subject=subject, number=number, title=title, term=term, section=section, professor=professor, enrolled=enrolled, available=available, capacity=capacity)
             print("[{}] Successfully added {}{}!".format(c['id'], subject, number))
         except Exception as e:
             print(f"[{c['id']}] Failed to add to database: {e}")

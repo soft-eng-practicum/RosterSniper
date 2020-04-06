@@ -4,7 +4,7 @@
 	<td>{{ course.subject }}-{{ course.number }} {{ course.section }}</td>
 	<td>{{ course.title }}</td>
 	<td>{{ course.professor }}</td>
-	<td>{{ course.actual }}/{{ course.capacity }}</td>
+	<td>{{ course.capacity }}</td>
 	<td><span id={{ CRN }} class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-heart mypointer"></span></td>
 </tr>
 {% endwith %}{% endfor %}{% endif %}
