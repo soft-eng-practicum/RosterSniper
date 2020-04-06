@@ -14,4 +14,7 @@ migrations/
 !migrations/__init__.py
 
 # User uploaded media is not usually tracked
-**/media/profile_pics/*.jpg
+**/media/profile_pics/*
+
+# Keep any folder with a .keep file
+!.keep
