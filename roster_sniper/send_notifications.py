@@ -34,8 +34,8 @@ def is_newly_available(course):
     if course.available > 0:
         return False
     
-    # Get the latest availability information
-    res = requests.get(AVAIL_URL.format(crn=course.CRN, term=course.term))
+    # Try to get the latest availability information
+    res = requests.get(AVAIL_URL.format(crn=course.CRN, term=course.term), timeout=5)
     
     try:
         # Because yay no json
@@ -54,7 +54,7 @@ def is_newly_available(course):
         course.capacity = capacity
         course.available = available
         # mixing requests with saving doesn't work in dev mode
-        #course.save()
+        course.save()
 
         # Cache the result
         crn_cache[favorite.course.CRN] = True
@@ -91,6 +91,9 @@ for favorite in Favorite.objects.filter(emailNotify=True):
     except ParseException as e:
         print(e)
         # send_email()
+    except Exception as e:
+        print(e)
+        # send_email()
     
     if should_notify:
         print("[{}] {}: {}-{} is newly available!".format(
@@ -100,4 +103,4 @@ for favorite in Favorite.objects.filter(emailNotify=True):
             favorite.course.section
         ))
         send_notification(favorite)
-        time.sleep(2)
+        time.sleep(5)
