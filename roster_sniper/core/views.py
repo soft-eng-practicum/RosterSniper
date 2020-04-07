@@ -56,7 +56,7 @@ def add_course(request):
         }, safe=False)
 
     else:
-        return render(request, 'add_course.html', {'hide_sidebar': True})
+        return render(request, 'add_course.html')
 
 
 def add_course_2(request):
@@ -76,7 +76,7 @@ def add_course_2(request):
         }, safe=False)
 
     else:
-        return render(request, 'add_course_2.html', {'hide_sidebar': True})
+        return render(request, 'add_course_2.html')
 
 
 def base_search(request):
@@ -128,7 +128,6 @@ def my_courses(request):
 
     else:
         return render(request, 'my_courses.html', {
-            'hide_sidebar': True,
             'favorites': request.user.favorite_set.all()
         })
 
