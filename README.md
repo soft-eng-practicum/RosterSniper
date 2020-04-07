@@ -14,7 +14,7 @@ Here is the Add Course page:
 
 <img src="roster_sniper/media/readme/add-course.png" width="600">
 
-and here is My Courses page:
+and here is the My Courses page:
 
 <img src="roster_sniper/media/readme/my-courses.png" width="600">
 
