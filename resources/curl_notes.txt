@@ -1,0 +1,3 @@
+curl --data "term=202008" --cookie-jar c.txt "https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/term/search?mode=search"
+
+curl --cookie c.txt "https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_subject=ITEC&txt_term=202008&pageOffset=0&pageMaxSize=10"
