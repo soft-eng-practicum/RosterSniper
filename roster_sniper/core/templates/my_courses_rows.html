@@ -3,8 +3,8 @@
 	<td>{{ course.subject }}-{{ course.number }} {{ course.section }}</td>
 	<td>{{ course.title }}</td>
 	<td>{{ course.professor }}</td>
-	<td>{{ course.actual }}/{{ course.capacity }}</td>
+	<td>{{ course.enrolled }}/{{ course.capacity }}</td>
 	<td><span data-type="email" title="Emails?" class="{% if favorite.emailNotify %}fas{% else %}far{% endif %} fa-envelope-open mypointer"></span></td>
-	<td><span data-type="favorite" title="Untrack?" class="fas fa-heart mypointer"></span></td>
+	<td><span data-type="favorite" title="Untrack?" class="fas fa-star mypointer"></span></td>
 </tr>
 {% endwith %}{% endfor %}

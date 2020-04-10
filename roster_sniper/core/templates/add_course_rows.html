@@ -5,6 +5,6 @@
 	<td>{{ course.title }}</td>
 	<td>{{ course.professor }}</td>
 	<td>{{ course.capacity }}</td>
-	<td><span id={{ CRN }} class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-heart mypointer"></span></td>
+	<td><span id={{ CRN }} title="Track?" class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-star mypointer"></span></td>
 </tr>
 {% endwith %}{% endfor %}{% endif %}
