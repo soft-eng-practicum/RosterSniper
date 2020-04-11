@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'roster_sniper.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'roster_sniper.settings.' + os.environ.get('DJANGO_ENVIRONMENT', 'production'))
 
 application = get_asgi_application()

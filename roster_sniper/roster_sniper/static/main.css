@@ -1,0 +1,48 @@
+body {
+	background: #fafafa;
+	color: #333333;
+	padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #444444;
+}
+
+.myheader .navbar-nav .nav-link {
+	color: #cbd5db;
+}
+
+.myheader .navbar-nav .nav-link:hover {
+	color: #ffffff;
+}
+
+.myheader .navbar-nav .nav-link.active {
+	font-weight: 500;
+}
+
+.mycontainer {
+	background: #ffffff;
+	padding: 10px 20px;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.myactimg {
+	height: 125px;
+	width: 125px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+.mypointer:hover {
+	cursor: pointer;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: #00704A;
+  border-color: #00704A;
+} 
