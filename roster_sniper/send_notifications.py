@@ -23,6 +23,13 @@ crn_cache = dict()
 # Class for regex parsing mishaps
 class ParseException(Exception): pass
 
+# debug function
+DEBUG = bool(os.environ.get('DEBUG'))
+def debug(*args):
+    if DEBUG:
+        print('[DEBUG] ', end="")
+        print(*args)
+
 # Function for checking if a course's availability has become available
 def is_newly_available(course):
     # If the result is cached, simply return that
@@ -40,6 +47,7 @@ def is_newly_available(course):
     try:
         # Because yay no json
         available, capacity = re.findall('<span dir="ltr"> (.*?) </span>', res.text)
+        debug("CRN: {} | Available: {} | Capacity: {}".format(course.CRN, available, capacity))
         available = int(available)
         capacity = int(capacity)
     except ValueError as e:
@@ -47,10 +55,10 @@ def is_newly_available(course):
         raise ParseException(f"[CRN: {favorite.course.CRN}-{favorite.course.term}] Error parsing updated enrollment info!")
 
     # Check to see if the new availability matches the old
-    actual = capacity - available
+    enrolled = capacity - available
     if available != course.available:
         # No match, so update the old course info
-        course.actual = actual
+        course.enrolled = enrolled
         course.capacity = capacity
         course.available = available
         # mixing requests with saving doesn't work in dev mode
@@ -64,6 +72,7 @@ def is_newly_available(course):
         return False
 
 def send_notification(favorite):
+    debug(f'Sending notification for "{favorite}"')
     context = {
         'name': favorite.user.username,
         'title': favorite.course.title,
@@ -85,6 +94,7 @@ def send_notification(favorite):
 # Loop over the list of enabled favorites
 for favorite in Favorite.objects.filter(emailNotify=True):
     should_notify = False
+    debug(f'Checking "{favorite}: {favorite.course.CRN}"')
     
     try:
         should_notify = is_newly_available(favorite.course)
@@ -93,7 +103,6 @@ for favorite in Favorite.objects.filter(emailNotify=True):
         # send_email()
     except Exception as e:
         print(e)
-        
     
     if should_notify:
         print("[{}] {}: {}-{} is newly available!".format(
@@ -103,4 +112,3 @@ for favorite in Favorite.objects.filter(emailNotify=True):
             favorite.course.section
         ))
         send_notification(favorite)
-        time.sleep(5)
