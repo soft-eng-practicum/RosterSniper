@@ -15,7 +15,7 @@ else:
     sys.exit(1)
 
 # Set up django
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'production'))
 django.setup()
 
 # Load the Course module to add items to database *after* django has been set up

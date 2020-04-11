@@ -10,7 +10,7 @@ import requests
 import django
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'production'))
 django.setup()
 from core.models import Favorite, Course
 
@@ -47,10 +47,10 @@ def is_newly_available(course):
         raise ParseException(f"[CRN: {favorite.course.CRN}-{favorite.course.term}] Error parsing updated enrollment info!")
 
     # Check to see if the new availability matches the old
-    enrolled = capacity - available
+    actual = capacity - available
     if available != course.available:
         # No match, so update the old course info
-        course.enrolled = enrolled
+        course.actual = actual
         course.capacity = capacity
         course.available = available
         # mixing requests with saving doesn't work in dev mode
@@ -93,7 +93,7 @@ for favorite in Favorite.objects.filter(emailNotify=True):
         # send_email()
     except Exception as e:
         print(e)
-        # send_email()
+        
     
     if should_notify:
         print("[{}] {}: {}-{} is newly available!".format(
