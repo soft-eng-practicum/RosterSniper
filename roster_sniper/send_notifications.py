@@ -74,7 +74,7 @@ def is_newly_available(course):
 def send_notification(favorite):
     debug(f'Sending notification for "{favorite}"')
     context = {
-        'name': favorite.user.username,
+        'name': favorite.user.first_name or favorite.user.username,
         'title': favorite.course.title,
         'professor': favorite.course.professor,
         'crn': favorite.course.CRN
