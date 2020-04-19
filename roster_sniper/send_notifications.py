@@ -73,11 +73,15 @@ def is_newly_available(course):
 
 def send_notification(favorite):
     debug(f'Sending notification for "{favorite}"')
+    # http://{{ hostname }}/unsubscribe/favorite/{{ un_fav }}
     context = {
         'name': favorite.user.first_name or favorite.user.username,
         'title': favorite.course.title,
         'professor': favorite.course.professor,
-        'crn': favorite.course.CRN
+        'crn': favorite.course.CRN,
+        'hostname': 'rsniper.shitchell.com',
+        'un_fav': str(favorite.emailUnsubID),
+        'un_all': str(favorite.user.profile.emailUnsubID)
     }
     email_text = get_template('email.txt')
     email_html = get_template('email.html')
