@@ -23,6 +23,10 @@ class Course(models.Model):
 	section = models.CharField(max_length=3)
 	professor = models.CharField(max_length=50)
 
+	days = models.CharField(max_length=6)
+	start_time = models.TimeField()
+	end_time = models.TimeField()
+
 	enrolled  = models.SmallIntegerField() # Number of students enrolled
 	available = models.SmallIntegerField() # Number of available seats
 	capacity  = models.SmallIntegerField() # Total number of seats

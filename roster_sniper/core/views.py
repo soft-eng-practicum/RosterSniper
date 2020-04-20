@@ -36,7 +36,29 @@ def add_course(request):
 
     if request.is_ajax():
 
-        courses = base_search(request)
+        courses = Course.objects.all()
+
+        if crn := request.GET.get('crn'):
+            courses = courses.filter(CRN__contains=crn)
+
+        if code := request.GET.get('code'):
+            # stackoverflow.com/a/36224347
+            courses = courses.annotate(
+                code=Concat('subject', V('-'), 'number', V(' '), 'section')
+            ).filter(
+                code__icontains=code
+            )
+
+        if title := request.GET.get('title'):
+            title = title.split()
+            for word in title:
+                courses = courses.filter(title__icontains=word)
+
+        if professor := request.GET.get('professor'):
+            courses = courses.filter(professor__icontains=professor)
+
+        if days := request.GET.get('days'):
+            courses = courses.filter(days__contains=days)
 
         return JsonResponse(data={
             'course_rows': render_to_string('add_course_rows.html', {
@@ -48,33 +70,6 @@ def add_course(request):
 
     else:
         return render(request, 'add_course.html')
-
-
-def base_search(request):
-    ''' Not an actual view but a helper function '''
-
-    courses = Course.objects.all()
-
-    if crn := request.GET.get('crn'):
-        courses = courses.filter(CRN__contains=crn)
-
-    if code := request.GET.get('code'):
-        # stackoverflow.com/a/36224347
-        courses = courses.annotate(
-            code=Concat('subject', V('-'), 'number', V(' '), 'section')
-        ).filter(
-            code__icontains=code
-        )
-
-    if title := request.GET.get('title'):
-        title = title.split()
-        for word in title:
-            courses = courses.filter(title__icontains=word)
-
-    if professor := request.GET.get('professor'):
-        courses = courses.filter(professor__icontains=professor)
-
-    return courses
 
 
 @login_required
