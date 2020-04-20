@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
-# Explanation: https://stackoverflow.com/a/15325966
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -105,5 +103,9 @@ LOGIN_URL = 'login'
 # Email
 # https://docs.djangoproject.com/en/3.0/topics/email/
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = '127.0.0.1'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Roster Sniper <no-reply@shitchell.com>'
