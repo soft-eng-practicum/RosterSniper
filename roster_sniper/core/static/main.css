@@ -1,3 +1,7 @@
+/* GGC Colors:
+https://www.ggc.edu/community/brand-management/graphic-standards-guide/colors/
+*/
+
 body {
 	background: #fafafa;
 	color: #333333;
@@ -54,6 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #85C446;
 }
 
+/********** Add Course page **********/
+
 #days button {
 	background-color: white !important;
 	border-color: #ced4da !important;
@@ -70,22 +76,23 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #6c757d !important;
 	color: white;
 }
-
-.italic {
-    font-style: italic;
+/* While this also disables the shadow when selecting the button by tabbing over
+to it, which is unfortunate, the shadow when clicking was just too ugly. */
+#days button:focus {
+	box-shadow: none !important;
 }
 
 #search-term {
-    border: none;
-    background: none;
-    appearance: none;
-    -o-appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border-bottom: 1px solid black;
+	border: none;
+	background: none;
+	appearance: none;
+	-o-appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-bottom: 1px solid black;
 }
 #search-term:focus, #search-term:active, #search-term::-moz-focus-inner {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    outline: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	outline: 0;
 }

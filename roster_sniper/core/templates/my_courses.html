@@ -8,10 +8,11 @@
 	{# stackoverflow.com/a/4457905 #}
 	<table class="table" style="table-layout: fixed; margin-top: 20px;">
 	<colgroup>
-		<col style="width: 15%;">
-		<col style="width: 20%;">
+		<col style="width: 13%;">
+		<col style="width: 13%;">
 		<col>
-		<col style="width: 22%;">
+		<col style="width: 200px;">
+		<col style="width: 15%;">
 		<col style="width: 100px;">{# when this was specified as a percent, once the table got too small, the width would be slightly smaller than the width of the title 'Students' and would hang off the edge #}
 		<col style="width: 40px;">
 		<col style="width: 40px;">
@@ -20,6 +21,7 @@
 		<th>Term</th>
 		<th>Code</th>
 		<th>Title</th>
+		<th>Meeting</th>
 		<th style="min-width: 100px;">Professor</th>
 		<th>Capacity</th>
 		<th colspan="2">Options</th>
@@ -33,6 +35,7 @@
 {% block extrajs %}
 	<script type="text/javascript" src="{% static 'js/my_courses.js' %}"></script>
 	<style type="text/css">
-		table td:nth-child(5) { text-align: right; }
+		table td:nth-child(6), table td:nth-child(7) { text-align: right; }
+		table td:nth-child(7) { padding-right: 1px; }
 	</style>
 {% endblock extrajs %}
