@@ -2,7 +2,7 @@
 
 RosterSniper is a web application used for monitoring course availability at Georgia Gwinnett College.
 
-- **Website:** http://shitchell.com:8008
+- **Website:** http://rsniper.shitchell.com
 - **Source Code:** https://github.com/soft-eng-practicum/ggc-coursicle
 - **Bug Reports:** https://github.com/soft-eng-practicum/ggc-coursicle/issues
 
