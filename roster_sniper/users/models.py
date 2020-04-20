@@ -11,7 +11,7 @@ class Profile(models.Model):
 	image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 	school = models.CharField(max_length=50, blank=True)
 
-	emailConfirmed = models.BooleanField(default=True)
+	emailConfirmed = models.BooleanField(default=False)
 
 	emailNotify = models.BooleanField(default=True)
 	emailUnsubID = models.UUIDField(default=uuid.uuid4)

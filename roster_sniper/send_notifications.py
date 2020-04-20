@@ -74,26 +74,27 @@ def is_newly_available(course):
 def send_notification(favorite):
     debug(f'Sending notification for "{favorite}"')
     # http://{{ hostname }}/unsubscribe/favorite/{{ un_fav }}
-    context = {
-        'name': favorite.user.first_name or favorite.user.username,
-        'title': favorite.course.title,
-        'professor': favorite.course.professor,
-        'crn': favorite.course.CRN,
-        'hostname': 'rsniper.shitchell.com',
-        'un_fav': str(favorite.emailUnsubID),
-        'un_all': str(favorite.user.profile.emailUnsubID)
-    }
-    email_text = get_template('email.txt')
-    email_html = get_template('email.html')
-    email_text = email_text.render(context)
-    email_html = email_html.render(context)
-    
-    subject = f"{favorite.course.title} is available!"
-    addr_to = favorite.user.email
-    addr_from = "Roster Sniper <no-reply@shitchell.com>"
-    msg = EmailMultiAlternatives(subject, email_text, addr_from, [addr_to])
-    msg.attach_alternative(email_html, "text/html")
-    msg.send()
+    if favorite.user.profile.emailConfirmed:
+        context = {
+            'name': favorite.user.first_name or favorite.user.username,
+            'title': favorite.course.title,
+            'professor': favorite.course.professor,
+            'crn': favorite.course.CRN,
+            'hostname': 'rsniper.shitchell.com',
+            'un_fav': str(favorite.emailUnsubID),
+            'un_all': str(favorite.user.profile.emailUnsubID)
+        }
+        email_text = get_template('email.txt')
+        email_html = get_template('email.html')
+        email_text = email_text.render(context)
+        email_html = email_html.render(context)
+        
+        subject = f"{favorite.course.title} is available!"
+        addr_to = favorite.user.email
+        addr_from = "Roster Sniper <no-reply@shitchell.com>"
+        msg = EmailMultiAlternatives(subject, email_text, addr_from, [addr_to])
+        msg.attach_alternative(email_html, "text/html")
+        msg.send()
 
 # Loop over the list of enabled favorites
 for favorite in Favorite.objects.filter(emailNotify=True):
