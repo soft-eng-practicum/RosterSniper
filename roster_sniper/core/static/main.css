@@ -39,17 +39,34 @@ h1, h2, h3, h4, h5, h6 {
 	cursor: pointer;
 }
 
+.italic {
+	font-style: italic;
+}
+
 .btn-primary,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #00704A;
-  border-color: #00704A;
-} 
+	background-color: #00704A;
+	border-color: #00704A;
+}
 .btn-primary:hover {
-  background-color: #85C446;
-  border-color: #85C446;
+	background-color: #85C446;
+	border-color: #85C446;
 }
 
-.italic {
-    font-style: italic;
+#days button {
+	background-color: white !important;
+	border-color: #ced4da !important;
+	color: #6c757d;
+}
+#days button:hover {
+	background-color: #b2b8bf !important;
+	border-color: #b2b8bf !important;
+	color: white;
+}
+#days button:active,
+#days button.active {
+	background-color: #6c757d !important;
+	border-color: #6c757d !important;
+	color: white;
 }
