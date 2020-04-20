@@ -96,7 +96,9 @@ def base_search(request):
         )
 
     if title := request.GET.get('title'):
-        courses = courses.filter(title__icontains=title)
+        title = title.split()
+        for word in title:
+            courses = courses.filter(title__icontains=word)
 
     if professor := request.GET.get('professor'):
         courses = courses.filter(professor__icontains=professor)

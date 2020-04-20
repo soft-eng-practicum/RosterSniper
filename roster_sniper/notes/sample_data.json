@@ -13,7 +13,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50002",
 	"fields": {
@@ -27,7 +27,7 @@
 		"available": 5,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50003",
 	"fields": {
@@ -41,7 +41,7 @@
 		"available": 9,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50004",
 	"fields": {
@@ -55,7 +55,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50005",
 	"fields": {
@@ -69,7 +69,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50006",
 	"fields": {
@@ -83,7 +83,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50007",
 	"fields": {
@@ -97,7 +97,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50008",
 	"fields": {
@@ -111,7 +111,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50009",
 	"fields": {
@@ -125,7 +125,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50010",
 	"fields": {
@@ -139,7 +139,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50011",
 	"fields": {
@@ -153,7 +153,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50012",
 	"fields": {
@@ -167,7 +167,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50013",
 	"fields": {
@@ -181,7 +181,7 @@
 		"available": 2,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50015",
 	"fields": {
@@ -195,7 +195,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50016",
 	"fields": {
@@ -209,7 +209,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50017",
 	"fields": {
@@ -223,7 +223,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50018",
 	"fields": {
@@ -237,7 +237,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50019",
 	"fields": {
@@ -251,7 +251,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50020",
 	"fields": {
@@ -265,7 +265,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50021",
 	"fields": {
@@ -279,7 +279,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50022",
 	"fields": {
@@ -293,7 +293,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50023",
 	"fields": {
@@ -307,7 +307,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50024",
 	"fields": {
@@ -321,7 +321,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50025",
 	"fields": {
@@ -335,7 +335,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50026",
 	"fields": {
@@ -349,7 +349,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50027",
 	"fields": {
@@ -363,7 +363,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50028",
 	"fields": {
@@ -377,7 +377,7 @@
 		"available": 8,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50029",
 	"fields": {
@@ -391,7 +391,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50030",
 	"fields": {
@@ -405,7 +405,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50031",
 	"fields": {
@@ -419,7 +419,7 @@
 		"available": 12,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50032",
 	"fields": {
@@ -433,7 +433,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50033",
 	"fields": {
@@ -447,7 +447,7 @@
 		"available": 12,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50034",
 	"fields": {
@@ -461,7 +461,7 @@
 		"available": 3,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50035",
 	"fields": {
@@ -475,7 +475,7 @@
 		"available": 17,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50036",
 	"fields": {
@@ -489,7 +489,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50037",
 	"fields": {
@@ -503,7 +503,7 @@
 		"available": 7,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50039",
 	"fields": {
@@ -517,7 +517,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50040",
 	"fields": {
@@ -531,7 +531,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50041",
 	"fields": {
@@ -545,7 +545,7 @@
 		"available": 4,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50042",
 	"fields": {
@@ -559,7 +559,7 @@
 		"available": 4,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50043",
 	"fields": {
@@ -573,7 +573,7 @@
 		"available": 14,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50044",
 	"fields": {
@@ -587,7 +587,7 @@
 		"available": 17,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50045",
 	"fields": {
@@ -601,7 +601,7 @@
 		"available": 6,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50046",
 	"fields": {
@@ -615,7 +615,7 @@
 		"available": 15,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50047",
 	"fields": {
@@ -629,7 +629,7 @@
 		"available": 9,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50048",
 	"fields": {
@@ -643,7 +643,7 @@
 		"available": 8,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50049",
 	"fields": {
@@ -657,7 +657,7 @@
 		"available": 40,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50050",
 	"fields": {
@@ -671,7 +671,7 @@
 		"available": 16,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50051",
 	"fields": {
@@ -685,7 +685,7 @@
 		"available": 32,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50052",
 	"fields": {
@@ -699,7 +699,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50053",
 	"fields": {
@@ -713,7 +713,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50054",
 	"fields": {
@@ -727,7 +727,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50055",
 	"fields": {
@@ -741,7 +741,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50056",
 	"fields": {
@@ -755,7 +755,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50057",
 	"fields": {
@@ -769,7 +769,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50058",
 	"fields": {
@@ -783,7 +783,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50059",
 	"fields": {
@@ -797,7 +797,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50060",
 	"fields": {
@@ -811,7 +811,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50061",
 	"fields": {
@@ -825,7 +825,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50062",
 	"fields": {
@@ -839,7 +839,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50063",
 	"fields": {
@@ -853,7 +853,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50064",
 	"fields": {
@@ -867,7 +867,7 @@
 		"available": 18,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50065",
 	"fields": {
@@ -881,7 +881,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50066",
 	"fields": {
@@ -895,7 +895,7 @@
 		"available": 3,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50067",
 	"fields": {
@@ -909,7 +909,7 @@
 		"available": 4,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50068",
 	"fields": {
@@ -923,7 +923,7 @@
 		"available": 3,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50070",
 	"fields": {
@@ -937,7 +937,7 @@
 		"available": 5,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50071",
 	"fields": {
@@ -951,7 +951,7 @@
 		"available": 8,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50073",
 	"fields": {
@@ -965,7 +965,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50074",
 	"fields": {
@@ -979,7 +979,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50075",
 	"fields": {
@@ -993,7 +993,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50076",
 	"fields": {
@@ -1007,7 +1007,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50077",
 	"fields": {
@@ -1021,7 +1021,7 @@
 		"available": 8,
 		"capacity": 50
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50080",
 	"fields": {
@@ -1035,7 +1035,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50081",
 	"fields": {
@@ -1049,7 +1049,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50082",
 	"fields": {
@@ -1063,7 +1063,7 @@
 		"available": 7,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50084",
 	"fields": {
@@ -1077,7 +1077,7 @@
 		"available": 7,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50086",
 	"fields": {
@@ -1091,7 +1091,7 @@
 		"available": 11,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50088",
 	"fields": {
@@ -1105,7 +1105,7 @@
 		"available": 13,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50089",
 	"fields": {
@@ -1119,7 +1119,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50090",
 	"fields": {
@@ -1133,7 +1133,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50091",
 	"fields": {
@@ -1147,7 +1147,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50093",
 	"fields": {
@@ -1161,7 +1161,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50094",
 	"fields": {
@@ -1175,7 +1175,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50095",
 	"fields": {
@@ -1189,7 +1189,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50096",
 	"fields": {
@@ -1203,7 +1203,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50097",
 	"fields": {
@@ -1217,7 +1217,7 @@
 		"available": 6,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50098",
 	"fields": {
@@ -1231,7 +1231,7 @@
 		"available": 2,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50099",
 	"fields": {
@@ -1245,7 +1245,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50100",
 	"fields": {
@@ -1259,7 +1259,7 @@
 		"available": 6,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50102",
 	"fields": {
@@ -1273,7 +1273,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50103",
 	"fields": {
@@ -1287,7 +1287,7 @@
 		"available": 7,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50105",
 	"fields": {
@@ -1301,7 +1301,7 @@
 		"available": 3,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50106",
 	"fields": {
@@ -1315,7 +1315,7 @@
 		"available": 7,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50107",
 	"fields": {
@@ -1329,7 +1329,7 @@
 		"available": 10,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50108",
 	"fields": {
@@ -1343,7 +1343,7 @@
 		"available": 13,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50109",
 	"fields": {
@@ -1357,7 +1357,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50110",
 	"fields": {
@@ -1371,7 +1371,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50111",
 	"fields": {
@@ -1385,7 +1385,7 @@
 		"available": 0,
 		"capacity": 60
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50112",
 	"fields": {
@@ -1399,7 +1399,7 @@
 		"available": 0,
 		"capacity": 25
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50113",
 	"fields": {
@@ -1413,7 +1413,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50114",
 	"fields": {
@@ -1427,7 +1427,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50115",
 	"fields": {
@@ -1441,7 +1441,7 @@
 		"available": 8,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50116",
 	"fields": {
@@ -1455,7 +1455,7 @@
 		"available": 0,
 		"capacity": 11
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50117",
 	"fields": {
@@ -1469,7 +1469,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50118",
 	"fields": {
@@ -1483,7 +1483,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50119",
 	"fields": {
@@ -1497,7 +1497,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50120",
 	"fields": {
@@ -1511,7 +1511,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50121",
 	"fields": {
@@ -1525,7 +1525,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50123",
 	"fields": {
@@ -1539,7 +1539,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50124",
 	"fields": {
@@ -1553,7 +1553,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50125",
 	"fields": {
@@ -1567,7 +1567,7 @@
 		"available": 10,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50126",
 	"fields": {
@@ -1581,7 +1581,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50127",
 	"fields": {
@@ -1595,7 +1595,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50128",
 	"fields": {
@@ -1609,7 +1609,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50129",
 	"fields": {
@@ -1623,7 +1623,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50130",
 	"fields": {
@@ -1637,7 +1637,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50131",
 	"fields": {
@@ -1651,7 +1651,7 @@
 		"available": 19,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50132",
 	"fields": {
@@ -1665,7 +1665,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50133",
 	"fields": {
@@ -1679,7 +1679,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50134",
 	"fields": {
@@ -1693,7 +1693,7 @@
 		"available": 1,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50136",
 	"fields": {
@@ -1707,7 +1707,7 @@
 		"available": 5,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50137",
 	"fields": {
@@ -1721,7 +1721,7 @@
 		"available": 0,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50138",
 	"fields": {
@@ -1735,7 +1735,7 @@
 		"available": 5,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50140",
 	"fields": {
@@ -1749,7 +1749,7 @@
 		"available": 16,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50141",
 	"fields": {
@@ -1763,7 +1763,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50142",
 	"fields": {
@@ -1777,7 +1777,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50144",
 	"fields": {
@@ -1791,7 +1791,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50145",
 	"fields": {
@@ -1805,7 +1805,7 @@
 		"available": 3,
 		"capacity": 50
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50147",
 	"fields": {
@@ -1819,7 +1819,7 @@
 		"available": 1,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50149",
 	"fields": {
@@ -1833,7 +1833,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50150",
 	"fields": {
@@ -1847,7 +1847,7 @@
 		"available": 23,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50152",
 	"fields": {
@@ -1861,7 +1861,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50153",
 	"fields": {
@@ -1875,7 +1875,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50154",
 	"fields": {
@@ -1889,7 +1889,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50155",
 	"fields": {
@@ -1903,7 +1903,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50159",
 	"fields": {
@@ -1917,7 +1917,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50161",
 	"fields": {
@@ -1931,7 +1931,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50164",
 	"fields": {
@@ -1945,7 +1945,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50165",
 	"fields": {
@@ -1959,7 +1959,7 @@
 		"available": 7,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50166",
 	"fields": {
@@ -1973,7 +1973,7 @@
 		"available": 40,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50167",
 	"fields": {
@@ -1987,7 +1987,7 @@
 		"available": 24,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50168",
 	"fields": {
@@ -2001,7 +2001,7 @@
 		"available": 20,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50169",
 	"fields": {
@@ -2015,7 +2015,7 @@
 		"available": 8,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50170",
 	"fields": {
@@ -2029,7 +2029,7 @@
 		"available": 12,
 		"capacity": 18
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50171",
 	"fields": {
@@ -2043,7 +2043,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50172",
 	"fields": {
@@ -2057,7 +2057,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50173",
 	"fields": {
@@ -2071,7 +2071,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50174",
 	"fields": {
@@ -2085,7 +2085,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50175",
 	"fields": {
@@ -2099,7 +2099,7 @@
 		"available": 20,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50176",
 	"fields": {
@@ -2113,7 +2113,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50178",
 	"fields": {
@@ -2127,7 +2127,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50179",
 	"fields": {
@@ -2141,7 +2141,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50180",
 	"fields": {
@@ -2155,7 +2155,7 @@
 		"available": 12,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50182",
 	"fields": {
@@ -2169,7 +2169,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50183",
 	"fields": {
@@ -2183,7 +2183,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50186",
 	"fields": {
@@ -2197,7 +2197,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50187",
 	"fields": {
@@ -2211,7 +2211,7 @@
 		"available": 17,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50189",
 	"fields": {
@@ -2225,7 +2225,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50191",
 	"fields": {
@@ -2239,7 +2239,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50192",
 	"fields": {
@@ -2253,7 +2253,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50193",
 	"fields": {
@@ -2267,7 +2267,7 @@
 		"available": 10,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50194",
 	"fields": {
@@ -2281,7 +2281,7 @@
 		"available": 23,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50195",
 	"fields": {
@@ -2295,7 +2295,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50196",
 	"fields": {
@@ -2309,7 +2309,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50197",
 	"fields": {
@@ -2323,7 +2323,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50198",
 	"fields": {
@@ -2337,7 +2337,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50199",
 	"fields": {
@@ -2351,7 +2351,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50200",
 	"fields": {
@@ -2365,7 +2365,7 @@
 		"available": 5,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50201",
 	"fields": {
@@ -2379,7 +2379,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50202",
 	"fields": {
@@ -2393,7 +2393,7 @@
 		"available": 18,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50203",
 	"fields": {
@@ -2407,7 +2407,7 @@
 		"available": 7,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50204",
 	"fields": {
@@ -2421,7 +2421,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50206",
 	"fields": {
@@ -2435,7 +2435,7 @@
 		"available": 21,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50207",
 	"fields": {
@@ -2449,7 +2449,7 @@
 		"available": 0,
 		"capacity": 15
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50208",
 	"fields": {
@@ -2463,7 +2463,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50209",
 	"fields": {
@@ -2477,7 +2477,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50210",
 	"fields": {
@@ -2491,7 +2491,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50211",
 	"fields": {
@@ -2505,7 +2505,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50212",
 	"fields": {
@@ -2519,7 +2519,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50213",
 	"fields": {
@@ -2533,7 +2533,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50214",
 	"fields": {
@@ -2547,7 +2547,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50215",
 	"fields": {
@@ -2561,7 +2561,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50216",
 	"fields": {
@@ -2575,7 +2575,7 @@
 		"available": 0,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50218",
 	"fields": {
@@ -2589,7 +2589,7 @@
 		"available": 5,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50220",
 	"fields": {
@@ -2603,7 +2603,7 @@
 		"available": 10,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50221",
 	"fields": {
@@ -2617,7 +2617,7 @@
 		"available": 22,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50222",
 	"fields": {
@@ -2631,7 +2631,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50224",
 	"fields": {
@@ -2645,7 +2645,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50226",
 	"fields": {
@@ -2659,7 +2659,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50227",
 	"fields": {
@@ -2673,7 +2673,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50228",
 	"fields": {
@@ -2687,7 +2687,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50229",
 	"fields": {
@@ -2701,7 +2701,7 @@
 		"available": 6,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50230",
 	"fields": {
@@ -2715,7 +2715,7 @@
 		"available": 7,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50231",
 	"fields": {
@@ -2729,7 +2729,7 @@
 		"available": 15,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50232",
 	"fields": {
@@ -2743,7 +2743,7 @@
 		"available": 19,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50234",
 	"fields": {
@@ -2757,7 +2757,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50235",
 	"fields": {
@@ -2771,7 +2771,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50237",
 	"fields": {
@@ -2785,7 +2785,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50238",
 	"fields": {
@@ -2799,7 +2799,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50239",
 	"fields": {
@@ -2813,7 +2813,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50240",
 	"fields": {
@@ -2827,7 +2827,7 @@
 		"available": 15,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50241",
 	"fields": {
@@ -2841,7 +2841,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50243",
 	"fields": {
@@ -2855,7 +2855,7 @@
 		"available": 17,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50244",
 	"fields": {
@@ -2869,7 +2869,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50245",
 	"fields": {
@@ -2883,7 +2883,7 @@
 		"available": 18,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50246",
 	"fields": {
@@ -2897,7 +2897,7 @@
 		"available": 40,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50247",
 	"fields": {
@@ -2911,7 +2911,7 @@
 		"available": 18,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50248",
 	"fields": {
@@ -2925,7 +2925,7 @@
 		"available": 6,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50249",
 	"fields": {
@@ -2939,7 +2939,7 @@
 		"available": 10,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50250",
 	"fields": {
@@ -2953,7 +2953,7 @@
 		"available": 19,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50251",
 	"fields": {
@@ -2967,7 +2967,7 @@
 		"available": 11,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50252",
 	"fields": {
@@ -2981,7 +2981,7 @@
 		"available": 0,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50253",
 	"fields": {
@@ -2995,7 +2995,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50254",
 	"fields": {
@@ -3009,7 +3009,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50256",
 	"fields": {
@@ -3023,7 +3023,7 @@
 		"available": 13,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50257",
 	"fields": {
@@ -3037,7 +3037,7 @@
 		"available": 6,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50258",
 	"fields": {
@@ -3051,7 +3051,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50260",
 	"fields": {
@@ -3065,7 +3065,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50261",
 	"fields": {
@@ -3079,7 +3079,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50262",
 	"fields": {
@@ -3093,7 +3093,7 @@
 		"available": 4,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50263",
 	"fields": {
@@ -3107,7 +3107,7 @@
 		"available": 8,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50264",
 	"fields": {
@@ -3121,7 +3121,7 @@
 		"available": 2,
 		"capacity": 50
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50266",
 	"fields": {
@@ -3135,7 +3135,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50267",
 	"fields": {
@@ -3149,7 +3149,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50269",
 	"fields": {
@@ -3163,7 +3163,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50270",
 	"fields": {
@@ -3177,7 +3177,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50271",
 	"fields": {
@@ -3191,7 +3191,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50272",
 	"fields": {
@@ -3205,7 +3205,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50273",
 	"fields": {
@@ -3219,7 +3219,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50274",
 	"fields": {
@@ -3233,7 +3233,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50275",
 	"fields": {
@@ -3247,7 +3247,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50276",
 	"fields": {
@@ -3261,7 +3261,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50277",
 	"fields": {
@@ -3275,7 +3275,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50278",
 	"fields": {
@@ -3289,7 +3289,7 @@
 		"available": 16,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50279",
 	"fields": {
@@ -3303,7 +3303,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50280",
 	"fields": {
@@ -3317,7 +3317,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50281",
 	"fields": {
@@ -3331,7 +3331,7 @@
 		"available": 23,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50282",
 	"fields": {
@@ -3345,7 +3345,7 @@
 		"available": 18,
 		"capacity": 18
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50283",
 	"fields": {
@@ -3359,7 +3359,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50284",
 	"fields": {
@@ -3373,7 +3373,7 @@
 		"available": 3,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50285",
 	"fields": {
@@ -3387,7 +3387,7 @@
 		"available": 28,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50286",
 	"fields": {
@@ -3401,7 +3401,7 @@
 		"available": 4,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50287",
 	"fields": {
@@ -3415,7 +3415,7 @@
 		"available": 8,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50288",
 	"fields": {
@@ -3429,7 +3429,7 @@
 		"available": 13,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50289",
 	"fields": {
@@ -3443,7 +3443,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50290",
 	"fields": {
@@ -3457,7 +3457,7 @@
 		"available": 8,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50295",
 	"fields": {
@@ -3471,7 +3471,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50296",
 	"fields": {
@@ -3485,7 +3485,7 @@
 		"available": 38,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50299",
 	"fields": {
@@ -3499,7 +3499,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50301",
 	"fields": {
@@ -3513,7 +3513,7 @@
 		"available": 13,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50302",
 	"fields": {
@@ -3527,7 +3527,7 @@
 		"available": 0,
 		"capacity": 14
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50303",
 	"fields": {
@@ -3541,7 +3541,7 @@
 		"available": 0,
 		"capacity": 14
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50305",
 	"fields": {
@@ -3555,7 +3555,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50306",
 	"fields": {
@@ -3569,7 +3569,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50307",
 	"fields": {
@@ -3583,7 +3583,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50308",
 	"fields": {
@@ -3597,7 +3597,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50312",
 	"fields": {
@@ -3611,7 +3611,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50315",
 	"fields": {
@@ -3625,7 +3625,7 @@
 		"available": 5,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50316",
 	"fields": {
@@ -3639,7 +3639,7 @@
 		"available": 0,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50317",
 	"fields": {
@@ -3653,7 +3653,7 @@
 		"available": 23,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50320",
 	"fields": {
@@ -3667,7 +3667,7 @@
 		"available": 5,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50321",
 	"fields": {
@@ -3681,7 +3681,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50322",
 	"fields": {
@@ -3695,7 +3695,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50323",
 	"fields": {
@@ -3709,7 +3709,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50324",
 	"fields": {
@@ -3723,7 +3723,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50325",
 	"fields": {
@@ -3737,7 +3737,7 @@
 		"available": 1,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50326",
 	"fields": {
@@ -3751,7 +3751,7 @@
 		"available": 17,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50327",
 	"fields": {
@@ -3765,7 +3765,7 @@
 		"available": 4,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50328",
 	"fields": {
@@ -3779,7 +3779,7 @@
 		"available": 10,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50329",
 	"fields": {
@@ -3793,7 +3793,7 @@
 		"available": 16,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50331",
 	"fields": {
@@ -3807,7 +3807,7 @@
 		"available": 3,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50333",
 	"fields": {
@@ -3821,7 +3821,7 @@
 		"available": 3,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50334",
 	"fields": {
@@ -3835,7 +3835,7 @@
 		"available": 0,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50335",
 	"fields": {
@@ -3849,7 +3849,7 @@
 		"available": 0,
 		"capacity": 14
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50336",
 	"fields": {
@@ -3863,7 +3863,7 @@
 		"available": 0,
 		"capacity": 14
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50341",
 	"fields": {
@@ -3877,7 +3877,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50342",
 	"fields": {
@@ -3891,7 +3891,7 @@
 		"available": 6,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50348",
 	"fields": {
@@ -3905,7 +3905,7 @@
 		"available": 3,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50349",
 	"fields": {
@@ -3919,7 +3919,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50351",
 	"fields": {
@@ -3933,7 +3933,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50352",
 	"fields": {
@@ -3947,7 +3947,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50353",
 	"fields": {
@@ -3961,7 +3961,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50354",
 	"fields": {
@@ -3975,7 +3975,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50355",
 	"fields": {
@@ -3989,7 +3989,7 @@
 		"available": 1,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50356",
 	"fields": {
@@ -4003,7 +4003,7 @@
 		"available": 22,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50357",
 	"fields": {
@@ -4017,7 +4017,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50358",
 	"fields": {
@@ -4031,7 +4031,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50359",
 	"fields": {
@@ -4045,7 +4045,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50360",
 	"fields": {
@@ -4059,7 +4059,7 @@
 		"available": 6,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50361",
 	"fields": {
@@ -4073,7 +4073,7 @@
 		"available": 0,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50362",
 	"fields": {
@@ -4087,7 +4087,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50368",
 	"fields": {
@@ -4101,7 +4101,7 @@
 		"available": 3,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50369",
 	"fields": {
@@ -4115,7 +4115,7 @@
 		"available": 2,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50370",
 	"fields": {
@@ -4129,7 +4129,7 @@
 		"available": 0,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50371",
 	"fields": {
@@ -4143,7 +4143,7 @@
 		"available": 11,
 		"capacity": 26
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50372",
 	"fields": {
@@ -4157,7 +4157,7 @@
 		"available": 9,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50373",
 	"fields": {
@@ -4171,7 +4171,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50374",
 	"fields": {
@@ -4185,7 +4185,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50376",
 	"fields": {
@@ -4199,7 +4199,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50377",
 	"fields": {
@@ -4213,7 +4213,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50378",
 	"fields": {
@@ -4227,7 +4227,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50379",
 	"fields": {
@@ -4241,7 +4241,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50380",
 	"fields": {
@@ -4255,7 +4255,7 @@
 		"available": 16,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50382",
 	"fields": {
@@ -4269,7 +4269,7 @@
 		"available": 12,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50384",
 	"fields": {
@@ -4283,7 +4283,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50385",
 	"fields": {
@@ -4297,7 +4297,7 @@
 		"available": 12,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50387",
 	"fields": {
@@ -4311,7 +4311,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50388",
 	"fields": {
@@ -4325,7 +4325,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50389",
 	"fields": {
@@ -4339,7 +4339,7 @@
 		"available": 10,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50390",
 	"fields": {
@@ -4353,7 +4353,7 @@
 		"available": 8,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50392",
 	"fields": {
@@ -4367,7 +4367,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50393",
 	"fields": {
@@ -4381,7 +4381,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50395",
 	"fields": {
@@ -4395,7 +4395,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50397",
 	"fields": {
@@ -4409,7 +4409,7 @@
 		"available": 23,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50398",
 	"fields": {
@@ -4423,7 +4423,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50399",
 	"fields": {
@@ -4437,7 +4437,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50400",
 	"fields": {
@@ -4451,7 +4451,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50402",
 	"fields": {
@@ -4465,7 +4465,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50404",
 	"fields": {
@@ -4479,7 +4479,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50405",
 	"fields": {
@@ -4493,7 +4493,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50406",
 	"fields": {
@@ -4507,7 +4507,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50408",
 	"fields": {
@@ -4521,7 +4521,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50410",
 	"fields": {
@@ -4535,7 +4535,7 @@
 		"available": 5,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50411",
 	"fields": {
@@ -4549,7 +4549,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50413",
 	"fields": {
@@ -4563,7 +4563,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50415",
 	"fields": {
@@ -4577,7 +4577,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50417",
 	"fields": {
@@ -4591,7 +4591,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50418",
 	"fields": {
@@ -4605,7 +4605,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50419",
 	"fields": {
@@ -4619,7 +4619,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50424",
 	"fields": {
@@ -4633,7 +4633,7 @@
 		"available": 24,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50426",
 	"fields": {
@@ -4647,7 +4647,7 @@
 		"available": 0,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50427",
 	"fields": {
@@ -4661,7 +4661,7 @@
 		"available": 2,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50431",
 	"fields": {
@@ -4675,7 +4675,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50432",
 	"fields": {
@@ -4689,7 +4689,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50434",
 	"fields": {
@@ -4703,7 +4703,7 @@
 		"available": 29,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50436",
 	"fields": {
@@ -4717,7 +4717,7 @@
 		"available": 4,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50437",
 	"fields": {
@@ -4731,7 +4731,7 @@
 		"available": 11,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50442",
 	"fields": {
@@ -4745,7 +4745,7 @@
 		"available": 21,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50443",
 	"fields": {
@@ -4759,7 +4759,7 @@
 		"available": 40,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50444",
 	"fields": {
@@ -4773,7 +4773,7 @@
 		"available": 13,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50445",
 	"fields": {
@@ -4787,7 +4787,7 @@
 		"available": 34,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50446",
 	"fields": {
@@ -4801,7 +4801,7 @@
 		"available": 16,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50448",
 	"fields": {
@@ -4815,7 +4815,7 @@
 		"available": 15,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50452",
 	"fields": {
@@ -4829,7 +4829,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50454",
 	"fields": {
@@ -4843,7 +4843,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50462",
 	"fields": {
@@ -4857,7 +4857,7 @@
 		"available": 7,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50464",
 	"fields": {
@@ -4871,7 +4871,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50465",
 	"fields": {
@@ -4885,7 +4885,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50469",
 	"fields": {
@@ -4899,7 +4899,7 @@
 		"available": 10,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50471",
 	"fields": {
@@ -4913,7 +4913,7 @@
 		"available": 9,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50472",
 	"fields": {
@@ -4927,7 +4927,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50473",
 	"fields": {
@@ -4941,7 +4941,7 @@
 		"available": 5,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50474",
 	"fields": {
@@ -4955,7 +4955,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50483",
 	"fields": {
@@ -4969,7 +4969,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50484",
 	"fields": {
@@ -4983,7 +4983,7 @@
 		"available": 20,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50493",
 	"fields": {
@@ -4997,7 +4997,7 @@
 		"available": 4,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50494",
 	"fields": {
@@ -5011,7 +5011,7 @@
 		"available": 5,
 		"capacity": 56
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50496",
 	"fields": {
@@ -5025,7 +5025,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50497",
 	"fields": {
@@ -5039,7 +5039,7 @@
 		"available": 8,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50498",
 	"fields": {
@@ -5053,7 +5053,7 @@
 		"available": 6,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50514",
 	"fields": {
@@ -5067,7 +5067,7 @@
 		"available": 6,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50523",
 	"fields": {
@@ -5081,7 +5081,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50524",
 	"fields": {
@@ -5095,7 +5095,7 @@
 		"available": 3,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50525",
 	"fields": {
@@ -5109,7 +5109,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50526",
 	"fields": {
@@ -5123,7 +5123,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50527",
 	"fields": {
@@ -5137,7 +5137,7 @@
 		"available": 5,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50528",
 	"fields": {
@@ -5151,7 +5151,7 @@
 		"available": 15,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50529",
 	"fields": {
@@ -5165,7 +5165,7 @@
 		"available": 3,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50532",
 	"fields": {
@@ -5179,7 +5179,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50534",
 	"fields": {
@@ -5193,7 +5193,7 @@
 		"available": 24,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50535",
 	"fields": {
@@ -5207,7 +5207,7 @@
 		"available": 18,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50537",
 	"fields": {
@@ -5221,7 +5221,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50538",
 	"fields": {
@@ -5235,7 +5235,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50539",
 	"fields": {
@@ -5249,7 +5249,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50540",
 	"fields": {
@@ -5263,7 +5263,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50541",
 	"fields": {
@@ -5277,7 +5277,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50542",
 	"fields": {
@@ -5291,7 +5291,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50543",
 	"fields": {
@@ -5305,7 +5305,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50544",
 	"fields": {
@@ -5319,7 +5319,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50545",
 	"fields": {
@@ -5333,7 +5333,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50546",
 	"fields": {
@@ -5347,7 +5347,7 @@
 		"available": 15,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50547",
 	"fields": {
@@ -5361,7 +5361,7 @@
 		"available": 14,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50548",
 	"fields": {
@@ -5375,7 +5375,7 @@
 		"available": 13,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50549",
 	"fields": {
@@ -5389,7 +5389,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50552",
 	"fields": {
@@ -5403,7 +5403,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50553",
 	"fields": {
@@ -5417,7 +5417,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50554",
 	"fields": {
@@ -5431,7 +5431,7 @@
 		"available": 6,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50555",
 	"fields": {
@@ -5445,7 +5445,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50582",
 	"fields": {
@@ -5459,7 +5459,7 @@
 		"available": 5,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50583",
 	"fields": {
@@ -5473,7 +5473,7 @@
 		"available": 9,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50584",
 	"fields": {
@@ -5487,7 +5487,7 @@
 		"available": 3,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50585",
 	"fields": {
@@ -5501,7 +5501,7 @@
 		"available": 0,
 		"capacity": 10
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50586",
 	"fields": {
@@ -5515,7 +5515,7 @@
 		"available": 4,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50587",
 	"fields": {
@@ -5529,7 +5529,7 @@
 		"available": 3,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50588",
 	"fields": {
@@ -5543,7 +5543,7 @@
 		"available": 9,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50589",
 	"fields": {
@@ -5557,7 +5557,7 @@
 		"available": 10,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50590",
 	"fields": {
@@ -5571,7 +5571,7 @@
 		"available": 1,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50591",
 	"fields": {
@@ -5585,7 +5585,7 @@
 		"available": 17,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50592",
 	"fields": {
@@ -5599,7 +5599,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50593",
 	"fields": {
@@ -5613,7 +5613,7 @@
 		"available": 16,
 		"capacity": 32
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50594",
 	"fields": {
@@ -5627,7 +5627,7 @@
 		"available": 12,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50595",
 	"fields": {
@@ -5641,7 +5641,7 @@
 		"available": 4,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50596",
 	"fields": {
@@ -5655,7 +5655,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50597",
 	"fields": {
@@ -5669,7 +5669,7 @@
 		"available": 34,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50598",
 	"fields": {
@@ -5683,7 +5683,7 @@
 		"available": 17,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50599",
 	"fields": {
@@ -5697,7 +5697,7 @@
 		"available": 16,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50600",
 	"fields": {
@@ -5711,7 +5711,7 @@
 		"available": 20,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50602",
 	"fields": {
@@ -5725,7 +5725,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50603",
 	"fields": {
@@ -5739,7 +5739,7 @@
 		"available": 1,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50605",
 	"fields": {
@@ -5753,7 +5753,7 @@
 		"available": 0,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50606",
 	"fields": {
@@ -5767,7 +5767,7 @@
 		"available": 5,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50607",
 	"fields": {
@@ -5781,7 +5781,7 @@
 		"available": 10,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50608",
 	"fields": {
@@ -5795,7 +5795,7 @@
 		"available": 23,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50609",
 	"fields": {
@@ -5809,7 +5809,7 @@
 		"available": 22,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50610",
 	"fields": {
@@ -5823,7 +5823,7 @@
 		"available": 22,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50611",
 	"fields": {
@@ -5837,7 +5837,7 @@
 		"available": 17,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50612",
 	"fields": {
@@ -5851,7 +5851,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50613",
 	"fields": {
@@ -5865,7 +5865,7 @@
 		"available": 6,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50614",
 	"fields": {
@@ -5879,7 +5879,7 @@
 		"available": 5,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50615",
 	"fields": {
@@ -5893,7 +5893,7 @@
 		"available": 11,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50616",
 	"fields": {
@@ -5907,7 +5907,7 @@
 		"available": 15,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50617",
 	"fields": {
@@ -5921,7 +5921,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50619",
 	"fields": {
@@ -5935,7 +5935,7 @@
 		"available": 13,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50620",
 	"fields": {
@@ -5949,7 +5949,7 @@
 		"available": 9,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50621",
 	"fields": {
@@ -5963,7 +5963,7 @@
 		"available": 0,
 		"capacity": 18
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50622",
 	"fields": {
@@ -5977,7 +5977,7 @@
 		"available": 5,
 		"capacity": 15
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50628",
 	"fields": {
@@ -5991,7 +5991,7 @@
 		"available": 9,
 		"capacity": 48
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50629",
 	"fields": {
@@ -6005,7 +6005,7 @@
 		"available": 10,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50630",
 	"fields": {
@@ -6019,7 +6019,7 @@
 		"available": 4,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50631",
 	"fields": {
@@ -6033,7 +6033,7 @@
 		"available": 11,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50632",
 	"fields": {
@@ -6047,7 +6047,7 @@
 		"available": 3,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50633",
 	"fields": {
@@ -6061,7 +6061,7 @@
 		"available": 1,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50634",
 	"fields": {
@@ -6075,7 +6075,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50635",
 	"fields": {
@@ -6089,7 +6089,7 @@
 		"available": 3,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50636",
 	"fields": {
@@ -6103,7 +6103,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50637",
 	"fields": {
@@ -6117,7 +6117,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50638",
 	"fields": {
@@ -6131,7 +6131,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50639",
 	"fields": {
@@ -6145,7 +6145,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50640",
 	"fields": {
@@ -6159,7 +6159,7 @@
 		"available": 3,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50641",
 	"fields": {
@@ -6173,7 +6173,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50642",
 	"fields": {
@@ -6187,7 +6187,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50643",
 	"fields": {
@@ -6201,7 +6201,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50644",
 	"fields": {
@@ -6215,7 +6215,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50645",
 	"fields": {
@@ -6229,7 +6229,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50646",
 	"fields": {
@@ -6243,7 +6243,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50647",
 	"fields": {
@@ -6257,7 +6257,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50648",
 	"fields": {
@@ -6271,7 +6271,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50649",
 	"fields": {
@@ -6285,7 +6285,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50650",
 	"fields": {
@@ -6299,7 +6299,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50651",
 	"fields": {
@@ -6313,7 +6313,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50652",
 	"fields": {
@@ -6327,7 +6327,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50653",
 	"fields": {
@@ -6341,7 +6341,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50654",
 	"fields": {
@@ -6355,7 +6355,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50655",
 	"fields": {
@@ -6369,7 +6369,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50656",
 	"fields": {
@@ -6383,7 +6383,7 @@
 		"available": 3,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50657",
 	"fields": {
@@ -6397,7 +6397,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50658",
 	"fields": {
@@ -6411,7 +6411,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50659",
 	"fields": {
@@ -6425,7 +6425,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50660",
 	"fields": {
@@ -6439,7 +6439,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50661",
 	"fields": {
@@ -6453,7 +6453,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50662",
 	"fields": {
@@ -6467,7 +6467,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50663",
 	"fields": {
@@ -6481,7 +6481,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50664",
 	"fields": {
@@ -6495,7 +6495,7 @@
 		"available": 2,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50665",
 	"fields": {
@@ -6509,7 +6509,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50666",
 	"fields": {
@@ -6523,7 +6523,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50667",
 	"fields": {
@@ -6537,7 +6537,7 @@
 		"available": 6,
 		"capacity": 6
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50668",
 	"fields": {
@@ -6551,7 +6551,7 @@
 		"available": 1,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50669",
 	"fields": {
@@ -6565,7 +6565,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50670",
 	"fields": {
@@ -6579,7 +6579,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50671",
 	"fields": {
@@ -6593,7 +6593,7 @@
 		"available": 3,
 		"capacity": 5
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50672",
 	"fields": {
@@ -6607,7 +6607,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50673",
 	"fields": {
@@ -6621,7 +6621,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50674",
 	"fields": {
@@ -6635,7 +6635,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50675",
 	"fields": {
@@ -6649,7 +6649,7 @@
 		"available": 1,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50676",
 	"fields": {
@@ -6663,7 +6663,7 @@
 		"available": 2,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50677",
 	"fields": {
@@ -6677,7 +6677,7 @@
 		"available": 1,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50678",
 	"fields": {
@@ -6691,7 +6691,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50679",
 	"fields": {
@@ -6705,7 +6705,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50680",
 	"fields": {
@@ -6719,7 +6719,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50681",
 	"fields": {
@@ -6733,7 +6733,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50682",
 	"fields": {
@@ -6747,7 +6747,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50684",
 	"fields": {
@@ -6761,7 +6761,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50685",
 	"fields": {
@@ -6775,7 +6775,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50686",
 	"fields": {
@@ -6789,7 +6789,7 @@
 		"available": 2,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50687",
 	"fields": {
@@ -6803,7 +6803,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50688",
 	"fields": {
@@ -6817,7 +6817,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50689",
 	"fields": {
@@ -6831,7 +6831,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50690",
 	"fields": {
@@ -6845,7 +6845,7 @@
 		"available": 2,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50691",
 	"fields": {
@@ -6859,7 +6859,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50692",
 	"fields": {
@@ -6873,7 +6873,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50693",
 	"fields": {
@@ -6887,7 +6887,7 @@
 		"available": 3,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50694",
 	"fields": {
@@ -6901,7 +6901,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50695",
 	"fields": {
@@ -6915,7 +6915,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50696",
 	"fields": {
@@ -6929,7 +6929,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50697",
 	"fields": {
@@ -6943,7 +6943,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50698",
 	"fields": {
@@ -6957,7 +6957,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50699",
 	"fields": {
@@ -6971,7 +6971,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50700",
 	"fields": {
@@ -6985,7 +6985,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50701",
 	"fields": {
@@ -6999,7 +6999,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50702",
 	"fields": {
@@ -7013,7 +7013,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50703",
 	"fields": {
@@ -7027,7 +7027,7 @@
 		"available": 2,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50704",
 	"fields": {
@@ -7041,7 +7041,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50705",
 	"fields": {
@@ -7055,7 +7055,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50706",
 	"fields": {
@@ -7069,7 +7069,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50707",
 	"fields": {
@@ -7083,7 +7083,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50708",
 	"fields": {
@@ -7097,7 +7097,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50709",
 	"fields": {
@@ -7111,7 +7111,7 @@
 		"available": 4,
 		"capacity": 5
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50710",
 	"fields": {
@@ -7125,7 +7125,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50711",
 	"fields": {
@@ -7139,7 +7139,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50712",
 	"fields": {
@@ -7153,7 +7153,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50713",
 	"fields": {
@@ -7167,7 +7167,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50714",
 	"fields": {
@@ -7181,7 +7181,7 @@
 		"available": 3,
 		"capacity": 4
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50715",
 	"fields": {
@@ -7195,7 +7195,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50716",
 	"fields": {
@@ -7209,7 +7209,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50717",
 	"fields": {
@@ -7223,7 +7223,7 @@
 		"available": 0,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50718",
 	"fields": {
@@ -7237,7 +7237,7 @@
 		"available": 1,
 		"capacity": 3
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50719",
 	"fields": {
@@ -7251,7 +7251,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50720",
 	"fields": {
@@ -7265,7 +7265,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50721",
 	"fields": {
@@ -7279,7 +7279,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50722",
 	"fields": {
@@ -7293,7 +7293,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50725",
 	"fields": {
@@ -7307,7 +7307,7 @@
 		"available": 1,
 		"capacity": 8
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50726",
 	"fields": {
@@ -7321,7 +7321,7 @@
 		"available": 4,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50727",
 	"fields": {
@@ -7335,7 +7335,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50728",
 	"fields": {
@@ -7349,7 +7349,7 @@
 		"available": 18,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50729",
 	"fields": {
@@ -7363,7 +7363,7 @@
 		"available": 28,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50731",
 	"fields": {
@@ -7377,7 +7377,7 @@
 		"available": 0,
 		"capacity": 7
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50732",
 	"fields": {
@@ -7391,7 +7391,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50733",
 	"fields": {
@@ -7405,7 +7405,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50734",
 	"fields": {
@@ -7419,7 +7419,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50735",
 	"fields": {
@@ -7433,7 +7433,7 @@
 		"available": 0,
 		"capacity": 5
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50736",
 	"fields": {
@@ -7447,7 +7447,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50737",
 	"fields": {
@@ -7461,7 +7461,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50738",
 	"fields": {
@@ -7475,7 +7475,7 @@
 		"available": 16,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50739",
 	"fields": {
@@ -7489,7 +7489,7 @@
 		"available": 19,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50740",
 	"fields": {
@@ -7503,7 +7503,7 @@
 		"available": 4,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50741",
 	"fields": {
@@ -7517,7 +7517,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50742",
 	"fields": {
@@ -7531,7 +7531,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50743",
 	"fields": {
@@ -7545,7 +7545,7 @@
 		"available": 13,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50744",
 	"fields": {
@@ -7559,7 +7559,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50745",
 	"fields": {
@@ -7573,7 +7573,7 @@
 		"available": 5,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50746",
 	"fields": {
@@ -7587,7 +7587,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50747",
 	"fields": {
@@ -7601,7 +7601,7 @@
 		"available": 11,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50749",
 	"fields": {
@@ -7615,7 +7615,7 @@
 		"available": 17,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50750",
 	"fields": {
@@ -7629,7 +7629,7 @@
 		"available": 3,
 		"capacity": 40
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50751",
 	"fields": {
@@ -7643,7 +7643,7 @@
 		"available": 2,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50753",
 	"fields": {
@@ -7657,7 +7657,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50754",
 	"fields": {
@@ -7671,7 +7671,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50755",
 	"fields": {
@@ -7685,7 +7685,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50756",
 	"fields": {
@@ -7699,7 +7699,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50757",
 	"fields": {
@@ -7713,7 +7713,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50758",
 	"fields": {
@@ -7727,7 +7727,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50759",
 	"fields": {
@@ -7741,7 +7741,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50760",
 	"fields": {
@@ -7755,7 +7755,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50761",
 	"fields": {
@@ -7769,7 +7769,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50762",
 	"fields": {
@@ -7783,7 +7783,7 @@
 		"available": 1,
 		"capacity": 2
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50763",
 	"fields": {
@@ -7797,7 +7797,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50764",
 	"fields": {
@@ -7811,7 +7811,7 @@
 		"available": 0,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50765",
 	"fields": {
@@ -7825,7 +7825,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50766",
 	"fields": {
@@ -7839,7 +7839,7 @@
 		"available": 0,
 		"capacity": 0
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50767",
 	"fields": {
@@ -7853,7 +7853,7 @@
 		"available": 1,
 		"capacity": 1
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50768",
 	"fields": {
@@ -7867,7 +7867,7 @@
 		"available": 9,
 		"capacity": 22
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50769",
 	"fields": {
@@ -7881,7 +7881,7 @@
 		"available": 20,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50770",
 	"fields": {
@@ -7895,7 +7895,7 @@
 		"available": 6,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50771",
 	"fields": {
@@ -7909,7 +7909,7 @@
 		"available": 4,
 		"capacity": 16
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50772",
 	"fields": {
@@ -7923,7 +7923,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50773",
 	"fields": {
@@ -7937,7 +7937,7 @@
 		"available": 12,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50774",
 	"fields": {
@@ -7951,7 +7951,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50775",
 	"fields": {
@@ -7965,7 +7965,7 @@
 		"available": 10,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50776",
 	"fields": {
@@ -7979,7 +7979,7 @@
 		"available": 8,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50777",
 	"fields": {
@@ -7993,7 +7993,7 @@
 		"available": 16,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50778",
 	"fields": {
@@ -8007,7 +8007,7 @@
 		"available": 0,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50779",
 	"fields": {
@@ -8021,7 +8021,7 @@
 		"available": 1,
 		"capacity": 24
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50780",
 	"fields": {
@@ -8035,7 +8035,7 @@
 		"available": 0,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50781",
 	"fields": {
@@ -8049,7 +8049,7 @@
 		"available": 2,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50783",
 	"fields": {
@@ -8063,7 +8063,7 @@
 		"available": 10,
 		"capacity": 20
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50784",
 	"fields": {
@@ -8077,7 +8077,7 @@
 		"available": 2,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50786",
 	"fields": {
@@ -8091,7 +8091,7 @@
 		"available": 0,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50788",
 	"fields": {
@@ -8105,7 +8105,7 @@
 		"available": 1,
 		"capacity": 28
 	}
-}{
+},{
 	"model": "core.course",
 	"pk": "50789",
 	"fields": {
