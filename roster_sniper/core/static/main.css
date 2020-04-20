@@ -74,7 +74,27 @@ h1, h2, h3, h4, h5, h6 {
 .italic {
     font-style: italic;
 }
+.bold {
+    font-weight: bold;
+}
+.quote {
+    border-left: 3px solid #666;
+    padding: 0.5em;
+    opacity: 69%;
+}
+.quote:before {
+    content: '“';
+}
+.quote:after {
+    content: '”';
+}
+.hopeful {
+    font-style: italic;
+    font-family: serif;
 
+    text-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+
+}
 #search-term {
     border: none;
     background: none;

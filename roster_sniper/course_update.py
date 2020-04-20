@@ -113,7 +113,7 @@ for c in classes:
             if meeting_time.get('wednesday'):
                 days += "W"
             if meeting_time.get('thursday'):
-                days += "T"
+                days += "R"
             if meeting_time.get('friday'):
                 days += "F"
             if meeting_time.get('saturday'):
