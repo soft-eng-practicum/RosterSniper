@@ -20,12 +20,34 @@ from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
 
+# For sending custom emails:
+# https://docs.djangoproject.com/en/3.0/topics/auth/default/#django.contrib.auth.views.PasswordResetView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('login/',
+        auth_views.LoginView.as_view(template_name='login.html'),
+        name='login'),
+    path('logout/',
+        auth_views.LogoutView.as_view(template_name='logout.html'),
+        name='logout'),
+    path('password-reset/request/',
+        auth_views.PasswordResetView.as_view(
+            template_name='password_reset/request.html'),
+        name='password_reset'),
+    path('password-reset/sent/',
+        auth_views.PasswordResetDoneView.as_view(
+            template_name='password_reset/sent.html'),
+        name='password_reset_done'),
+    path('password-reset/confirm/<uidb64>/<token>/',
+        auth_views.PasswordResetConfirmView.as_view(
+            template_name='password_reset/confirm.html'),
+        name='password_reset_confirm'),
+    path('password-reset/complete/',
+        auth_views.PasswordResetCompleteView.as_view(
+            template_name='password_reset/complete.html'),
+        name='password_reset_complete'),
     path('', include('core.urls')),
 ]
 
