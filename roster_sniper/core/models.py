@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 #   Course e.g. ITEC 2150 Intermediate Programming
 #   Section e.g. 50123 ITEC 2150-05, Professor Bob, 20/26, MWF 1-2 pm
 class Course(models.Model):
+	SEMESTER_CODES = {'02': 'Spring', '05': 'Summer', '08': 'Fall'}
 	CRN = models.CharField(primary_key=True, max_length=5)
 
 	# Course Information
@@ -23,7 +24,7 @@ class Course(models.Model):
 	section = models.CharField(max_length=3)
 	professor = models.CharField(max_length=50)
 
-	days = models.CharField(max_length=6)
+	days = models.CharField(max_length=10)
 	start_time = models.TimeField()
 	end_time = models.TimeField()
 
@@ -37,6 +38,24 @@ class Course(models.Model):
 
 	class Meta:
 		ordering = ['subject', 'number', 'section']
+
+	@property
+	def termstr(self):
+		return Course.get_term_str(self.term)
+	
+	@staticmethod
+	def get_term_year(term):
+		year = term[:4]
+		return int(year)
+
+	@staticmethod
+	def get_term_semester(term):
+		semester = term[-2:]
+		return Course.SEMESTER_CODES.get(semester)
+
+	@staticmethod
+	def get_term_str(term):
+		return Course.get_term_semester(term) + " " + str(Course.get_term_year(term))
 
 	def __str__(self):
 		return f'{self.subject} {self.number}-{self.section}: {self.title}'

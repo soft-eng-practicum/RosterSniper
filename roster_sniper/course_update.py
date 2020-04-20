@@ -3,6 +3,7 @@
 import os
 import sys
 import json
+import datetime
 import argparse
 
 SEARCH_URL = 'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_subject=&txt_term={term}&pageOffset={offset}&pageMaxSize=500'
@@ -100,13 +101,45 @@ for c in classes:
             if args.verbose:
                 print(f"[{c['id']}] Failed to find a professor")
 
+        # Get the meeting time
+        meeting_time = c.get('meetingsFaculty', [{}])
+        days = ""
+        if len(meeting_time) > 0:
+            meeting_time = meeting_time[0].get('meetingTime', {})
+            if meeting_time.get('monday'):
+                days += "M"
+            if meeting_time.get('tuesday'):
+                days += "T"
+            if meeting_time.get('wednesday'):
+                days += "W"
+            if meeting_time.get('thursday'):
+                days += "T"
+            if meeting_time.get('friday'):
+                days += "F"
+            if meeting_time.get('saturday'):
+                days += "S"
+
+            try:
+                start_hour = int(meeting_time.get('beginTime', '0000')[:2])
+                start_min = int(meeting_time.get('beginTime', '0000')[2:])
+                end_hour = int(meeting_time.get('endTime', '0000')[:2])
+                end_min = int(meeting_time.get('endTime', '0000')[2:])
+                start_time = datetime.time(start_hour, start_min)
+                end_time = datetime.time(end_hour, end_min)
+            except:
+                start_time = datetime.time(0, 0)
+                end_time = datetime.time(0, 0)
+        else:
+            start_time = datetime.time(0, 0)
+            end_time = datetime.time(0, 0)
+
         enrolled = c['seatsAvailable']
         available = c['enrollment']
         capacity = enrolled + available
 
         # Add it to the database hopefully
         try:
-            Course.objects.create(CRN=crn, subject=subject, number=number, title=title, term=term, section=section, professor=professor, enrolled=enrolled, available=available, capacity=capacity)
+            Course.objects.create(CRN=crn, subject=subject, number=number, title=title, term=term, section=section, professor=professor, days=days, start_time=start_time, end_time=end_time, enrolled=enrolled, available=available, capacity=capacity)
             if args.verbose:
                 print(f"[{c['id']}] Successfully added {subject}{number}-{section}!")
         except IntegrityError:
@@ -126,6 +159,6 @@ for c in classes:
         except Exception as e:
             if args.verbose:
                 print(f"[{c['id']}] Failed to add to database: {e}")
-    except:
+    except Exception:
         if args.verbose:
-            print(f"[{c['id']}] Failed to collect any data")
+            print(f"[{c['id']}] Failed to collect any data" )

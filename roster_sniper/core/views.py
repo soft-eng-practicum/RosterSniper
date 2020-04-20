@@ -69,7 +69,45 @@ def add_course(request):
         }, safe=False)
 
     else:
-        return render(request, 'add_course.html')
+        terms = Course.objects.all().order_by().values('term').distinct()
+        terms = [x['term'] for x in terms]
+        t = dict()
+        for term in terms:
+        	t[term] = Course.get_term_str(term)
+        context = {
+            'terms': t
+        }
+        return render(request, 'add_course.html', context)
+
+
+def base_search(request):
+    ''' Not an actual view but a helper function '''
+
+    courses = Course.objects.all()
+
+    if crn := request.GET.get('crn'):
+        courses = courses.filter(CRN__contains=crn)
+
+    if term := request.GET.get('term'):
+        courses = courses.filter(term=term)
+
+    if code := request.GET.get('code'):
+        # stackoverflow.com/a/36224347
+        courses = courses.annotate(
+            code=Concat('subject', V('-'), 'number', V(' '), 'section')
+        ).filter(
+            code__icontains=code
+        )
+
+    if title := request.GET.get('title'):
+        title = title.split()
+        for word in title:
+            courses = courses.filter(title__icontains=word)
+
+    if professor := request.GET.get('professor'):
+        courses = courses.filter(professor__icontains=professor)
+
+    return courses
 
 
 @login_required

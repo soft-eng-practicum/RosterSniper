@@ -70,3 +70,22 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #6c757d !important;
 	color: white;
 }
+
+.italic {
+    font-style: italic;
+}
+
+#search-term {
+    border: none;
+    background: none;
+    appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-bottom: 1px solid black;
+}
+#search-term:focus, #search-term:active, #search-term::-moz-focus-inner {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: 0;
+}

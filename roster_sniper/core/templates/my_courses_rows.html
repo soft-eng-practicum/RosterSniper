@@ -1,5 +1,6 @@
 {% for favorite in favorites %}{% with course=favorite.course %}
 <tr id={{ course.CRN }}>
+	<td>{{ course.termstr }}</td>
 	<td>{{ course.subject }}-{{ course.number }} {{ course.section }}</td>
 	<td>{{ course.title }}</td>
 	<td>{{ course.professor }}</td>
