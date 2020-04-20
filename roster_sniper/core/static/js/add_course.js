@@ -1,14 +1,21 @@
-// See github.com/SHxKM/django-ajax-search for a more complex example
-// I originally did something like that but I felt it was too slow
+// Runs when the page is 'ready'
+$(function() {
+	$('table').tablesorter({
+		theme : 'bootstrap',
+		widthFixed: true,
+		sortReset: true,
+		sortRestart : true
+	}).tablesorterPager({
+		container: $('.ts-pager'),
+		cssGoto: '.pagenum',
+		output: '{startRow} - {endRow} / {totalRows}'
+	});
 
-// Is fired even when 'non textual' keys are released e.g. shift
-// not really a big deal
+	// Triggers search if enter is pressed while in a search box
+	$('thead input').keypress(e => { if (e.keyCode == 13) update_courses() });
+});
 
-var page = 0;
-
-function update_courses(btn='') {
-
-	// This only adds a parameter to the query string if it is non-empty
+function update_courses() {
 	search_params = {};
 	if ( x = $('#search-crn').val() ) search_params.crn = x;
 	if ( x = $('#search-code').val() ) search_params.code = x;
@@ -18,40 +25,15 @@ function update_courses(btn='') {
 	// Don't allow empty searches
 	if ($.isEmptyObject(search_params)) {
 		$('#course_rows').html('');
-		$('#morebtns').hide();
-		$('#howtosearch').show();
+		$('table').trigger('update');
 		return;
 	} // else..
 
-	$('#howtosearch').hide();
-
-	var updt_func;
-	if (btn == 'more') {
-		page++;
-		search_params.page = page;
-
-		updt_func = response => { $('#course_rows').append(response['course_rows']); }
-
-	} else {
-		if (btn != 'all') {
-			page = 1;
-			search_params.page = page;
-		}
-
-		updt_func = response => { $('#course_rows').html(response['course_rows']); }
-	}
-
-	$.getJSON('/add-course/', search_params).done(updt_func,
+	$.getJSON('/add-course/', search_params).done(
 		response => { 
-			if (response['more']) $('#morebtns').show();
-			else $('#morebtns').hide();
+			$('#course_rows').html(response['course_rows']);
+			$('table').trigger('update');
 			$('#course_rows td span.fa-star').on('click', favorite);
 		}
 	)
 }
-
-// on 'paste' too?
-$('#search-parent input').on('keyup', update_courses);
-
-// Automatically run search in case user reloads page with search parameters
-update_courses();
