@@ -3,5 +3,5 @@ Hi {{ name }},
 
 Please follow the link to confirm your registration:
 
-http://{{ hostname }}{% url 'activate' uidb64=uid token=token %}
+{{ link }}
 {% endautoescape %}

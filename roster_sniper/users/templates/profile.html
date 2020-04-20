@@ -19,6 +19,9 @@
 				{{ u_form|crispy }}
 				{{ p_form|crispy }}
 			</fieldset>
+            {% if not user.profile.emailConfirmed %}
+            <p class="italic"><a href="{% url 'send-verification' %}">Send confirmation email</a> to receive notifications.</p>
+            {% endif %}
 			<div class="form-group">
 				<button class="btn btn-outline-info" type="submit">Save</button>
 			</div>

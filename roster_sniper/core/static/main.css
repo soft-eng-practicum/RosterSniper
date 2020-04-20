@@ -49,3 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #85C446;
   border-color: #85C446;
 }
+
+.italic {
+    font-style: italic;
+}

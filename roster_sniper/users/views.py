@@ -18,38 +18,46 @@ def register(request):
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.is_active = False
-            user.save()
-            context = {
-                'name': form.cleaned_data.get('first_name') or form.cleaned_data.get('username'),
-                'hostname': 'rsniper.shitchell.com',
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user)
-            }
-            email_text = get_template('verification_email.txt')
-            email_html = get_template('verification_email.html')
-            email_text = email_text.render(context)
-            email_html = email_html.render(context)
+            form.save()
             
-            subject = f"Verify your Roster Sniper account"
-            addr_to = form.cleaned_data.get('email')
-            addr_from = "Roster Sniper <no-reply@shitchell.com>"
-            msg = EmailMultiAlternatives(subject, email_text, addr_from, [addr_to])
-            msg.attach_alternative(email_html, "text/html")
-            msg.send()
+            new_user = authenticate(username=form.cleaned_data['username'],
+                                    password=form.cleaned_data['password1'])
+            send_email_verification(new_user)
 
+            login(request, new_user)
             messages.info(request, 'Thanks for registering. Please confirm your email to continue.')
-            return redirect('login')
-            #new_user = authenticate(username=form.cleaned_data['username'],
-            #                        password=form.cleaned_data['password1'])
-
-            #login(request, new_user)
-            #return redirect('add_course')
+            return redirect('profile')
     else:
         form = MyUserCreationForm()
 
     return render(request, 'register.html', {'form': form})
+
+def generate_verification_uri(user):
+    uid = urlsafe_base64_encode(force_bytes(user.pk))
+    token = account_activation_token.make_token(user)
+    return f"http://rsniper.shitchell.com/activate/{uid}/{token}"
+
+def send_verification(request):
+    send_email_verification(request.user)
+    messages.info(request, 'A verification email has been sent.')
+    return redirect('profile')
+
+def send_email_verification(user):
+    context = {
+        'name': user.first_name or user.username,
+        'link': generate_verification_uri(user)
+    }
+    email_text = get_template('verification_email.txt')
+    email_html = get_template('verification_email.html')
+    email_text = email_text.render(context)
+    email_html = email_html.render(context)
+    
+    subject = f"Verify your Roster Sniper account"
+    addr_to = user.email
+    addr_from = "Roster Sniper <no-reply@shitchell.com>"
+    msg = EmailMultiAlternatives(subject, email_text, addr_from, [addr_to])
+    msg.attach_alternative(email_html, "text/html")
+    msg.send()
 
 # https://medium.com/@frfahim/django-registration-with-confirmation-email-bb5da011e4ef
 def activate(request, uidb64, token):
@@ -60,6 +68,7 @@ def activate(request, uidb64, token):
         user = None
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
+        user.profile.emailConfirmed = True
         user.save()
         login(request, user)
         messages.info(request, 'Your email address has been verified!')
@@ -74,6 +83,8 @@ def profile(request):
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 
         if u_form.is_valid() and p_form.is_valid():
+            if 'email' in u_form.changed_data:
+                request.user.profile.emailConfirmed = False
             u_form.save()
             p_form.save()
             messages.success(request, 'Your account has been updated.')

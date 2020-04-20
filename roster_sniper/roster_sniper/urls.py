@@ -29,6 +29,7 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
             user_views.activate, name='activate'),
+    path('send-verification', user_views.send_verification, name='send-verification'),
     path('login/',
         auth_views.LoginView.as_view(template_name='login.html'),
         name='login'),
