@@ -31,37 +31,8 @@ def about(request):
 
 
 def add_course(request):
-    ''' First course search page that was developed '''
-
-    if request.is_ajax():
-
-        courses = base_search(request)
-
-        if page := request.GET.get('page'):
-            page = int(page)
-
-            more = len(courses) > page*10
-            courses = courses[(page-1)*10:page*10]
-
-        else: # Requesting everything (clicked View All button)
-            more = False
-
-        return JsonResponse(data={
-            'course_rows': render_to_string('add_course_rows.html', {
-                'courses': courses,
-                'CRNs': request.user.course_set.values_list('CRN', flat=True)
-                    if request.user.is_authenticated else None
-            }),
-            'more': more
-        }, safe=False)
-
-    else:
-        return render(request, 'add_course.html')
-
-
-def add_course_2(request):
-    ''' Developed after courses(), this view uses the tablesorter jQuery plugin
-    to display courses in a nice sortable table '''
+    ''' This view uses the tablesorter jQuery plugin to display courses in a
+    nice sortable table '''
 
     if request.is_ajax():
 
@@ -76,7 +47,7 @@ def add_course_2(request):
         }, safe=False)
 
     else:
-        return render(request, 'add_course_2.html')
+        return render(request, 'add_course.html')
 
 
 def base_search(request):
