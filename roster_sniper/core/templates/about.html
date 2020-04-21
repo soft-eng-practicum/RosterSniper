@@ -3,7 +3,33 @@
 {% block title %}About - {% endblock title %}
 
 {% block content %}
-	<h1>About Page</h1>
-	<p>Created by {{ name1 }} and {{ name2 }}.</p>
-	<p><a href="https://github.com/soft-eng-practicum/ggc-coursicle">GitHub Page</a></p>
+<div id="content">
+    <div>
+        <h3>How this site works</h3>
+        <p>
+            <ol>
+                <li><a href="{% url 'register' %}">Create</a> an account</li>
+                <li>Verify your email</li>
+                <li><a href="{% url 'add_course' %}">Search</a> for a class you <span class="italic">really</span> want</li>
+                <li>Click the <span class="far fa-star mypointer"></span> next to it</li>
+                <li>Register as soon as you get your notification</li>
+            </ol>
+        </p>
+    </div>
+
+    <div>
+    	<h4>Created by</h4>
+    	<p>{{ name1 }} and {{ name2 }}.</p>
+    </div>
+
+    <div>
+    	<h4>Checkout the code</h4>
+    	<p><a href="https://github.com/soft-eng-practicum/ggc-coursicle">GitHub Page</a></p>
+    </div>
+
+    <div>
+    	<h4>Openly released</h4>
+    	<p>All work released under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons</a></p>
+    </div>
+</div>
 {% endblock content %}

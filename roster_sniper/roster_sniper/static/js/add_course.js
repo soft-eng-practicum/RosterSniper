@@ -25,7 +25,6 @@ function update_courses() {
 	}
 	if ( x = $('#search-title').val() ) search_params.title = x;
 	if ( x = $('#search-professor').val() ) search_params.professor = x;
-	if ( x = $('#search-term').val() ) search_params.term = x;
 
 	// Don't allow empty searches
 	if ($.isEmptyObject(search_params)) {
@@ -33,6 +32,8 @@ function update_courses() {
 		$('table').trigger('update');
 		return;
 	} // else..
+
+	if ( x = $('#search-term').val() ) search_params.term = x;
 
 	days = '';
 	$('#days').children().each(function() {
