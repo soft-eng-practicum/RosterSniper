@@ -3,6 +3,7 @@
 	<td>{{ course.termstr }}</td>
 	<td>{{ course.subject }}-{{ course.number }} {{ course.section }}</td>
 	<td>{{ course.title }}</td>
+	<td>{{ course.days }}: {{ course.start_time|time:"g:iA"|lower }}-{{ course.end_time|time:"g:iA"|lower }}</td>
 	<td>{{ course.professor }}</td>
 	<td>{{ course.enrolled }}/{{ course.capacity }}</td>
 	<td><span data-type="email" title="Emails?" class="{% if favorite.emailNotify %}fas{% else %}far{% endif %} fa-envelope-open mypointer"></span></td>
