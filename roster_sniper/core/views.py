@@ -38,6 +38,9 @@ def add_course(request):
 
         courses = Course.objects.all()
 
+        if term := request.GET.get('term'):
+            courses = courses.filter(term=term)
+        
         if crn := request.GET.get('crn'):
             courses = courses.filter(CRN__contains=crn)
 
