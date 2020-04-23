@@ -16,13 +16,13 @@
             {% endfor %}
         </select>
 	</h2>
-	<table class="table" style="table-layout: fixed;">
+	<table class="table table-responsive" style="table-layout: fixed;">
 	<colgroup>
-		<col style="width: 10%;">
-		<col style="width: 13%;">
-		<col>
+		<col style="width: 10%; min-width: 75px;">
+		<col style="width: 13%; min-width: 100px;">
+		<col style="min-width: 200px;">
 		<col style="width: 200px;">
-		<col style="width: 15%;">
+		<col style="width: 15%; min-width: 150px;">
 		<col style="width: 100px;">
 		<col style="width: 30px;">
 	</colgroup>
@@ -66,12 +66,12 @@
 			<button type="button" class="btn btn-secondary next" title="next">→</button>
 			<button type="button" class="btn btn-secondary last" title="last">⇥</button>
 		</div>
-		<select class="form-control-sm custom-select px-1 pagesize" style="width: 100px;" title="Select page size">
+		<select class="form-control-sm custom-select px-1 pagesize" style="max-width: 100px;" title="Select page size">
 			<option selected="selected" value="10">10</option>
 			<option value="20">20</option>
 			<option value="all">All Rows</option>
 		</select>
-		<select class="form-control-sm custom-select px-4 mx-2 pagenum" title="Select page number"></select>
+		<select class="form-control-sm custom-select px-4 mx-2 pagenum" style="max-width: 100px;" title="Select page number"></select>
 	</div></th></tr></tfoot>
 	</table>
 {% endblock content %}
