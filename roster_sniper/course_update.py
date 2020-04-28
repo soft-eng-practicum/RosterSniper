@@ -73,7 +73,7 @@ if args.production:
 elif args.development:
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings.development")
 else:
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'production'))
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'development'))
 django.setup()
 
 # Load the Course module to add items to database *after* django has been set up
@@ -92,7 +92,7 @@ for c in classes:
         subject = c['subject']
         number = c['courseNumber']
         title = c['courseTitle']
-        title = html.unescape(title)
+        
 
         term = c['term']
         section = c['sequenceNumber']

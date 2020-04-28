@@ -10,7 +10,7 @@ import requests
 import django
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'production'))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'development'))
 django.setup()
 from core.models import Favorite, Course
 
