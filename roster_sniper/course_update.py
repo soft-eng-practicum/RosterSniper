@@ -3,6 +3,7 @@
 import os
 import sys
 import json
+import html
 import datetime
 import argparse
 
@@ -91,6 +92,7 @@ for c in classes:
         subject = c['subject']
         number = c['courseNumber']
         title = c['courseTitle']
+        title = html.unescape(title)
 
         term = c['term']
         section = c['sequenceNumber']
@@ -133,8 +135,8 @@ for c in classes:
             start_time = datetime.time(0, 0)
             end_time = datetime.time(0, 0)
 
-        enrolled = c['seatsAvailable']
-        available = c['enrollment']
+        enrolled = c['enrollment']
+        available = c['seatsAvailable']
         capacity = enrolled + available
 
         # Add it to the database hopefully

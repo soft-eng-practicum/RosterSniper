@@ -35,7 +35,7 @@ def register(request):
 def generate_verification_uri(user):
     uid = urlsafe_base64_encode(force_bytes(user.pk))
     token = account_activation_token.make_token(user)
-    return f"http://rsniper.shitchell.com/activate/{uid}/{token}"
+    return f"http://rostersniper.com/activate/{uid}/{token}"
 
 def send_verification(request):
     send_email_verification(request.user)

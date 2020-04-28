@@ -24,19 +24,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = '^vb=_m2$*bv1*@ssrw@d37dqfryj_q-l7kr7ve(khu4^x5j)4k'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '^vb=_m2$*bv1*@ssrw@d37dqfryj_q-l7kr7ve(khu4^x5j)4k')
 
-ALLOWED_HOSTS = ['rsniper.shitchell.com', 'shitchell.com', 'localhost']
+ALLOWED_HOSTS = ['rsniper.shitchell.com', 'shitchell.com', 'rostersniper.com', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [
-    'core.apps.RSConfig',
-    'users.apps.UsersConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core.apps.RSConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
