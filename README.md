@@ -20,7 +20,9 @@ and here is the My Courses page:
 
 ## Installation
 
-The project requires Python 3.8 or higher and Django 3, along with a few others packages as described in [requirements.txt](requirements.txt). It is recommend that you create a virtual environment with these packages. The website uses jQuery, Popper.js, Bootstrap, and Font Awesome but they are not hosted locally, instead they are hot-linked from a few CDNs. However the tablesorter jQuery plugin is hosted locally and [included](roster_sniper/core/static/tablesorter) in this repository.
+The project requires Python 3.8 or higher along with a few packages as described in [requirements.txt](requirements.txt). To install these packages, it is recommended that you first create a virtual environment using a tool such as `venv`. To install the packages listed in requirements.txt, run `pip install -r requirements.txt`.
+
+The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they are not hosted locally, instead they are hot-linked from a few CDNs and no installation is required. However, the tablesorter jQuery plugin is hosted locally and [included](roster_sniper/core/static/tablesorter) in this repository.
 
 The development web server is ran using the command `python manage.py runserver`.
 
