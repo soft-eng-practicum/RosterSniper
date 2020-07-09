@@ -1,0 +1,43 @@
+<html><body style="font-family: arial, sans; font-size: 1.2em; background-color: #00704A; padding: 1cm 0.5cm;" align="center">
+<div style="padding: 1em; max-width: 600px; background-color: white; border-radius: 5px;">
+
+	<h1><a href="{{ home }}" style="font-style: italic; font-weight: bold; text-decoration: none; color: black;">RosterSniper</a></h1>
+
+	<span style="font-size: 1.2em; color: #2196f3; font-weight: bold;">A section you're watching <i>just {% if is_open %}opened!{% else %}closed.{% endif %}</i></span>
+
+	<table style='border-collapse: collapse; border-left: 3px solid #9E9E9E; padding: 0.1em; margin: 1em 0;'>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">Course</td>
+			<td style="padding-left: 15px;">{{ course }}</title>
+		</tr>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">Professor</td>
+			<td style="padding-left: 15px;">{{ professor }}</td>
+		</tr>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">CRN</td>
+			<td style="padding-left: 15px;">{{ crn }}</td>
+		</tr>
+	</table>
+	
+	<div>
+	<!--[if mso]>
+		<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" stroke="f" fillcolor="#00704A">
+		<w:anchorlock/>
+		<center>
+	<![endif]-->
+		<a href="https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration" style="background-color: #00704A; border-radius: 50px; color: white; font-size: 14px; font-weight: bold; text-decoration: none; line-height: 40px; width:200px; display: inline-block;">Register Now!</a>
+	<!--[if mso]>
+		</center>
+		</v:roundrect>
+	<![endif]-->
+	</div>
+	
+	<hr style="margin-top: 1.4em;">
+	<div style="font-size: 0.8em; color: #9E9E9E; display: inline-block;" align="left">
+		<div><a href="{{ unsub_url_fav }}" style="color: #2196F3">Unsubscribe</a> from emails related to this section</div>
+		<div><a href="{{ unsub_url_all }}" style="color: #2196F3">Unsubscribe</a> from all emails</div>
+	</div>
+
+</div>
+</body></html>

@@ -1,8 +1,8 @@
-# <img src="roster_sniper/media/readme/logo.png" height="40">
+# <img src="backend/media/readme/logo.png" height="40">
 
 RosterSniper is a web application used for monitoring course availability at Georgia Gwinnett College.
 
-- **Website:** http://rsniper.shitchell.com
+- **Website:** https://rostersniper.com
 - **Source Code:** https://github.com/soft-eng-practicum/ggc-coursicle
 - **Bug Reports:** https://github.com/soft-eng-practicum/ggc-coursicle/issues
 
@@ -12,21 +12,21 @@ The website is built using Django, jQuery and plugins, Font Awesome, et al.
 
 Here is the Add Course page:
 
-<img src="roster_sniper/media/readme/add-course.png" width="600">
+<img src="docs/img/add-courses.png" width="600">
 
 and here is the My Courses page:
 
-<img src="roster_sniper/media/readme/my-courses.png" width="600">
+<img src="docs/img/my-courses.png" width="600">
 
 ## Installation
 
 The project requires Python 3.8 or higher along with a few packages as described in [requirements.txt](requirements.txt). To install these packages, it is recommended that you first create a virtual environment using a tool such as `venv`. To install the packages listed in requirements.txt, run `pip install -r requirements.txt`.
 
-The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they are not hosted locally, instead they are hot-linked from a few CDNs and no installation is required. However, the tablesorter jQuery plugin is hosted locally and [included](roster_sniper/core/static/tablesorter) in this repository.
+The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they are not hosted locally, instead they are hot-linked from a few CDNs and no installation is required.
 
 The development web server is ran using the command `python manage.py runserver`.
 
-Our developer documentation can be found [here](roster_sniper/notes).
+Our developer documentation can be found [here](docs).
 
 ## Our Team
 

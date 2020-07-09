@@ -1,4 +1,13 @@
-Django>=3.0,<3.1
-django-crispy-forms==1.9.0
-Pillow==7.0.0
-psycopg2-binary
+# Python must be 3.8 or higher! (uses PEP 572)
+
+Django~=3.0.0
+django-crispy-forms~=1.9.0
+
+# HTTP library used to download banner course data
+requests~=2.23.0
+
+# Imaging library used for profile picture manipulation
+Pillow~=7.1.0
+
+# PostgreSQL Python adapter, Django requires at least 2.5.4
+psycopg2-binary>=2.5.4

@@ -1,0 +1,51 @@
+{% extends "base/base_reg.html" %}
+{% load static %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my_courses.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/my_courses.js' %}" defer></script>
+{% endblock %}
+
+{% block title %}Your Courses - {% endblock title %}
+
+{% block content %}
+<h2 class="mb-3">Your Courses</h2>
+{% if favorites %}
+{% regroup favorites by section.term as grouped_favorites %}
+{% for term in grouped_favorites %}
+	<div class="card courses-card">
+		<div class="card-header h4">{{ term.grouper }}</div>
+
+		<table class="table m-0">
+			<thead><tr class="table-borderless">
+				<th>Course Code</th>
+				<th>Title</th>
+				<th>Meeting</th>
+				<th>Professor</th>
+				<th>Seats</th>
+				<th>Options</th>
+			</tr></thead>
+			<tbody>
+				{% for favorite in term.list %}{% with section=favorite.section %}{% spaceless %}
+				<tr id="{{ section.CRN }}">
+					<td>{{ section.get_code }}</td>
+					<td>{{ section.course.title }}</td>
+					<td><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
+					<td>{{ section.get_prof_name }}</td>
+					<td>{{ section.enrolled }}/{{ section.capacity }}</td>
+					<td class="course-options">
+						<span data-type="email" title="Emails?" class="{% if favorite.emailNotify %}fas{% else %}far{% endif %} fa-envelope-open mypointer"></span>
+						<span data-type="favorite" title="Untrack?" class="fas fa-star mypointer"></span>
+					</td>
+				</tr>
+				{% endspaceless %}{% endwith %}{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endfor %}
+{% else %}
+Looks like you aren't watching any courses. Head on over to the <a href="{% url 'add_courses' %}">add courses</a> page and start searching! &#128578;
+{% endif %}
+{% endblock content %}

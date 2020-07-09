@@ -1,0 +1,19 @@
+/******************************** Courses Card ********************************/
+
+.courses-card {
+	overflow-x: auto;
+	margin-bottom: 1rem;
+}
+
+.courses-card > .card-header {
+	border-bottom: 0px;
+}
+
+.courses-card > .card-header, .courses-card > .card-footer {
+	background-color: #F5F5F5;
+}
+
+.courses-card > table > thead > tr > th {
+	border-bottom: 0px !important;
+	background-color: #F5F5F5;
+}

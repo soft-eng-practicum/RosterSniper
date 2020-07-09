@@ -1,0 +1,35 @@
+{% extends "base/base_sm.html" %}
+
+{% block title %}Unsubscribed - {% endblock title %}
+
+{% block content %}
+	<h1 id="subTitle">Unsubscribed</h1>
+	<p>You've <span id="subSpan">unsubscribed from</span> {{ text }}.</p>
+	<button id="subBtn" type="button" class="btn btn-primary" onclick="subscribe()">Resubscribe?</button>
+	<div class="border-top mt-3 pt-1 small text-muted">
+		Manage individual subscription emails <a href="{% url 'my_courses' %}">here</a>.<br>
+		Manage all emails <a href="{% url 'profile' %}">here</a>.
+	</div>
+{% endblock content %}
+
+{% block foot %}
+	<script type="text/javascript">
+		subTitle = $('#subTitle');
+		subSpan = $('#subSpan');
+		subBtn = $('#subBtn');
+
+		function subscribe() {
+			if (subBtn.html().charAt(0) == 'R') {
+				$.get(window.location.pathname, { subscribe: 'true' });
+				subTitle.html('Subscribed');
+				subSpan.html('subscribed to');
+				subBtn.html('Unsubscribe?');
+			} else {
+				$.get(window.location.pathname);
+				subTitle.html('Unsubscribed');
+				subSpan.html('unsubscribed from');
+				subBtn.html('Resubscribe?');
+			}
+		}
+	</script>
+{% endblock foot %}

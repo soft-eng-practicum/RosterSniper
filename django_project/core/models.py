@@ -1,0 +1,159 @@
+import uuid
+
+from django.db import models
+
+from users.models import User
+
+
+class Professor(models.Model):
+	email = models.EmailField(null=True, blank=True, unique=True)
+	firstname = models.CharField(max_length=25)
+	lastname = models.CharField(max_length=25)
+	title = models.CharField(max_length=4, blank=True) # E.g. Dr, Mr, Ms, Mrs
+
+	class Meta:
+		ordering = ['lastname']
+
+	def title_name(self):
+		if self.title:
+			return f'{self.title} {self.firstname} {self.lastname}'
+		else:
+			return f'{self.firstname} {self.lastname}'
+
+	def __str__(self):
+		return f'{self.lastname}, {self.firstname}'
+
+
+class Term(models.Model):
+	code = models.CharField(max_length=6, primary_key=True)  # e.g. 202008
+	description = models.CharField(max_length=20) # e.g. Fall 2020
+	active = models.BooleanField(default=True)
+
+	class Meta:
+		ordering = ['code']
+
+	def __str__(self):
+		return self.description
+
+
+class Subject(models.Model):
+	# E.g. ITEC, Information Technology
+	short_title = models.CharField(max_length=4, primary_key=True)
+	long_title = models.CharField(max_length=100)
+
+	class Meta:
+		ordering = ['short_title']
+
+	@property
+	def full_str(self):
+		return f'{self.short_title}: {self.long_title}'
+
+	def __str__(self):
+		return self.short_title
+
+
+class Course(models.Model):
+	subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+
+	# Course Information
+	# Some course numbers have an *, ^, H, or K at the end (length=5)
+	# and some course titles are very very very long for some reason..
+	number = models.CharField(max_length=5)
+	title = models.CharField(max_length=100)
+
+	credit_hours = models.SmallIntegerField()
+	def get_credit_hours(self):
+		return f"{self.credit_hours} Credit Hour{'' if self.credit_hours == 1 else 's'}"
+
+	class Meta:
+		ordering = ['subject_id', 'number']
+
+	# Using {self.subject} would call __str__ on the entire subject, hitting the
+	# database to get all the attributes needed to create the object. Instead we
+	# are using the foreign key directly which is defined to be short_title in
+	# the Subject class.
+	def short_str(self):
+		return f'{self.subject_id} {self.number}'
+
+	def __str__(self):
+		return f'{self.subject_id} {self.number}: {self.title}'
+
+
+class Section(models.Model):
+
+	CRN = models.CharField(max_length=5, primary_key=True)
+	course = models.ForeignKey(Course, on_delete=models.CASCADE)
+
+	term = models.ForeignKey(Term, on_delete=models.CASCADE)
+	section_num = models.CharField(max_length=3)
+	professor = models.ForeignKey(Professor, on_delete=models.SET_NULL,
+		null=True, blank=True)
+
+	days_map = {
+		'M': 'Monday',
+		'T': 'Tuesday',
+		'W': 'Wednesday',
+		'R': 'Thursday',
+		'F': 'Friday',
+		'S': 'Saturday',
+		'U': 'Sunday'
+	}
+	days = models.CharField(default='', max_length=7)
+	start_time = models.TimeField()
+	end_time = models.TimeField()
+
+	enrolled  = models.SmallIntegerField() # Number of students enrolled
+	available = models.SmallIntegerField() # Number of available seats
+	capacity  = models.SmallIntegerField() # Total number of seats
+
+	# docs.djangoproject.com/en/dev/
+	# ref/models/fields/#django.db.models.ManyToManyField.through
+	watchers = models.ManyToManyField(User, through='Favorite')
+
+	class Meta:
+		ordering = ['term_id', 'course', 'section_num']
+
+	def get_code(self):
+		# E.g. ITEC 1001-01
+		return f'{self.course.short_str()}-{self.section_num}'
+
+	def get_prof_name(self):
+		return str(self.professor) if self.professor else 'TBA'
+
+	def get_meeting(self):
+		if self.days:
+			return f"{self.days}: {self.start_time.strftime('%-I:%M')} - {self.end_time.strftime('%-I:%M %p')}"
+		else:
+			return "NA"
+
+	def get_meeting_full(self):
+		return f"(Primary) {', '.join(Section.days_map[day] for day in self.days)} at {self.start_time.strftime('%-I:%M %p')} - {self.end_time.strftime('%-I:%M %p')}" if self.days else "NA"
+
+	def get_log_str(self):
+		return (
+			f'{self.term_id}, {self.CRN}, '
+			f'{self.course.title[:32]}{"..." if len(self.course.title) > 30 else ""}'
+		).ljust(50)
+
+	def __str__(self):
+		return f'{self.get_code()}: {self.course.title}'
+
+
+class Favorite(models.Model):
+	''' Manually specified intermediary table for the many-to-many User-Course
+	relationship '''
+
+	section = models.ForeignKey(Section, on_delete=models.CASCADE)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+	# Possibly add txtNotify in the future
+	emailNotify = models.BooleanField(default=True)
+	emailUnsubID = models.UUIDField(default=uuid.uuid4)
+	# I'd say unique=True is not necessary here.. ^^
+
+	class Meta:
+		unique_together = ['section', 'user']
+		ordering = ['section']
+
+	def __str__(self):
+		return f'{self.user.username} watching {self.section}'

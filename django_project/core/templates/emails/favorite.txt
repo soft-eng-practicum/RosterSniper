@@ -1,0 +1,17 @@
+RosterSniper
+------------
+
+A section just became available!
+
+Course:     {course}
+Professor:  {professor}
+CRN:        {crn}
+
+Follow the link to register:
+https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration
+
+Unsubscribe from notifications for this course:
+{{ unsub_url_fav }}
+
+Unsubscribe from notifications for all courses:
+{{ unsub_url_all }}
