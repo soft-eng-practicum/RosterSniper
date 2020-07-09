@@ -3,14 +3,14 @@
 RosterSniper is a web application used for monitoring course availability at Georgia Gwinnett College.
 
 - **Website:** https://rostersniper.com
-- **Source Code:** https://github.com/soft-eng-practicum/ggc-coursicle
-- **Bug Reports:** https://github.com/soft-eng-practicum/ggc-coursicle/issues
+- **Source Code:** https://github.com/soft-eng-practicum/RosterSniper
+- **Bug Reports:** https://github.com/soft-eng-practicum/RosterSniper/issues
 
 ## About
 
 The website is built using Django, jQuery and plugins, Font Awesome, et al.
 
-Here is the Add Course page:
+Here is the Add Courses page:
 
 <img src="docs/img/add-courses.png" width="600">
 

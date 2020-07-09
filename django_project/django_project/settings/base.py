@@ -15,9 +15,6 @@ import os
 # Not an actual setting, only used to build paths eg os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# List of people who get error notifications (when DEBUG=False)
-ADMINS = [('Ryan', 'rjc0514@gmail.com'), ('Shaun', 'smitchell11@ggc.edu')]
-
 # Application definition
 INSTALLED_APPS = [
     # stackoverflow.com/a/34214067
