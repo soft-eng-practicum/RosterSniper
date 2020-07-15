@@ -1,5 +1,4 @@
-import os, json
-import html, requests
+import json, html, requests
 from datetime import time
 
 from django.core.management.base import BaseCommand
@@ -7,7 +6,6 @@ from django.core.management.base import BaseCommand
 from core.models import Term
 
 
-# ./manage.py update_courses -o data.json -r -v 2
 # https://jennydaman.gitlab.io/nubanned/dark
 class Command(BaseCommand):
 	help = 'Update course information from banner'
@@ -19,7 +17,7 @@ class Command(BaseCommand):
 	def add_arguments(self, parser):
 		parser.add_argument('-t', '--terms', type=int, nargs='*',
 			default=Term.objects.filter(active=True).values_list('code', flat=True),
-			help='The semester to search for course information (ex: 202005)')
+			help='Terms that the program will fetch course information from (eg: 202005). Defaults to all active Term model instances.' )
 
 		parser.add_argument('-i', '--infile', type=str,
 			help='Update the database using the specified JSON file')
@@ -31,10 +29,16 @@ class Command(BaseCommand):
 			help='Fetch course information but do not update the database')
 
 		parser.add_argument('-r', '--remove-old', action='store_true',
-			help='Removes courses in the database which are not found using the updated information')
+			help='Removes sections in the database which are not found in the updated information')
 
 	def handle(self, *args, **options):
 		verbosity = options['verbosity']
+
+		def log(str):
+			self.stdout.write(str)
+
+		def log_sec(str):
+			self.stdout.write(f"[{section.get_log_str()}] {str}")
 		
 		# Load course data from JSON file
 		if filename := options['infile']:
@@ -45,11 +49,11 @@ class Command(BaseCommand):
 			courses = []
 
 			if not options['terms']:
-				self.stdout.write('No terms were provided. You may add them in the admin page or as an option to this command eg -t 202005 202008')
+				log('No terms were provided. You may add them in the admin page or as an option to this command eg -t 202005 202008')
 				return
 
 			for term in options['terms']:
-				self.stdout.write(f'Term: {term}')
+				log(f'Term: {term}')
 
 				# Get session cookies
 				session = requests.Session()
@@ -74,21 +78,18 @@ class Command(BaseCommand):
 						offset += 500
 						courses.extend(course_data)
 
-						self.stdout.write(
-							f'[downloading] {count}/{total} '
-							f'{"open" if open_only else "closed"} courses collected'
-						)
+						log(f"[downloading] {count}/{total} {'open' if open_only else 'closed'} courses collected")
 
 					session.get(Command.RESET_URL)
 
 			if verbosity > 1:
-				self.stdout.write(f"[info] {len(courses)} courses were downloaded")
+				log(f"[info] {len(courses)} courses were downloaded")
 
 		# Save course data if necessary
 		if filename := options['outfile']:
 			with open(filename, 'w') as f:
 				f.write(json.dumps(courses, indent='\t'))
-				self.stdout.write(f'[info] Saved course information to {filename}')
+				log(f'[info] Saved course information to {filename}')
 
 		# If we aren't supposed to update the database, exit here
 		if options['no_update']:
@@ -97,7 +98,7 @@ class Command(BaseCommand):
 		from core.models import Subject, Term, Course, Professor, Section
 
 		# Add course information to database
-		self.stdout.write('[updating] Adding courses to database')
+		log('[updating] Adding courses to database')
 
 		# values_list(...) returns a ValuesListQuerySet but we want a list
 		crns = list(Section.objects.values_list('CRN', flat=True))
@@ -140,7 +141,7 @@ class Command(BaseCommand):
 				except IndexError as e:
 					professor = None
 					if verbosity > 2:
-						self.stdout.write(f"[{crn}] This course doesn't have a professor")
+						log(f"[{crn}] This course doesn't have a professor")
 
 				try:
 					section = Section.objects.get(CRN=crn)
@@ -195,28 +196,19 @@ class Command(BaseCommand):
 				section.save()
 
 				if verbosity > 1:
-					self.stdout.write(
-						f"[{section.get_log_str()}] Successfully {'added' if created else 'updated'}"
-					)
+					log_sec(f"Successfully {'added' if created else 'updated'}")
 
 			except Exception as e:
-				print(e)
 				if verbosity > 1:
-					self.stdout.write(self.style.ERROR(
-						f'[{crn}] Failed to collect any data'
-					))
+					log(self.style.ERROR(f'[{crn}] Failed to collect any data'))
 
 		# Handle old courses
 		for crn in crns:
 			if options['remove_old']:
 				section = Section.objects.get(CRN=crn)
 				if verbosity > 1:
-					self.stdout.write(
-						f"[{section.get_log_str()}] Deleted , not found in updated information"
-					)
+					log_sec("Deleted, not found in updated information")
 				section.delete()
 			else:
 				if verbosity > 1:
-					self.stdout.write(
-						f"[{crn}] This course was not found in the updated information"
-					)
+					log(f"[{crn}] This course was not found in the updated information")

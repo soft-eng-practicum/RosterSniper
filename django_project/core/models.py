@@ -156,4 +156,4 @@ class Favorite(models.Model):
 		ordering = ['section']
 
 	def __str__(self):
-		return f'{self.user.username} watching {self.section}'
+		return f'{self.user.email} watching {self.section}'

@@ -1,14 +1,14 @@
-<html><body style="font-family: arial, sans; font-size: 1.2em; background-color: #00704A; padding: 1cm 0.5cm;" align="center">
+<html><body style="font-family: arial, sans; font-size: 1.2em; background-color: #00704A; padding: 1cm 0.5cm;" align="center";>
 <div style="padding: 1em; max-width: 600px; background-color: white; border-radius: 5px;">
 
 	<h1><a href="{{ home }}" style="font-style: italic; font-weight: bold; text-decoration: none; color: black;">RosterSniper</a></h1>
 
-	<span style="font-size: 1.2em; color: #2196f3; font-weight: bold;">A section you're watching <i>just {% if is_open %}opened!{% else %}closed.{% endif %}</i></span>
+	<span style="font-size: 1.2em; color: #2196f3; font-weight: bold;">A section you're watching just {{ status }}</span>
 
 	<table style='border-collapse: collapse; border-left: 3px solid #9E9E9E; padding: 0.1em; margin: 1em 0;'>
 		<tr>
 			<td style="padding-left: 3px; font-weight: bold;">Course</td>
-			<td style="padding-left: 15px;">{{ course }}</title>
+			<td style="padding-left: 15px;">{{ course_title }}</title>
 		</tr>
 		<tr>
 			<td style="padding-left: 3px; font-weight: bold;">Professor</td>
@@ -35,8 +35,8 @@
 	
 	<hr style="margin-top: 1.4em;">
 	<div style="font-size: 0.8em; color: #9E9E9E; display: inline-block;" align="left">
-		<div><a href="{{ unsub_url_fav }}" style="color: #2196F3">Unsubscribe</a> from emails related to this section</div>
-		<div><a href="{{ unsub_url_all }}" style="color: #2196F3">Unsubscribe</a> from all emails</div>
+		<div><a href="{{ unsub_fav }}" style="color: #2196F3;">Unsubscribe</a> from emails related to this section</div>
+		<div><a href="{{ unsub_all }}" style="color: #2196F3;">Unsubscribe</a> from all emails</div>
 	</div>
 
 </div>
