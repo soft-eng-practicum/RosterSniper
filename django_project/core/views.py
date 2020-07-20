@@ -124,8 +124,6 @@ def unsubscribe(request, unsubType, unsubID):
     link sent within an email, accessing a URL unique to the particular
     unsubscribe request. Because there are 2^122 different version 4 UUIDs it is
     unlikely that someone would guess a correct one or even want to.
-
-    TODO: Test and reuse error code
     '''
 
     try:
@@ -138,10 +136,7 @@ def unsubscribe(request, unsubType, unsubID):
             text = 'all emails'
 
         else:
-            return render(request, 'base/message.html', {
-                'title': 'Unsubscribe Error',
-                'message': 'Your unsubscribe link is invalid! 😕'
-            })
+            raise ObjectDoesNotExist()
 
         # Ordinarily unsubscribe links sent in emails will not have the
         # 'subscribe' parameter in the query string so the following will
@@ -150,14 +145,12 @@ def unsubscribe(request, unsubType, unsubID):
         # This is meant to be used by a button on the unsubscribe page that lets
         # users re subscribe by making a GET request in the background. It
         # doesn't actually matter what the argument is, as long as it exists.
-        if request.is_ajax():
-            unsubObject.emailNotify = request.GET.get('subscribe') is not None
-            unsubObject.save()
-            return HttpResponse('')
+        unsubObject.emailNotify = request.GET.get('subscribe') is not None
+        unsubObject.save()
 
+        if request.is_ajax():
+            return HttpResponse('')
         else:
-            unsubObject.emailNotify = False
-            unsubObject.save()
             return render(request, 'unsubscribe.html', { 'text': text })
 
     except ObjectDoesNotExist:
@@ -165,4 +158,3 @@ def unsubscribe(request, unsubType, unsubID):
             'title': 'Unsubscribe Error',
             'message': 'Your unsubscribe link is invalid! 😕'
         })
-
