@@ -53,7 +53,7 @@ class Command(BaseCommand):
 				return
 
 			for term in options['terms']:
-				log(f'Term: {term}')
+				log(f'[info] Starting term {term}')
 
 				# Get session cookies
 				session = requests.Session()

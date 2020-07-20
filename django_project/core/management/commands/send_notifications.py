@@ -25,6 +25,10 @@ class Command(BaseCommand):
             # Most of these could be calculated in the template but because
             # there are two templates it is done here so it doesn't need to be
             # done twice.
+            #
+            # Also, the 'status' condition might look unintuitive but basically
+            # closed originally + notification = seat available now
+            # (section.available is updated after this method is called)
             context = {
                 'status': 'opened!' if section.available < 0 else 'closed.',
                 'course_title': section.course.title,
@@ -42,7 +46,7 @@ class Command(BaseCommand):
             email_html = render_to_string('emails/favorite.html', context)
 
             EmailMultiAlternatives(
-                subject = f"{section.course.title} just {context['status']}",
+                subject = f"{context['course_title']} just {context['status']}",
                 to = [favorite.user.email],
                 body = email_text,
                 alternatives = [(email_html, 'text/html')]
@@ -87,10 +91,9 @@ class Command(BaseCommand):
                 # HTML might have changed
                 log_sec('Error parsing updated enrollment info!')
                 if not sent_admin_email:
-                    # .split('/')[-1] gets the file name
                     send_admin_email(
-                        f"{__file__.split('/')[-1]}: Banner class enrollment page might have changed",
-                        f"While updating {section.get_log_str()}, the following response was found to have {len(matches)} matche(s) instead of 2:\n{res.text}"
+                        "send_notifications.py: Banner class enrollment page might have changed",
+                        f"While updating {section.get_log_str()}, the following response was found to have {len(matches)} match(es) instead of 2:\n{res.text}"
                     )
                     sent_admin_email = True
                 continue
@@ -106,6 +109,7 @@ class Command(BaseCommand):
             else:
                 last_section[1] = False
 
+            # This condition is more general than the one above for send_email()
             if section.available != available:
                 section.enrolled = enrolled
                 section.available = available

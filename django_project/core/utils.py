@@ -3,6 +3,7 @@ from django.urls import reverse
 
 from django.core.mail import EmailMessage
 
+
 # Based on https://stackoverflow.com/a/34992631
 # Maybe implement as a template tag?
 # https://github.com/Flimm/django-fullurl

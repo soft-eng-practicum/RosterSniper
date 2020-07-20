@@ -22,9 +22,7 @@ ALLOWED_HOSTS = ['localhost']
 # Custom setting, used in core.utils.full_reverse()
 DEFAULT_DOMAIN = 'http://localhost:8000'
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# Database https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

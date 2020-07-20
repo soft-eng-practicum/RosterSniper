@@ -31,9 +31,7 @@ CSRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# Database https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',

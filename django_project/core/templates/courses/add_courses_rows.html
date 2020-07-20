@@ -2,14 +2,14 @@
 {% regroup all_sections by course as grouped_sections %}
 {% for course in grouped_sections %}
 <div class="card courses-card">
-	<div class="card-header h5">
+	<div class="card-header">
 		<div>{{ course.grouper.short_str }}</div>
 		<div>{{ course.grouper.title }}</div>
 		<div>{{ course.grouper.get_credit_hours }}</div>
 	</div>
 
-	<table class="table m-0">
-		<thead><tr class="table-borderless">
+	<table class="table">
+		<thead><tr>
 			<th>Section</th>
 			<th>CRN</th>
 			<th>Meeting</th>

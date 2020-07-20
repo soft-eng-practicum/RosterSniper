@@ -1,54 +1,18 @@
 /******************** My Courses Page ********************/
 
-.course-options *:not(:first-child) {
+.course-options * {
 	padding-left: 9px;
 }
 
-@media (min-width: 601px) {
-	tbody td:first-child, thead th:first-child {
-		padding-left: 1.25rem;
-	}
-	tbody td:nth-child(6), thead th:nth-child(6) {
-		padding-right: 1.25rem;
-		text-align: right;
-	}
-}
-
 @media (max-width: 600px) {
-	thead {
-		display: none;
-	}
-
-	td:not(:nth-child(2)) {
-		text-align: left !important;
-	}
-	td:nth-child(2) {
-		text-align: right !important;
-	}
-	td {
-		padding: 0.2rem 0.6rem !important;
-	}
-	td:not(:nth-child(-n+2)) {
-		border: 0;
-	}
-
-	td:nth-child(1), td:nth-child(2) {
-		display: inline-block;
-		width: 50%;
-	}
 	td:nth-child(1)::before { content: "Course: " }
+	td:nth-child(2)::before { content: "Title: " }
+	td:nth-child(3)::before { content: "Meeting: " }
+	td:nth-child(4)::before { content: "Professor: " }
 	td:nth-child(5)::before { content: "Students: " }
-	td:nth-child(6)::before { content: "Options: " }
-	tbody > tr > td:nth-child(n+3) {
-		display: block;
-	}
-
-	.card-header{
-		flex-direction: column;
-		align-items: center;
-	}
+	td:nth-child(6)::before { content: "Options:" }
 
 	.course-options * {
-		padding: 0 4px !important;
+		padding-left: 7px;
 	}
 }

@@ -16,10 +16,10 @@
 {% regroup favorites by section.term as grouped_favorites %}
 {% for term in grouped_favorites %}
 	<div class="card courses-card">
-		<div class="card-header h4">{{ term.grouper }}</div>
+		<div class="card-header">{{ term.grouper }}</div>
 
-		<table class="table m-0">
-			<thead><tr class="table-borderless">
+		<table class="table">
+			<thead><tr>
 				<th>Course Code</th>
 				<th>Title</th>
 				<th>Meeting</th>

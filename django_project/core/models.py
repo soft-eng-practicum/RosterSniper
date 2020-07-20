@@ -122,7 +122,7 @@ class Section(models.Model):
 
 	def get_meeting(self):
 		if self.days:
-			return f"{self.days}: {self.start_time.strftime('%-I:%M')} - {self.end_time.strftime('%-I:%M %p')}"
+			return f"{self.days}, {self.start_time.strftime('%-I:%M')} - {self.end_time.strftime('%-I:%M %p')}"
 		else:
 			return "NA"
 

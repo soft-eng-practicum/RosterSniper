@@ -68,32 +68,6 @@ itself because we want the scrollbar to be all the way to the right. */
 	background-size: 300px;
 }
 
-.card-header {
-	display: flex;
-	justify-content: space-between;
-}
-.card-header div:nth-child(2) {
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
-	text-align: center;
-}
-.card-header div:nth-child(3) {
-	text-align: right;
-}
-.limit-four tr:nth-child(n+5) {
-	display: none;
-}
-
-@media (min-width: 601px) {
-	tbody td:first-child, thead th:first-child {
-		padding-left: 1.25rem;
-	}
-	tbody td:nth-child(6), thead th:nth-child(6) {
-		padding-right: 1.25rem;
-		text-align: right;
-	}
-}
-
 @media (max-width: 900px) {
 	#sidebar-col {
 		display: none;
@@ -101,37 +75,10 @@ itself because we want the scrollbar to be all the way to the right. */
 }
 
 @media (max-width: 600px) {
-	thead {
-		display: none;
-	}
-
-	td:not(:nth-child(2)) {
-		text-align: left !important;
-	}
-	td:nth-child(2) {
-		text-align: right !important;
-	}
-	td {
-		padding: 0.2rem 0.6rem !important;
-	}
-	td:not(:nth-child(-n+2)) {
-		border: 0;
-	}
-
-	td:nth-child(1), td:nth-child(2) {
-		display: inline-block;
-		width: 50%;
-	}
 	td:nth-child(1)::before { content: "Section: " }
 	td:nth-child(2)::before { content: "CRN: " }
+	td:nth-child(3)::before { content: "Meeting: " }
+	td:nth-child(4)::before { content: "Professor: " }
 	td:nth-child(5)::before { content: "Students: " }
 	td:nth-child(6)::before { content: "Favorite: " }
-	tbody > tr > td:nth-child(n+3) {
-		display: block;
-	}
-
-	.card-header{
-		flex-direction: column;
-		align-items: center;
-	}
 }
