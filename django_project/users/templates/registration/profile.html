@@ -5,26 +5,10 @@
 
 {% block content %}
 <div class="mycontainer">
-	<div class="media">
-		<div class="media-body">
-			<h2>Your Profile</h2>
-			<p class="text-secondary">{{ user.email }}</p>
-		</div>
-		<div style="position: relative;">
-			<img class="rounded-circle myactimg" src="{{ user.profile.image.url }}">
-			<div class="dropdown" style="position: absolute; right: 15px; bottom: 15px;">
-				<button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Edit</button>
-				<div class="dropdown-menu dropdown-menu-right" >
-					<a class="dropdown-item" href="#">Upload a photo</a>
-					<a class="dropdown-item" href="#">Remove photo</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		<fieldset>
-			<legend class="border-bottom mb-4">Profile</legend>
+			<legend class="border-bottom mb-4">Your Profile</legend>
 			{{ form|crispy }}
 		</fieldset>
 		{% if not user.email_confirmed %}

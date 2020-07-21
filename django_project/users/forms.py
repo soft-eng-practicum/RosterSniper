@@ -17,8 +17,6 @@ class MyUserCreationForm(UserCreationForm):
 
 class UserUpdateForm(forms.ModelForm):
 
-	email = forms.EmailField(disabled=True)
-
 	class Meta:
 		model = User
 		fields = ['email', 'first_name', 'email_notify']

@@ -22,8 +22,6 @@ from django.views.generic.base import RedirectView
 
 from users import views as user_views
 
-# For sending custom emails:
-# https://docs.djangoproject.com/en/3.0/topics/auth/default/#django.contrib.auth.views.PasswordResetView
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)),
     path('admin/', admin.site.urls),
@@ -33,8 +31,6 @@ urlpatterns = [
     path('activate/<uidb64>/<token>/', user_views.activate, name='activate'),
 
     # https://docs.djangoproject.com/en/3.0/topics/auth/default/#module-django.contrib.auth.views
-    # https://github.com/django/django/blob/master/django/contrib/auth/urls.py
-
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('change-password/',
@@ -49,7 +45,3 @@ urlpatterns = [
     
     path('', include('core.urls')),
 ]
-
-# docs.djangoproject.com/en/3.0/howto/static-files/
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

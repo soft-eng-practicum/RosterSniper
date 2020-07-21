@@ -90,10 +90,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # URL that static files are served from
 STATIC_URL = '/static/'
 
-# Where user-uploaded files go (via FileField or ImageField)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Where user-uploaded files go (via FileField or ImageField) (not currently used)
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # URL that user-uploaded files are served from
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
 # Named URL pattern where requests are redirected for login when using the login_required() decorator
 LOGIN_URL = 'login'

@@ -95,17 +95,20 @@ def activate(request, uidb64, token):
 
 @login_required
 def profile(request):
-
+    
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
 
         if form.is_valid():
             if 'email' in form.changed_data:
                 request.user.email_confirmed = False
-                request.user.save()
+                messages.info(request, 'Please confirm your new email to receive notifications.')
+                send_email_verification(request.user)
+
+            else:
+                messages.success(request, 'Your account has been updated.')
                 
             form.save()
-            messages.success(request, 'Your account has been updated.')
             return redirect('profile')
 
     else:

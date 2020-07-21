@@ -41,8 +41,6 @@ class UserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = None
-
-    # has_photo = models.BooleanField(default=False)
     
     email = models.EmailField(unique=True)
     email_confirmed = models.BooleanField(default=False)
