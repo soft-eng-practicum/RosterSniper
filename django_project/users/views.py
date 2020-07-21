@@ -126,6 +126,7 @@ class MyPasswordChangeView(PasswordChangeView):
 
 class MyPasswordResetView(PasswordResetView):
     success_url = reverse_lazy('login')
+    html_email_template_name = 'emails/password_reset.html'
 
     def form_valid(self, form):
         messages.success(self.request, 'A password reset link has been sent to your email.')
