@@ -23,13 +23,14 @@
 	</div>
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
-		<fieldset class="form-group">
+		<fieldset>
 			<legend class="border-bottom mb-4">Profile</legend>
 			{{ form|crispy }}
 		</fieldset>
 		{% if not user.email_confirmed %}
 		<p>You must confirm your email to receive notifications. <a id="send_email" href="">Resend confirmation email</a></p>
 		{% endif %}
+		<p><a href="{% url 'password_change' %}">Change your password</a></p>
 		<div class="form-group">
 			<button class="btn btn-outline-info" type="submit">Save</button>
 		</div>

@@ -30,27 +30,22 @@ urlpatterns = [
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
-    path('activate/<uidb64>/<token>/',
-        user_views.activate, name='activate'),
+    path('activate/<uidb64>/<token>/', user_views.activate, name='activate'),
 
-    # Uses the default template_name "registration/..."
-    # TODO: password_change
     # https://docs.djangoproject.com/en/3.0/topics/auth/default/#module-django.contrib.auth.views
     # https://github.com/django/django/blob/master/django/contrib/auth/urls.py
+
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('password-reset/request/',
-        auth_views.PasswordResetView.as_view(),
+    path('change-password/',
+        user_views.MyPasswordChangeView.as_view(),
+        name='password_change'),
+    path('reset-password/request/',
+        user_views.MyPasswordResetView.as_view(),
         name='password_reset'),
-    path('password-reset/sent/',
-        auth_views.PasswordResetDoneView.as_view(),
-        name='password_reset_done'),
-    path('password-reset/confirm/<uidb64>/<token>/',
-        auth_views.PasswordResetConfirmView.as_view(),
+    path('reset-password/confirm/<uidb64>/<token>/',
+        user_views.MyPasswordResetConfirmView.as_view(),
         name='password_reset_confirm'),
-    path('password-reset/complete/',
-        auth_views.PasswordResetCompleteView.as_view(),
-        name='password_reset_complete'),
     
     path('', include('core.urls')),
 ]

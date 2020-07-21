@@ -1,11 +1,16 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import (
+    PasswordChangeView, PasswordResetView, PasswordResetConfirmView
+)
+
 from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.urls import reverse_lazy
 
 from core.utils import full_reverse
 
@@ -107,3 +112,29 @@ def profile(request):
         form = UserUpdateForm(instance=request.user)
 
     return render(request, 'registration/profile.html', {'form': form})
+
+
+# Custom password change/reset views with messages instead of the default
+# done/complete views
+class MyPasswordChangeView(PasswordChangeView):
+    success_url = reverse_lazy('profile')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Your password has been changed.')
+        return super().form_valid(form)
+
+
+class MyPasswordResetView(PasswordResetView):
+    success_url = reverse_lazy('login')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'A password reset link has been sent to your email.')
+        return super().form_valid(form)
+
+
+class MyPasswordResetConfirmView(PasswordResetConfirmView):
+    success_url = reverse_lazy('login')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Your password has been reset.')
+        return super().form_valid(form)
