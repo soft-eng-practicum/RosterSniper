@@ -106,7 +106,7 @@ def my_courses(request):
             and (email == 'true' or email == 'false'):
 
             f = Favorite.objects.get(user=request.user, section__CRN=crn)
-            f.emailNotify = email == 'true'
+            f.email_notify = email == 'true'
             f.save()
 
         return HttpResponse('')
@@ -117,9 +117,9 @@ def my_courses(request):
         })
 
 
-def unsubscribe(request, unsubType, unsubID):
+def unsubscribe(request, unsub_type, unsub_id):
     '''
-    Unsubscribe requests contain an unsubType and an unsubID. The unsubID is
+    Unsubscribe requests contain an unsub_type and an unsub_id. The unsub_id is
     used to safely allow users to unsubscribe without logging in by clicking a
     link sent within an email, accessing a URL unique to the particular
     unsubscribe request. Because there are 2^122 different version 4 UUIDs it is
@@ -127,12 +127,12 @@ def unsubscribe(request, unsubType, unsubID):
     '''
 
     try:
-        if unsubType == 'favorite':
-            unsubObject = Favorite.objects.get(emailUnsubID=unsubID)
-            text = f'emails related to {unsubObject.section}'
+        if unsub_type == 'favorite':
+            unsub_object = Favorite.objects.get(email_unsub_id=unsub_id)
+            text = f'emails related to {unsub_object.section}'
 
-        elif unsubType == 'all':
-            unsubObject = User.objects.get(emailUnsubID=unsubID)
+        elif unsub_type == 'all':
+            unsub_object = User.objects.get(email_unsub_id=unsub_id)
             text = 'all emails'
 
         else:
@@ -145,8 +145,8 @@ def unsubscribe(request, unsubType, unsubID):
         # This is meant to be used by a button on the unsubscribe page that lets
         # users re subscribe by making a GET request in the background. It
         # doesn't actually matter what the argument is, as long as it exists.
-        unsubObject.emailNotify = request.GET.get('subscribe') is not None
-        unsubObject.save()
+        unsub_object.email_notify = request.GET.get('subscribe') is not None
+        unsub_object.save()
 
         if request.is_ajax():
             return HttpResponse('')

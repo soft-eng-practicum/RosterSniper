@@ -27,7 +27,7 @@
 			<legend class="border-bottom mb-4">Profile</legend>
 			{{ form|crispy }}
 		</fieldset>
-		{% if not user.emailConfirmed %}
+		{% if not user.email_confirmed %}
 		<p>You must confirm your email to receive notifications. <a id="send_email" href="">Resend confirmation email</a></p>
 		{% endif %}
 		<div class="form-group">

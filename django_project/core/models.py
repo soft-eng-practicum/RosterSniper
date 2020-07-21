@@ -146,9 +146,9 @@ class Favorite(models.Model):
 	section = models.ForeignKey(Section, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-	# Possibly add txtNotify in the future
-	emailNotify = models.BooleanField(default=True)
-	emailUnsubID = models.UUIDField(default=uuid.uuid4)
+	# Possibly add txt_notify in the future
+	email_notify = models.BooleanField(default=True)
+	email_unsub_id = models.UUIDField(default=uuid.uuid4)
 	# I'd say unique=True is not necessary here.. ^^
 
 	class Meta:

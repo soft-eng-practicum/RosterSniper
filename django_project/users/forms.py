@@ -21,12 +21,12 @@ class UserUpdateForm(forms.ModelForm):
 
 	class Meta:
 		model = User
-		fields = ['email', 'first_name', 'emailNotify']
+		fields = ['email', 'first_name', 'email_notify']
 
 		labels = {
-			'emailNotify': 'Receive emails'
+			'email_notify': 'Receive emails'
 		}
 		help_texts = {
 			'first_name': 'This field is optional and only used to personalize emails.',
-			'emailNotify': 'This enables/disables all emails from this site. To disable email notifications for individual sections use the envelope buttons on the My Courses page.'
+			'email_notify': 'This enables/disables all emails from this site. To disable email notifications for individual sections use the envelope buttons on the My Courses page.'
 		}

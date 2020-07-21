@@ -42,13 +42,13 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     username = None
 
-    # hasPhoto = models.BooleanField(default=False)
+    # has_photo = models.BooleanField(default=False)
     
     email = models.EmailField(unique=True)
-    emailConfirmed = models.BooleanField(default=False)
+    email_confirmed = models.BooleanField(default=False)
 
-    emailNotify = models.BooleanField(default=True)
-    emailUnsubID = models.UUIDField(default=uuid.uuid4)
+    email_notify = models.BooleanField(default=True, help_text='Whether or not you should receive emails')
+    email_unsub_id = models.UUIDField(default=uuid.uuid4)
 
     objects = UserManager()
 

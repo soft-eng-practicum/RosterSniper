@@ -53,8 +53,8 @@ def send_email_verification(user):
         'home': full_reverse('home'),
         'link': full_reverse('activate', args=[uid, token])
     }
-    email_text = render_to_string('registration/emails/verification.txt', context)
-    email_html = render_to_string('registration/emails/verification.html', context)
+    email_text = render_to_string('emails/verification.txt', context)
+    email_html = render_to_string('emails/verification.html', context)
     
     EmailMultiAlternatives(
         subject = "Verify your RosterSniper account",
@@ -77,7 +77,7 @@ def activate(request, uidb64, token):
 
     else:
         if activation_token_generator.check_token(user, token):
-            user.emailConfirmed = True
+            user.email_confirmed = True
             user.save()
             messages.info(request, 'Your email address has been verified!')
             return redirect('profile')
@@ -96,7 +96,9 @@ def profile(request):
 
         if form.is_valid():
             if 'email' in form.changed_data:
-                request.user.emailConfirmed = False
+                request.user.email_confirmed = False
+                request.user.save()
+                
             form.save()
             messages.success(request, 'Your account has been updated.')
             return redirect('profile')

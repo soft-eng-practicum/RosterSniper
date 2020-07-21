@@ -37,9 +37,9 @@ class Command(BaseCommand):
 
                 'home': full_reverse('home'),
                 'unsub_fav': full_reverse(
-                    'unsubscribe', args=['favorite', favorite.emailUnsubID]),
+                    'unsubscribe', args=['favorite', favorite.email_unsub_id]),
                 'unsub_all': full_reverse(
-                    'unsubscribe', args=['all', favorite.user.emailUnsubID])
+                    'unsubscribe', args=['all', favorite.user.email_unsub_id])
             }
 
             email_text = render_to_string('emails/favorite.txt', context)
@@ -59,8 +59,8 @@ class Command(BaseCommand):
         # This works because Favorites are ordered by section
         last_section = [0, False]
 
-        for favorite in Favorite.objects.filter(emailNotify=True,
-            user__emailConfirmed=True, user__emailNotify=True):
+        for favorite in Favorite.objects.filter(email_notify=True,
+            user__email_confirmed=True, user__email_notify=True):
 
             section = favorite.section
 

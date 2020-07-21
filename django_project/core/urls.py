@@ -6,5 +6,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('add-courses/', views.add_courses, name='add_courses'),
     path('my-courses/', views.my_courses, name='my_courses'),
-    path('unsubscribe/<str:unsubType>/<uuid:unsubID>/', views.unsubscribe, name='unsubscribe'),
+    path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
 ]
