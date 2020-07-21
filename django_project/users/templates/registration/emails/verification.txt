@@ -1,0 +1,9 @@
+{% extends "emails/base.txt" %}
+
+{% block content %}
+Hello,
+
+Please follow the link to confirm your registration:
+
+{{ link }}
+{% endblock content %}

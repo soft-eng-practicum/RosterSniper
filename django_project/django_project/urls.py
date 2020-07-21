@@ -32,8 +32,6 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('activate/<uidb64>/<token>/',
         user_views.activate, name='activate'),
-    path('send-verification',
-        user_views.send_verification, name='send-verification'),
 
     # Uses the default template_name "registration/..."
     # TODO: password_change

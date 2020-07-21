@@ -2,61 +2,59 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.mail import EmailMultiAlternatives
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
-from django.urls import reverse
-from django.utils.encoding import force_bytes, force_text
+from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+
+from core.utils import full_reverse
 
 from .models import User
 from .forms import MyUserCreationForm, UserUpdateForm
-from .tokens import account_activation_token
+from .tokens import activation_token_generator
 
 
-# Auto login after register: stackoverflow.com/a/3222558
 def register(request):
+
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             
+            # Auto login after register: stackoverflow.com/a/3222558
             new_user = authenticate(
                 email=form.cleaned_data['email'],
                 password=form.cleaned_data['password1'])
             login(request, new_user)
 
             send_email_verification(new_user)
-            messages.info(request, 'Thanks for registering. Please confirm your email to continue.')
+            messages.info(request, 'Thanks for registering. Please confirm your email to receive notifications.')
 
-            return redirect('add_courses')
+            return redirect('profile')
+
+    elif request.is_ajax() and request.GET.get('send_email'):
+        send_email_verification(request.user)
+        messages.info(request, 'A verification email has been sent.')
+        return redirect('profile')
+
     else:
         form = MyUserCreationForm()
 
     return render(request, 'registration/register.html', {'form': form})
 
 
-def send_verification(request):
-    send_email_verification(request)
-    messages.info(request, 'A verification email has been sent.')
-    return redirect('profile')
-
-
 # Not a view
-def send_email_verification(request):
-
-    user = request.user
+def send_email_verification(user):
 
     uid = urlsafe_base64_encode(force_bytes(user.pk))
-    token = account_activation_token.make_token(user)
-    link = request.build_absolute_uri(reverse('activate', args=[uid, token]))
+    token = activation_token_generator.make_token(user)
 
     context = {
-        'name': user.first_name or request.user.username,
-        'link': link
+        'home': full_reverse('home'),
+        'link': full_reverse('activate', args=[uid, token])
     }
-    email_text = render_to_string('verification_email.txt', context)
-    email_html = render_to_string('verification_email.html', context)
+    email_text = render_to_string('registration/emails/verification.txt', context)
+    email_html = render_to_string('registration/emails/verification.html', context)
     
     EmailMultiAlternatives(
         subject = "Verify your RosterSniper account",
@@ -68,38 +66,42 @@ def send_email_verification(request):
 
 # https://medium.com/@frfahim/django-registration-with-confirmation-email-bb5da011e4ef
 def activate(request, uidb64, token):
+
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
-        user = User.objects.get(pk=uid)
+        user = User.objects.get(
+            pk=force_str(urlsafe_base64_decode(uidb64))
+        )
+
     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
-    if user is not None and account_activation_token.check_token(user, token):
-        user.is_active = True
-        user.emailConfirmed = True
-        user.save()
-        login(request, user)
-        messages.info(request, 'Your email address has been verified!')
-        return redirect('profile')
+        pass
+
     else:
-        return render(request, 'base/message.html', {
-            'title': 'Activation Error',
-            'message': 'Your activation link is invalid! 😕'
-        })
+        if activation_token_generator.check_token(user, token):
+            user.emailConfirmed = True
+            user.save()
+            messages.info(request, 'Your email address has been verified!')
+            return redirect('profile')
+
+    return render(request, 'base/message.html', {
+        'title': 'Activation Error',
+        'message': 'Your activation link is invalid! 😕'
+    })
 
 
 @login_required
 def profile(request):
-    if request.method == 'POST':
-        u_form = UserUpdateForm(request.POST, instance=request.user)
 
-        if u_form.is_valid():
-            if 'email' in u_form.changed_data:
+    if request.method == 'POST':
+        form = UserUpdateForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            if 'email' in form.changed_data:
                 request.user.emailConfirmed = False
-            u_form.save()
+            form.save()
             messages.success(request, 'Your account has been updated.')
             return redirect('profile')
 
     else:
-        u_form = UserUpdateForm(instance=request.user)
+        form = UserUpdateForm(instance=request.user)
 
-    return render(request, 'registration/profile.html', {'u_form': u_form})
+    return render(request, 'registration/profile.html', {'form': form})

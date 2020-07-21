@@ -25,10 +25,10 @@
 		{% csrf_token %}
 		<fieldset class="form-group">
 			<legend class="border-bottom mb-4">Profile</legend>
-			{{ u_form|crispy }}
+			{{ form|crispy }}
 		</fieldset>
 		{% if not user.emailConfirmed %}
-		<p class="italic"><a href="{% url 'send-verification' %}">Send confirmation email</a> to receive notifications.</p>
+		<p>You must confirm your email to receive notifications. <a id="send_email" href="">Resend confirmation email</a></p>
 		{% endif %}
 		<div class="form-group">
 			<button class="btn btn-outline-info" type="submit">Save</button>
@@ -36,3 +36,11 @@
 	</form>
 </div>
 {% endblock content %}
+
+{% block foot %}
+	<script type="text/javascript">
+		$('#send_email').click(function() {
+			$.get("{% url 'register' %}?send_email=true");
+		});
+	</script>
+{% endblock foot %}

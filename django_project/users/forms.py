@@ -5,7 +5,6 @@ from .models import User
 
 
 class MyUserCreationForm(UserCreationForm):
-	email = forms.EmailField()
 
 	class Meta:
 		model = User
@@ -17,15 +16,17 @@ class MyUserCreationForm(UserCreationForm):
 
 
 class UserUpdateForm(forms.ModelForm):
+
 	email = forms.EmailField(disabled=True)
 
 	class Meta:
 		model = User
+		fields = ['email', 'first_name', 'emailNotify']
+
 		labels = {
 			'emailNotify': 'Receive emails'
 		}
 		help_texts = {
 			'first_name': 'This field is optional and only used to personalize emails.',
-			'emailNotify': f'This enables/disables all emails from this site. To disable email notifications for individual sections use the envelope buttons on the My Courses page.'
+			'emailNotify': 'This enables/disables all emails from this site. To disable email notifications for individual sections use the envelope buttons on the My Courses page.'
 		}
-		fields = ['email', 'first_name', 'emailNotify']

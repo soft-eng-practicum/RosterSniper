@@ -1,0 +1,22 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+	<div style="font-size: 1.2em; color: #2196F3; font-weight: bold; margin-bottom: 1em;">Please verify your email to enable notifications.</div>
+
+	<div>
+		<!--[if mso]>
+			<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ link }}" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" stroke="f" fillcolor="#00704a">
+			<w:anchorlock/>
+			<center>
+		<![endif]-->
+		<a href="{{ link }}" style="background-color: #00704A; border-radius: 50px; color: white; font-size: 14px; font-weight: bold; text-decoration: none; line-height: 40px; width:200px; display: inline-block;">Verify Email</a>
+		<!--[if mso]>
+			</center>
+			</v:roundrect>
+		<![endif]-->
+	</div>
+{% endblock content %}
+
+{% block footer %}
+	If you did not expect to receive this email, please disregard it.
+{% endblock footer %}

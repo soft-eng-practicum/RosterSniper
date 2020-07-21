@@ -1,6 +1,6 @@
-RosterSniper
-------------
+{% extends "emails/base.txt" %}
 
+{% block content %}
 A section you're watching just {{ status }}
 
 Course:     {{ course_title }}
@@ -15,3 +15,4 @@ Unsubscribe from notifications for this course:
 
 Unsubscribe from notifications for all courses:
 {{ unsub_all }}
+{% endblock content %}
