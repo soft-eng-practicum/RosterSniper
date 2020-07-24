@@ -95,7 +95,7 @@ def activate(request, uidb64, token):
 
 @login_required
 def profile(request):
-    
+
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
 
