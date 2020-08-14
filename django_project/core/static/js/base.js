@@ -22,5 +22,5 @@ console.log(String.raw`%c
 // * prevents selection of the navbar-brand
 $(document).ready(function() {
 	var pathname = window.location.pathname;
-	$("#rsnav * a[href='"+pathname+"']").addClass("active");
+	$("#rs-nav * a[href='"+pathname+"']").addClass("active");
 })

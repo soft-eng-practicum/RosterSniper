@@ -25,7 +25,7 @@
 				<td><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
 				<td>{{ section.get_prof_name }}</td>
 				<td>{{ section.enrolled }}/{{ section.capacity }}</td>
-				<td><i id="{{ CRN }}" title="Track?" class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-star mypointer"></i></td>
+				<td><i id="{{ CRN }}" title="Track?" class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-star pointer"></i></td>
 			</tr>
 			{% endwith %}{% endfor %}
 		</tbody>

@@ -9,10 +9,6 @@ from core.models import Term
 # https://jennydaman.gitlab.io/nubanned/dark
 class Command(BaseCommand):
 	help = 'Update course information from banner'
-
-	SESSION_URL = 'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/term/search?mode=search&term={term}'
-	RESET_URL = 'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/classSearch/resetDataForm'
-	SEARCH_URL = 'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_term={term}&chk_open_only={open_only}&pageOffset={offset}&pageMaxSize=500'
 	
 	def add_arguments(self, parser):
 		parser.add_argument('-t', '--terms', type=int, nargs='*',
@@ -33,6 +29,11 @@ class Command(BaseCommand):
 
 	def handle(self, *args, **options):
 		verbosity = options['verbosity']
+
+		BASE_URL    = 'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/'
+		SESSION_URL = BASE_URL + 'term/search?mode=search&term={term}'
+		RESET_URL   = BASE_URL + 'classSearch/resetDataForm'
+		SEARCH_URL  = BASE_URL + 'searchResults/searchResults?txt_term={term}&chk_open_only={open_only}&pageOffset={offset}&pageMaxSize=500'
 
 		def log(str):
 			self.stdout.write(str)
@@ -57,7 +58,7 @@ class Command(BaseCommand):
 
 				# Get session cookies
 				session = requests.Session()
-				session.get(Command.SESSION_URL.format(term=term))
+				session.get(SESSION_URL.format(term=term))
 
 				for open_only in (True, False):
 					# Course data is downloaded in chucks of 500
@@ -66,7 +67,7 @@ class Command(BaseCommand):
 					offset = 0
 					while total != count:
 
-						response = session.get(Command.SEARCH_URL.format(
+						response = session.get(SEARCH_URL.format(
 							term=term, open_only=open_only, offset=offset))
 
 						# Replaces "&amp;" with "&" and "&#39;" with "'"
@@ -80,7 +81,7 @@ class Command(BaseCommand):
 
 						log(f"[downloading] {count}/{total} {'open' if open_only else 'closed'} courses collected")
 
-					session.get(Command.RESET_URL)
+					session.get(RESET_URL)
 
 			if verbosity > 1:
 				log(f"[info] {len(courses)} courses were downloaded")
