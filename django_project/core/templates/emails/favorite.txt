@@ -7,8 +7,8 @@ Course:     {{ course_title }}
 Professor:  {{ professor }}
 CRN:        {{ crn }}
 
-Follow the link to register:
-https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration
+{% if status == "opened!" %}Follow the link to register:
+https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration{% endif %}
 
 Unsubscribe from notifications for this course:
 {{ unsub_fav }}

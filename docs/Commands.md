@@ -1,12 +1,12 @@
 # Commands
 
-There are currently two [custom django-admin commands](https://docs.djangoproject.com/en/dev/howto/custom-management-commands/) which are implemented [here](/django_project/core/management/commands/). To get more information about each command, run
+There is currently one [custom django-admin command](https://docs.djangoproject.com/en/dev/howto/custom-management-commands/) which is implemented [here](/django_project/core/management/commands/). To get more information about each command, run
 ```
 ./manage.py command_name -h
 ```
 
 ### update_courses
-Updates course/section information by fetching it from banner. Eg
+Updates course/section information by fetching it from banner. If a section opens or closes an email is sent to any watchers.
 ```
 $ ./manage.py update_courses -v 2
 Term: 202005
@@ -24,5 +24,7 @@ Term: 202008
 ...
 ```
 
-### send_notifications
-Updates the enrollment information of sections which are currently being tracked by users and sends out notification emails.
+To only update the enrollment information of favorited sections, use the `-f` option.
+```
+$ ./manage.py update_courses -f -v 2
+```

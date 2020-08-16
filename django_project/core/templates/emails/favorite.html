@@ -18,6 +18,7 @@
 		</tr>
 	</table>
 	
+	{% if status == "opened!" %}
 	<div>
 		<!--[if mso]>
 			<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/registration/registerPostSignIn?mode=registration" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" stroke="f" fillcolor="#00704A">
@@ -30,6 +31,7 @@
 			</v:roundrect>
 		<![endif]-->
 	</div>
+	{% endif %}
 {% endblock content %}
 
 {% block footer %}
