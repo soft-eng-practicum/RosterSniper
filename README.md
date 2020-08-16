@@ -27,18 +27,3 @@ The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they ar
 The development web server is ran using the command `python manage.py runserver`.
 
 Our developer documentation can be found [here](docs).
-
-## Our Team
-
-**Shaun Mitchell:** smitchell11@ggc.edu
-1. Co-CEO
-2. Code architecture/lead programmer
-3. Data modeler
-4. Team manager
-5. Client liaison
-
-**Ryan Cosentino:** rcosentino@ggc.edu
-1. Co-CEO
-2. UI/UX design
-3. Documentation lead
-4. Testing lead
