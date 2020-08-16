@@ -1,6 +1,9 @@
 # Python
 __pycache__/
 
+# pyenv
+.python-version
+
 # mypy
 .mypy_cache/
 
