@@ -1,0 +1,12 @@
+{% extends "emails/base.txt" %}
+
+{% block content %}
+A section you're watching has been deleted from Banner. You will no longer receive notifications for this course.
+
+Course:     {{ course_title }}
+Professor:  {{ professor }}
+CRN:        {{ crn }}
+
+Unsubscribe from all emails:
+{{ unsub_all }}
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "emails/base.html" %}
+
+{% block title %}
+	A section you're watching has been deleted from Banner. You will no longer receive notifications for this course.
+{% endblock title %}
+
+{% block content %}
+	<table style='border-collapse: collapse; border-left: 3px solid #9E9E9E; padding: 0.1em; margin: 1em 0;'>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">Course</td>
+			<td style="padding-left: 15px;">{{ course_title }}</title>
+		</tr>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">Professor</td>
+			<td style="padding-left: 15px;">{{ professor }}</td>
+		</tr>
+		<tr>
+			<td style="padding-left: 3px; font-weight: bold;">CRN</td>
+			<td style="padding-left: 15px;">{{ crn }}</td>
+		</tr>
+	</table>
+{% endblock content %}
+
+{% block footer %}
+	<div><a href="{{ unsub_all }}" style="color: #2196F3;">Unsubscribe</a> from all emails</div>
+{% endblock footer %}

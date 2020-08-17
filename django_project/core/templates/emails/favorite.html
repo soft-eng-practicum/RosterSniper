@@ -1,9 +1,9 @@
 {% extends "emails/base.html" %}
 
-{% block content %}
-	<span style="font-size: 1.2em; color: #2196f3; font-weight: bold;">A section you're watching just {{ status }}</span>
+{% block title %}A section you're watching just {{ status }}{% endblock title %}
 
-	<table style='border-collapse: collapse; border-left: 3px solid #9E9E9E; padding: 0.1em; margin: 1em 0;'>
+{% block content %}
+	<table style="border-collapse: collapse; border-left: 3px solid #9E9E9E;">
 		<tr>
 			<td style="padding-left: 3px; font-weight: bold;">Course</td>
 			<td style="padding-left: 15px;">{{ course_title }}</title>

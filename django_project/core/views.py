@@ -30,6 +30,7 @@ def about(request):
 
 
 def add_courses(request):
+    ''' The Add Courses page lets users search for and favorite sections. '''
 
     if request.is_ajax():
 
