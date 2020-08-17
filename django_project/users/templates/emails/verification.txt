@@ -6,4 +6,6 @@ Hello,
 Please follow the link to confirm your registration:
 
 {{ link }}
+
+If you did not expect to receive this email, please disregard it.
 {% endblock content %}

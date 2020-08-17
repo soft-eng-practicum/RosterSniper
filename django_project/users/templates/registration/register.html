@@ -1,9 +1,10 @@
-{% extends "base/base_container.html" %}
+{% extends "base/small.html" %}
 {% load crispy_forms_tags %}
 
 {% block title %}Register - {% endblock title %}
 
 {% block content %}
+<div class="rs-container">
 	<form method="POST">
 		{% csrf_token %}
 		<fieldset class="form-group">
@@ -19,4 +20,5 @@
 			Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
 		</small>
 	</div>
+</div>
 {% endblock content %}
