@@ -44,10 +44,10 @@ function update_courses() {
 		return;
 	} // else..
 
-	url = '/add-courses/' + '?' + searchParams.toString()
+	params = searchParams.toString()
 	$('#courses-col').removeClass('bear');
-	history.pushState(null, '', url);
-	$.getJSON(url).done(
+	history.pushState(null, '', '/add-courses/?' + params);
+	$.getJSON('/get-courses/?' + params).done(
 		response => {
 			$('#courses').html(response['courses']);
 			$('.meeting').tooltip({delay: {show: 1500, hide: 100}});

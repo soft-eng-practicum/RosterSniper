@@ -4,8 +4,7 @@ from django.db.models import Q
 
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import JsonResponse
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
@@ -29,65 +28,68 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+def get_courses(request):
+
+    if not request.is_ajax():
+        return HttpResponseNotFound()
+
+    query = Q()
+    sections = Section.objects.select_related('professor', 'course').all()
+
+    if term := request.GET.get('term'):
+        sections = sections.filter(term=term)
+    else:
+        return JsonResponse(data={})
+
+    if q := request.GET.get('q'):
+        #
+        # TODO: split on : and - characters also
+        # https://stackoverflow.com/a/23720594
+        #
+        for term in q.split():
+            query &= Q(CRN__exact=term) | Q(section_num__exact=term) \
+                | Q(course__number__exact=term) | Q(course__title__icontains=term) \
+                | Q(course__subject__pk__iexact=term)
+
+    if days := request.GET.get('days'):
+        query &= Q(days__contains=days)
+
+    if crsNumMin := request.GET.get('crsNumMin'):
+        query &= Q(course__number__gte=crsNumMin)
+    if crsNumMax := request.GET.get('crsNumMax'):
+        query &= Q(course__number__lte=crsNumMax)
+
+    if creditHourExact := request.GET.get('creditHourExact'):
+        query &= Q(course__credit_hours=creditHourExact)
+    if creditHourMin := request.GET.get('creditHourMin'):
+        query &= Q(course__credit_hours__gte=creditHourMin)
+    if creditHourMax := request.GET.get('creditHourMax'):
+        query &= Q(course__credit_hours__lte=creditHourMax)
+
+    if professor := request.GET.get('professor'):
+        for term in professor.split():
+            query &= Q(professor__firstname__icontains=term) \
+                | Q(professor__lastname__icontains=term)
+
+    # page = request.GET.get('page', 1)
+
+    sections = sections.filter(query)
+
+    return JsonResponse(data={
+        'courses': render_to_string('courses/add_courses_rows.html', {
+            'all_sections': sections,
+            'CRNs': request.user.section_set.values_list('CRN', flat=True)
+                if request.user.is_authenticated else None
+        })
+    }, safe=False)
+
+
 def add_courses(request):
     ''' The Add Courses page lets users search for and favorite sections. '''
 
-    if request.is_ajax():
-
-        query = Q()
-        sections = Section.objects.select_related('professor', 'course').all()
-
-        if term := request.GET.get('term'):
-            sections = sections.filter(term=term)
-        else:
-            return JsonResponse(data={})
-
-        if q := request.GET.get('q'):
-            #
-            # TODO: split on : and - characters also
-            # https://stackoverflow.com/a/23720594
-            #
-            for term in q.split():
-                query &= Q(CRN__exact=term) | Q(section_num__exact=term) \
-                    | Q(course__number__exact=term) | Q(course__title__icontains=term) \
-                    | Q(course__subject__pk__iexact=term)
-
-        if days := request.GET.get('days'):
-            query &= Q(days__contains=days)
-
-        if crsNumMin := request.GET.get('crsNumMin'):
-            query &= Q(course__number__gte=crsNumMin)
-        if crsNumMax := request.GET.get('crsNumMax'):
-            query &= Q(course__number__lte=crsNumMax)
-
-        if creditHourExact := request.GET.get('creditHourExact'):
-            query &= Q(course__credit_hours=creditHourExact)
-        if creditHourMin := request.GET.get('creditHourMin'):
-            query &= Q(course__credit_hours__gte=creditHourMin)
-        if creditHourMax := request.GET.get('creditHourMax'):
-            query &= Q(course__credit_hours__lte=creditHourMax)
-
-        if professor := request.GET.get('professor'):
-            for term in professor.split():
-                query &= Q(professor__firstname__icontains=term) \
-                    | Q(professor__lastname__icontains=term)
-
-        # page = request.GET.get('page', 1)
-
-        sections = sections.filter(query)
-
-        return JsonResponse(data={
-            'courses': render_to_string('courses/add_courses_rows.html', {
-                'all_sections': sections,
-                'CRNs': request.user.section_set.values_list('CRN', flat=True)
-                    if request.user.is_authenticated else None
-            })
-        }, safe=False)
-
-    else:
-        return render(request, 'courses/add_courses.html',
-            { 'terms': Term.objects.filter(active=True) }
-        )
+    return render(request, 'courses/add_courses.html',
+        { 'terms': Term.objects.filter(active=True) }
+    )
 
 
 @login_required
