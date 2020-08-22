@@ -30,7 +30,7 @@ try:
 
 # Defaults to development mode if local.py and environment variable don't exist
 except ImportError:
-	if os.environ.get('RS_ENVIRONMENT') == 'production':
-    	from .production import *
+    if os.environ.get('RS_ENVIRONMENT') == 'production':
+        from .production import *
     else
-    	from .development import *
+        from .development import *
