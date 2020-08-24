@@ -32,5 +32,5 @@ try:
 except ImportError:
     if os.environ.get('RS_ENVIRONMENT') == 'production':
         from .production import *
-    else
+    else:
         from .development import *
