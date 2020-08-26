@@ -32,5 +32,9 @@ def handler404(request, *args, **argv):
     return handler(404, 'Page Not Found', '😢')
 
 
+def handler418(request, *args, **argv):
+    return handler(418, "I'm a Teapot", '🍵')
+
+
 def handler500(request, *args, **argv):
     return handler(500, 'Server Error', '🔥🔥')

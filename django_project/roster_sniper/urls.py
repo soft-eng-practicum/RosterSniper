@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from django.views.generic.base import RedirectView
 
+from core.error_views import handler418
 from users import views as user_views
 
 handler400 = 'core.error_views.handler400'
@@ -30,6 +31,7 @@ handler500 = 'core.error_views.handler500'
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)),
     path('admin/', admin.site.urls),
+    path('teapot/', handler418),
 
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
