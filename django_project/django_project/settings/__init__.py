@@ -24,7 +24,6 @@ List of all settings:  https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 
 
-
 try:
     from .local import *
 

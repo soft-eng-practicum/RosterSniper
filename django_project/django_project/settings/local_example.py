@@ -3,10 +3,6 @@ The local settings file is meant to include passwords or any other setting which
 for whatever reason shouldn't be tracked by git. DO NOT specify them here! You
 MUST copy this file, rename it to 'local.py', and then change the settings as
 you like. The renamed file is in the gitignore and will not be tracked.
-
-The following can be used to generate a new SECRET_KEY
->>> python -c 'from django.core.management import utils; print(utils.get_random_secret_key())'
-cm+6y_4_jd^ri3kx##spu3axn*)d-=a6d)ej)@1wwh%z1kj)g@
 '''
 
 DEBUG = True
