@@ -4,7 +4,7 @@ from django.db.models import Q
 
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
+from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
@@ -31,7 +31,7 @@ def about(request):
 def get_courses(request):
 
     if not request.is_ajax():
-        return HttpResponseNotFound()
+        raise Http404()
 
     query = Q()
     sections = Section.objects.select_related('professor', 'course').all()

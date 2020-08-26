@@ -22,6 +22,11 @@ from django.views.generic.base import RedirectView
 
 from users import views as user_views
 
+handler400 = 'core.error_views.handler400'
+handler403 = 'core.error_views.handler403'
+handler404 = 'core.error_views.handler404'
+handler500 = 'core.error_views.handler500'
+
 urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)),
     path('admin/', admin.site.urls),
