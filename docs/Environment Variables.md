@@ -23,5 +23,5 @@ python -c 'from django.core.management import utils; print(utils.get_random_secr
 ### RS_DB_PASSWORD
 In development mode a non-password-protected SQLite database is used. In production, we use a Postgres database whose connection parameters are stored in the [`production.py`][prod] setting file which retrieves the password from the `RS_DB_PASSWORD` environment variable.
 
-[prod]: /django_project/django_project/settings/production.py
-[dev]: /django_project/django_project/settings/development.py
+[prod]: /django_project/roster_sniper/settings/production.py
+[dev]: /django_project/roster_sniper/settings/development.py

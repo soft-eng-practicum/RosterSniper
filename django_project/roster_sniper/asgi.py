@@ -1,5 +1,5 @@
 """
-ASGI config for django_project project.
+ASGI config for roster_sniper project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -13,7 +13,7 @@ from django.core.asgi import get_asgi_application
 
 os.environ.setdefault(
 	"DJANGO_SETTINGS_MODULE",
-	"django_project.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'development')
+	"roster_sniper.settings." + os.environ.get('DJANGO_ENVIRONMENT', 'development')
 )
 
 application = get_asgi_application()

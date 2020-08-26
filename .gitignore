@@ -10,7 +10,7 @@ __pycache__/
 # Django
 db.sqlite3
 django_project/static/
-django_project/django_project/settings/local.py
+django_project/roster_sniper/settings/local.py
 
 # Once the DB becomes more stable we should start to track migrations
 # The initial makemigrations command needs each app to contain a migrations
