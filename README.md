@@ -34,3 +34,4 @@ Our developer documentation can be found [here](docs).
 
 *Lead Developer -* Devin Rogers :new_moon_with_face:
 <br />_Team Manager and Client Liaison -_ Safiyullah (Safi) Khan :neckbeard:
+<br/> _Documentation lead &amp; UI/UX Design -_ Jeremia Reyes :iphone: :two_men_holding_hands:
