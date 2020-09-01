@@ -30,4 +30,4 @@ Our developer documentation can be found [here](docs).
 
 ## Our Team
 
-
+*Lead Developer-* Devin Rogers
