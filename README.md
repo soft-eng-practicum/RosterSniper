@@ -32,4 +32,4 @@ Our developer documentation can be found [here](docs).
 
 ## Our Team
 
-*Lead Developer-* Devin Rogers
+*Lead Developer-* Devin Rogers :new_moon_with_face:
