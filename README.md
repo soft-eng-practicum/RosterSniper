@@ -6,7 +6,7 @@ RosterSniper is a web application used for monitoring course availability at Geo
 - **Source Code:** https://github.com/soft-eng-practicum/RosterSniper
 - **Bug Reports:** https://github.com/soft-eng-practicum/RosterSniper/issues
 - **Progress Tracking (with Jira):** https://jira.ggc.edu/secure/RapidBoard.jspa?rapidView=45&projectKey=THINKCODE
-- **Communications (with Discord):** https://discord.gg/xHu7UV6
+- **:satellite: Communications (with Discord):** https://discord.gg/xHu7UV6
 
 ## About
 
