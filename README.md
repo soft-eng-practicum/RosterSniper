@@ -32,5 +32,5 @@ Our developer documentation can be found [here](docs).
 
 ## Our Team
 
-*Lead Developer-* Devin Rogers :new_moon_with_face:
-<br />_Team Manager and Client Liaison_ Safiyullah (Safi) Khan :neckbeard:
+*Lead Developer - * Devin Rogers :new_moon_with_face:
+<br />_Team Manager and Client Liaison - _ Safiyullah (Safi) Khan :neckbeard:
