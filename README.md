@@ -27,3 +27,7 @@ The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they ar
 The development web server is ran using the command `python manage.py runserver`.
 
 Our developer documentation can be found [here](docs).
+
+## Our Team
+
+
