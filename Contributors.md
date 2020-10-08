@@ -17,3 +17,9 @@ Below is a list of contributors and some of their roles (we still need someone f
 * Website design and admin site
 * Data modeler and database design
 * Documentation
+
+During the fall of 2020, another team from Dr. Gunay's software development II class began working on the project:
+* *Lead Developer*: Devin Rogers :new_moon_with_face:
+* *Team Manager and Client Liaison*: Safiyullah (Safi) Khan :neckbeard:
+* *Documentation lead & UI/UX Design*: Jeremia Reyes :iphone: :two_men_holding_hands:
+* *Data modeler and Testing Lead*: Joshua "Mart" Miller :monocle_face:

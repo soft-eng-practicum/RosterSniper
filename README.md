@@ -28,11 +28,4 @@ The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome but they ar
 
 The development web server is ran using the command `python manage.py runserver`.
 
-Our developer documentation can be found [here](docs).
-
-## Our Team
-
-*Lead Developer -* Devin Rogers :new_moon_with_face:
-<br />_Team Manager and Client Liaison -_ Safiyullah (Safi) Khan :neckbeard:
-<br/> _Documentation lead &amp; UI/UX Design -_ Jeremia Reyes :iphone: :two_men_holding_hands:
-<br/>_Data modeler and Testing Lead -_ Joshua "Mart" Miller :monocle_face:
+Our developer documentation can be found [here](docs) and a list of contributors can be found [here](Contributors.md).
