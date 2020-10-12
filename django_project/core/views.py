@@ -2,15 +2,16 @@ from random import randint
 
 from django.db.models import Q
 
+from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 from django.template.loader import render_to_string
+from django.urls import path, include
 
 from .models import Professor, Term, Course, Section, Favorite
 from users.models import User
-
 
 def home(request):
     return render(request, 'home.html')
@@ -92,6 +93,7 @@ def add_courses(request):
     )
 
 
+
 @login_required
 def my_courses(request):
     ''' Shows all of the user's favorited sections and lets them enable / disable
@@ -118,6 +120,11 @@ def my_courses(request):
         return render(request, 'courses/my_courses.html', {
             'favorites': request.user.favorite_set.all()
         })
+
+
+
+# def test_celery(request):
+#    return HttpResponse('Celery Done!')
 
 
 def unsubscribe(request, unsub_type, unsub_id):

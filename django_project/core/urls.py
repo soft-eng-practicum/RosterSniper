@@ -1,7 +1,11 @@
 from django.urls import path
+from django.contrib import admin
 from . import views
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('', include('example.urls')),
+    # These were pre-existing to technolo-g:
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('get-courses/', views.get_courses, name='get_courses'),

@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.urls import path, include
 from django.views.generic.base import RedirectView
 
+
 from core.error_views import handler418
 from users import views as user_views
 
@@ -49,6 +50,6 @@ urlpatterns = [
     path('reset-password/confirm/<uidb64>/<token>/',
         user_views.MyPasswordResetConfirmView.as_view(),
         name='password_reset_confirm'),
-    
+    path('', include('example.urls')),
     path('', include('core.urls')),
 ]

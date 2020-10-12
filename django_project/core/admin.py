@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db.models import Count
 
-from.models import *
+from .models import *
 
 # TODO: Ordering issue
 

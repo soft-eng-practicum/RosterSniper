@@ -1,3 +1,5 @@
+from celery import shared_task
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -5,7 +7,7 @@ from django.contrib.auth.views import (
     PasswordChangeView, PasswordResetView, PasswordResetConfirmView
 )
 
-from django.core.mail import EmailMultiAlternatives
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
@@ -13,6 +15,8 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.urls import reverse_lazy
 
 from core.utils import full_reverse
+
+from time import sleep
 
 from .models import User
 from .forms import MyUserCreationForm, UserUpdateForm
@@ -25,7 +29,7 @@ def register(request):
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            
+
             # Auto login after register: stackoverflow.com/a/3222558
             new_user = authenticate(
                 email=form.cleaned_data['email'],
@@ -60,7 +64,7 @@ def send_email_verification(user):
     }
     email_text = render_to_string('emails/verification.txt', context)
     email_html = render_to_string('emails/verification.html', context)
-    
+
     EmailMultiAlternatives(
         subject = "Verify your RosterSniper account",
         to = [user.email],
@@ -107,7 +111,7 @@ def profile(request):
 
             else:
                 messages.success(request, 'Your account has been updated.')
-                
+
             form.save()
             return redirect('profile')
 

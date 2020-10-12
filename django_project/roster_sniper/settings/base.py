@@ -14,7 +14,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
 
     'crispy_forms',
-
+    'example',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,10 +91,12 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'add_courses'
 
-# Email
+# Emails
 # Production/development specific settings go in their respective setting modules
 # https://docs.djangoproject.com/en/3.0/topics/email/
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CELERY_BROKER_URL = 'aqmp://rabbitmq'
