@@ -27,10 +27,10 @@ def gastatesplash(request):
     return render(request, 'gastate-welcome.html')
     
 def gatechsplash(request):
-    return render(render, 'gatech-welcome.html')
+    return render(request, 'gatech-welcome.html')
     
 def ugasplash(request):
-    return render(render, 'uga-welcome.html')
+    return render(request, 'uga-welcome.html')
     
 def about(request):
     names = ['Ryan Cosentino', 'Shaun Mitchell', 'Jeremy "Jeremia" Reyes', 'Safiyullah "Safi" Khan', 'Joshua "Mart" Miller', 'Devin Rogers']

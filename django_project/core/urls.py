@@ -9,4 +9,9 @@ urlpatterns = [
     path('my-courses/', views.my_courses, name='my_courses'),
     path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
     path('find-school/', views.find_school, name='find_school'),
+    path('gastate-welcome/', views.gastatesplash, name='gastate-welcome'),
+    path('gatech-welcome/', views.gatechsplash, name='gatech-welcome'),
+    path('uga-welcome/', views.ugasplash, name='uga-welcome'),
+    path('ggc-welcome/', views.ggcsplash, name='ggc-welcome'),
+    
 ]

@@ -3,8 +3,25 @@ https://www.ggc.edu/community/brand-management/graphic-standards-guide/colors/
 */
 
 :root {
+    
+/*    Universal*/
+    --azure-blue: #0080FF;
+        
+/*    Georgia Colleges and Universities*/
+
+/*    Georgia Gwinnett College*/
 	--grizzly-green: #00704A;
-	--azure-blue: #0080FF;
+    
+/*    Georgia State University*/
+    --panther-blue: #0039A6;
+    
+/*    Georgia Tech*/
+    --buzz-gold: #EAAA00;
+    
+/*    University of Georgia*/
+    --bulldog-red: #BA0C2F;
+    
+    
 }
 
 html, body {
@@ -55,6 +72,7 @@ main {
 	
 	background-color: var(--azure-blue);
 	border-color: var(--azure-blue);
+    
 }
 .btn-primary:hover {
 	background-color: ##003465;

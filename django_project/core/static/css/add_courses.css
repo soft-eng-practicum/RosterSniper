@@ -62,10 +62,11 @@ itself because we want the scrollbar to be all the way to the right. */
 }
 
 .bear {
-	background-image: url(/static/img/bear.png);
+	background-image: url(/static/img/rs_logo.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 300px;
+	background-size: 250px;
+    opacity: 0.3;
 }
 
 @media (max-width: 900px) {
