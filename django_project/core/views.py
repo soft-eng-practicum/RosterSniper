@@ -14,18 +14,38 @@ from users.models import User
 
 def home(request):
     return render(request, 'home.html')
+    
+#    Added schools below to test mock splash pages
 
 def find_school(request):
     return render(request, 'find-school.html')
+    
+def ggcsplash(request):
+    return render(request, 'ggc-welcome.html')
 
+def gastatesplash(request):
+    return render(request, 'gastate-welcome.html')
+    
+def gatechsplash(request):
+    return render(render, 'gatech-welcome.html')
+    
+def ugasplash(request):
+    return render(render, 'uga-welcome.html')
+    
 def about(request):
-    names = ['Ryan Cosentino', 'Shaun Mitchell']
+    names = ['Ryan Cosentino', 'Shaun Mitchell', 'Jeremy "Jeremia" Reyes', 'Safiyullah "Safi" Khan', 'Joshua "Mart" Miller', 'Devin Rogers']
     temp = randint(0, 1)
     context = {
         'title': 'About',
         'name1': names[temp],
         'name2': names[1-temp],
+        'name3': names[2-temp],
+        'name4': names[3-temp],
+        'name5': names[4-temp],
+        'name6': names[5-temp],
     }
+    
+    
 
     return render(request, 'about.html', context)
 
