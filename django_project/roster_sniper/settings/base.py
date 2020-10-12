@@ -99,4 +99,4 @@ DEFAULT_FROM_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CELERY_BROKER_URL = 'aqmp://rabbitmq'
+CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
