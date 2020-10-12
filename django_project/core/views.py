@@ -15,6 +15,8 @@ from users.models import User
 def home(request):
     return render(request, 'home.html')
 
+def find_school(request):
+    return render(request, 'find-school.html')
 
 def about(request):
     names = ['Ryan Cosentino', 'Shaun Mitchell']

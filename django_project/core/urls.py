@@ -8,4 +8,5 @@ urlpatterns = [
     path('add-courses/', views.add_courses, name='add_courses'),
     path('my-courses/', views.my_courses, name='my_courses'),
     path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
+    path('find-school/', views.find_school, name='find_school'),
 ]
