@@ -99,4 +99,12 @@ DEFAULT_FROM_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Celery configuration
+# NOTE: In Celery 6.0, the config files are updated and these variable names change.
+# See more about this:
+# https://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings
+# Defining RabbitMQ as the broker:
 CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
+# A whitelist of content types:
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
