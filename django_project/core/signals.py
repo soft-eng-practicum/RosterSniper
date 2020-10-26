@@ -11,7 +11,7 @@ from .models import Section
 
 @receiver(pre_delete, sender=Section)
 def delete_section(sender, instance, **kwargs):
-    '''
+    """
     Sends an email to all watchers when a section is deleted eg when the
     section is no longer present in banner and the command update_courses
     --remove-old is ran.
@@ -19,7 +19,7 @@ def delete_section(sender, instance, **kwargs):
     Because deleting a section automatically deletes all associated favorites I
     thought about making sender=Favorite but then it would trigger when a user
     unfavorites a section which is not what we want.
-    '''
+    """
 
     section = instance
     favorites = section.favorite_set.filter(user__email_confirmed=True, user__email_notify=True)
@@ -45,8 +45,8 @@ def delete_section(sender, instance, **kwargs):
         email_html = render_to_string('emails/deleted_section.html', context)
 
         EmailMultiAlternatives(
-            subject = f"{context['course_title']} has been deleted",
-            to = [favorite.user.email],
-            body = email_text,
-            alternatives = [(email_html, 'text/html')]
+            subject=f"{context['course_title']} has been deleted",
+            to=[favorite.user.email],
+            body=email_text,
+            alternatives=[(email_html, 'text/html')]
         ).send()

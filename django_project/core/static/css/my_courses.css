@@ -1,9 +1,5 @@
 /******************** My Courses Page ********************/
 
-.course-options * {
-	padding-left: 9px;
-}
-
 @media (max-width: 600px) {
 	td:nth-child(1)::before { content: "Course: " }
 	td:nth-child(2)::before { content: "Title: " }

@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Django's HttpResponseNotFound, HttpResponseServerError etc response objects
 # only set the status_code for you.. that's literally all they do.. so I don't
-# really see a season to use them here
+# really see a reason to use them here
 
 # Helper function, not a view
 def handler(status_code, title, emoji):

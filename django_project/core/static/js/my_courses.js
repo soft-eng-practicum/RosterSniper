@@ -24,5 +24,5 @@ function update_favorites() {
 	}
 }
 
-$('tbody > tr > td > span').on('click', update_favorites);
+$('td.course-options > span').on('click', update_favorites);
 $('.meeting').tooltip({delay: {show: 1500, hide: 100}});
