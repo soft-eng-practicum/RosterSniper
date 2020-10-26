@@ -8,7 +8,7 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
-from .models import Professor, Term, Course, Section, Favorite
+from .models import Term, Section, Favorite
 from users.models import User
 
 
@@ -20,7 +20,6 @@ def about(request):
     names = ['Ryan Cosentino', 'Shaun Mitchell']
     temp = randint(0, 1)
     context = {
-        'title': 'About',
         'name1': names[temp],
         'name2': names[1-temp],
     }
@@ -48,6 +47,7 @@ def get_courses(request):
         #
         for term in q.split():
             query &= Q(CRN__exact=term) | Q(section_num__exact=term) \
+                | Q(section_title__icontains=term) \
                 | Q(course__number__exact=term) | Q(course__title__icontains=term) \
                 | Q(course__subject__pk__iexact=term)
 
@@ -60,11 +60,11 @@ def get_courses(request):
         query &= Q(course__number__lte=crsNumMax)
 
     if creditHourExact := request.GET.get('creditHourExact'):
-        query &= Q(course__credit_hours=creditHourExact)
+        query &= Q(credit_hours=creditHourExact)
     if creditHourMin := request.GET.get('creditHourMin'):
-        query &= Q(course__credit_hours__gte=creditHourMin)
+        query &= Q(credit_hours__gte=creditHourMin)
     if creditHourMax := request.GET.get('creditHourMax'):
-        query &= Q(course__credit_hours__lte=creditHourMax)
+        query &= Q(credit_hours__lte=creditHourMax)
 
     if professor := request.GET.get('professor'):
         for term in professor.split():
@@ -88,7 +88,7 @@ def add_courses(request):
     ''' The Add Courses page lets users search for and favorite sections. '''
 
     return render(request, 'courses/add_courses.html',
-        { 'terms': Term.objects.filter(active=True) }
+        { 'terms': Term.objects.filter(display=True) }
     )
 
 
