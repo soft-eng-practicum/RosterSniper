@@ -12,7 +12,6 @@ INSTALLED_APPS = [
     # stackoverflow.com/a/34214067
     'core.apps.RSConfig',
     'users.apps.UsersConfig',
-
     'crispy_forms',
     'example',
     'django.contrib.admin',
@@ -106,5 +105,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Defining RabbitMQ as the broker:
 CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
 # A whitelist of content types:
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
