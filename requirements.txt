@@ -8,6 +8,3 @@ requests~=2.23.0
 
 # PostgreSQL Python adapter, Django requires at least 2.5.4
 psycopg2-binary>=2.5.4
-
-# django-celery plugin
-celery~=3.1.26.post2 (Cipater)
