@@ -10,7 +10,10 @@ admin.site.site_header = 'RosterSniper Admin'
 # admin.site.index_title = "Welcome to RosterSniper Admin"
 
 
-admin.site.register(Term)
+@admin.register(Term)
+class TermAdmin(admin.ModelAdmin):
+	search_fields = ['code', 'description']
+	list_display = ['__str__', 'code', 'default', 'update', 'display']
 
 
 class MyInline(admin.TabularInline):
