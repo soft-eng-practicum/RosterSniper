@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'crispy_forms',
     'example',
+    'django_celery_beat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,3 +108,9 @@ CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
 # A whitelist of content types:
 # CELERY_ACCEPT_CONTENT = ['json']
 # CELERY_TASK_SERIALIZER = 'json'
+# EMAIL_HOST = 
+# EMAIL_PORT =
+# EMAIL_HOST_USER =
+# EMAIL_HOST_PASSWORD =
+# EMAIL_USE_TLS =
+# EMAIL_USE_SSL = 
