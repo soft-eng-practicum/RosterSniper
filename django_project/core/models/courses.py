@@ -26,8 +26,11 @@ class Term(models.Model):
 	code = models.CharField(max_length=6, primary_key=True, help_text='E.g. 202008')
 	description = models.CharField(max_length=20, help_text='E.g. Fall 2020')
 
+	default = models.BooleanField(default=False,
+		help_text="Whether this is the default term on the add-courses page")
+
 	# There are two attributes since we might want a viewable history that goes
-	# a few terms back, but don't want to waste time updating them
+	# back a few terms, but don't want to waste time updating them
 	update = models.BooleanField(default=True,
 		help_text="Whether related sections and courses are updated")
 	display = models.BooleanField(default=True,

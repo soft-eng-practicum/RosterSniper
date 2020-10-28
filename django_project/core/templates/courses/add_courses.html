@@ -23,8 +23,8 @@
 	Term
 	<div class="input-group">
 		<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
-			<option value="{{ term.code }}">{{ term.description }}</option>
-		{% endfor %}</select>
+			<option value="{{ term.code }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
+		</select>
 	</div>
 
 	Days

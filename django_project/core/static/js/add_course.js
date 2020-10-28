@@ -14,10 +14,6 @@ $(function () {
 		}
 	});
 
-	// I'd imagine the newest term will be the most used option
-	if ( !searchParams.has("term") )
-		$("#term option:last").attr("selected", "selected");
-
 	update_courses();
 })
 
