@@ -3,7 +3,7 @@
 {% block content %}
 A section you're watching just {{ status }}
 
-Course:     {{ course_title }}
+Course:     {{ section_title }}
 Professor:  {{ professor }}
 CRN:        {{ crn }}
 

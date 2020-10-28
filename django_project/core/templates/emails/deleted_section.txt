@@ -3,7 +3,7 @@
 {% block content %}
 A section you're watching has been deleted from Banner. You will no longer receive notifications for this course.
 
-Course:     {{ course_title }}
+Course:     {{ section_title }}
 Professor:  {{ professor }}
 CRN:        {{ crn }}
 

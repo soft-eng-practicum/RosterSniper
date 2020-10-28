@@ -1,4 +1,3 @@
-# unescape is used to replace "&amp;" with "&" and "&#39;" with "'"
 from html import unescape
 
 import json, re
@@ -29,6 +28,9 @@ class Banner9:
 		x = []
 		total = 1
 		while len(x) < total:
+			# First we replace all &quot; with single quotes because unescape
+			# would replace them with double quotes which messes with the JSON.
+			# After that, unescape covers the regular &amp; -> & and &#39; -> '
 			r_text = session.get(self.url + url.format( term=term, offset=len(x) )).text.replace("&quot;", "'")
 			r_json = json.loads(unescape(r_text))
 
@@ -56,7 +58,7 @@ class Banner9:
 
 			# This works because >= compares strings lexicographically
 			# E.g. "2021" >= "2020"
-			if code[0:4] >= str(year):
+			if code[0:4] >= year:
 				Term.objects.update_or_create(
 					code=code,
 					defaults={ "description": term["description"] }
@@ -217,7 +219,7 @@ class Banner9:
 			section.save()
 
 		else:
-			# HTML might have changed
+			# HTML might have changed (is raising an error necessary?)
 			raise CommandError(
 				f"[{section.get_log_str()}] Banner 9 class enrollment page might have changed"
 			)

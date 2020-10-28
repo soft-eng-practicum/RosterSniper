@@ -29,8 +29,8 @@
 			<tbody>
 				{% for favorite in term.list %}{% with section=favorite.section %}{% spaceless %}
 				<tr id="{{ section.CRN }}">
-					<td class="course">{{ section.get_code }}</td>
-					<td class="section">{{ section.section_title }}</td>
+					<td class="section">{{ section.get_code }}</td>
+					<td class="title">{{ section.section_title }}</td>
 					<td class="meeting"><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
 					<td class="professor">{{ section.get_prof_name }}</td>
 					<td class="seats">{{ section.enrolled }}/{{ section.capacity }}</td>

@@ -160,33 +160,33 @@ class Section(models.Model):
 		if favorites and ((self.available <= 0 and available > 0)
 			or (self.available > 0 and available <= 0)):
 
+			# Most of these could be calculated in the template but because
+			# there are two templates it is done here so it doesn't need to be
+			# done twice.
+			#
+			# Also, the 'status' condition might look unintuitive but basically
+			# closed originally + notification = seat available now
+			# (self.available is updated after this method is called)
+			context = {
+				'status': 'opened!' if self.available <= 0 else 'closed.',
+				'section_title': self.section_title,
+				'professor': self.get_prof_name(),
+				'crn': self.CRN,
+
+				'home': full_reverse('home')
+			}
 			for favorite in favorites:
 
-				# Most of these could be calculated in the template but because
-				# there are two templates it is done here so it doesn't need to be
-				# done twice.
-				#
-				# Also, the 'status' condition might look unintuitive but basically
-				# closed originally + notification = seat available now
-				# (self.available is updated after this method is called)
-				context = {
-					'status': 'opened!' if self.available <= 0 else 'closed.',
-					'course_title': self.course.title,
-					'professor': self.get_prof_name(),
-					'crn': self.CRN,
-
-					'home': full_reverse('home'),
-					'unsub_fav': full_reverse(
-						'unsubscribe', args=['favorite', favorite.email_unsub_id]),
-					'unsub_all': full_reverse(
-						'unsubscribe', args=['all', favorite.user.email_unsub_id])
-				}
+				context['unsub_fav'] = full_reverse(
+					'unsubscribe', args=['favorite', favorite.email_unsub_id])
+				context['unsub_all'] = full_reverse(
+					'unsubscribe', args=['all', favorite.user.email_unsub_id])
 
 				email_text = render_to_string('emails/favorite.txt', context)
 				email_html = render_to_string('emails/favorite.html', context)
 
 				EmailMultiAlternatives(
-					subject=f"{context['course_title']} just {context['status']}",
+					subject=f"{context['section_title']} just {context['status']}",
 					to=[favorite.user.email],
 					body=email_text,
 					alternatives=[(email_html, 'text/html')]

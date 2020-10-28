@@ -30,7 +30,7 @@ def delete_section(sender, instance, **kwargs):
     # Most of these could be calculated in the template but because there are
     # two templates it is done here so it doesn't need to be done twice.
     context = {
-        'course_title': section.course.title,
+        'section_title': section.section_title,
         'professor': section.get_prof_name(),
         'crn': section.CRN,
 
@@ -45,7 +45,7 @@ def delete_section(sender, instance, **kwargs):
         email_html = render_to_string('emails/deleted_section.html', context)
 
         EmailMultiAlternatives(
-            subject=f"{context['course_title']} has been deleted",
+            subject=f"{context['section_title']} has been deleted",
             to=[favorite.user.email],
             body=email_text,
             alternatives=[(email_html, 'text/html')]

@@ -93,17 +93,16 @@ ACCT    Special Topics in Business:    1 Credit
 	}
 
 	/* add-courses */
-	td.section::before { content: "Section: " }
 	td.crn::before { content: "CRN: " }
 	td.favorite::before { content: "Favorite: " }
 
 	/* my-courses */
-	td.course::before { content: "Course: " }
 	td.title::before { content: "Title: " }
 	td.meeting::before { content: "Meeting: " }
 	td.options::before { content: "Options: " }
 
 	/* both */
+	td.section::before { content: "Section: " }
 	td.meeting::before { content: "Meeting: " }
 	td.professor::before { content: "Professor: " }
 	td.seats::before { content: "Seats: " }
