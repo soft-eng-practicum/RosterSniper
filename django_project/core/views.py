@@ -33,7 +33,11 @@ def get_courses(request):
         raise Http404()
 
     query = Q()
-    sections = Section.objects.select_related('professor', 'course').all()
+
+    # The custom order_by is needed so the regroups work in the template
+    sections = Section.objects \
+        .order_by('course', 'section_title', 'section_num') \
+        .select_related('professor', 'course').all()
 
     if term := request.GET.get('term'):
         sections = sections.filter(term=term)
@@ -46,9 +50,10 @@ def get_courses(request):
         # https://stackoverflow.com/a/23720594
         #
         for term in q.split():
-            query &= Q(CRN__exact=term) | Q(section_num__exact=term) \
+            query &= Q(CRN__exact=term) \
+                | Q(section_num__exact=term) \
                 | Q(section_title__icontains=term) \
-                | Q(course__number__exact=term) | Q(course__title__icontains=term) \
+                | Q(course__number__exact=term) \
                 | Q(course__subject__pk__iexact=term)
 
     if days := request.GET.get('days'):

@@ -28,27 +28,48 @@ ACCT    Special Topics in Business:    1 Credit
 	text-align: right;
 }
 
-.courses-card > .card-header, .courses-card > .card-footer {
-	background-color: #F5F5F5;
+.courses-card > .card-header,
+.courses-card > .card-footer,
+.courses-card > table th {
+	background-color: #F4F4F4;
+}
+
+.section-title {
+	background-color: #FAFAFA;
+	font-weight: bold;
 }
 
 .courses-card > table {
 	margin-bottom: 0;
 }
 
-.courses-card > table > thead > tr > th {
+.courses-card > table th {
 	border: 0px !important;
-	background-color: #F5F5F5;
 }
 
 .limit-four tr:nth-child(n+5) {
 	display: none;
 }
 
-.course-options * {
-	padding-left: 9px;
+/* Large Screen */
+@media (min-width: 601px) {
+	/* the * covers th (in thead) and td (in tbody) */
+	tr > *:first-child {
+		padding-left: 1.25rem;
+	}
+	tr > *:last-child {
+		padding-right: 1.25rem;
+	}
+
+	.section-options {
+		text-align: right;
+	}
+	.section-options * {
+		padding-left: 8px;
+	}
 }
 
+/* Small Screen */
 @media (max-width: 600px) {
 	thead {
 		display: none;
@@ -66,15 +87,24 @@ ACCT    Special Topics in Business:    1 Credit
 		flex-direction: column;
 		align-items: center;
 	}
-}
 
-@media (min-width: 601px) {
-	/* the * covers th (in thead) and td (in tbody) */
-	tr > *:first-child {
-		padding-left: 1.25rem;
+	.section-options * {
+		padding-right: 5px;
 	}
-	tr > *:last-child {
-		padding-right: 1.25rem;
-		text-align: right;
-	}
+
+	/* add-courses */
+	td.section::before { content: "Section: " }
+	td.crn::before { content: "CRN: " }
+	td.favorite::before { content: "Favorite: " }
+
+	/* my-courses */
+	td.course::before { content: "Course: " }
+	td.title::before { content: "Title: " }
+	td.meeting::before { content: "Meeting: " }
+	td.options::before { content: "Options: " }
+
+	/* both */
+	td.meeting::before { content: "Meeting: " }
+	td.professor::before { content: "Professor: " }
+	td.seats::before { content: "Seats: " }
 }

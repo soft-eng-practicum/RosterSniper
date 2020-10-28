@@ -3,7 +3,6 @@
 
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/my_courses.css' %}">
 
 	<script type="text/javascript" src="{% static 'js/my_courses.js' %}" defer></script>
 {% endblock %}
@@ -25,19 +24,19 @@
 				<th>Meeting</th>
 				<th>Professor</th>
 				<th>Seats</th>
-				<th>Options</th>
+				<th class="section-options">Options</th>
 			</tr></thead>
 			<tbody>
 				{% for favorite in term.list %}{% with section=favorite.section %}{% spaceless %}
 				<tr id="{{ section.CRN }}">
-					<td>{{ section.get_code }}</td>
-					<td>{{ section.course.title }}</td>
-					<td><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
-					<td>{{ section.get_prof_name }}</td>
-					<td>{{ section.enrolled }}/{{ section.capacity }}</td>
-					<td class="course-options">
-						<span data-type="email" title="Emails?" class="{% if favorite.email_notify %}fas{% else %}far{% endif %} fa-envelope-open pointer"></span>
-						<span data-type="favorite" title="Untrack?" class="fas fa-star pointer"></span>
+					<td class="course">{{ section.get_code }}</td>
+					<td class="section">{{ section.section_title }}</td>
+					<td class="meeting"><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
+					<td class="professor">{{ section.get_prof_name }}</td>
+					<td class="seats">{{ section.enrolled }}/{{ section.capacity }}</td>
+					<td class="section-options options">
+						<i data-type="email" title="Emails?" class="{% if favorite.email_notify %}fas{% else %}far{% endif %} fa-envelope-open pointer"></i>
+						<i data-type="favorite" title="Untrack?" class="fas fa-star pointer"></i>
 					</td>
 				</tr>
 				{% endspaceless %}{% endwith %}{% endfor %}

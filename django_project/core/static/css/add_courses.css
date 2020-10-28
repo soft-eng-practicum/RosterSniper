@@ -6,7 +6,7 @@
 	padding: 1rem;
 	width: 240px;
 	flex-shrink: 0;
-	background-color: #F5F5F5;
+	background-color: #F4F4F4;
 	box-shadow: 5px 0px 10px 0px rgba(176,176,176,0.1);
 }
 #sidebar-col > div {
@@ -72,13 +72,4 @@ itself because we want the scrollbar to be all the way to the right. */
 	#sidebar-col {
 		display: none;
 	}
-}
-
-@media (max-width: 600px) {
-	td:nth-child(1)::before { content: "Section: " }
-	td:nth-child(2)::before { content: "CRN: " }
-	td:nth-child(3)::before { content: "Meeting: " }
-	td:nth-child(4)::before { content: "Professor: " }
-	td:nth-child(5)::before { content: "Students: " }
-	td:nth-child(6)::before { content: "Favorite: " }
 }

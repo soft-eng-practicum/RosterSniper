@@ -1,6 +1,6 @@
 {% spaceless %}
-{% regroup all_sections by course as grouped_sections %}
-{% for course in grouped_sections %}
+{% regroup all_sections by course as courses %}
+{% for course in courses %}
 <div class="card courses-card">
 	<div class="card-header">
 		<div>{{ course.grouper.short_str }}</div>
@@ -15,29 +15,30 @@
 			<th>Meeting</th>
 			<th>Professor</th>
 			<th>Seats</th>
-			<th>Track</th>
+			<th class="course-options">Track</th>
 		</tr></thead>
-		<tbody class="limit-four">
-			{% for section in course.list %}{% with CRN=section.CRN %}
+		<tbody>
+			{% regroup course.list by section_title as related_sections %}
+			{% for related_section in related_sections %}
+			{% if related_section.grouper != course.grouper.title %}
+			<tr class="section-title">
+				<td colspan="6">{{ related_section.grouper }}</td>
+			</tr>
+			{% endif %}
+			{% for section in related_section.list %}{% with CRN=section.CRN %}
 			<tr>
-				<td>{{ section.section_num }}</td>
-				<td>{{ CRN }}</td>
-				<td><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
-				<td>{{ section.get_prof_name }}</td>
-				<td>{{ section.enrolled }}/{{ section.capacity }}</td>
-				<td class="course-options">
+				<td class="section">{{ section.section_num }}</td>
+				<td class="crn">{{ CRN }}</td>
+				<td class="meeting"><span title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
+				<td class="professor">{{ section.get_prof_name }}</td>
+				<td class="seats">{{ section.enrolled }}/{{ section.capacity }}</td>
+				<td class="section-options favorite">
 					<i id="{{ CRN }}" title="Track?" class="{% if CRN in CRNs %}fas{% else %}far{% endif %} fa-star pointer"></i>
 				</td>
 			</tr>
-			{% endwith %}{% endfor %}
+			{% endwith %}{% endfor %}{% endfor %}
 		</tbody>
 	</table>
-
-	{% if course.list|length > 4 %}
-	<div class="card-footer">
-		<button class="btn btn-link p-0">Show All ({{ course.list|length }})</button>
-	</div>
-	{% endif %}
 </div>
 {% endfor %}
 {% endspaceless %}

@@ -126,7 +126,7 @@ class Banner9:
 			course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
 			section.course = course
 			section.section_num = s["sequenceNumber"]
-			section.section_title = s["courseTitle"][len(course.title):]
+			section.section_title = s["courseTitle"]# [len(course.title):]
 
 			if (credit_hours := s["creditHours"]) is None:
 				section.credit_hours = s["creditHourLow"]
@@ -179,7 +179,7 @@ class Banner9:
 				end_time = time(int(end_time[:2]), int(end_time[2:]))
 
 				if (b := meeting["building"]) and (r := meeting["room"]):
-					room = f"{b} {r}"
+					room = f"{b}-{r}"
 
 			# If there were no scheduled meetings
 			else:

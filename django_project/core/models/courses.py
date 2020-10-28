@@ -150,6 +150,10 @@ class Section(models.Model):
 			user__email_confirmed=True, user__email_notify=True)
 
 		# If there's a new opening or new closing
+		#
+		# We make sure favorites is non-empty first because if it's empty, the
+		# section might not exist in the DB, and self.available might be None,
+		# and None <= 0 causes an error.
 		if favorites and ((self.available <= 0 and available > 0)
 			or (self.available > 0 and available <= 0)):
 

@@ -50,7 +50,7 @@ function update_courses() {
 	$.getJSON('/get-courses/?' + params).done(
 		response => {
 			$('#courses').html(response['courses']);
-			$('.meeting').tooltip({delay: {show: 1500, hide: 100}});
+			$('.meeting > span').tooltip({delay: {show: 1500, hide: 100}});
 			$('#courses .card-footer button').click(show_all);
 			$('#courses td i.fa-star').on('click', favorite);
 		}
