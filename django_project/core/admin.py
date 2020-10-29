@@ -104,3 +104,18 @@ class SectionAdmin(admin.ModelAdmin):
 	def get_queryset(self, request):
 		queryset = super().get_queryset(request)
 		return queryset.order_by(*Section._meta.ordering) 
+
+
+@admin.register(Favorite)
+class FavoriteAdmin(admin.ModelAdmin):
+	search_fields = ['user__email', 'section__section_title']
+	list_display = ['user', 'get_section', 'email_notify']
+	list_select_related = ['user', 'section']
+	list_filter = ['email_notify']
+
+	def get_section(self, obj):
+		return obj.section.get_code()
+	get_section.short_description = 'Section'
+	get_section.admin_order_field = 'section'
+
+	readonly_fields = ['user', 'section']
