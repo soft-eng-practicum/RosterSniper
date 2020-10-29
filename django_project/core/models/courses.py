@@ -205,7 +205,7 @@ class Section(models.Model):
 		).ljust(50)
 
 	def __str__(self):
-		return f'{self.get_code()}: {self.course.title}{self.section_title}'
+		return f'{self.get_code()}: {self.section_title}'
 
 class Favorite(models.Model):
 	''' Manually specified intermediary table for the many-to-many User-Section

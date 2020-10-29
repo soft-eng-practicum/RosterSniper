@@ -23,7 +23,7 @@ class Banner9:
 
 		# Establish a session with the given term (saves cookies)
 		session = requests.Session()
-		session.get(self.url + f"term/search?mode=search&term={term}", timeout=5)
+		session.get(self.url + f"term/search?mode=search&term={term.code}", timeout=5)
 
 		x = []
 		total = 1
@@ -31,11 +31,13 @@ class Banner9:
 			# First we replace all &quot; with single quotes because unescape
 			# would replace them with double quotes which messes with the JSON.
 			# After that, unescape covers the regular &amp; -> & and &#39; -> '
-			r_text = session.get(self.url + url.format( term=term, offset=len(x) )).text.replace("&quot;", "'")
+			r_text = session.get(self.url + url.format( term=term.code, offset=len(x) )).text.replace("&quot;", "'")
 			r_json = json.loads(unescape(r_text))
 
 			x.extend(r_json["data"])
 			total = r_json["totalCount"]
+
+			self.log(f'[{term}] Downloaded {len(x)}/{total}')
 
 		return x
 
@@ -54,6 +56,8 @@ class Banner9:
 			# Ignore "special" terms like 202018 *Fall ELI 2020
 			# For normal terms, 02: Spring, 05: Summer, 08: Fall
 			if code[4:6] not in ["02", "05", "08"]:
+				if self.verbosity > 1:
+					self.log(f'Too special  {term}')
 				continue
 
 			# This works because >= compares strings lexicographically
@@ -63,15 +67,23 @@ class Banner9:
 					code=code,
 					defaults={ "description": term["description"] }
 				)
+				if self.verbosity > 1:
+					self.log(1, f'Updated term {term}')
+
+			else:
+				if self.verbosity > 1:
+					self.log(f'Too old      {term}')
 
 	def update_subjects(self, term):
 
 		# Get all subjects for the given term. The response looks like
 		# [{"code": "ACCT", "description": "Accounting"}, ...]
 		text = requests.get(
-			self.url + f"courseSearch/get_subject?term={term}&offset=1&max=500"
+			self.url + f"courseSearch/get_subject?term={term.code}&offset=1&max=500"
 		).text
 		subjects = json.loads(unescape(text))
+
+		self.log(f'[{term}] Downloaded {len(subjects)}')
 
 		for subject in subjects:
 			Subject.objects.update_or_create(
@@ -109,11 +121,15 @@ class Banner9:
 			"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500"
 		)
 
+		self.log(f'[{term}] Updating database')
+
 		if seats_only:
 			for s in sections:
 				section = Section.objects.get(CRN=s["courseReferenceNumber"])
 				section.set_enrollment(s["enrollment"], s["maximumEnrollment"])
 				section.save()
+				if self.verbosity > 1:
+					self.log(f'[{term}] {section.CRN} now {section.get_enrollment()}')
 			return
 
 		for s in sections:
@@ -121,9 +137,9 @@ class Banner9:
 			# We can't use update_or_create() here b/c it calls save() before mandatory fields are set
 			crn = s["courseReferenceNumber"]
 			try:
-				section = Section.objects.get(term_id=term, CRN=crn)
+				section = Section.objects.get(term=term, CRN=crn)
 			except Section.DoesNotExist:
-				section = Section(term_id=term, CRN=crn)
+				section = Section(term=term, CRN=crn)
 
 			course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
 			section.course = course
@@ -196,7 +212,7 @@ class Banner9:
 			section.save()
 
 			if self.verbosity > 1:
-				self.log(f"[{crn}] Successfully {'added' if True else 'updated'}")
+				self.log(f"[{term}] Updated {section}")
 
 	def update_section_seats(self, section):
 

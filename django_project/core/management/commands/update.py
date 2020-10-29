@@ -36,10 +36,10 @@ class Command(BaseCommand):
 			self.log(f'Using latest term: {term}')
 
 			self.log('Updating subjects')
-			scraper.update_subjects(term.code)
+			scraper.update_subjects(term)
 
 			self.log('Updating courses')
-			scraper.update_courses(term.code)
+			scraper.update_courses(term)
 
 		elif mode == 'favorites':
 			self.log('Updating favorited sections')
@@ -77,9 +77,9 @@ class Command(BaseCommand):
 			if mode == 'sections':
 				for term in terms:
 					self.log(f'[{term}] Updating sections')
-					scraper.update_sections(term.code)
+					scraper.update_sections(term)
 
 			elif mode == 'seats':
 				for term in terms:
 					self.log(f'[{term}] Updating seats')
-					scraper.update_section_seats(term.code)
+					scraper.update_sections(term, seats_only=True)
