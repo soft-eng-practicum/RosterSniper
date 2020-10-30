@@ -7,7 +7,7 @@ from .models import *
 
 admin.site.site_title = 'RS Admin'
 admin.site.site_header = 'RosterSniper Admin'
-# admin.site.index_title = "Welcome to RosterSniper Admin"
+admin.site.index_title = "Welcome to the RosterSniper admin page!"
 
 
 @admin.register(Term)
@@ -97,7 +97,7 @@ class SectionAdmin(admin.ModelAdmin):
 		'professor__firstname', 'professor__lastname'
 	]
 	list_display = ['__str__', 'enrolled', 'capacity']
-	list_filter = ['course__subject']
+	list_filter = ['term', 'course__subject']
 	list_select_related = ['course']
 	autocomplete_fields = ['professor']
 
@@ -110,8 +110,7 @@ class SectionAdmin(admin.ModelAdmin):
 class FavoriteAdmin(admin.ModelAdmin):
 	search_fields = ['user__email', 'section__section_title']
 	list_display = ['user', 'get_section', 'email_notify']
-	list_select_related = ['user', 'section']
-	list_filter = ['email_notify']
+	list_filter = ['section__term', 'email_notify']
 
 	def get_section(self, obj):
 		return obj.section.get_code()

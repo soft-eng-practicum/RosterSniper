@@ -68,7 +68,7 @@ class Banner9:
 					defaults={ "description": term["description"] }
 				)
 				if self.verbosity > 1:
-					self.log(1, f'Updated term {term}')
+					self.log(f'Updated term {term}')
 
 			else:
 				if self.verbosity > 1:
