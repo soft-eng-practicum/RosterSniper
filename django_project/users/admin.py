@@ -1,13 +1,21 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
+from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import ugettext_lazy as _
 
 from .models import User
 
 
 @admin.register(User)
-class UserAdmin(DjangoUserAdmin):
-    """Define admin model for custom User model with no email field."""
+class MyUserAdmin(UserAdmin):
+    """
+    Custom Admin for custom User model. The differences are:
+    - replaced username with email
+    - added 'Notifications' fieldset
+    - removed is_staff from list_display and list_filter
+      (we don't really have non superuser staff, so its not important)
+    - added email_confirmed to list_filter
+    - removed last_name from search_fields because we don't use them
+    """
 
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
@@ -23,6 +31,8 @@ class UserAdmin(DjangoUserAdmin):
             'fields': ('email', 'password1', 'password2'),
         }),
     )
-    list_display = ('email', 'first_name', 'last_name', 'is_staff')
-    search_fields = ('email', 'first_name', 'last_name')
+
+    list_display = ('email', 'first_name', 'email_confirmed')
+    list_filter = ('email_confirmed', 'is_superuser', 'is_active', 'groups')
+    search_fields = ('email', 'first_name')
     ordering = ('email',)

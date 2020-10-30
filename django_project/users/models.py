@@ -43,9 +43,11 @@ class User(AbstractUser):
     username = None
     
     email = models.EmailField(unique=True)
-    email_confirmed = models.BooleanField(default=False)
+    email_confirmed = models.BooleanField(default=False,
+        help_text='Whether the user has clicked an activation link')
 
-    email_notify = models.BooleanField(default=True, help_text='Whether or not you should receive emails')
+    email_notify = models.BooleanField(default=True,
+        help_text='Whether the user should receive emails')
     email_unsub_id = models.UUIDField(default=uuid.uuid4)
 
     objects = UserManager()
