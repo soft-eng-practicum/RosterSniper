@@ -76,6 +76,9 @@ def get_courses(request):
             query &= Q(professor__firstname__icontains=term) \
                 | Q(professor__lastname__icontains=term)
 
+    if room := request.GET.get('room'):
+        query &= Q(room__icontains=room.replace(" ", "-"))
+
     # page = request.GET.get('page', 1)
 
     sections = sections.filter(query)
