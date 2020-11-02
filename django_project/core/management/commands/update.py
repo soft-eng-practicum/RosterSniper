@@ -14,7 +14,7 @@ class Command(BaseCommand):
 		self.stdout.write(self.style.ERROR(str))
 	
 	def add_arguments(self, parser):
-		parser.add_argument('mode', choices=['terms', 'courses', 'sections', 'seats', 'favorites'])
+		parser.add_argument('mode', choices=['terms', 'courses', 'sections', 'favorites'])
 
 		parser.add_argument('-t', '--terms', type=int, nargs='*',
 			help='Terms that the program will fetch section information from (eg: 202005). Defaults to all Term model instances with update=True.')
@@ -67,19 +67,12 @@ class Command(BaseCommand):
 				if verbosity > 1:
 					self.log(f'[{s.get_log_str()}] Seats: {s.get_enrollment()}')
 
-		# The following modes all iterate over terms
-		else:
+		elif mode == 'sections':
 			if x := options['terms']:
 				terms = Term.objects.filter(id__in=x)
 			else:
 				terms = Term.objects.filter(update=True)
 
-			if mode == 'sections':
-				for term in terms:
-					self.log(f'[{term}] Updating sections')
-					scraper.update_sections(term)
-
-			elif mode == 'seats':
-				for term in terms:
-					self.log(f'[{term}] Updating seats')
-					scraper.update_sections(term, seats_only=True)
+			for term in terms:
+				self.log(f'[{term}] Updating sections')
+				scraper.update_sections(term)

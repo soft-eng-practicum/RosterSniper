@@ -115,22 +115,13 @@ class Banner9:
 				}
 			)
 
-	def update_sections(self, term, seats_only=False):
+	def update_sections(self, term):
 
 		sections = self._get_with_session(term,
 			"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500"
 		)
 
 		self.log(f'[{term}] Updating database')
-
-		if seats_only:
-			for s in sections:
-				section = Section.objects.get(CRN=s["courseReferenceNumber"])
-				section.set_enrollment(s["enrollment"], s["maximumEnrollment"])
-				section.save()
-				if self.verbosity > 1:
-					self.log(f'[{term}] {section.CRN} now {section.get_enrollment()}')
-			return
 
 		for s in sections:
 
@@ -141,7 +132,12 @@ class Banner9:
 			except Section.DoesNotExist:
 				section = Section(term=term, CRN=crn)
 
-			course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
+			try:
+				course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
+			except Course.DoesNotExist:
+				self.log(f'[crn={crn}] New courses found, please run update courses')
+				continue
+
 			section.course = course
 			section.section_num = s["sequenceNumber"]
 			section.section_title = s["courseTitle"]# [len(course.title):]
