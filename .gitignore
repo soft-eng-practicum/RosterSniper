@@ -12,11 +12,5 @@ db.sqlite3
 django_project/static/
 django_project/roster_sniper/settings/local.py
 
-# Once the DB becomes more stable we should start to track migrations
-# The initial makemigrations command needs each app to contain a migrations
-# python package.
-migrations/
-!migrations/__init__.py
-
 # Keep any folder with a .keep file
 !.keep
