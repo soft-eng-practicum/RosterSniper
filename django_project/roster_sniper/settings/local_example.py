@@ -23,6 +23,7 @@ else:
 
 ## Development local settings example ##########################################
 
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'example@gmail.com'
 # EMAIL_HOST_PASSWORD = 'some_password'
