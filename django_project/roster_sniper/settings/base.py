@@ -3,6 +3,9 @@ The base settings file is meant to be imported by the dev/prod settings files.
 '''
 
 import os
+#mart added to get djcelery to work
+import djcelery
+djcelery.setup_loader()
 
 # Not an actual setting, only used to build paths eg os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -22,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles'
 ]
+INSTALLED_APPS += ("djcelery",)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -114,3 +118,4 @@ CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
 # EMAIL_HOST_PASSWORD =
 # EMAIL_USE_TLS =
 # EMAIL_USE_SSL = 
+
