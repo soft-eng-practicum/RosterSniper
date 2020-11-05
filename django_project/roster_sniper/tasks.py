@@ -21,8 +21,6 @@ def writer():
 
 @shared_task
 def send_celery_mail():
-    # sleep(600)
-    # update_courses
     send_mail('Celery task worked',
     'Proof email works',
     'amatuccikristov@gmail.com',

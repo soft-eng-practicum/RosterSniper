@@ -1,4 +1,4 @@
-CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
+CELERY_BROKER_URL = 'aqmp://127.0.0.1:5672'
 result_backend = 'rpc://'
 
 task_serializer = 'json'

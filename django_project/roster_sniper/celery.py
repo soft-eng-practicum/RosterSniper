@@ -2,6 +2,10 @@ from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
 from . import settings
+from os import path
+from . import tasks
+
+# from . import celeryconfig
 
 # This python file creates an instance of Celery.
 
@@ -14,19 +18,30 @@ os.environ.setdefault(
 )
 
 app = Celery('roster_sniper')
+# app = Celery('roster_sniper', broker='redis://redis:6379/0')
+# broker= 'amqp://guest:guest@localhost:5672;amqp://127.0.0.1:5672;amqp://127.0.0.1:15672;amqp://127.0.0.1:58301;amqp://127.0.0.1:25672;amqp://127.0.0.1:1883;amqp://127.0.0.1:61613;
 
 # Define strings here so worker doesn't have to 
 # serialize the configuration object to the child processes.
 # Note: Celery versions under 4 may throw error if adding ", NAMESPACE='CELERY"
 # So I removed that.
-app.config_from_object('django.conf:settings')
+app.config_from_object('django.conf:settings', namespace='CELERY')
 # app.config_from_object('celeryconfig')
 # Load tasks from all registered Django app configs
-app.autodiscover_tasks(settings.INSTALLED_APPS)
+# app.autodiscover_tasks(settings.INSTALLED_APPS)
+app.autodiscover_tasks()
+
+app.conf.beat_schedule = {
+	'beat-test': {
+		'task': tasks.writer,
+		'schedule': 15.0
+	}
+}
 
 @app.task(bind=True)
 def debug_task(self):
 	print('Request: {0!r}'.format(self.request))
+
 
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
@@ -40,5 +55,3 @@ def setup_periodic_tasks(sender, **kwargs):
 	sender.add_periodic_task(30.0, f.write('test'))
 	# Executes every Monday morning at 7:30 a.m.
 	
-
-

@@ -3,6 +3,8 @@ The base settings file is meant to be imported by the dev/prod settings files.
 '''
 
 import os
+from celery.schedules import crontab
+from example import tasks
 
 # Not an actual setting, only used to build paths eg os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -15,6 +17,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'example',
     'django_celery_beat',
+    'djcelery',
+    'django_celery_results',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,7 +108,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # See more about this:
 # https://docs.celeryproject.org/en/latest/userguide/configuration.html#new-lowercase-settings
 # Defining RabbitMQ as the broker:
-CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
+broker_url = [
+    'amqp://guest:guest@localhost:5672//',
+    'amqp://guest:guest@localhost:5672//',
+    'amqp://guest:guest@localhost:58936//',
+    'amqp://guest:guest@localhost:5672/'
+]
+# CELERYBEAT_SCEDULER = "celery.schedulers.DatabaseScheduler"
 # A whitelist of content types:
 # CELERY_ACCEPT_CONTENT = ['json']
 # CELERY_TASK_SERIALIZER = 'json'
@@ -114,3 +124,4 @@ CELERY_BROKER_URL = 'aqmp://127.0.0.1:15672'
 # EMAIL_HOST_PASSWORD =
 # EMAIL_USE_TLS =
 # EMAIL_USE_SSL = 
+
