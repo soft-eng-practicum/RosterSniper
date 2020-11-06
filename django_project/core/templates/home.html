@@ -1,27 +1,47 @@
 {% extends "base/regular.html" %}
+{% load static %}
 
 {% block content %}
-
-<div class="jumbotron ">
+<style>
+.center {text-align: center; list-style-position: inside;}
+</style>
+<div class="jumbotron">
     
-    <h3 class="display-4 bold italic text-center pb-3">&ldquo;BUT I NEED THAT CLASS!&rdquo;</h3>
-
-	<p class="lead">
-    We've all been there. You obviously had other important things to do and you completely forgot to pick your classes!
-    <br/>
-    <br/>
-    Now you're stuck between a Saturday 7am and a MTWTF 6pm-10pm with none other than Doctor Payne.</p>
+    <h1 class="display-3 bold italic text-center pb-3">Welcome to RosterSniper!</h1>
 
 
-	<h3 class="display-6 text-center italic pb-2">&ldquo;...but what if there was another way?&rdquo;</h3>
+	<h2 class="display-5 text-center italic pb-2"><strike>Squeeze</strike> seize the day!</h2><br/>
 
-	<p class="lead">No, not by being the responsible adult your mother hoped you would be by this point in your life. What if you could cheat the system? Consider this: <span class="bold">1,337%</span> of students will drop a class before the semester even starts. What if you had <span class="italic">spidey senses&trade;</span> and could detect immediately when the gods give you a second chance?</p>
+	<h3 class="display-6 text-center italic pb-2">Take control of your college experience by picking the classes you want.</h3><br/>
+	
 
-	<p class="lead pb-1">Well there is a way. RosterSniper works by sending you an email notification as soon as your class has an open seat. But be speedy, because you're not the only one using our website. Register, verify, and let the race to schedule redemption begin!</p>
+	<h4 class="display-7 text-center italic pb-2">RosterSniper works by sending you an email notification as soon as your class has an open seat. But be speedy, because you're not the only one using our website.</h4><br/>
+	
+	<h4 class="display-7 text-center italic pb-2">Sign up today and get personalized notifications about course openings with RosterSniper!</h4><br/>
 
 	<div class="text-center">
     <a class="btn btn-primary btn-lg" href="{% url 'find_school' %}" role="button">Find Your School</a>
 	</div>
+	
+	
+	<hr/>
+	<div class="center">
+	<h3 class="display-4 bold italic text-center pb-3">How This Site Works</h3>
+	<ol style="font-size:30px">
+		<li><a href="{% url 'register' %}">Create</a> an account</li><br/>
+		<img src="{% static 'img/about/1_register.png' %}" class="center" style="max-width: 500px; max-height: 450px"><br/><br/>
+		<li><a href="{% url 'add_courses' %}">Search</a> for and <span class="far fa-star pointer"></span> a class you <i>really</i> want</li><br/>
+		<img src="{% static 'img/about/2_add_courses.png' %}" class="center" style="max-width: 500px; max-height: 450px"><br/><br/>
+		<li>Wait for Emails</li><br/>
+		<img src="{% static 'img/about/3_email.png' %}" class="center" style="max-width: 500px; max-height: 450px"><br/><br/>
+		<li>Adjust Notifications</li><br/>
+		<img src="{% static 'img/about/4_notifications.png' %}" class="center" style="max-width: 500px; max-height: 450px"><br/><br/>
+	</ol>
+	
+	<h3 class="display-4 bold italic text-center pb-3">Try it today for free!</h3>
+	<a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Register Now</a>
+	</div>
+
         
 </div>
 <!-- thanks to dinosaursninja#9988 for the divine assistance-->
