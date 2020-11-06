@@ -6,16 +6,28 @@
 
 
     <h3 class="display-6 text-center italic pb-2">Welcome to RosterSniper!</h3>
-
-  <h3>Please select your school from the following list</h3>
+<div class="text-center">
+    <br/>
+    <br/>
+  <h3>Please select your school from the following list:</h3>
       
 <br/><hr/><br/>
     
     <a class="btn btn-primary btn-lg" href="{% url 'ggc-welcome' %}" role="button">Georgia Gwinnett College</a>
+    <br/>
+    <br/>
+    <br/>
     <a class="btn btn-primary btn-lg" href="{% url 'gastate-welcome' %}" role="button">Georgia State University</a>
+    <br/>
+    <br/>
+    <br/>
     <a class="btn btn-primary btn-lg" href="{% url 'gatech-welcome' %}" role="button">Georgia Institute of Technology</a>
+    <br/>
+    <br/>
+    <br/>
     <a class="btn btn-primary btn-lg" href="{% url 'uga-welcome' %}" role="button">University of Georgia</a>
         
 </div>
-<!-- thanks to dinosaursninja#9988 for the divine assistance-->
+</div>
+
 {% endblock content %}
