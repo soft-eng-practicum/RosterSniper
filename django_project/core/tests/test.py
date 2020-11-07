@@ -30,7 +30,10 @@ class BasicTest(TestCase):
 	def test_fields(self):
 		global professor 
 		professor = courses.Professor()
-		#professor.email = "test@test.test"
-		#professor.firstname = "f"
-		#professor.lastname = "indachat"
-		return 1
+		professor.email = "test@test.test"
+		professor.firstname = "f"
+		professor.lastname = "indachat"
+		professor.save()
+		
+		record = courses.Professor.objects.get(pk=1)#email ="test@test.test"
+		self.assertEqual(record, professor)
