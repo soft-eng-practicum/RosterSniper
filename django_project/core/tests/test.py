@@ -22,13 +22,15 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from core.utils import full_reverse
 
-from ..models import school
+from ..models import courses
 
 class BasicTest(TestCase):
 	#Test Functions need to begin with test_
 	#This test is to test courses feilds  
 	def test_fields(self):
-		professor = professor()
+		global professor 
+		professor = courses.Professor()
 		#professor.email = "test@test.test"
 		#professor.firstname = "f"
 		#professor.lastname = "indachat"
+		return 1
