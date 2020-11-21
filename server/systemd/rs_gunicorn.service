@@ -1,0 +1,17 @@
+[Unit]
+Description=rostersniper gunicorn daemon
+Requires=rs_gunicorn.socket
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/rostersniper.com/RosterSniper/django_project
+ExecStart=/a/path/to/myprojectenv/bin/gunicorn \
+	--access-logfile - \
+	--workers 3 \
+	--bind unix:/var/www/rostersniper.com/rs_gunicorn.sock \
+	roster_sniper.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

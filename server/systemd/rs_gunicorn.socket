@@ -1,0 +1,8 @@
+[Unit]
+Description=rostersniper gunicorn socket
+
+[Socket]
+ListenStream=/var/www/rostersniper.com/rs_gunicorn.sock
+
+[Install]
+WantedBy=sockets.target
