@@ -1,0 +1,8 @@
+The following Maven libraries are needed to run the selenium tests In "KhanRSTest.java":
+
+commons-io:commons-io:2.7
+junit:junit:4.12
+org.apache.commons:commons-lang3:3.11
+org.seleniumhq.selenium:selenium-java:3.141.59
+
+Recommended Java Version: Java 11
