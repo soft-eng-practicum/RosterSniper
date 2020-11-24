@@ -26,9 +26,7 @@ DATABASES = {
 """
 Because we can't include a default email account (w/ password), the only way to
 get dev emails to work "out of the box" is to use the file (or console) backend.
-This basically "sends" emails to log files in the django_project/.emails/
-directory. The dot is there to differentiate the emails folder from a django app
-which happens to live in the same directory.
+This basically "sends" emails to log files in the django_project/@ emails/ directory.
 
 More info:
 https://docs.djangoproject.com/en/stable/topics/email/#email-backends
@@ -36,4 +34,4 @@ https://docs.djangoproject.com/en/stable/topics/email/#email-backends
 If you want to add your own email account, see local_example.py
 """
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, '.emails')
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, '@ emails')
