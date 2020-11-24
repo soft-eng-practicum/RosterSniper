@@ -18,8 +18,8 @@ class Command(BaseCommand):
 		parser.add_argument('-t', '--terms', type=int, nargs='*',
 			help='Terms that the program will fetch section information from (eg: 202005). Defaults to all Term model instances with update=True.')
 
-		parser.add_argument('--all-terms', action='store_true',
-			help="Updates sections from all terms, regardless of the term's update attribute")
+		parser.add_argument('--term-mode', type=int, choices=[0, 1, 2], default=2,
+			help="Used when updating sections to determines which terms to use. 2: update=True (default), 1: display=True, 0: all.")
 
 	def handle(self, mode, verbosity, *args, **options):
 
@@ -44,12 +44,17 @@ class Command(BaseCommand):
 			self.log(f'Updating courses using latest term: {term}')
 			scraper.update_courses(term)
 
-			if options['all_terms']:
-				terms = Term.objects.all()
+			if m := options['term_mode']:
+				if m == 2:
+					terms = Term.objects.filter(update=True)
+				elif m == 1:
+					terms = Term.objects.filter(display=True)
+				elif m == 0:
+					terms = Term.objects.all()
 			elif x := options['terms']:
 				terms = Term.objects.filter(code__in=x)
 			else:
-				terms = Term.objects.filter(update=True)
+				return
 
 			for term in terms:
 				self.log(f'[{term}] Updating sections')
