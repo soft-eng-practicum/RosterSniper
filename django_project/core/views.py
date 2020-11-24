@@ -50,7 +50,7 @@ def get_courses(request):
         # https://stackoverflow.com/a/23720594
         #
         for term in q.split():
-            query &= Q(CRN__exact=term) \
+            query &= Q(crn__exact=term) \
                 | Q(section_num__exact=term) \
                 | Q(section_title__icontains=term) \
                 | Q(course__number__exact=term) \
@@ -86,7 +86,7 @@ def get_courses(request):
     return JsonResponse(data={
         'courses': render_to_string('courses/add_courses_rows.html', {
             'all_sections': sections,
-            'CRNs': request.user.section_set.values_list('CRN', flat=True)
+            'crns': request.user.section_set.values_list('crn', flat=True)
                 if request.user.is_authenticated else None
         })
     }, safe=False)
@@ -102,23 +102,23 @@ def add_courses(request):
 
 @login_required
 def my_courses(request):
-    ''' Shows all of the user's favorited sections and lets them enable / disable
-    email notifications and unfavorite sections. '''
+    ''' Shows user their favorites, lets them remove favorites, and lets them
+    enable / disable email notifications. '''
 
-    if request.is_ajax() and (crn := request.GET.get('crn')):
+    if request.is_ajax() and (term := request.GET.get('term')) \
+        and (crn := request.GET.get('crn')):
 
         if favorite := request.GET.get('favorite'):
+            s = Section.objects.get(term_id=term, crn=crn)
             if favorite == 'true':
-                request.user.section_set.add(crn)
+                request.user.section_set.add(s)
             elif favorite == 'false':
-                request.user.section_set.remove(crn)
+                request.user.section_set.remove(s)
 
-        elif (email := request.GET.get('email')) \
-            and (email == 'true' or email == 'false'):
-
-            f = Favorite.objects.get(user=request.user, section__CRN=crn)
-            f.email_notify = email == 'true'
-            f.save()
+        elif email := request.GET.get('email'):
+            Favorite.objects.filter(
+                user=request.user, section__term_id=term, section__crn=crn
+            ).update(email_notify=email == 'true')
 
         return HttpResponse('')
 

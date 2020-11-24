@@ -1,11 +1,11 @@
 
 $(function () {
-	$('#q, #sidebar-col input').keypress(e => { if (e.keyCode == 13) update_courses() });
+	$('#q, #sidebar-col input').keypress(e => { if (e.keyCode === 13) update_courses() });
 	$('#days > button').tooltip({delay: {show: 1500, hide: 100}});
 
-	var searchParams = new URLSearchParams(window.location.search);
+	const searchParams = new URLSearchParams(window.location.search);
 	searchParams.forEach(function(value, key) {
-		if (key == "days") {
+		if (key === "days") {
 			$('#days').children().each(function() {
 				if (value.includes(this.innerHTML)) $(this).addClass('active');
 			});
@@ -18,13 +18,13 @@ $(function () {
 })
 
 function update_courses() {
-	var searchParams = new URLSearchParams();
+	const searchParams = new URLSearchParams();
 
 	$("#term, #sidebar-col input, #q").each(function() {
 		if ( x = $(this).val().trim() ) searchParams.append($(this).attr('id'), x);
 	});
 
-	days = '';
+	let days = '';
 	$('#days > button').each(function() {
 		if ($(this).hasClass('active')) days += this.innerHTML;
 	});
@@ -35,12 +35,12 @@ function update_courses() {
 		if ( !$('#courses-col').hasClass('bear') ) {
 			$('#courses-col').addClass('bear');
 			$('#courses').html('');
-			history.pushState(null, '', '/add-courses/'); 
+			history.pushState(null, '', '/add-courses/');
 		}
 		return;
 	} // else..
 
-	params = searchParams.toString()
+	let params = searchParams.toString()
 	$('#courses-col').removeClass('bear');
 	history.pushState(null, '', '/add-courses/?' + params);
 	$.getJSON('/get-courses/?' + params).done(
@@ -60,7 +60,7 @@ function show_all() {
 
 function favorite() {
 
-	clicked = $(this);
+	let clicked = $(this);
 
 	// Toggles the classes between (font awesome) regular and solid
 	// Solid -> favorited
@@ -68,6 +68,7 @@ function favorite() {
 
 	if (logedin) {
 		$.get('/my-courses/', {
+			term: $("#term").val(),
 			crn: clicked.attr('id'),
 			favorite: clicked.hasClass('fas')
 		});

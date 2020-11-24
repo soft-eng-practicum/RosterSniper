@@ -89,7 +89,8 @@ class Section(models.Model):
 
 	term = models.ForeignKey(Term, on_delete=models.CASCADE)
 
-	CRN = models.CharField(max_length=5, primary_key=True)
+	# CRNs can't be the primary key because they repeat every year
+	crn = models.CharField(max_length=5)
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
 	section_num = models.CharField(max_length=3)
 
@@ -171,7 +172,7 @@ class Section(models.Model):
 				'status': 'opened!' if self.available <= 0 else 'closed.',
 				'section_title': self.section_title,
 				'professor': self.get_prof_name(),
-				'crn': self.CRN,
+				'crn': self.crn,
 
 				'home': full_reverse('home')
 			}
@@ -200,7 +201,7 @@ class Section(models.Model):
 
 	def get_log_str(self):
 		return (
-			f'{self.term_id}, {self.CRN}, '
+			f'{self.term_id}, {self.crn}, '
 			f'{self.course.title[:32]}{"..." if len(self.course.title) > 30 else ""}'
 		).ljust(50)
 

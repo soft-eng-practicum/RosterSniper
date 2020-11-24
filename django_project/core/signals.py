@@ -32,7 +32,7 @@ def delete_section(sender, instance, **kwargs):
     context = {
         'section_title': section.section_title,
         'professor': section.get_prof_name(),
-        'crn': section.CRN,
+        'crn': section.crn,
 
         'home': full_reverse('home'),
     }

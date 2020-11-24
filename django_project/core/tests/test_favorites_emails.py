@@ -14,7 +14,7 @@ class Tests(TestCase):
 		user = User.objects.get(pk=1)
 		user.section_set.add('20448')
 
-		section = Section.objects.get(CRN='20448')
+		section = Section.objects.get(crn='20448')
 		self.assertEqual(section.available, 0)
 		section.set_enrollment(27, 28)
 		section.set_enrollment(28, 28)
@@ -36,5 +36,5 @@ class Tests(TestCase):
 			for msg in [email.body, email.alternatives[0][0]]:
 				self.assertIn(section.section_title, msg)
 				self.assertIn(section.get_prof_name(), msg)
-				self.assertIn(section.CRN, msg)
+				self.assertIn(section.crn, msg)
 				self.assertIn('Unsubscribe', msg)

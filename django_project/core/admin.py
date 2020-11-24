@@ -93,7 +93,7 @@ class SectionAdmin(admin.ModelAdmin):
 	search_fields = [
 		'course__subject__pk__iexact',
 		'course__number__exact', 'course__title',
-		'CRN__exact', 'section_num__exact',
+		'crn__exact', 'section_num__exact',
 		'professor__firstname', 'professor__lastname'
 	]
 	list_display = ['__str__', 'enrolled', 'capacity']

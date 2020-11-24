@@ -21,6 +21,6 @@ console.log(String.raw`%c
 // Navbar active links https://gist.github.com/daverogers/5375778
 // * prevents selection of the navbar-brand
 $(document).ready(function() {
-	var pathname = window.location.pathname;
+	const pathname = window.location.pathname;
 	$("#rs-nav * a[href='"+pathname+"']").addClass("active");
 })

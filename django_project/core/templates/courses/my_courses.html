@@ -14,7 +14,7 @@
 {% if favorites %}
 {% regroup favorites by section.term as grouped_favorites %}
 {% for term in grouped_favorites %}
-	<div class="card courses-card">
+	<div class="card courses-card" data-term="{{ term.grouper.code }}">
 		<div class="card-header">{{ term.grouper }}</div>
 
 		<table class="table">
@@ -28,7 +28,7 @@
 			</tr></thead>
 			<tbody>
 				{% for favorite in term.list %}{% with section=favorite.section %}{% spaceless %}
-				<tr id="{{ section.CRN }}">
+				<tr id="{{ section.crn }}">
 					<td class="section">{{ section.get_code }}</td>
 					<td class="title">{{ section.section_title }}</td>
 					<td class="meeting"><span class="meeting" title="{{ section.get_meeting_full }}">{{ section.get_meeting }}</span></td>
