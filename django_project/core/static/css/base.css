@@ -47,15 +47,18 @@ main {
 	margin-bottom: 20px;
 }
 
-.btn-primary,
-.btn-primary:focus,
-.btn-primary:active {
+.btn-primary {
 	background-color: var(--grizzly-green);
 	border-color: var(--grizzly-green);
 }
-.btn-primary:hover {
-	background-color: #85C446;
-	border-color: #85C446;
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #63A322;
+	border-color: #63A322;
+}
+.btn-primary:active {
+	background-color: #006644 !important;
+	border-color: #006644 !important;
 }
 
 .pointer:hover {
