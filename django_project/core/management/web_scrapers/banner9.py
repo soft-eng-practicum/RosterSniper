@@ -1,7 +1,8 @@
-from html import unescape
+import json
+import re
 
-import json, re
-from datetime import datetime, time
+from datetime import date, time
+from html import unescape
 
 import requests
 
@@ -13,10 +14,11 @@ from core.models import Professor, Term, Subject, Course, Section
 # Some Banner 9 documentation: https://jennydaman.gitlab.io/nubanned/dark
 class Banner9:
 
-	def __init__(self, base_url, log, verbosity):
+	def __init__(self, base_url, log, err, verbosity):
 		# E.g. https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/
 		self.url = base_url
 		self.log = log
+		self.err = err
 		self.verbosity = verbosity
 
 	def _get_with_session(self, term, url):
@@ -31,11 +33,14 @@ class Banner9:
 			# First we replace all &quot; with single quotes because unescape
 			# would replace them with double quotes which messes with the JSON.
 			# After that, unescape covers the regular &amp; -> & and &#39; -> '
-			r_text = session.get(self.url + url.format( term=term.code, offset=len(x) )).text.replace("&quot;", "'")
-			r_json = json.loads(unescape(r_text))
+			r = json.loads(unescape(
+				session.get(
+					self.url + url.format(term=term.code, offset=len(x))
+				).text.replace("&quot;", "'")
+			))
 
-			x.extend(r_json["data"])
-			total = r_json["totalCount"]
+			x.extend(r["data"])
+			total = r["totalCount"]
 
 			self.log(f'[{term}] Downloaded {len(x)}/{total}')
 
@@ -43,47 +48,76 @@ class Banner9:
 
 	def update_terms(self):
 
-		# Get a list of the 10 most recent terms. The response looks like
+		# Get a list of the 100 most recent terms. The response looks like
 		# [{'code': '202105', 'description': 'Summer 2021'}, ...]
-		terms = requests.get(
-			self.url + "courseSearch/getTerms?offset=1&max=10"
+		r = requests.get(
+			self.url + "courseSearch/getTerms?offset=1&max=100"
 		).json()
 
-		year = str(datetime.now().year)
-
-		for term in terms:
-			code = term["code"]
-			# Ignore "special" terms like 202018 *Fall ELI 2020
-			# For normal terms, 02: Spring, 05: Summer, 08: Fall
-			if code[4:6] not in ["02", "05", "08"]:
-				if self.verbosity > 1:
-					self.log(f'Too special  {term}')
+		for json_term in r:
+			if json_term["description"][0] == "*":
 				continue
+			term, created = Term.objects.update_or_create(
+				code=json_term["code"],
+				defaults={"description": json_term["description"]}
+			)
 
-			# This works because >= compares strings lexicographically
-			# E.g. "2021" >= "2020"
-			if code[0:4] >= year:
-				Term.objects.update_or_create(
-					code=code,
-					defaults={ "description": term["description"] }
-				)
-				if self.verbosity > 1:
-					self.log(f'Updated term {term}')
+			if self.verbosity > 1:
+				self.log(f"{'Created' if created else 'Updated'} term {term}")
 
-			else:
-				if self.verbosity > 1:
-					self.log(f'Too old      {term}')
+		today = date.today()
+		year  = today.year
+		month = today.month
+
+		# Last display term
+		if 1 <= month <= 5:
+			c = f'{year-1}08'
+		else:
+			c = f'{year}02'
+		Term.objects.filter(code__gte=c).update(display=True)
+		Term.objects.filter(code__lt=c).update(display=False)
+
+		# Last update term
+		if month == 1:
+			c = f'{year}02'
+		elif 2 <= month <= 5:
+			c = f'{year}05'
+		elif 6 <= month <= 8:
+			c = f'{year}08'
+		else:
+			c = f'{year+1}02'
+		Term.objects.filter(code__gte=c).update(update=True)
+		Term.objects.filter(code__lt=c).update(update=False)
+
+		# Default term
+		if 1 <= month <= 2:
+			c = f'{year}02'
+		elif 3 <= month <= 9:
+			c = f'{year}08'
+		else:
+			c = f'{year + 1}02'
+		try:
+			term = Term.objects.get(code=c)
+			term.default=True
+			Term.objects.exclude(code=c).update(default=False)
+		except Term.DoesNotExist:
+			term = Term.objects.filter(display=True).exclude(description__contains="Summer")[0]
+			term.default = True
+		finally:
+			term.save()
+			if self.verbosity > 1:
+				self.log(f"Using term {term} as default")
 
 	def update_subjects(self, term):
 
 		# Get all subjects for the given term. The response looks like
 		# [{"code": "ACCT", "description": "Accounting"}, ...]
-		text = requests.get(
-			self.url + f"courseSearch/get_subject?term={term.code}&offset=1&max=500"
+		text = requests.get(self.url
+			+ f"courseSearch/get_subject?term={term.code}&offset=1&max=500"
 		).text
 		subjects = json.loads(unescape(text))
 
-		self.log(f'[{term}] Downloaded {len(subjects)}')
+		self.log(f"[{term}] Downloaded {len(subjects)}")
 
 		for subject in subjects:
 			Subject.objects.update_or_create(
@@ -128,19 +162,19 @@ class Banner9:
 			# We can't use update_or_create() here b/c it calls save() before mandatory fields are set
 			crn = s["courseReferenceNumber"]
 			try:
-				section = Section.objects.get(term=term, CRN=crn)
+				section = Section.objects.get(term=term, crn=crn)
 			except Section.DoesNotExist:
-				section = Section(term=term, CRN=crn)
+				section = Section(term=term, crn=crn)
 
 			try:
 				course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
 			except Course.DoesNotExist:
-				self.log(f'[crn={crn}] New courses found, please run update courses')
+				self.log(f"[crn={crn}] New courses found, please run update courses")
 				continue
 
 			section.course = course
 			section.section_num = s["sequenceNumber"]
-			section.section_title = s["courseTitle"]# [len(course.title):]
+			section.section_title = s["courseTitle"]
 
 			if (credit_hours := s["creditHours"]) is None:
 				section.credit_hours = s["creditHourLow"]
@@ -218,7 +252,7 @@ class Banner9:
 		<span class="status-bold">Enrollment Maximum:</span> <span dir="ltr"> 40 </span><br/>
 		"""
 		r = requests.get(
-			self.url + f"searchResults/getEnrollmentInfo?term={section.term_id}&courseReferenceNumber={section.CRN}"
+			self.url + f"searchResults/getEnrollmentInfo?term={section.term_id}&courseReferenceNumber={section.crn}"
 		)
 
 		# Regular expressions are a lot faster than BeautifulSoup,

@@ -1,45 +1,59 @@
 from django.core.management.base import BaseCommand
 
 from core.management.web_scrapers.banner9 import Banner9
-from core.models import Term
 
 
 class Command(BaseCommand):
 	help = 'Update information from banner'
 
-	def log(self, str):
-		self.stdout.write(str)
+	def log(self, msg):
+		self.stdout.write(msg)
 
-	def err(self, str):
-		self.stdout.write(self.style.ERROR(str))
-	
+	def err(self, msg):
+		self.stdout.write(self.style.ERROR(msg))
+
 	def add_arguments(self, parser):
-		parser.add_argument('mode', choices=['terms', 'courses', 'sections', 'favorites'])
+		parser.add_argument('mode', choices=['terms', 'sections', 'favorites'])
 
 		parser.add_argument('-t', '--terms', type=int, nargs='*',
 			help='Terms that the program will fetch section information from (eg: 202005). Defaults to all Term model instances with update=True.')
 
-		# TODO:
-		# parser.add_argument('-r', '--remove-old', action='store_true',
-		# 	help='Removes sections in the database which are not found in the updated information')
+		parser.add_argument('--all-terms', action='store_true',
+			help="Updates sections from all terms, regardless of the term's update attribute")
 
 	def handle(self, mode, verbosity, *args, **options):
 
-		scraper = Banner9('https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/', self.log, verbosity)
+		scraper = Banner9(
+			'https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/',
+			self.log, self.err, verbosity
+		)
 
 		if mode == 'terms':
 			self.log('Updating terms')
 			scraper.update_terms()
 
-		elif mode == 'courses':
-			term = Term.objects.last()
-			self.log(f'Using latest term: {term}')
+		elif mode == 'sections':
+			from core.models import Term
 
-			self.log('Updating subjects')
+			# First update subject and course info using most recent term
+			term = Term.objects.first()
+
+			self.log(f'Updating subjects using latest term: {term}')
 			scraper.update_subjects(term)
 
-			self.log('Updating courses')
+			self.log(f'Updating courses using latest term: {term}')
 			scraper.update_courses(term)
+
+			if options['all_terms']:
+				terms = Term.objects.all()
+			elif x := options['terms']:
+				terms = Term.objects.filter(code__in=x)
+			else:
+				terms = Term.objects.filter(update=True)
+
+			for term in terms:
+				self.log(f'[{term}] Updating sections')
+				scraper.update_sections(term)
 
 		elif mode == 'favorites':
 			self.log('Updating favorited sections')
@@ -66,13 +80,3 @@ class Command(BaseCommand):
 
 				if verbosity > 1:
 					self.log(f'[{s.get_log_str()}] Seats: {s.get_enrollment()}')
-
-		elif mode == 'sections':
-			if x := options['terms']:
-				terms = Term.objects.filter(id__in=x)
-			else:
-				terms = Term.objects.filter(update=True)
-
-			for term in terms:
-				self.log(f'[{term}] Updating sections')
-				scraper.update_sections(term)

@@ -31,13 +31,13 @@ class Term(models.Model):
 
 	# There are two attributes since we might want a viewable history that goes
 	# back a few terms, but don't want to waste time updating them
-	update = models.BooleanField(default=True,
-		help_text="Whether related sections and courses are updated")
-	display = models.BooleanField(default=True,
+	update = models.BooleanField(default=False,
+		help_text="Whether related sections are updated")
+	display = models.BooleanField(default=False,
 		help_text="Whether this term is displayed on the add-courses page")
 
 	class Meta:
-		ordering = ['code']
+		ordering = ['-code']
 
 	def __str__(self):
 		return self.description
