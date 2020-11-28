@@ -16,10 +16,6 @@ Here is the Add Courses page:
 
 <img src="docs/img/add-courses.png" width="600">
 
-and here is the My Courses page:
-
-<img src="docs/img/my-courses.png" width="600">
-
 ## Installation
 
 The project requires Python 3.8 or higher along with a few packages as described in [requirements.txt](requirements.txt). To install these packages, it is recommended that you first create a virtual environment using a tool such as `venv`. To install the packages listed in requirements.txt, run `pip install -r requirements.txt`.

@@ -123,7 +123,7 @@ class Section(models.Model):
 	watchers = models.ManyToManyField(User, through='Favorite')
 
 	class Meta:
-		ordering = ['term_id', 'course', 'section_num']
+		ordering = ['term', 'course', 'section_num']
 
 	def get_code(self):
 		# E.g. ITEC 1001-01
