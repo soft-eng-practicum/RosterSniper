@@ -4,11 +4,13 @@ Requires=rs_gunicorn.socket
 After=network.target
 
 [Service]
-User=www-data
-Group=www-data
+User=rostersniper
+Group=rostersniper
 WorkingDirectory=/var/www/rostersniper.com/RosterSniper/django_project
-ExecStart=/a/path/to/myprojectenv/bin/gunicorn \
-	--access-logfile - \
+Environment="/usr/bin"
+ExecStart=/var/www/rostersniper.com/.pyenv/shims/gunicorn \
+	--access-logfile /var/www/rostersniper.com/logs/gunicorn-access.log \
+	--error-logfile /var/www/rostersniper.com/logs/gunicorn-error.log \
 	--workers 3 \
 	--bind unix:/var/www/rostersniper.com/rs_gunicorn.sock \
 	roster_sniper.wsgi:application
