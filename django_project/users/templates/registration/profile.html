@@ -12,7 +12,7 @@
 			{{ form|crispy }}
 		</fieldset>
 		{% if not user.email_confirmed %}
-		<p>You must confirm your email to receive notifications. <a id="send_email" href="">Resend confirmation email</a></p>
+		<p>You must confirm your email to receive notifications. <button id="send_email" type="button" class="btn btn-link p-0 align-baseline">Resend confirmation email</button></p>
 		{% endif %}
 		<p><a href="{% url 'password_change' %}">Change your password</a></p>
 		<div class="form-group">
@@ -25,7 +25,8 @@
 {% block foot %}
 	<script type="text/javascript">
 		$('#send_email').click(function() {
-			$.get("{% url 'register' %}?send_email=true");
+			$.get("{% url 'register' %}?send_email=true")
+			.done( () => location.reload() ); {# shows "email has been sent" msg #}
 		});
 	</script>
 {% endblock foot %}

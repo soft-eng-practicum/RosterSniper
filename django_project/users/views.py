@@ -6,6 +6,7 @@ from django.contrib.auth.views import (
 )
 
 from django.core.mail import EmailMultiAlternatives
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
@@ -17,7 +18,6 @@ from core.utils import full_reverse
 from .models import User
 from .forms import MyUserCreationForm, UserUpdateForm
 from .tokens import activation_token_generator
-
 
 def register(request):
 
@@ -40,7 +40,7 @@ def register(request):
 	elif request.is_ajax() and request.GET.get('send_email'):
 		send_email_verification(request.user)
 		messages.info(request, 'A verification email has been sent.')
-		return redirect('profile')
+		return HttpResponse('')
 
 	else:
 		form = MyUserCreationForm()
@@ -73,20 +73,18 @@ def send_email_verification(user):
 def activate(request, uidb64, token):
 
 	try:
-		user = User.objects.get(
-			pk=force_str(urlsafe_base64_decode(uidb64))
-		)
+		user = User.objects.get(pk=force_str(urlsafe_base64_decode(uidb64)))
 
-	except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-		pass
-
-	else:
 		if activation_token_generator.check_token(user, token):
 			user.email_confirmed = True
 			user.save()
 			messages.info(request, 'Your email address has been verified!')
 			return redirect('profile')
 
+	except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+		pass
+
+	# Covers both invalid tokens and exceptions
 	return render(request, 'base/message.html', {
 		'title': 'Activation Error',
 		'message': 'Your activation link is invalid! 😕'
