@@ -5,15 +5,13 @@ from django.contrib.auth.views import (
 	PasswordChangeView, PasswordResetView, PasswordResetConfirmView
 )
 
-from django.core.mail import EmailMultiAlternatives
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.urls import reverse_lazy
 
-from core.utils import full_reverse
+from core.utils import full_reverse, send_email
 
 from .models import User
 from .forms import MyUserCreationForm, UserUpdateForm
@@ -54,19 +52,14 @@ def send_email_verification(user):
 	uid = urlsafe_base64_encode(force_bytes(user.pk))
 	token = activation_token_generator.make_token(user)
 
-	context = {
-		'home': full_reverse('home'),
-		'link': full_reverse('activate', args=[uid, token])
-	}
-	email_text = render_to_string('emails/verification.txt', context)
-	email_html = render_to_string('emails/verification.html', context)
+	context = {'link': full_reverse('activate', args=[uid, token])}
 
-	EmailMultiAlternatives(
+	send_email(
 		subject="Verify your RosterSniper account",
 		to=[user.email],
-		body=email_text,
-		alternatives=[(email_html, "text/html")]
-	).send()
+		file='verification',
+		context=context
+	)
 
 
 # https://medium.com/@frfahim/django-registration-with-confirmation-email-bb5da011e4ef

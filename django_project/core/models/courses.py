@@ -2,12 +2,8 @@ import uuid
 
 from django.db import models
 
+from core.utils import full_reverse, send_email
 from users.models import User
-
-# Emails
-from django.core.mail import EmailMultiAlternatives
-from django.template.loader import render_to_string
-from core.utils import full_reverse
 
 
 class Professor(models.Model):
@@ -174,9 +170,7 @@ class Section(models.Model):
 				'status': 'opened!' if self.available <= 0 else 'closed.',
 				'section_title': self.section_title,
 				'professor': self.get_prof_name(),
-				'crn': self.crn,
-
-				'home': full_reverse('home')
+				'crn': self.crn
 			}
 			for favorite in favorites:
 
@@ -185,15 +179,12 @@ class Section(models.Model):
 				context['unsub_all'] = full_reverse(
 					'unsubscribe', args=['all', favorite.user.email_unsub_id])
 
-				email_text = render_to_string('emails/favorite.txt', context)
-				email_html = render_to_string('emails/favorite.html', context)
-
-				EmailMultiAlternatives(
+				send_email(
 					subject=f"{context['section_title']} just {context['status']}",
 					to=[favorite.user.email],
-					body=email_text,
-					alternatives=[(email_html, 'text/html')]
-				).send()
+					file='favorite',
+					context=context
+				)
 
 		# This condition is more general than the one above
 		if self.available != available:
