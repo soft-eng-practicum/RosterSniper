@@ -50,9 +50,7 @@ class Banner9:
 
 		# Get a list of the 100 most recent terms. The response looks like
 		# [{'code': '202105', 'description': 'Summer 2021'}, ...]
-		r = requests.get(
-			self.url + "courseSearch/getTerms?offset=1&max=100"
-		).json()
+		r = requests.get(self.url + "courseSearch/getTerms?offset=1&max=100").json()
 
 		for json_term in r:
 			if json_term["description"][0] == "*":
@@ -110,19 +108,20 @@ class Banner9:
 
 	def update_subjects(self, term):
 
-		# Get all subjects for the given term. The response looks like
+		# Get all subjects for the given term. The response text looks like
 		# [{"code": "ACCT", "description": "Accounting"}, ...]
-		text = requests.get(self.url
-			+ f"courseSearch/get_subject?term={term.code}&offset=1&max=500"
-		).text
-		subjects = json.loads(unescape(text))
+		subjects = json.loads(unescape(
+			requests.get(
+				self.url + f"courseSearch/get_subject?term={term.code}&offset=1&max=500"
+			).text
+		))
 
 		self.log(f"[{term}] Downloaded {len(subjects)}")
 
 		for subject in subjects:
 			Subject.objects.update_or_create(
 				short_title=subject["code"],
-				defaults={ "long_title": subject["description"] }
+				defaults={"long_title": subject["description"]}
 			)
 
 	def update_courses(self, term):
@@ -167,7 +166,9 @@ class Banner9:
 				section = Section(term=term, crn=crn)
 
 			try:
-				course = Course.objects.get(subject__short_title=s["subject"], number=s["courseNumber"])
+				course = Course.objects.get(
+					subject__short_title=s["subject"], number=s["courseNumber"]
+				)
 			except Course.DoesNotExist:
 				self.log(f"[crn={crn}] New courses found, please run update courses")
 				continue
@@ -198,8 +199,7 @@ class Banner9:
 			# "meetingsFaculty" contains a list of all the different meetings.
 			# For most courses there will only be one meeting, but lab courses will
 			# usually have two. Some might not even have a 'meetingsFaculty'.
-			days = ""
-			room = ""
+			days = room = ""
 			if meetings := s.get("meetingsFaculty", []):
 				meeting = meetings[0].get("meetingTime")
 

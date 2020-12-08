@@ -1,16 +1,16 @@
-'''
+"""
 The local settings file is meant to include passwords or any other setting which
 for whatever reason shouldn't be tracked by git. DO NOT specify them here! You
 MUST copy this file, rename it to 'local.py', and then change the settings as
 you like. The renamed file is in the gitignore and will not be tracked.
-'''
+"""
 
 DEBUG = True
 
 if DEBUG:
-    from .development import *
+	from .development import *
 else:
-    from .production import *
+	from .production import *
 
 
 ## General local settings example ##############################################

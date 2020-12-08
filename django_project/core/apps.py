@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class RSConfig(AppConfig):
-    name = 'core'
+	name = 'core'
 
-    def ready(self):
-        import core.signals
+	def ready(self):
+		import core.signals

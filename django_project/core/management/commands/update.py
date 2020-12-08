@@ -15,11 +15,17 @@ class Command(BaseCommand):
 	def add_arguments(self, parser):
 		parser.add_argument('mode', choices=['terms', 'sections', 'favorites'])
 
-		parser.add_argument('-t', '--terms', type=int, nargs='*',
-			help='Terms that the program will fetch section information from (eg: 202005). Defaults to all Term model instances with update=True.')
+		parser.add_argument(
+			'-t', '--terms',
+			type=int, nargs='*',
+			help='Terms that the program will fetch section information from (eg: 202005). Defaults to all Term model instances with update=True.'
+		)
 
-		parser.add_argument('--term-mode', type=int, choices=[0, 1, 2], default=2,
-			help="Used when updating sections to determines which terms to use. 2: update=True (default), 1: display=True, 0: all.")
+		parser.add_argument(
+			'--term-mode',
+			type=int, choices=[0, 1, 2], default=2,
+			help='Used when updating sections to determines which terms to use. 2: update=True (default), 1: display=True, 0: all.'
+		)
 
 	def handle(self, mode, verbosity, *args, **options):
 

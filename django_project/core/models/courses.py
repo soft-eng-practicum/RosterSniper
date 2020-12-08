@@ -95,7 +95,7 @@ class Section(models.Model):
 	section_num = models.CharField(max_length=3)
 
 	section_title = models.CharField(max_length=100, blank=True,
-		help_text="This is for classes with a section-specific title, e.g. if the course's title was 'Special Topics', the section's title could be '- Python for Data Analysis'")
+		help_text="For most sections, the section_title is equal to its course__title, however this is not the case for hybrid/online/special topics classes.")
 	credit_hours = models.SmallIntegerField()
 	professor = models.ForeignKey(Professor, on_delete=models.SET_NULL,
 		null=True, blank=True)
@@ -158,8 +158,10 @@ class Section(models.Model):
 		# We make sure favorites is non-empty first because if it's empty, the
 		# section might not exist in the DB, and self.available might be None,
 		# and None <= 0 causes an error.
-		if favorites and ((self.available <= 0 and available > 0)
-			or (self.available > 0 and available <= 0)):
+		if favorites and (
+			(self.available <= 0 and available > 0) or
+			(self.available > 0 and available <= 0)
+		):
 
 			# Most of these could be calculated in the template but because
 			# there are two templates it is done here so it doesn't need to be

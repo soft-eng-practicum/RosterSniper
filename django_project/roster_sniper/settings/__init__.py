@@ -1,4 +1,4 @@
-'''
+"""
 Settings are imported as follows:
     __init__ -> local (optional) -> development/production -> base
 
@@ -19,17 +19,17 @@ because the DATABASES dictionary is defined in development.py/production.py.
 For more information about Django settings, check out the following links
 General information:   https://docs.djangoproject.com/en/3.1/topics/settings/
 List of all settings:  https://docs.djangoproject.com/en/3.1/ref/settings/
-'''
+"""
 
 import os
 
 
 try:
-    from .local import *
+	from .local import *
 
 # Defaults to development mode if local.py and environment variable don't exist
 except ImportError:
-    if os.environ.get('RS_ENVIRONMENT') == 'production':
-        from .production import *
-    else:
-        from .development import *
+	if os.environ.get('RS_ENVIRONMENT') == 'production':
+		from .production import *
+	else:
+		from .development import *

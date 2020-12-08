@@ -1,10 +1,10 @@
-'''
+"""
 The production settings file is meant to be used in production. Some settings,
 like SECRET_KEY and the database password, are not included for security
 reasons. To specify them, see local_example.py for instructions.
 
 Checklist:  https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-'''
+"""
 
 from .base import *
 
@@ -25,14 +25,14 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
 # Database https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rsniper',
-        'USER': 'rsniper',
-        'PASSWORD': '## this should be overridden in local.py ##',
-        'HOST': 'localhost',
-        'PORT': ''
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+		'NAME': 'rsniper',
+		'USER': 'rsniper',
+		'PASSWORD': '## this should be overridden in local.py ##',
+		'HOST': 'localhost',
+		'PORT': ''
+	}
 }
 
 # Email
