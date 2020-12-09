@@ -9,7 +9,7 @@ from django.core.mail import EmailMessage, EmailMultiAlternatives
 # Maybe implement as a template tag?
 # https://github.com/Flimm/django-fullurl
 def full_reverse(viewname, args=None, kwargs=None):
-	return f'{settings.DEFAULT_DOMAIN}{reverse(viewname, args=args, kwargs=kwargs)}'
+	return f'{settings.DEFAULT_HOST}{reverse(viewname, args=args, kwargs=kwargs)}'
 
 
 def send_email(subject, to, file, context):

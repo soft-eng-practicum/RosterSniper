@@ -23,6 +23,7 @@ else:
 
 ## Development local settings example ##########################################
 
+# DEFAULT_FROM_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'example@gmail.com'
@@ -34,11 +35,11 @@ else:
 
 ## Production local settings example ###########################################
 
-'''
+"""
 The following can be used to generate a new SECRET_KEY
 >>> python -c 'from django.core.management import utils; print(utils.get_random_secret_key())'
 cm+6y_4_jd^ri3kx##spu3axn*)d-=a6d)ej)@1wwh%z1kj)g@
-'''
+"""
 # SECRET_KEY = 'a_secret_key'
 
 # DATABASES['default']['PASSWORD'] = 'some_password'

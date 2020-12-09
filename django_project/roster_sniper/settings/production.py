@@ -14,7 +14,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['rostersniper.com']
 
 # Custom setting, used in core.utils.full_reverse()
-DEFAULT_DOMAIN = 'https://rostersniper.com'
+DEFAULT_HOST = 'https://rostersniper.com'
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
