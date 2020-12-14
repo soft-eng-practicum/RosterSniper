@@ -26,7 +26,6 @@ handler404 = 'roster_sniper.error_views.handler404'
 handler500 = 'roster_sniper.error_views.handler500'
 
 urlpatterns = [
-	path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)),
 	path('admin/', admin.site.urls),
 	path('teapot/', handler418),
 
