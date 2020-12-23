@@ -21,7 +21,7 @@ class Banner9:
 		self.err = err
 		self.verbosity = verbosity
 
-	def _get_with_session(self, term, url):
+	def _get_with_session(self, term, url, item=""):
 
 		# Establish a session with the given term (saves cookies)
 		session = requests.Session()
@@ -42,7 +42,8 @@ class Banner9:
 			x.extend(r["data"])
 			total = r["totalCount"]
 
-			self.log(f'[{term}] Downloaded {len(x)}/{total}')
+			if self.verbosity >= 1:
+				self.log(f"[{term}] Downloaded {len(x)}/{total} {item}")
 
 		return x
 
@@ -62,6 +63,9 @@ class Banner9:
 
 			if self.verbosity > 1:
 				self.log(f"{'Created' if created else 'Updated'} term {term}")
+
+		if self.verbosity >= 1:
+			self.log(f"[info] Updated {len(r)} term(s)")
 
 		today = date.today()
 		year  = today.year
@@ -103,8 +107,8 @@ class Banner9:
 			term.default = True
 		finally:
 			term.save()
-			if self.verbosity > 1:
-				self.log(f"Using term {term} as default")
+			if self.verbosity >= 1:
+				self.log(f"[info] Using term {term} as default")
 
 	def update_subjects(self, term):
 
@@ -116,18 +120,23 @@ class Banner9:
 			).text
 		))
 
-		self.log(f"[{term}] Downloaded {len(subjects)}")
+		self.log(f"[{term}] Downloaded {len(subjects)} subject(s)")
 
 		for subject in subjects:
-			Subject.objects.update_or_create(
+			s, created = Subject.objects.update_or_create(
 				short_title=subject["code"],
 				defaults={"long_title": subject["description"]}
 			)
 
+			if self.verbosity > 1:
+				self.log(f"[info] {'Created' if created else 'Updated'} {s.full_str}")
+
 	def update_courses(self, term):
 
-		courses = self._get_with_session(term,
-			"courseSearchResults/courseSearchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500"
+		courses = self._get_with_session(
+			term,
+			"courseSearchResults/courseSearchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500",
+			"course(s)"
 		)
 
 		for course in courses:
@@ -139,7 +148,7 @@ class Banner9:
 			else:
 				credit_hours = f"{low}-{high}"
 
-			Course.objects.update_or_create(
+			c, created = Course.objects.update_or_create(
 				subject=Subject.objects.get(short_title=course["subject"]),
 				number=course["courseNumber"],
 				defaults={
@@ -148,10 +157,15 @@ class Banner9:
 				}
 			)
 
+			if self.verbosity > 1:
+				self.log(f"[info] {'Created' if created else 'Updated'} {c}")
+
 	def update_sections(self, term):
 
-		sections = self._get_with_session(term,
-			"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500"
+		sections = self._get_with_session(
+			term,
+			"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500",
+			"section(s)"
 		)
 
 		self.log(f'[{term}] Updating database')
@@ -265,7 +279,7 @@ class Banner9:
 			section.save()
 
 		else:
-			# HTML might have changed (is raising an error necessary?)
-			raise CommandError(
-				f"[{section.get_log_str()}] Banner 9 class enrollment page might have changed"
+			# HTML might have changed
+			self.log(
+				f"[{section.get_log_str()}] Banner 9 class enrollment page might have changed:\n{r.text}"
 			)

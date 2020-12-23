@@ -35,7 +35,6 @@ class Command(BaseCommand):
 		)
 
 		if mode == 'terms':
-			self.log('Updating terms')
 			scraper.update_terms()
 
 		elif mode == 'sections':
@@ -44,31 +43,27 @@ class Command(BaseCommand):
 			# First update subject and course info using most recent term
 			term = Term.objects.first()
 
-			self.log(f'Updating subjects using latest term: {term}')
+			self.log(f'[info] Updating subjects and courses using latest term: {term}')
 			scraper.update_subjects(term)
-
-			self.log(f'Updating courses using latest term: {term}')
 			scraper.update_courses(term)
 
-			if m := options['term_mode']:
+			if x := options['terms']:
+				terms = Term.objects.filter(code__in=x)
+			elif m := options['term_mode']:
 				if m == 2:
 					terms = Term.objects.filter(update=True)
 				elif m == 1:
 					terms = Term.objects.filter(display=True)
 				elif m == 0:
 					terms = Term.objects.all()
-			elif x := options['terms']:
-				terms = Term.objects.filter(code__in=x)
 			else:
 				return
 
 			for term in terms:
-				self.log(f'[{term}] Updating sections')
+				self.log(f'[info] Updating sections for {term}')
 				scraper.update_sections(term)
 
 		elif mode == 'favorites':
-			self.log('Updating favorited sections')
-
 			from core.models import Section
 
 			"""
@@ -80,14 +75,16 @@ class Command(BaseCommand):
 			The .order_by() clears the Section's default sort which gets rid of
 			an INNER JOIN and ORDER BY in the query.
 			"""
-			for s in Section.objects.filter(
+			sections = Section.objects.filter(
 				term__update=True,
 				favorite__user__email_confirmed=True,
 				favorite__user__email_notify=True,
 				favorite__email_notify=True
-			).order_by().distinct():
+			).order_by().distinct()
 
+			for s in sections:
 				scraper.update_section_seats(s)
-
 				if verbosity > 1:
 					self.log(f'[{s.get_log_str()}] Seats: {s.get_enrollment()}')
+
+			self.log(f'[info] Updated {len(sections)} favorites')
