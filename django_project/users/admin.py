@@ -32,7 +32,7 @@ class MyUserAdmin(UserAdmin):
 		}),
 	)
 
-	list_display = ('email', 'first_name', 'email_confirmed')
+	list_display = ('email', 'first_name', 'date_joined', 'last_login', 'email_confirmed')
 	list_filter = ('email_confirmed', 'is_superuser', 'is_active', 'groups')
 	search_fields = ('email', 'first_name')
 	ordering = ('email',)

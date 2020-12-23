@@ -1,6 +1,6 @@
 # Commands
 
-There is currently one [custom django-admin command](https://docs.djangoproject.com/en/dev/howto/custom-management-commands/) which is implemented [here](/django_project/core/management/commands). To get more information about a command, run
+There is currently one [custom django-admin command](https://docs.djangoproject.com/en/stable/howto/custom-management-commands/) which is implemented [here](/django_project/core/management/commands). To get more information about a command, run
 ```
 $ ./manage.py command_name -h
 ```
@@ -17,7 +17,7 @@ $ ./manage.py update terms
 ```
 
 ### Updating Sections
-To update sections run the following command. Because every section references a subject and course, the command first updates subjects and courses. The command only updates sections 
+To update sections run the following command. Because every section references a subject and course, the command first updates subjects and courses.
 ```
 $ ./manage.py update sections
 [info] Updating subjects and courses using latest term: Summer 2021

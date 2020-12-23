@@ -6,9 +6,11 @@ from .models import *
 
 # TODO: Order apps better
 
+# https://github.com/django/django/blob/master/django/contrib/admin/sites.py
 admin.site.site_title = 'RS Admin'
 admin.site.site_header = 'RosterSniper Admin'
 admin.site.index_title = 'Welcome to the RosterSniper admin page!'
+admin.site.enable_nav_sidebar = False
 
 class YearFilter(admin.SimpleListFilter):
 
