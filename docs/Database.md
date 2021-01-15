@@ -1,76 +1,43 @@
 # About the Database
 
-To make django turn the models into tables, first run
+Django has a built-in ORM that lets you create, retrieve, update and delete information from a relational database (Postgres, MySQL, SQLite etc) using Python instead of SQL. Tables are defined as python classes called *models* and the individual columns are defined as class instance variables called *fields*. The python classes and database tables are kept in sync through migrations. Basically, Django reads all of the model files and generates migration files which are placed in the app's `migrations` folder. This is done using the following command:
+```sh
+$ ./manage.py makemigrations
 ```
-./manage.py makemigrations
+These migration files are typically stored in git. That way, only the developer that adds or updates a model needs to make the migration file and the other developers use the following command to execute it:
+```sh
+$ ./manage.py migrate
 ```
-
-To see the actual SQL, run
-```
-./manage.py sqlmigrate <app-name> <migration-number>
-```
-
-To make the migrations, run
-```
-./manage.py migrate
+Here, Django uses the migration files to generate and run SQL that creates or modifies the database tables (the exact SQL is specific to your particular database). To see the SQL that a migration file will run, use the following command:
+```sh
+$ ./manage.py sqlmigrate app_label migration_name
 ```
 
-To start the django shell, run
-```
-./manage.py shell
+## Managing Data
+
+Other commands that may come in handy are `dumpdata`, `loaddata`, and `flush` (documented [here](https://docs.djangoproject.com/en/stable/ref/django-admin/)). E.g.
+```sh
+$ ./manage.py dumpdata [app_label] --indent=4 -o data.json
+$ ./manage.py flush
+$ ./manage.py loaddata data.json
 ```
 
-### Data
-
-Here is a code snippet that might come in handy for debugging
-```
-from core.models import Section
-from django.contrib.auth.models import User
-
-s = Section.objects.get(pk=50080)
-u = User.objects.get(username='ryan')
-
-s.watchers.all()
-u.course_set.all()
-u.favorite_set.all()
-```
-
-To delete all regular data (e.g. not the django_migrations table) run
-```
-./manage.py flush
-```
-You could also delete the the sqlite file and rerun migrations if you want to
-start from scratch
-
-To delete all data from a particular model, run
-```
+You can also use the Django [shell](https://docs.djangoproject.com/en/stable/ref/django-admin/#shell) to delete data from a particular model, e.g.
+```py
 from core.models import Model
 Model.objects.all().delete()
 ```
 
-To import Course sample data, run
-```
-./manage.py loaddata notes/sample_data.json
-```
+## Superusers
 
-To export all data from a particular app, run
+Admins are users that can access the Django admin page `/admin/`. They can be created using the command
+```sh
+$ ./manage.py createsuperuser
 ```
-./manage.py dumpdata <appname> --indent=4 > appdata.json
-```
+which prompts you for an email and password.
 
-### Users
-
-An admin can be created using the command
-```
-./manage.py createsuperuser
-```
-which prompts you for a username, email, and password.
-
-To turn a preexisting user into an admin, run
-```
-from django.contrib.auth.models import User
-user = User.objects.get(username='username')
-user.is_staff = True
-user.is_superuser = True
-user.save()
+To turn a preexisting user into an admin, using the Django shell, run
+```py
+from users.models import User
+User.objects.filter(email='example@email.com').update(is_staff=True, is_superuser=True)
 ```
