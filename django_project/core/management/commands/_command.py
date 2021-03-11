@@ -23,7 +23,7 @@ class MyBaseCommand(BaseCommand):
 	def handle(self, *args, **options):
 
 		if s := options['schools']:
-			schools = School.objects.filter(acronym_in=s)
+			schools = School.objects.filter(short_name__in=s)
 		else:
 			schools = School.objects.all()
 

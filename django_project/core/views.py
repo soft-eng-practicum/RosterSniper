@@ -118,7 +118,10 @@ def add_courses(request, school):
 	return render(
 		request,
 		'courses/add_courses.html',
-		{'terms': Term.objects.filter(display=True)}
+		{
+			'terms': Term.objects.filter(school=s, display=True),
+			'color' : s.color_hex
+		}
 	)
 
 

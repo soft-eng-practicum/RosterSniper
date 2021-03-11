@@ -3,7 +3,7 @@ https://www.ggc.edu/community/brand-management/graphic-standards-guide/colors/
 */
 
 :root {
-	--grizzly-green: #00704A;
+	--main-color: #00704A;
 }
 
 html, body {
@@ -21,7 +21,7 @@ main {
 }
 
 #rs-nav {
-	background-color: var(--grizzly-green);
+	background-color: var(--main-color);
 	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 }
 #rs-nav .navbar-nav .nav-link {
@@ -48,8 +48,8 @@ main {
 }
 
 .btn-primary {
-	background-color: var(--grizzly-green);
-	border-color: var(--grizzly-green);
+	background-color: var(--main-color);
+	border-color: var(--main-color);
 }
 .btn-primary:hover,
 .btn-primary:focus {
