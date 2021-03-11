@@ -8,7 +8,7 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 from django.template.loader import render_to_string
 
-from .models import Term, Section, Favorite
+from .models import School, Term, Section, Favorite
 from users.models import User
 
 
@@ -27,9 +27,14 @@ def about(request):
 	return render(request, 'about.html', context)
 
 
-def get_courses(request):
+def get_courses(request, school):
 
 	if not request.is_ajax():
+		raise Http404()
+
+	try:
+		s = School.objects.get(short_name=school)
+	except School.DoesNotExist:
 		raise Http404()
 
 	query = Q()
@@ -39,7 +44,7 @@ def get_courses(request):
 		Section.objects
 		.order_by('course', 'section_title', 'section_num')
 		.select_related('professor', 'course')
-		.all()
+		.filter(school=s)
 	)
 
 	if term := request.GET.get('term'):
@@ -102,8 +107,13 @@ def get_courses(request):
 	)
 
 
-def add_courses(request):
+def add_courses(request, school):
 	""" The Add Courses page lets users search for and favorite sections. """
+
+	try:
+		s = School.objects.get(short_name=school)
+	except School.DoesNotExist:
+		raise Http404()
 
 	return render(
 		request,
