@@ -6,20 +6,21 @@ from html import unescape
 
 import requests
 
-from django.core.management.base import CommandError
-
 from core.models import Professor, Term, Subject, Course, Section
 
 
 # Some Banner 9 documentation: https://jennydaman.gitlab.io/nubanned/dark
-class Banner9:
+class Scrapper:
 
-	def __init__(self, base_url, log, err, verbosity):
+	def __init__(self, school, log, err, options):
 		# E.g. https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/
-		self.url = base_url
+		self.school = school
+		self.url = school.url
 		self.log = log
 		self.err = err
-		self.verbosity = verbosity
+
+		self.options = options
+		self.verbosity = options["verbosity"]
 
 	def _get_with_session(self, term, url, item=""):
 
@@ -57,8 +58,9 @@ class Banner9:
 			if json_term["description"][0] == "*":
 				continue
 			term, created = Term.objects.update_or_create(
+				school=self.school,
 				code=json_term["code"],
-				defaults={"description": json_term["description"]}
+				defaults={"description": json_term["description"].replace('Semester ', '')}
 			)
 
 			if self.verbosity > 1:
@@ -162,13 +164,24 @@ class Banner9:
 
 	def update_sections(self, term):
 
-		sections = self._get_with_session(
-			term,
-			"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500",
-			"section(s)"
-		)
+		# Load section data from JSON file
+		if filename := self.options["infile"]:
+			sections = json.load(open(filename))
 
-		self.log(f'[{term}] Updating database')
+		else:
+			sections = self._get_with_session(
+				term,
+				"searchResults/searchResults?txt_term={term}&pageOffset={offset}&pageMaxSize=500",
+				"section(s)"
+			)
+
+		# Save section data if necessary
+		if filename := self.options["outfile"]:
+			with open(filename, "w") as f:
+				f.write(json.dumps(sections, indent="\t"))
+				self.log(f"[info] Saved course information to {filename}")
+
+		self.log(f"[{term}] Updating database")
 
 		for s in sections:
 
@@ -180,14 +193,13 @@ class Banner9:
 				section = Section(term=term, crn=crn)
 
 			try:
-				course = Course.objects.get(
+				section.course = Course.objects.get(
 					subject__short_title=s["subject"], number=s["courseNumber"]
 				)
 			except Course.DoesNotExist:
 				self.log(f"[crn={crn}] New courses found, please run update courses")
 				continue
 
-			section.course = course
 			section.section_num = s["sequenceNumber"]
 			section.section_title = s["courseTitle"]
 
