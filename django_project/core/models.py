@@ -5,8 +5,54 @@ from django.db import models
 from core.utils import full_reverse, send_email
 from users.models import User
 
+################################################################################
+# School related classes
+################################################################################
 
-class Professor(models.Model):
+class WebScraper(models.Model):
+
+	# This is also used for scrapper's filename
+	name = models.CharField(max_length=25, unique=True)
+
+	class Meta:
+		ordering = ['name']
+
+	def __str__(self):
+		return self.name
+
+
+class School(models.Model):
+
+	name = models.CharField(max_length=100)
+	short_name = models.CharField(max_length=16, blank=True)
+	active = models.BooleanField(default=False)
+
+	# E.g. 00704A (no #)
+	color_hex = models.CharField(max_length=6, blank=True)
+
+	web_scraper = models.ForeignKey(
+		WebScraper, blank=True, null=True, on_delete=models.SET_NULL)
+	url = models.CharField(max_length=200, blank=True)
+
+	class Meta:
+		ordering = ['name']
+
+	def __str__(self):
+		return self.name
+
+
+class HasSchool(models.Model):
+	school = models.ForeignKey(School, on_delete=models.CASCADE)
+
+	class Meta:
+		abstract = True
+
+################################################################################
+# School-specific classes
+################################################################################
+
+class Professor(HasSchool):
+
 	email = models.EmailField(null=True, blank=True, unique=True)
 	firstname = models.CharField(max_length=25)
 	lastname = models.CharField(max_length=25)
@@ -18,8 +64,9 @@ class Professor(models.Model):
 		return f'{self.lastname}, {self.firstname}'
 
 
-class Term(models.Model):
-	code = models.CharField(max_length=6, primary_key=True, help_text='E.g. 202008')
+class Term(HasSchool):
+
+	code = models.CharField(max_length=6, help_text='E.g. 202008')
 	description = models.CharField(max_length=20, help_text='E.g. Fall 2020')
 
 	default = models.BooleanField(default=False,
@@ -39,8 +86,9 @@ class Term(models.Model):
 		return self.description
 
 
-class Subject(models.Model):
-	short_title = models.CharField(max_length=4, primary_key=True, help_text='E.g. ITEC')
+class Subject(HasSchool):
+
+	short_title = models.CharField(max_length=4, help_text='E.g. ITEC')
 	long_title = models.CharField(max_length=100, help_text='E.g. Information Technology')
 
 	class Meta:
@@ -54,7 +102,8 @@ class Subject(models.Model):
 		return self.short_title
 
 
-class Course(models.Model):
+class Course(HasSchool):
+
 	subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
 
 	# Course Information
@@ -81,11 +130,11 @@ class Course(models.Model):
 		return f'{self.subject_id} {self.number}: {self.title}'
 
 
-class Section(models.Model):
+class Section(HasSchool):
 
 	term = models.ForeignKey(Term, on_delete=models.CASCADE)
 
-	# CRNs can't be the primary key because they repeat every year
+	# CRNs often repeat every year
 	crn = models.CharField(max_length=5)
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
 	section_num = models.CharField(max_length=3)
@@ -201,9 +250,13 @@ class Section(models.Model):
 	def __str__(self):
 		return f'{self.get_code()}: {self.section_title}'
 
+################################################################################
+# Other
+################################################################################
+
 class Favorite(models.Model):
-	''' Manually specified intermediary table for the many-to-many User-Section
-	relationship '''
+	""" Manually specified intermediary table for the many-to-many User-Section
+	relationship """
 
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	section = models.ForeignKey(Section, on_delete=models.CASCADE)
@@ -219,4 +272,3 @@ class Favorite(models.Model):
 
 	def __str__(self):
 		return f'{self.user.email} watching {self.section}'
-
