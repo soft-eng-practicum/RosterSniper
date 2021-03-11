@@ -12,6 +12,20 @@ admin.site.site_header = 'RosterSniper Admin'
 admin.site.index_title = 'Welcome to the RosterSniper admin page!'
 admin.site.enable_nav_sidebar = False
 
+
+@admin.register(WebScraper)
+class WebScraperAdmin(admin.ModelAdmin):
+	search_fields = ('name',)
+	list_display = ('__str__',)
+
+
+@admin.register(School)
+class SchoolAdmin(admin.ModelAdmin):
+	search_fields = ('name', 'short_name')
+	list_filter = ('web_scraper',)
+	list_display = ('__str__', 'short_name', 'web_scraper', 'active')
+
+
 class YearFilter(admin.SimpleListFilter):
 
 	title = parameter_name = 'year'
