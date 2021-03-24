@@ -1,0 +1,57 @@
+[
+{
+	"model": "core.school",
+	"pk": 1,
+	"fields": {
+		"name": "Georgia Gwinnett College",
+		"short_name": "ggc",
+		"active": true,
+		"color_hex": "00704A",
+		"web_scraper": 1,
+		"url": "https://ggc.gabest.usg.edu/StudentRegistrationSsb/ssb/"
+	}
+},
+{
+	"model": "core.school",
+	"pk": 4,
+	"fields": {
+		"name": "Georgia State University",
+		"short_name": "gsu",
+		"active": false,
+		"color_hex": "0039A6",
+		"web_scraper": 1,
+		"url": "https://registration.gosolar.gsu.edu/StudentRegistrationSsb/ssb/"
+	}
+},
+{
+	"model": "core.school",
+	"pk": 6,
+	"fields": {
+		"name": "Savannah State University",
+		"short_name": "savannahstate",
+		"active": true,
+		"color_hex": "d43900",
+		"web_scraper": 1,
+		"url": "https://savstate.gabest.usg.edu/StudentRegistrationSsb/ssb/"
+	}
+},
+{
+	"model": "core.school",
+	"pk": 8,
+	"fields": {
+		"name": "Clemson University",
+		"short_name": "clemson",
+		"active": false,
+		"color_hex": "F56600",
+		"web_scraper": 1,
+		"url": "https://regssb.sis.clemson.edu/StudentRegistrationSsb/ssb/"
+	}
+},
+{
+	"model": "core.webscraper",
+	"pk": 1,
+	"fields": {
+		"name": "banner9"
+	}
+}
+]
