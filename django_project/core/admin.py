@@ -25,6 +25,8 @@ class SchoolAdmin(admin.ModelAdmin):
 	list_filter = ('active', 'web_scraper',)
 	list_display = ('__str__', 'short_name', 'web_scraper', 'active')
 
+	change_form_template = "admin/school_change_form.html"
+
 	actions = ['activate_schools', 'deactivate_schools']
 
 	def activate_schools(self, request, queryset):
