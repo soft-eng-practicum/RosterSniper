@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.db.models import Count
 from django.db.models.functions import Substr
 
@@ -22,8 +22,28 @@ class WebScraperAdmin(admin.ModelAdmin):
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
 	search_fields = ('name', 'short_name')
-	list_filter = ('web_scraper',)
+	list_filter = ('active', 'web_scraper',)
 	list_display = ('__str__', 'short_name', 'web_scraper', 'active')
+
+	actions = ['activate_schools', 'deactivate_schools']
+
+	def activate_schools(self, request, queryset):
+		queryset.update(active=True)
+		self.message_user(
+			request,
+			'Selected schools were marked as active.',
+			messages.SUCCESS
+		)
+	activate_schools.short_description = 'Activate selected schools'
+
+	def deactivate_schools(self, request, queryset):
+		queryset.update(active=False)
+		self.message_user(
+			request,
+			'Selected schools were marked as inactive.',
+			messages.SUCCESS
+		)
+	deactivate_schools.short_description = 'Deactivate selected schools'
 
 
 class YearFilter(admin.SimpleListFilter):
@@ -44,7 +64,7 @@ class YearFilter(admin.SimpleListFilter):
 @admin.register(Term)
 class TermAdmin(admin.ModelAdmin):
 	search_fields = ('code', 'description')
-	list_filter = ('display', 'update', YearFilter)
+	list_filter = ('school', 'display', 'update', YearFilter)
 	list_display = ('__str__', 'code', 'display', 'default', 'update')
 
 
