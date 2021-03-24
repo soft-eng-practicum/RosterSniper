@@ -24,11 +24,13 @@ class WebScraper(models.Model):
 class School(models.Model):
 
 	name = models.CharField(max_length=100)
-	short_name = models.CharField(max_length=16, blank=True)
-	active = models.BooleanField(default=False)
+	short_name = models.CharField(max_length=16, blank=True,
+		help_text="This is also the domain name minus the .edu")
+	active = models.BooleanField(default=False,
+		help_text="Whether the school is displayed on the home page and available on add-courses")
 
-	# E.g. 00704A (no #)
-	color_hex = models.CharField(max_length=6, blank=True)
+	color_hex = models.CharField(max_length=6, blank=True,
+		help_text="School color used on their add-courses page, no #")
 
 	web_scraper = models.ForeignKey(
 		WebScraper, blank=True, null=True, on_delete=models.SET_NULL)
@@ -44,8 +46,14 @@ class School(models.Model):
 class HasSchool(models.Model):
 	school = models.ForeignKey(School, on_delete=models.CASCADE)
 
+	@classmethod
+	def set_school(cls, school):
+		return cls.objects.filter(school=school)
+
 	class Meta:
 		abstract = True
+		ordering = ['school']
+
 
 ################################################################################
 # School-specific classes
@@ -54,17 +62,19 @@ class HasSchool(models.Model):
 class Professor(HasSchool):
 
 	email = models.EmailField(null=True, blank=True, unique=True)
-	firstname = models.CharField(max_length=25)
-	lastname = models.CharField(max_length=25)
+	firstname = models.CharField(max_length=50)
+	lastname = models.CharField(max_length=50)
 
 	class Meta:
-		ordering = ['lastname']
+		ordering = ['school', 'lastname']
 
 	def __str__(self):
 		return f'{self.lastname}, {self.firstname}'
 
 
 class Term(HasSchool):
+
+	code_std = models.CharField(max_length=6)
 
 	code = models.CharField(max_length=6, help_text='E.g. 202008')
 	description = models.CharField(max_length=20, help_text='E.g. Fall 2020')
@@ -80,7 +90,7 @@ class Term(HasSchool):
 		help_text="Whether this term is displayed on the add-courses page")
 
 	class Meta:
-		ordering = ['-code']
+		ordering = ['school', '-code_std']
 
 	def __str__(self):
 		return self.description
@@ -92,7 +102,7 @@ class Subject(HasSchool):
 	long_title = models.CharField(max_length=100, help_text='E.g. Information Technology')
 
 	class Meta:
-		ordering = ['short_title']
+		ordering = ['school', 'short_title']
 
 	@property
 	def full_str(self):
@@ -113,21 +123,22 @@ class Course(HasSchool):
 	title = models.CharField(max_length=100)
 
 	credit_hours = models.CharField(default='', max_length=10)
+
 	def get_credit_hours(self):
 		return f"{self.credit_hours or 'NA'} Credit Hour{'' if self.credit_hours == '1' else 's'}"
 
 	class Meta:
-		ordering = ['subject_id', 'number']
+		ordering = ['subject', 'number']
 
 	# Using {self.subject} would call __str__ on the entire subject, hitting the
 	# database to get all the attributes needed to create the object. Instead we
 	# are using the foreign key directly which is defined to be short_title in
 	# the Subject class.
 	def short_str(self):
-		return f'{self.subject_id} {self.number}'
+		return f'{self.subject.short_title} {self.number}'
 
 	def __str__(self):
-		return f'{self.subject_id} {self.number}: {self.title}'
+		return f'{self.subject.short_title} {self.number}: {self.title}'
 
 
 class Section(HasSchool):
@@ -157,7 +168,7 @@ class Section(HasSchool):
 	days = models.CharField(default='', max_length=7, blank=True)
 	start_time = models.TimeField()
 	end_time = models.TimeField()
-	room = models.CharField(default='', max_length=10, blank=True)
+	room = models.CharField(default='', max_length=50, blank=True)
 
 	enrolled  = models.SmallIntegerField()  # Number of students enrolled
 	available = models.SmallIntegerField()  # Number of available seats
