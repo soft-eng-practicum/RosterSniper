@@ -1,5 +1,18 @@
 {% extends "base/regular.html" %}
-{% load static %}
+
+{% block head %}
+	<style type="text/css">
+		.school {
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+			width: 18rem;
+		}
+		.school > img:first-child {
+			height: 10rem;
+			object-fit: cover;
+		}
+	</style>
+{% endblock %}
 
 {% block content %}
 <div class="jumbotron">
@@ -20,8 +33,8 @@
 
 <div class="d-flex align-items-stretch flex-wrap">
 {% for school in schools %}
-<div class="card mr-3 mb-3" style="width: 18rem;">
-	<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" style="height: 10rem; object-fit: cover;" alt="{{ school.name }}">
+<div class="card school">
+	<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" alt="{{ school.name }}">
 	<div class="card-body">
 		<h5 class="card-title">{{ school.name }}</h5>
 		<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary">Add Courses</a>
