@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.base import RedirectView
 
 from .error_views import handler418
 
@@ -26,9 +25,9 @@ handler404 = 'roster_sniper.error_views.handler404'
 handler500 = 'roster_sniper.error_views.handler500'
 
 urlpatterns = [
+	path('', include('core.urls')),
+	path('', include('users.urls')),
+
 	path('admin/', admin.site.urls),
 	path('teapot/', handler418),
-
-	path('', include('core.urls')),
-	path('', include('users.urls'))
 ]
