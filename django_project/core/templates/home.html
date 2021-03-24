@@ -1,4 +1,5 @@
 {% extends "base/regular.html" %}
+{% load static %}
 
 {% block content %}
 <div class="jumbotron">
@@ -16,4 +17,16 @@
 	<a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
 </div>
 <!-- thanks to dinosaursninja#9988 for the divine assistance-->
+
+<div class="d-flex align-items-stretch flex-wrap">
+{% for school in schools %}
+<div class="card mr-3 mb-3" style="width: 18rem;">
+	<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" style="height: 10rem; object-fit: cover;" alt="{{ school.name }}">
+	<div class="card-body">
+		<h5 class="card-title">{{ school.name }}</h5>
+		<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary">Add Courses</a>
+	</div>
+</div>
+{% endfor %}
+</div>
 {% endblock content %}

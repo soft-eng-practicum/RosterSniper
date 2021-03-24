@@ -13,7 +13,9 @@ from users.models import User
 
 
 def home(request):
-	return render(request, 'home.html')
+	return render(request, 'home.html', {
+		'schools': School.objects.filter(active=True),
+	})
 
 
 def about(request):
