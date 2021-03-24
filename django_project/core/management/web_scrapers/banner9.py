@@ -1,12 +1,23 @@
 import json
 import re
 
-from datetime import date, time
+from datetime import time
 from html import unescape
 
 import requests
 
 from core.models import Professor, Term, Subject, Course, Section
+
+
+def season(description):
+	if "spring" in description:
+		return "01"
+	elif "summer" in description:
+		return "05"
+	elif "fall" in description:
+		return "08"
+
+	return "00"
 
 
 # Some Banner 9 documentation: https://jennydaman.gitlab.io/nubanned/dark
@@ -52,15 +63,22 @@ class Scrapper:
 
 		# Get a list of the 100 most recent terms. The response looks like
 		# [{'code': '202105', 'description': 'Summer 2021'}, ...]
-		r = requests.get(self.url + "courseSearch/getTerms?offset=1&max=100").json()
+		r = requests.get(self.url + "courseSearch/getTerms?offset=1&max=100", timeout=5).json()
 
 		for json_term in r:
-			if json_term["description"][0] == "*":
+
+			d = json_term["description"].replace('Semester ', '').replace(' (View Only)', '')
+			c = json_term["code"]
+
+			if d[0] == "*" or len(d) >= 20:
 				continue
 			term, created = Term.objects.update_or_create(
 				school=self.school,
-				code=json_term["code"],
-				defaults={"description": json_term["description"].replace('Semester ', '')}
+				code=c,
+				defaults={
+					"code_std": c[:4] + season(d.lower()),
+					"description": d
+				}
 			)
 
 			if self.verbosity > 1:
@@ -68,49 +86,6 @@ class Scrapper:
 
 		if self.verbosity >= 1:
 			self.log(f"[info] Updated {len(r)} term(s)")
-
-		today = date.today()
-		year  = today.year
-		month = today.month
-
-		# Last display term
-		if 1 <= month <= 5:
-			c = f'{year-1}08'
-		else:
-			c = f'{year}02'
-		Term.objects.filter(code__gte=c).update(display=True)
-		Term.objects.filter(code__lt=c).update(display=False)
-
-		# Last update term
-		if month == 1:
-			c = f'{year}02'
-		elif 2 <= month <= 5:
-			c = f'{year}05'
-		elif 6 <= month <= 8:
-			c = f'{year}08'
-		else:
-			c = f'{year+1}02'
-		Term.objects.filter(code__gte=c).update(update=True)
-		Term.objects.filter(code__lt=c).update(update=False)
-
-		# Default term
-		if 1 <= month <= 2:
-			c = f'{year}02'
-		elif 3 <= month <= 9:
-			c = f'{year}08'
-		else:
-			c = f'{year + 1}02'
-		try:
-			term = Term.objects.get(code=c)
-			term.default=True
-			Term.objects.exclude(code=c).update(default=False)
-		except Term.DoesNotExist:
-			term = Term.objects.filter(display=True).exclude(description__contains="Summer")[0]
-			term.default = True
-		finally:
-			term.save()
-			if self.verbosity >= 1:
-				self.log(f"[info] Using term {term} as default")
 
 	def update_subjects(self, term):
 
@@ -126,6 +101,7 @@ class Scrapper:
 
 		for subject in subjects:
 			s, created = Subject.objects.update_or_create(
+				school=self.school,
 				short_title=subject["code"],
 				defaults={"long_title": subject["description"]}
 			)
@@ -151,7 +127,11 @@ class Scrapper:
 				credit_hours = f"{low}-{high}"
 
 			c, created = Course.objects.update_or_create(
-				subject=Subject.objects.get(short_title=course["subject"]),
+				school=self.school,
+				subject=Subject.objects.get(
+					school=self.school,
+					short_title=course["subject"]
+				),
 				number=course["courseNumber"],
 				defaults={
 					"title": course["courseTitle"],
@@ -165,7 +145,8 @@ class Scrapper:
 	def update_sections(self, term):
 
 		# Load section data from JSON file
-		if filename := self.options["infile"]:
+		if self.options["infile"]:
+			filename = f"data/{self.school.short_name}-{term.code}.json"
 			sections = json.load(open(filename))
 
 		else:
@@ -176,7 +157,10 @@ class Scrapper:
 			)
 
 		# Save section data if necessary
-		if filename := self.options["outfile"]:
+		if self.options["outfile"]:
+			# Automatically create directory
+			# https://stackoverflow.com/a/12517490
+			filename = f"data/{self.school.short_name}-{term.code}.json"
 			with open(filename, "w") as f:
 				f.write(json.dumps(sections, indent="\t"))
 				self.log(f"[info] Saved course information to {filename}")
@@ -188,16 +172,23 @@ class Scrapper:
 			# We can't use update_or_create() here b/c it calls save() before mandatory fields are set
 			crn = s["courseReferenceNumber"]
 			try:
-				section = Section.objects.get(term=term, crn=crn)
+				section = Section.objects.get(
+					school=self.school,
+					term=term,
+					crn=crn
+				)
 			except Section.DoesNotExist:
-				section = Section(term=term, crn=crn)
+				section = Section(school=self.school, term=term, crn=crn)
 
 			try:
 				section.course = Course.objects.get(
-					subject__short_title=s["subject"], number=s["courseNumber"]
+					school=self.school,
+					subject__short_title=s["subject"],
+					number=s["courseNumber"]
 				)
 			except Course.DoesNotExist:
 				self.log(f"[crn={crn}] New courses found, please run update courses")
+				print(s)
 				continue
 
 			section.section_num = s["sequenceNumber"]
@@ -210,15 +201,28 @@ class Scrapper:
 
 			if faculty := s["faculty"]:
 				professor = faculty[0]
-				professor_name = professor["displayName"].split(", ")
+
+				# Max split for
+				# clemson: Lydia Lancaster Folger Schleifer
+				# oakland: Mohammed (Professor Mahmoud) Mahmoud
+				professor_name = professor["displayName"]
+				if ", " in professor_name:
+					professor_name = professor_name.split(", ", maxsplit=1)[::-1]
+				else:
+					professor_name = professor_name.split(" ", maxsplit=1)
+
+				if len(professor_name) != 2:
+					continue
 
 				section.professor, _ = Professor.objects.update_or_create(
+					school=self.school,
 					email=professor["emailAddress"],
 					defaults={
-						"firstname": professor_name[1],
-						"lastname": professor_name[0]
+						"firstname": professor_name[0],
+						"lastname": professor_name[1]
 					}
 				)
+
 			else:
 				section.professor = None
 

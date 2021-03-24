@@ -22,35 +22,35 @@ class Command(MyBaseCommand):
 			help='Used when updating sections to determines which terms to use. 2: update=True (default), 1: display=True, 0: all.'
 		)
 
-		parser.add_argument('-i', '--infile', type=str,
+		parser.add_argument('-i', '--infile', action='store_true',
 			help='Update the database using the specified JSON file')
 
-		parser.add_argument('-o', '--outfile', type=str,
+		parser.add_argument('-o', '--outfile', action='store_true',
 			help='Output the course information to the specified file in JSON format')
 
-	def handle(self, *args, **options):
+	def handle_school(self, scraper, options):
 
-		scraper = self.get_scraper(options)
+		t = Term.set_school(scraper.school)
 
 		# First update subject and course info using most recent term
-		term = Term.objects.first()
+		term = t.first()
 
-		self.log(f'[info] Updating subjects and courses using latest term: {term}')
+		# self.log(f'[info] Updating subjects and courses using latest term: {term}')
 		scraper.update_subjects(term)
 		scraper.update_courses(term)
 
 		if x := options['terms']:
-			terms = Term.objects.filter(code__in=x)
+			terms = t.filter(code__in=x)
 		elif m := options['term_mode']:
 			if m == 2:
-				terms = Term.objects.filter(update=True)
+				terms = t.filter(update=True)
 			elif m == 1:
-				terms = Term.objects.filter(display=True)
+				terms = t.filter(display=True)
 			elif m == 0:
-				terms = Term.objects.all()
+				terms = t
 		else:
 			return
 
 		for term in terms:
-			self.log(f'[info] Updating sections for {term}')
+			# self.log(f'[info] Updating sections for {term}')
 			scraper.update_sections(term)

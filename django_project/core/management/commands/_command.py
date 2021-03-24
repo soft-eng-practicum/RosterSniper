@@ -16,7 +16,7 @@ class MyBaseCommand(BaseCommand):
 
 		parser.add_argument(
 			'-s', '--schools',
-			type=int, nargs='*',
+			nargs='*',
 			help='WIP'
 		)
 
@@ -25,7 +25,7 @@ class MyBaseCommand(BaseCommand):
 		if s := options['schools']:
 			schools = School.objects.filter(short_name__in=s)
 		else:
-			schools = School.objects.all()
+			schools = School.objects.filter(active=True)
 
 		for school in schools.select_related('web_scraper'):
 			self.log(f'[info] School: {school}')
@@ -38,6 +38,7 @@ class MyBaseCommand(BaseCommand):
 				options
 			)
 			self.handle_school(scrapper, options)
+			self.log('')
 
 	def handle_school(self, scrapper, options):
 		""" Override me pls """
