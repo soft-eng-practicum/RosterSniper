@@ -18,6 +18,7 @@ def view_maker(queryset):
 		except School.DoesNotExist:
 			raise Http404()
 
+		# Closure
 		qs = queryset.filter(school=s)
 
 		try:
@@ -49,7 +50,7 @@ professors = view_maker(
 
 terms = view_maker(
 	Term.objects.filter(display=True).values(
-		'code', 'description',
+		'code', 'description'
 	)
 )
 

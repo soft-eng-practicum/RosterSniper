@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, views_api
+from . import views, views_api, views_drf
 
 
 urlpatterns = [
@@ -17,4 +17,12 @@ urlpatterns = [
 	path('api/<str:school>/subjects/', views_api.subjects),
 	path('api/<str:school>/courses/', views_api.courses),
 	path('api/<str:school>/sections/', views_api.sections),
+
+	# DRF
+	path('drf/schools/', views_drf.Schools.as_view()),
+	path('drf/<str:school>/professors/', views_drf.Professors.as_view()),
+	path('drf/<str:school>/terms/', views_drf.Terms.as_view()),
+	path('drf/<str:school>/subjects/', views_drf.Subjects.as_view()),
+	path('drf/<str:school>/courses/', views_drf.Courses.as_view()),
+	path('drf/<str:school>/sections/', views_drf.Sections.as_view()),
 ]
