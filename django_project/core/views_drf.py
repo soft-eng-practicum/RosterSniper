@@ -7,7 +7,7 @@ from .serializers import (
 	SchoolSerializer, ProfessorSerializer, TermSerializer,
 	SubjectSerializer, CourseSerializer, SectionSerializer
 )
-from .models import School
+from .models import School, Term
 
 class MyView(ListAPIView):
 	http_method_names = ['get']
@@ -27,7 +27,10 @@ class PerSchool(MyView):
 		except School.DoesNotExist:
 			raise Http404()
 
-		return self.serializer_class.Meta.model.objects.filter(school=s)
+		qs = self.qs if hasattr(self, 'qs') \
+			else self.serializer_class.Meta.model.objects.all()
+
+		return qs.filter(school=s)
 
 
 class Professors(PerSchool):
@@ -36,6 +39,7 @@ class Professors(PerSchool):
 
 class Terms(PerSchool):
 	serializer_class = TermSerializer
+	qs = Term.objects.filter(display=True)
 
 
 class Subjects(PerSchool):
