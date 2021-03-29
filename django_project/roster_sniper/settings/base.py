@@ -89,7 +89,7 @@ STATIC_URL = '/static/'
 
 # Named URL pattern where requests are redirected for login when using the login_required() decorator
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'add_courses'
+LOGIN_REDIRECT_URL = 'home'
 
 # Email
 # Production/development specific settings go in their respective setting modules
