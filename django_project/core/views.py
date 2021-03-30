@@ -31,8 +31,9 @@ def about(request):
 
 def get_courses(request, school):
 
-	if not request.is_ajax():
-		raise Http404()
+	# TODO: uncomment
+	# if not request.is_ajax():
+	# 	raise Http404()
 
 	try:
 		s = School.objects.get(short_name=school)
@@ -108,7 +109,101 @@ def get_courses(request, school):
 		safe=False
 	)
 
-def find_rooms(request):
+def get_rooms(request, school):
+
+	# TODO: uncomment
+	# if not request.is_ajax():
+	# 	raise Http404()
+
+	try:
+		s = School.objects.get(short_name=school)
+	except School.DoesNotExist:
+		raise Http404()
+
+	query = Q()
+
+	# The custom order_by is needed so the regroups work in the template
+	sections = (
+		Section.objects
+		.order_by('course', 'section_title', 'section_num')
+		.select_related('professor', 'course')
+		.filter(school=s)
+	)
+
+	if term := request.GET.get('term'):
+		sections = sections.filter(term=term)
+	else:
+		return JsonResponse(data={})
+
+	if q := request.GET.get('q'):
+		#
+		# TODO: split on : and - characters also
+		# https://stackoverflow.com/a/23720594
+		#
+		for term in q.split():
+			query &= (
+				Q(crn__exact=term)
+				| Q(section_num__exact=term)
+				| Q(section_title__icontains=term)
+				| Q(course__number__exact=term)
+				| Q(course__subject__pk__iexact=term)
+			)
+
+	if days := request.GET.get('days'):
+		query &= Q(days__contains=days)
+
+	if crsNumMin := request.GET.get('crsNumMin'):
+		query &= Q(course__number__gte=crsNumMin)
+	if crsNumMax := request.GET.get('crsNumMax'):
+		query &= Q(course__number__lte=crsNumMax)
+
+	if creditHourExact := request.GET.get('creditHourExact'):
+		query &= Q(credit_hours=creditHourExact)
+	if creditHourMin := request.GET.get('creditHourMin'):
+		query &= Q(credit_hours__gte=creditHourMin)
+	if creditHourMax := request.GET.get('creditHourMax'):
+		query &= Q(credit_hours__lte=creditHourMax)
+
+	if professor := request.GET.get('professor'):
+		for term in professor.split():
+			query &= Q(professor__firstname__icontains=term) \
+				| Q(professor__lastname__icontains=term)
+
+	if room := request.GET.get('room'):
+		query &= Q(room__icontains=room.replace(" ", "-"))
+
+	# page = request.GET.get('page', 1)
+
+	sections = sections.filter(query)
+
+	return JsonResponse(
+		data={
+			'courses': render_to_string(
+				'courses/add_courses_rows.html', {
+					'all_sections': sections,
+					'crns': request.user.section_set.values_list('crn', flat=True)
+						if request.user.is_authenticated else None
+				}
+			)
+		},
+		safe=False
+	)
+
+def find_rooms(request, school):
+    try:
+        s = School.objects.get(short_name=school)
+    except School.DoesNotExist:
+        raise Http404()
+
+    return render(
+        request,
+        'rooms/room_finder.html',
+        {
+			'terms': Term.objects.filter(school=s, display=True),
+			'color' : s.color_hex
+        }
+    )
+    
     return JsonResponse(
         data={
             'hello': 'world'

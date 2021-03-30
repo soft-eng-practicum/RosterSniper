@@ -7,8 +7,8 @@ urlpatterns = [
 	path('about/', views.about, name='about'),
 	path('get-courses/<str:school>/', views.get_courses, name='get_courses'),
 	path('add-courses/<str:school>/', views.add_courses, name='add_courses'),
+	path('room-finder/<str:school>', views.find_rooms, name='find_rooms'),
 	path('my-courses/', views.my_courses, name='my_courses'),
-	path('find-rooms/', views.find_rooms, name='find_rooms'),
 	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
 
 	# My API
