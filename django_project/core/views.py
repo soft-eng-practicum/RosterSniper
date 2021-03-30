@@ -108,6 +108,12 @@ def get_courses(request, school):
 		safe=False
 	)
 
+def find_rooms(request):
+    return JsonResponse(
+        data={
+            'hello': 'world'
+        }
+    )
 
 def add_courses(request, school):
 	""" The Add Courses page lets users search for and favorite sections. """
