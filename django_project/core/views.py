@@ -146,7 +146,7 @@ def get_rooms(request, school):
 				| Q(section_num__exact=term)
 				| Q(section_title__icontains=term)
 				| Q(course__number__exact=term)
-				| Q(course__subject__pk__iexact=term)
+				| Q(course__subject__short_title__iexact=term)
 			)
 
 	if days := request.GET.get('days'):
