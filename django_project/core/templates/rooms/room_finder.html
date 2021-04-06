@@ -3,7 +3,7 @@
 
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/room_finder.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/room_finder.css' %}?1">
 
 	<script type="text/javascript" src="{% static 'js/mdb.min.js' %}" defer></script>
 	<script type="text/javascript" src="{% static 'js/room_finder.js' %}" defer></script>
@@ -24,13 +24,13 @@
 <div id="sidebar-col" class="border-right">
 	<div class="h5">
 		Options
-		<button id="apply" class="btn btn-link" onclick="update_courses()">Apply</button>
+		<button id="apply" class="btn btn-link" onclick="update_rooms()">Apply</button>
 	</div>
 
 	Term
 	<div class="input-group">
 		<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
-			<option value="{{ term.id }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
+			<option value="{{ term.code }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
 		</select>
 	</div>
 
@@ -57,8 +57,11 @@
 	</div>
 </div>
 
-<div id="courses-col">
-	<div id="courses"></div>
+<div id="rooms-col">
+	<div id="rooms-header" class="h5 hidden">
+		Available Rooms &mdash; <span id="available-count"></span>
+	</div>
+	<div id="rooms"></div>
 </div>
 
 </div>

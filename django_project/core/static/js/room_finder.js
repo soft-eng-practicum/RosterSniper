@@ -1,32 +1,18 @@
 
 $(function () {
-	$('#q, #sidebar-col input').keypress(e => { if (e.keyCode === 13) update_courses() });
-	$('#days > button').tooltip({delay: {show: 1500, hide: 100}});
+//    $('#timeStart').pickatime({});
+//    $('#timeEnd').pickatime({});
 
-	const searchParams = new URLSearchParams(window.location.search);
-	searchParams.forEach(function(value, key) {
-		if (key === "days") {
-			$('#days').children().each(function() {
-				if (value.includes(this.innerHTML)) $(this).addClass('active');
-			});
-		} else {
-			$("#" + key).val(value);
-		}
-	});
-
-    $('#timeStart').pickatime({});
-    $('#timeEnd').pickatime({});
-
-	update_courses();
+	update_rooms();
 })
 
-function update_courses() {
+function update_rooms() {
 	const searchParams = new URLSearchParams();
 
 	// URL without query string
 	const url = window.location.pathname.split('?')[0]
 
-	$("#term, #sidebar-col input, #q").each(function () {
+	$("#term, #sidebar-col input").each(function () {
 		if (x = $(this).val().trim()) searchParams.append($(this).attr('id'), x);
 	});
 
@@ -38,23 +24,27 @@ function update_courses() {
 
 	// Don't allow empty searches (term will always be present)
 	if ([...searchParams].length < 2) {
-		if (!$('#courses-col').hasClass('bear')) {
-			$('#courses-col').addClass('bear');
-			$('#courses').html('');
+		if (!$('#rooms-col').hasClass('bear')) {
+			$('#rooms-col').addClass('bear');
+			$('#rooms').html('');
+            $('#rooms-header').addClass('hidden');
 			history.pushState(null, '', url);
 		}
 		return;
 	} // else..
 
 	let params = searchParams.toString()
-	$('#courses-col').removeClass('bear');
+	$('#rooms-col').removeClass('bear');
 	history.pushState(null, '', url + '?' + params);
-	$.getJSON(`/get-courses/${url.split('/')[2]}/?${params}`).done(
+	$.getJSON(`/get-rooms/${url.split('/')[2]}/?${params}`).done(
 		response => {
-			$('#courses').html(response['courses']);
-			$('.meeting > span').tooltip({delay: {show: 1500, hide: 100}});
-			$('#courses .card-footer button').click(show_all);
-			$('#courses td i.fa-star').on('click', favorite);
+            responseHTML = "";
+            response['availableRoomIDs'].forEach(function(el, i) {
+                responseHTML += '<p class="border-right border-bottom">' + el + '</p>';
+            });
+			$('#rooms').html(responseHTML);
+            $('#available-count').html(response['availableCount']);
+            $('#rooms-header').removeClass('hidden');
 		}
 	);
 }

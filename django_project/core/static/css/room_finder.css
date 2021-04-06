@@ -22,7 +22,7 @@
 
 #days button {
 	background-color: white !important;
-	border-color: #ced4da !important;
+	border-color: #9ea1a5 !important;
 	color: #6c757d;
 }
 #days button:hover {
@@ -42,9 +42,9 @@ to it, which is unfortunate, the shadow when clicking was just too ugly. */
 	box-shadow: none !important;
 }
 
-/********** Courses Column **********/
+/********** Rooms Column **********/
 
-#courses-col {
+#rooms-col {
 	padding: 1.3rem;
 	flex-grow: 1;
 
@@ -57,8 +57,20 @@ to it, which is unfortunate, the shadow when clicking was just too ugly. */
 }
 /* The max-width is applied to all div children instead of the #courses-col
 itself because we want the scrollbar to be all the way to the right. */
-#courses-col > div {
+#rooms-col > div {
 	max-width: 1600px;
+}
+
+#rooms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#rooms p {
+    padding: 1em;
+    margin-right: 1em;
+    width: 10em;
+    text-align: center;
 }
 
 .bear {

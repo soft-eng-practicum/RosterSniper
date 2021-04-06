@@ -1,4 +1,7 @@
 from random import randint
+from functools import reduce
+import datetime
+import operator
 
 from django.db.models import Q
 
@@ -122,72 +125,73 @@ def get_rooms(request, school):
 
 	query = Q()
 
-	# The custom order_by is needed so the regroups work in the template
+	# Get all sections (with a room) for the given school
 	sections = (
 		Section.objects
-		.order_by('course', 'section_title', 'section_num')
-		.select_related('professor', 'course')
+		.order_by('room')
 		.filter(school=s)
+		.filter(~Q(room=""))
 	)
 
 	if term := request.GET.get('term'):
-		sections = sections.filter(term=term)
+		sections = sections.filter(term__code=term)
 	else:
 		return JsonResponse(data={})
 
-	if q := request.GET.get('q'):
-		#
-		# TODO: split on : and - characters also
-		# https://stackoverflow.com/a/23720594
-		#
-		for term in q.split():
-			query &= (
-				Q(crn__exact=term)
-				| Q(section_num__exact=term)
-				| Q(section_title__icontains=term)
-				| Q(course__number__exact=term)
-				| Q(course__subject__short_title__iexact=term)
-			)
+	# get all room ids
+	room_ids = set([x.room for x in sections])
 
+	# Find all classes taking place in the specified time window
+	##
+
+	# check the day
 	if days := request.GET.get('days'):
-		query &= Q(days__contains=days)
+		query &= reduce(operator.or_, (Q(days__contains=x) for x in days))
 
-	if crsNumMin := request.GET.get('crsNumMin'):
-		query &= Q(course__number__gte=crsNumMin)
-	if crsNumMax := request.GET.get('crsNumMax'):
-		query &= Q(course__number__lte=crsNumMax)
+	# check start/end times
+	time_start = datetime.time(0, 0)
+	time_end = datetime.time(23, 59)
 
-	if creditHourExact := request.GET.get('creditHourExact'):
-		query &= Q(credit_hours=creditHourExact)
-	if creditHourMin := request.GET.get('creditHourMin'):
-		query &= Q(credit_hours__gte=creditHourMin)
-	if creditHourMax := request.GET.get('creditHourMax'):
-		query &= Q(credit_hours__lte=creditHourMax)
+	if request_start := request.GET.get("timeStart"):
+		request_start = [int(x) for x in request_start.split(":")]
+		time_start = datetime.time(*request_start)
 
-	if professor := request.GET.get('professor'):
-		for term in professor.split():
-			query &= Q(professor__firstname__icontains=term) \
-				| Q(professor__lastname__icontains=term)
+	if request_end := request.GET.get("timeEnd"):
+		request_end = [int(x) for x in request_end.split(":")]
+		time_end = datetime.time(*request_end)
 
-	if room := request.GET.get('room'):
-		query &= Q(room__icontains=room.replace(" ", "-"))
+	# either the start time or the end time is in the specified window
+	query &= (
+		(
+			Q(start_time__gte=time_start)
+			& Q(start_time__lte=time_end)
+		) | (
+			Q(end_time__gte=time_start)
+			& Q(end_time__lte=time_end)
+		)
+	)
 
-	# page = request.GET.get('page', 1)
-
+	# run our query
 	sections = sections.filter(query)
 
-	return JsonResponse(
-		data={
-			'courses': render_to_string(
-				'courses/add_courses_rows.html', {
-					'all_sections': sections,
-					'crns': request.user.section_set.values_list('crn', flat=True)
-						if request.user.is_authenticated else None
-				}
-			)
-		},
-		safe=False
-	)
+	# get only the room numbers
+	unavailable_room_ids = set([x.room for x in sections])
+
+	# find all rooms that aren't in the list of rooms having classes at the given time
+	available_room_ids = room_ids.difference(unavailable_room_ids)
+
+	return JsonResponse(data={
+		"startTime": time_start,
+		"endTime": time_end,
+		"days": days,
+		"totalRoomCount": len(room_ids),
+		"allRoomIDs": list(room_ids),
+		"availableCount": len(available_room_ids),
+		"unavailableCount": len(unavailable_room_ids),
+		"availableRoomIDs": sorted(available_room_ids),
+		"unavailableRoomIDs": list(unavailable_room_ids),
+		"unavailableSections": list(sections.values())
+	}, safe=False)
 
 def find_rooms(request, school):
     try:
