@@ -37,8 +37,8 @@
 	<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" alt="{{ school.name }}">
 	<div class="card-body">
 		<h5 class="card-title">{{ school.name }}</h5>
-		<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary">Add Courses</a>
-		<a href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary">Find Empty Rooms</a>
+		<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary btn-block">Add Courses</a>
+		<a href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary btn-block">Room Finder</a>
 	</div>
 </div>
 {% endfor %}
