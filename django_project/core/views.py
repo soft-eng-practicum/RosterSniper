@@ -23,7 +23,7 @@ def home(request):
 
 
 def about(request):
-	names = ['Ryan Cosentino', 'Shaun Mitchell']
+	names = ('Ryan Cosentino', 'Shaun Mitchell')
 	temp = randint(0, 1)
 	context = {
 		'name1': names[temp],
@@ -33,15 +33,20 @@ def about(request):
 	return render(request, 'about.html', context)
 
 
+# Helper function, not a view
+def get_school(school):
+	try:
+		return School.objects.get(active=True, short_name=school)
+	except School.DoesNotExist:
+		raise Http404()
+
+
 def get_courses(request, school):
 
 	if not request.is_ajax():
 		raise Http404()
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
+	s = get_school(school)
 
 	if term := request.GET.get('term'):
 		# The custom order_by is needed so the regroups work in the template
@@ -112,10 +117,7 @@ def get_courses(request, school):
 def add_courses(request, school):
 	""" The Add Courses page lets users search for and favorite sections. """
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
+	s = get_school(school)
 
 	return render(
 		request,
@@ -133,10 +135,7 @@ def get_rooms(request, school):
 	# if not request.is_ajax():
 	# 	raise Http404()
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
+	s = get_school(school)
 
 	# Get all sections (with a room) for the given school
 	if term := request.GET.get('term'):
@@ -210,10 +209,7 @@ def get_rooms(request, school):
 
 def find_rooms(request, school):
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
+	s = get_school(school)
 
 	return render(
 		request,
