@@ -1,8 +1,5 @@
 
 $(function () {
-//    $('#timeStart').pickatime({});
-//    $('#timeEnd').pickatime({});
-
 	// setup the time picker
 	$("#timeStart").wickedpicker({
 		now: "12:00",
@@ -15,7 +12,7 @@ $(function () {
 		minutesInterval: 15
 	});
 
-	update_rooms();
+//	update_rooms();
 })
 
 function update_rooms() {
