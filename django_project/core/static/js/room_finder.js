@@ -3,6 +3,18 @@ $(function () {
 //    $('#timeStart').pickatime({});
 //    $('#timeEnd').pickatime({});
 
+	// setup the time picker
+	$("#timeStart").wickedpicker({
+		now: "12:00",
+		timeSeperator: ":",
+		minutesInterval: 15
+	});
+	$("#timeEnd").wickedpicker({
+		now: "18:00",
+		timeSeperator: ":",
+		minutesInterval: 15
+	});
+
 	update_rooms();
 })
 
@@ -24,17 +36,13 @@ function update_rooms() {
 
 	// Don't allow empty searches (term will always be present)
 	if ([...searchParams].length < 2) {
-		if (!$('#rooms-col').hasClass('bear')) {
-			$('#rooms-col').addClass('bear');
-			$('#rooms').html('');
-            $('#rooms-header').addClass('hidden');
-			history.pushState(null, '', url);
-		}
+        $('#rooms').html('');
+        $('#rooms-header').addClass('hidden');
+        history.pushState(null, '', url);
 		return;
 	} // else..
 
 	let params = searchParams.toString()
-	$('#rooms-col').removeClass('bear');
 	history.pushState(null, '', url + '?' + params);
 	$.getJSON(`/get-rooms/${url.split('/')[2]}/?${params}`).done(
 		response => {
@@ -42,7 +50,7 @@ function update_rooms() {
             response['availableRoomIDs'].forEach(function(el, i) {
                 responseHTML += '<p class="border-right border-bottom">' + el + '</p>';
             });
-			$('#rooms').html(responseHTML);
+            $('#rooms').html(responseHTML);
             $('#available-count').html(response['availableCount']);
             $('#rooms-header').removeClass('hidden');
 		}

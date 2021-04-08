@@ -73,11 +73,8 @@ itself because we want the scrollbar to be all the way to the right. */
     text-align: center;
 }
 
-.bear {
-	background-image: url(/static/img/bear.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 300px;
+.hidden {
+    display: none;
 }
 
 @media (max-width: 900px) {

@@ -2,6 +2,7 @@ from random import randint
 from functools import reduce
 import datetime
 import operator
+import re
 
 from django.db.models import Q
 
@@ -159,17 +160,24 @@ def get_rooms(request, school):
 		query &= reduce(operator.or_, (Q(days__contains=x) for x in days))
 
 	# check start/end times
-	if request_start := request.GET.get('timeStart'):
-		request_start = [int(x) for x in request_start.split(':')]
-		time_start = datetime.time(*request_start)
-	else:
-		time_start = datetime.time(0, 0)
+	time_start = datetime.time(0, 0)
+	time_end = datetime.time(23, 59)
 
-	if request_end := request.GET.get('timeEnd'):
-		request_end = [int(x) for x in request_end.split(':')]
-		time_end = datetime.time(*request_end)
-	else:
-		time_end = datetime.time(23, 59)
+	if request_start := request.GET.get("timeStart"):
+		times = re.findall('\d+', request_start)[:2]
+		if len(times) == 2:
+			times = [int(x) for x in times]
+			if 'pm' in request_start.lower() and times[0] != 12:
+				times[0] += 12
+			time_start = datetime.time(*times)
+
+	if request_end := request.GET.get("timeEnd"):
+		times = re.findall('\d+', request_end)[:2]
+		if len(times) == 2:
+			times = [int(x) for x in times]
+			if 'pm' in request_end.lower() and times[0] != 12:
+				times[0] += 12
+			time_end = datetime.time(*times)
 
 	# A class does not intersect with a given time window if:
 	# - The class ends before (lt) the window starts, or
