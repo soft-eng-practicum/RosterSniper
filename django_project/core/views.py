@@ -1,4 +1,8 @@
 from random import randint
+from functools import reduce
+import datetime
+import operator
+import re
 
 from django.db.models import Q
 
@@ -19,7 +23,7 @@ def home(request):
 
 
 def about(request):
-	names = ['Ryan Cosentino', 'Shaun Mitchell']
+	names = ('Ryan Cosentino', 'Shaun Mitchell')
 	temp = randint(0, 1)
 	context = {
 		'name1': names[temp],
@@ -29,30 +33,33 @@ def about(request):
 	return render(request, 'about.html', context)
 
 
+# Helper function, not a view
+def get_school(school):
+	try:
+		return School.objects.get(active=True, short_name=school)
+	except School.DoesNotExist:
+		raise Http404()
+
+
 def get_courses(request, school):
 
 	if not request.is_ajax():
 		raise Http404()
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
-
-	query = Q()
-
-	# The custom order_by is needed so the regroups work in the template
-	sections = (
-		Section.objects
-		.order_by('course', 'section_title', 'section_num')
-		.select_related('professor', 'course')
-		.filter(school=s)
-	)
+	s = get_school(school)
 
 	if term := request.GET.get('term'):
-		sections = sections.filter(term=term)
+		# The custom order_by is needed so the regroups work in the template
+		sections = (
+			Section.objects
+			.order_by('course', 'section_title', 'section_num')
+			.select_related('professor', 'course')
+			.filter(school=s, term=term)
+		)
 	else:
 		return JsonResponse(data={})
+
+	query = Q()
 
 	if q := request.GET.get('q'):
 		#
@@ -89,9 +96,7 @@ def get_courses(request, school):
 				| Q(professor__lastname__icontains=term)
 
 	if room := request.GET.get('room'):
-		query &= Q(room__icontains=room.replace(" ", "-"))
-
-	# page = request.GET.get('page', 1)
+		query &= Q(room__icontains=room.replace(' ', '-'))
 
 	sections = sections.filter(query)
 
@@ -112,14 +117,103 @@ def get_courses(request, school):
 def add_courses(request, school):
 	""" The Add Courses page lets users search for and favorite sections. """
 
-	try:
-		s = School.objects.get(short_name=school)
-	except School.DoesNotExist:
-		raise Http404()
+	s = get_school(school)
 
 	return render(
 		request,
 		'courses/add_courses.html',
+		{
+			'terms': Term.objects.filter(school=s, display=True),
+			'color' : s.color_hex
+		}
+	)
+
+
+def get_rooms(request, school):
+
+	# TODO: uncomment
+	# if not request.is_ajax():
+	# 	raise Http404()
+
+	s = get_school(school)
+
+	# Get all sections (with a room) for the given school
+	if term := request.GET.get('term'):
+		sections = (
+			Section.objects
+			.order_by('room')
+			.filter(school=s, term__code=term)
+			.exclude(room='')
+		)
+	else:
+		return JsonResponse(data={})
+
+	# get all room ids
+	room_ids = set(sections.values_list('room', flat=True).distinct())
+
+	# Find all classes taking place in the specified time window
+	query = Q()
+
+	# check the day
+	if days := request.GET.get('days'):
+		query &= reduce(operator.or_, (Q(days__contains=x) for x in days))
+
+	# check start/end times
+	time_start = datetime.time(0, 0)
+	time_end = datetime.time(23, 59)
+
+	if request_start := request.GET.get("timeStart"):
+		times = re.findall('\d+', request_start)[:2]
+		if len(times) == 2:
+			times = [int(x) for x in times]
+			if 'pm' in request_start.lower() and times[0] != 12:
+				times[0] += 12
+			time_start = datetime.time(*times)
+
+	if request_end := request.GET.get("timeEnd"):
+		times = re.findall('\d+', request_end)[:2]
+		if len(times) == 2:
+			times = [int(x) for x in times]
+			if 'pm' in request_end.lower() and times[0] != 12:
+				times[0] += 12
+			time_end = datetime.time(*times)
+
+	# A class does not intersect with a given time window if:
+	# - The class ends before (lt) the window starts, or
+	# - The class starts after (gt) the window ends
+	# The following is the negation of that
+	query &= Q(end_time__gte=time_start) & Q(start_time__lte=time_end)
+
+	# run our query
+	sections = sections.filter(query)
+
+	# get only the room numbers
+	unavailable_room_ids = set(sections.values_list('room', flat=True).distinct())
+
+	# find all rooms that aren't in the list of rooms having classes at the given time
+	available_room_ids = room_ids.difference(unavailable_room_ids)
+
+	return JsonResponse(data={
+		'startTime': time_start,
+		'endTime': time_end,
+		'days': days,
+		'totalRoomCount': len(room_ids),
+		'allRoomIDs': list(room_ids),
+		'availableCount': len(available_room_ids),
+		'unavailableCount': len(unavailable_room_ids),
+		'availableRoomIDs': sorted(available_room_ids),
+		'unavailableRoomIDs': list(unavailable_room_ids),
+		'unavailableSections': list(sections.values())
+	}, safe=False)
+
+
+def find_rooms(request, school):
+
+	s = get_school(school)
+
+	return render(
+		request,
+		'rooms/room_finder.html',
 		{
 			'terms': Term.objects.filter(school=s, display=True),
 			'color' : s.color_hex

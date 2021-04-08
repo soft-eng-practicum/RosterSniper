@@ -27,11 +27,11 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'rsniper',
-		'USER': 'rsniper',
+		'NAME': 'roster_sniper',
+		'USER': 'roster_sniper',
 		'PASSWORD': '## this should be overridden in local.py ##',
 		'HOST': 'localhost',
-		'PORT': ''
+		'PORT': '5432'
 	}
 }
 
