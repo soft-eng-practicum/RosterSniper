@@ -21,6 +21,7 @@ urlpatterns = [
 	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
 
 	# My API
+	path('api/', views.api_about, name='api_about'),
 	path('api/schools/', views_api.schools),
 	path('api/<str:school>/', include([
 		path('professors/', views_api.professors),

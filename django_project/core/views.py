@@ -317,3 +317,7 @@ def unsubscribe(request, unsub_type, unsub_id):
 				'message': 'Your unsubscribe link is invalid! 😕'
 			}
 		)
+
+
+def api_about(request):
+	return render(request, 'api_about.html')
