@@ -53,27 +53,3 @@ function update_rooms() {
 		}
 	);
 }
-
-function show_all() {
-	$(this).parent().prev().children().eq(1).removeClass('limit-four');
-	$(this).parent().remove();
-}
-
-function favorite() {
-
-	let clicked = $(this);
-
-	// Toggles the classes between (font awesome) regular and solid
-	// Solid -> favorited
-	clicked.toggleClass('far fas');
-
-	if (logedin) {
-		$.get('/my-courses/', {
-			term: $("#term").val(),
-			crn: clicked.attr('id'),
-			favorite: clicked.hasClass('fas')
-		});
-	} else {
-		window.location.href = '/login/'
-	}
-}
