@@ -1,25 +1,10 @@
-{% extends "base/regular.html" %}
+{% extends "schools.html" %}
 
-{% block head %}
-	<style type="text/css">
-		.school {
-			margin-right: 1rem;
-			margin-bottom: 1rem;
-			width: 18rem;
-		}
-		.school > img:first-child {
-			height: 10rem;
-			object-fit: cover;
-		}
-	</style>
-{% endblock %}
-
-{% block content %}
+{% block school-pre %}
 <div class="jumbotron">
 	<h1 class="display-4 bold italic text-center pb-3">&ldquo;BUT I NEED THAT CLASS!&rdquo;</h1>
 
 	<p class="lead">We've been there. Your friends all signed up for classes as soon as registration opened, but you had one more Roblox to blox, one more Minecraft to craft, and one more YouTube to tube. Now you're stuck between a Saturday 7am and a MTWTF 6pm-10pm with none other than Doctor Payne.</p>
-
 
 	<h3 class="display-6 text-center italic pb-2">&ldquo;...but what if there was another way?&rdquo;</h3>
 
@@ -29,18 +14,10 @@
 
 	<a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
 </div>
-<!-- thanks to dinosaursninja#9988 for the divine assistance-->
+<!-- thanks to dinosaursninja#9988 for the divine assistance -->
+{% endblock %}
 
-<div class="d-flex align-items-stretch flex-wrap">
-{% for school in schools %}
-<div class="card school">
-	<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" alt="{{ school.name }}">
-	<div class="card-body">
-		<h5 class="card-title">{{ school.name }}</h5>
-		<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary btn-block">Add Courses</a>
-		<a href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary btn-block">Room Finder</a>
-	</div>
-</div>
-{% endfor %}
-</div>
-{% endblock content %}
+{% block school-buttons %}
+	<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary btn-block">Add Courses</a>
+	<a href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary btn-block">Room Finder</a>
+{% endblock %}

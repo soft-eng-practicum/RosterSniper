@@ -3,13 +3,13 @@
 
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/room_finder.css' %}?2">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/find_rooms.css' %}?2">
 
-	<script type="text/javascript" src="{% static 'js/room_finder.js' %}?8" defer></script>
+	<script type="text/javascript" src="{% static 'js/find_rooms.js' %}?8" defer></script>
 
 	<style>
 		:root {
-			--main-color: #{{ color }};
+			--main-color: #{{ school.color_hex }};
 		}
 	</style>
 {% endblock %}

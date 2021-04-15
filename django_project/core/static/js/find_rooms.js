@@ -41,7 +41,7 @@ function update_rooms() {
 
 	let params = searchParams.toString()
 	history.pushState(null, '', url + '?' + params);
-	$.getJSON(`/get-rooms/${url.split('/')[2]}/?${params}`).done(
+	$.getJSON(`/${url.split('/')[1]}/get-rooms/?${params}`).done(
 		response => {
             responseHTML = "";
             response['availableRoomIDs'].forEach(function(el, i) {

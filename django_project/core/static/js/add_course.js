@@ -46,7 +46,7 @@ function update_courses() {
 	let params = searchParams.toString()
 	$('#courses-col').removeClass('bear');
 	history.pushState(null, '', url + '?' + params);
-	$.getJSON(`/get-courses/${url.split('/')[2]}/?${params}`).done(
+	$.getJSON(`/${url.split('/')[1]}/get-courses/?${params}`).done(
 		response => {
 			$('#courses').html(response['courses']);
 			$('.meeting > span').tooltip({delay: {show: 1500, hide: 100}});

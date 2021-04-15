@@ -11,6 +11,8 @@ from .models import School, Term
 
 class MyView(ListAPIView):
 	http_method_names = ['get']
+
+	# https://github.com/encode/django-rest-framework/blob/master/rest_framework/pagination.py
 	pagination_class = LimitOffsetPagination
 
 

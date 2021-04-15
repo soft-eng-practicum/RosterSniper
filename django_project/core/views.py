@@ -17,9 +17,11 @@ from users.models import User
 
 
 def home(request):
-	return render(request, 'home.html', {
-		'schools': School.objects.filter(active=True),
-	})
+	return render(
+		request,
+		'home.html',
+		{ 'schools': School.objects.filter(active=True) }
+	)
 
 
 def about(request):
@@ -124,8 +126,16 @@ def add_courses(request, school):
 		'courses/add_courses.html',
 		{
 			'terms': Term.objects.filter(school=s, display=True),
-			'color' : s.color_hex
+			'school': s
 		}
+	)
+
+def add_courses_(request):
+
+	return render(
+		request,
+		'courses/add_courses_.html',
+		{ 'schools': School.objects.filter(active=True) }
 	)
 
 
@@ -163,7 +173,7 @@ def get_rooms(request, school):
 	time_end = datetime.time(23, 59)
 
 	if request_start := request.GET.get("timeStart"):
-		times = re.findall('\d+', request_start)[:2]
+		times = re.findall(r'\d+', request_start)[:2]
 		if len(times) == 2:
 			times = [int(x) for x in times]
 			if 'pm' in request_start.lower() and times[0] != 12:
@@ -171,7 +181,7 @@ def get_rooms(request, school):
 			time_start = datetime.time(*times)
 
 	if request_end := request.GET.get("timeEnd"):
-		times = re.findall('\d+', request_end)[:2]
+		times = re.findall(r'\d+', request_end)[:2]
 		if len(times) == 2:
 			times = [int(x) for x in times]
 			if 'pm' in request_end.lower() and times[0] != 12:
@@ -216,8 +226,16 @@ def find_rooms(request, school):
 		'rooms/room_finder.html',
 		{
 			'terms': Term.objects.filter(school=s, display=True),
-			'color' : s.color_hex
+			'school': s
 		}
+	)
+
+def find_rooms_(request):
+
+	return render(
+		request,
+		'rooms/room_finder_.html',
+		{ 'schools': School.objects.filter(active=True) }
 	)
 
 

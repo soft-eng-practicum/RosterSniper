@@ -70,3 +70,14 @@ main {
 .italic {
 	font-style: italic;
 }
+
+/* School cards */
+.school {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	width: 18rem;
+}
+.school > img:first-child {
+	height: 10rem;
+	object-fit: cover;
+}
