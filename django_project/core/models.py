@@ -55,6 +55,36 @@ class HasSchool(models.Model):
 		ordering = ['school']
 
 
+class SuggestedSchool(models.Model):
+
+	school_name = models.CharField(max_length=50)
+	edu_site = models.CharField(
+		max_length=100,
+		help_text="The school's main website, preferably with a .edu TLD."
+	)
+	registration_site = models.CharField(
+		max_length=200,
+		help_text="The school's publicly accessible course registration page."
+	)
+
+	notes = models.TextField(
+		max_length=1000,
+		blank=True,
+		help_text="Any additional information you'd like to add."
+	)
+
+	submitted = models.DateTimeField(
+		auto_now_add=True,
+		help_text='When the school suggestion was submitted.'
+	)
+
+	class Meta:
+		ordering = ['school_name']
+
+	def __str__(self):
+		return self.school_name
+
+
 ################################################################################
 # School-specific classes
 ################################################################################

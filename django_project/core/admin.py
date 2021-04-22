@@ -48,6 +48,17 @@ class SchoolAdmin(admin.ModelAdmin):
 	deactivate_schools.short_description = 'Deactivate selected schools'
 
 
+@admin.register(SuggestedSchool)
+class SuggestedSchoolAdmin(admin.ModelAdmin):
+	search_fields = ('school_name',)
+	list_display = ('school_name', 'edu_site', 'submitted')
+
+	# Fields with auto_now_add=True aren't editable and therefore aren't
+	# displayed in the admin by default
+	# https://stackoverflow.com/a/23660030
+	readonly_fields = ('submitted',)
+
+
 class YearFilter(admin.SimpleListFilter):
 
 	title = parameter_name = 'year'

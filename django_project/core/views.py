@@ -7,12 +7,14 @@ import re
 from django.db.models import Q
 
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, JsonResponse, Http404
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 
 from .models import School, Term, Section, Favorite
+from .forms import SuggestedSchoolForm
 from users.models import User
 
 
@@ -25,11 +27,23 @@ def home(request):
 
 
 def about(request):
+
+	if request.method == 'POST':
+		form = SuggestedSchoolForm(request.POST)
+		if form.is_valid():
+			form.save()
+			messages.info(request, 'Thank you for your submission.')
+			return redirect('about')
+
+	else:
+		form = SuggestedSchoolForm()
+
 	names = ('Ryan Cosentino', 'Shaun Mitchell')
 	temp = randint(0, 1)
 	context = {
 		'name1': names[temp],
-		'name2': names[1-temp],
+		'name2': names[1 - temp],
+		'form': form
 	}
 
 	return render(request, 'about.html', context)

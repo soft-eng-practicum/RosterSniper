@@ -61,6 +61,12 @@ main {
 	border-color: #006644 !important;
 }
 
+.btn-link-inline {
+	padding: 0;
+	display: inline;
+	vertical-align: initial;
+}
+
 .pointer:hover {
 	cursor: pointer;
 }
