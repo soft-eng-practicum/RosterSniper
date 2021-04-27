@@ -59,3 +59,21 @@ itself because we want the scrollbar to be all the way to the right. */
 	background-position: center;
 	background-size: 300px;
 }
+
+@media (max-width: 900px) {
+	#content-wrapper {
+		position: relative;
+	}
+	main.sidebar-open #courses-col-wrapper {
+		position: relative;
+	}
+	main.sidebar-open #courses-col-wrapper-cover {
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+}

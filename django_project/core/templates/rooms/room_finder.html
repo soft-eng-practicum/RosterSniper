@@ -2,11 +2,10 @@
 {% load static %}
 
 {% block head %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/room_finder.css' %}?2">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}?2">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/room_finder.css' %}?3">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}?3">
 
-	<script type="text/javascript" src="{% static 'js/room_finder.js' %}?8" defer></script>
+	<script type="text/javascript" src="{% static 'js/room_finder.js' %}?9" defer></script>
 
 	<style>
 		:root {
@@ -19,50 +18,59 @@
 
 {% block content %}
 
-<div class="d-flex h-100">
 
-<div id="sidebar-col" class="border-right">
-	<div class="h5">
-		Options
-		<button id="apply" class="btn btn-link" onclick="update_rooms()">Apply</button>
+<div id="content-wrapper" class="d-flex h-100">
+
+	<div id="sidebar-col" class="border-right">
+		<div class="h5">
+			Options
+			<button id="apply" class="btn btn-link" onclick="closeSidebar(); update_rooms()">Apply</button>
+		</div>
+
+		Term
+		<div class="input-group">
+			<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
+				<option value="{{ term.code }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
+			</select>
+		</div>
+
+		Days
+		<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Monday">M</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Tuesday">T</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Wednesday">W</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Thursday">R</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Friday">F</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Saturday">S</button>
+		</div>
+
+		Time Range
+		<div class="input-group">
+			<input id="timeStart" type="text" class="form-control form-control-sm timepicker" placeholder="Start time">
+			<input id="timeEnd" type="text" class="form-control form-control-sm timepicker" placeholder="End time">
+		</div>
 	</div>
 
-	Term
-	<div class="input-group">
-		<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
-			<option value="{{ term.code }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
-		</select>
-	</div>
+	<div id="rooms-col-wrapper" class="d-flex flex-column~/">
+		<div id="rooms-col-wrapper-cover"></div>
 
-	Days
-	<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Monday">M</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Tuesday">T</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Wednesday">W</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Thursday">R</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Friday">F</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Saturday">S</button>
-	</div>
+		<div id="sidebar-trigger-wrapper">
+			<span><a id="sidebar-trigger" href="#">Options</a></span>
+		</div>
 
-	Time Range
-	<div class="input-group">
-		<input id="timeStart" type="text" class="form-control form-control-sm timepicker" placeholder="Start time">
-		<input id="timeEnd" type="text" class="form-control form-control-sm timepicker" placeholder="End time">
+		<div id="rooms-col">
+			<div id="rooms-header" class="h5 hidden">
+				Available Rooms &mdash; <span id="available-count"></span>
+			</div>
+			<div id="rooms"></div>
+		</div>
 	</div>
-</div>
-
-<div id="rooms-col">
-	<div id="rooms-header" class="h5 hidden">
-		Available Rooms &mdash; <span id="available-count"></span>
-	</div>
-	<div id="rooms"></div>
-</div>
 
 </div>
 {% endblock content %}
