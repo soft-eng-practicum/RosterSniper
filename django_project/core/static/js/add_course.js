@@ -14,8 +14,6 @@ $(function () {
 		}
 	});
 
-	$('#sidebar-trigger').click(openSidebar);
-
 	update_courses();
 })
 

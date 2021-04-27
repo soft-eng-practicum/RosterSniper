@@ -12,8 +12,6 @@ $(function () {
 		minutesInterval: 15
 	});
 
-	$('#sidebar-trigger').click(openSidebar);
-
 	// update_rooms();
 })
 
