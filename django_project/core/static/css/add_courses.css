@@ -1,18 +1,5 @@
 /******************** Add Courses Page ********************/
 
-/********** Sidebar Column **********/
-
-#sidebar-col {
-	padding: 1rem;
-	width: 240px;
-	flex-shrink: 0;
-	background-color: #F4F4F4;
-	box-shadow: 5px 0px 10px 0px rgba(176,176,176,0.1);
-}
-#sidebar-col > div {
-	padding-bottom: 1rem;
-}
-
 #apply {
 	float: right;
 	padding: 0;
@@ -61,15 +48,14 @@ itself because we want the scrollbar to be all the way to the right. */
 	max-width: 1600px;
 }
 
+#courses-col-wrapper {
+	flex-grow: 1;
+	flex-direction: column;
+}
+
 .bear {
 	background-image: url(/static/img/bear.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 300px;
-}
-
-@media (max-width: 900px) {
-	#sidebar-col {
-		display: none;
-	}
 }

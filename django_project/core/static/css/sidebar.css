@@ -1,0 +1,61 @@
+/******************** Add Courses Page ********************/
+
+/********** Sidebar Column **********/
+
+#sidebar-col {
+	padding: 1rem;
+	width: 240px;
+	flex-shrink: 0;
+	background-color: #F4F4F4;
+	box-shadow: 5px 0px 10px 0px rgba(176,176,176,0.1);
+
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+	transition-property: left;
+}
+#sidebar-col > div {
+	padding-bottom: 1rem;
+}
+#sidebar-trigger-wrapper {
+	display: none;
+}
+
+@media (max-width: 900px) {
+	#content-wrapper {
+		position: relative;
+	}
+
+	#sidebar-col {
+		position: absolute;
+		top: 0;
+		left: -240px;
+		bottom: 0;
+		z-index: 4;
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	main.sidebar-open #sidebar-col {
+		left: 0px;
+	}
+	main.sidebar-open #courses-col-wrapper {
+		position: relative;
+	}
+	main.sidebar-open #courses-col-wrapper-cover {
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	#sidebar-trigger-wrapper {
+		display: block;
+		padding: 0.5rem 1.3rem;
+		background: #FFF;
+	}
+}

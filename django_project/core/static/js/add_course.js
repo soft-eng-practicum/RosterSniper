@@ -14,6 +14,8 @@ $(function () {
 		}
 	});
 
+	$('#sidebar-trigger').click(openSidebar);
+
 	update_courses();
 })
 
@@ -78,4 +80,13 @@ function favorite() {
 	} else {
 		window.location.href = '/login/'
 	}
+}
+
+function openSidebar() {
+	$('main').addClass('sidebar-open');
+	$('main.sidebar-open #courses-col-wrapper-cover').click(closeSidebar);
+}
+
+function closeSidebar() {
+	$('main').removeClass('sidebar-open');
 }

@@ -3,9 +3,10 @@
 
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/add_courses.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/add_courses.css' %}?8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}?11">
 
-	<script type="text/javascript" src="{% static 'js/add_course.js' %}" defer></script>
+	<script type="text/javascript" src="{% static 'js/add_course.js' %}?8" defer></script>
 
 	<style>
 		:root {
@@ -18,71 +19,79 @@
 
 {% block content %}
 
-<div class="d-flex h-100">
+<div id="content-wrapper" class="d-flex h-100">
 
-<div id="sidebar-col" class="border-right">
-	<div class="h5">
-		Options
-		<button id="apply" class="btn btn-link" onclick="update_courses()">Apply</button>
-	</div>
+	<div id="sidebar-col" class="border-right">
+		<div class="h5">
+			Options
+			<button id="apply" class="btn btn-link" onclick="closeSidebar(); update_courses()">Apply</button>
+		</div>
 
-	Term
-	<div class="input-group">
-		<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
-			<option value="{{ term.id }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
-		</select>
-	</div>
+		Term
+		<div class="input-group">
+			<select id="term" class="custom-select custom-select-sm">{% for term in terms %}
+				<option value="{{ term.id }}"{% if term.default %} selected{% endif %}>{{ term.description }}</option>{% endfor %}
+			</select>
+		</div>
 
-	Days
-	<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Monday">M</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Tuesday">T</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Wednesday">W</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Thursday">R</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Friday">F</button>
-		<button type="button" class="btn btn-sm btn-outline-primary"
-			data-placement="bottom" title="Saturday">S</button>
-	</div>
+		Days
+		<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Monday">M</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Tuesday">T</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Wednesday">W</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Thursday">R</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Friday">F</button>
+			<button type="button" class="btn btn-sm btn-outline-primary"
+				data-placement="bottom" title="Saturday">S</button>
+		</div>
 
-	Course Number Range
-	<div class="input-group">
-	<input id="crsNumMin" type="text" class="form-control form-control-sm" placeholder="Min">
-	<input id="crsNumMax" type="text" class="form-control form-control-sm" placeholder="Max">
-	</div>
+		Course Number Range
+		<div class="input-group">
+		<input id="crsNumMin" type="text" class="form-control form-control-sm" placeholder="Min">
+		<input id="crsNumMax" type="text" class="form-control form-control-sm" placeholder="Max">
+		</div>
 
-	Credit Hours
-	<div class="input-group">
-	<input id="creditHourExact" type="text" class="form-control form-control-sm" placeholder="Exact">
-	<input id="creditHourMin" type="text" class="form-control form-control-sm" placeholder="Min">
-	<input id="creditHourMax" type="text" class="form-control form-control-sm" placeholder="Max">
-	</div>
+		Credit Hours
+		<div class="input-group">
+		<input id="creditHourExact" type="text" class="form-control form-control-sm" placeholder="Exact">
+		<input id="creditHourMin" type="text" class="form-control form-control-sm" placeholder="Min">
+		<input id="creditHourMax" type="text" class="form-control form-control-sm" placeholder="Max">
+		</div>
 
-	Professor
-	<div class="input-group">
-		<input id="professor" type="text" class="form-control form-control-sm" placeholder="Professor">
-	</div>
+		Professor
+		<div class="input-group">
+			<input id="professor" type="text" class="form-control form-control-sm" placeholder="Professor">
+		</div>
 
-	Room
-	<div class="input-group">
-		<input id="room" type="text" class="form-control form-control-sm" placeholder="Room">
-	</div>
-</div>
-
-<div id="courses-col">
-	<div class="input-group mb-3">
-		<input id="q" type="text" class="form-control" placeholder="Class, subject, course number, CRN">
-		<div class="input-group-append">
-			<button class="btn btn-primary" type="button" onclick="update_courses()">Search</button>
+		Room
+		<div class="input-group">
+			<input id="room" type="text" class="form-control form-control-sm" placeholder="Room">
 		</div>
 	</div>
 
-	<div id="courses"></div>
-</div>
+	<div id="courses-col-wrapper" class="d-flex flex-column~/">
+		<div id="courses-col-wrapper-cover"></div>
+
+		<div id="sidebar-trigger-wrapper">
+			<span><a id="sidebar-trigger" href="#">Options</a></span>
+		</div>
+
+		<div id="courses-col">
+			<div class="input-group mb-3">
+				<input id="q" type="text" class="form-control" placeholder="Class, subject, course number, CRN">
+				<div class="input-group-append">
+					<button class="btn btn-primary" type="button" onclick="update_courses()">Search</button>
+				</div>
+			</div>
+		
+			<div id="courses"></div>
+		</div>
+	</div>
 
 </div>
 {% endblock content %}
