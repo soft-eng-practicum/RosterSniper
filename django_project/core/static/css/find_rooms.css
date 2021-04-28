@@ -1,18 +1,5 @@
 /******************** Add Courses Page ********************/
 
-/********** Sidebar Column **********/
-
-#sidebar-col {
-	padding: 1rem;
-	width: 240px;
-	flex-shrink: 0;
-	background-color: #F4F4F4;
-	box-shadow: 5px 0px 10px 0px rgba(176,176,176,0.1);
-}
-#sidebar-col > div {
-	padding-bottom: 1rem;
-}
-
 #apply {
 	float: right;
 	padding: 0;
@@ -22,7 +9,7 @@
 
 #days button {
 	background-color: white !important;
-	border-color: #9ea1a5 !important;
+	border-color: #ced4da !important;
 	color: #6c757d;
 }
 #days button:hover {
@@ -61,6 +48,11 @@ itself because we want the scrollbar to be all the way to the right. */
 	max-width: 1600px;
 }
 
+#rooms-col-wrapper {
+	flex-grow: 1;
+	flex-direction: column;
+}
+
 #rooms {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +70,19 @@ itself because we want the scrollbar to be all the way to the right. */
 }
 
 @media (max-width: 900px) {
-	#sidebar-col {
-		display: none;
+	#content-wrapper {
+		position: relative;
+	}
+	main.sidebar-open #rooms-col-wrapper {
+		position: relative;
+	}
+	main.sidebar-open #rooms-col-wrapper-cover {
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
 	}
 }

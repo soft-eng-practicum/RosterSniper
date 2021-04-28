@@ -12,7 +12,7 @@ $(function () {
 		minutesInterval: 15
 	});
 
-//	update_rooms();
+	// update_rooms();
 })
 
 function update_rooms() {
@@ -52,4 +52,13 @@ function update_rooms() {
             $('#rooms-header').removeClass('hidden');
 		}
 	);
+}
+
+function openSidebar() {
+	$('main').addClass('sidebar-open');
+	$('main.sidebar-open #rooms-col-wrapper-cover').click(closeSidebar);
+}
+
+function closeSidebar() {
+	$('main').removeClass('sidebar-open');
 }
