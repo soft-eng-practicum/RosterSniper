@@ -18,13 +18,11 @@
 {% block title %}Add Courses - {% endblock title %}
 
 {% block content %}
-
-<div id="content-wrapper" class="d-flex h-100">
-
+<div id="content-wrapper">
 	<div id="sidebar-col" class="border-right">
 		<div class="h5">
 			Options
-			<button id="apply" class="btn btn-link" onclick="closeSidebar(); update_courses()">Apply</button>
+			<button id="apply" class="btn btn-link" onclick="update_courses()">Apply</button>
 		</div>
 
 		Term
@@ -36,31 +34,25 @@
 
 		Days
 		<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Monday">M</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Tuesday">T</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Wednesday">W</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Thursday">R</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Friday">F</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Saturday">S</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Monday">M</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Tuesday">T</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Wednesday">W</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Thursday">R</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Friday">F</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Saturday">S</button>
 		</div>
 
 		Course Number Range
 		<div class="input-group">
-		<input id="crsNumMin" type="text" class="form-control form-control-sm" placeholder="Min">
-		<input id="crsNumMax" type="text" class="form-control form-control-sm" placeholder="Max">
+			<input id="crsNumMin" type="text" class="form-control form-control-sm" placeholder="Min">
+			<input id="crsNumMax" type="text" class="form-control form-control-sm" placeholder="Max">
 		</div>
 
 		Credit Hours
 		<div class="input-group">
-		<input id="creditHourExact" type="text" class="form-control form-control-sm" placeholder="Exact">
-		<input id="creditHourMin" type="text" class="form-control form-control-sm" placeholder="Min">
-		<input id="creditHourMax" type="text" class="form-control form-control-sm" placeholder="Max">
+			<input id="creditHourExact" type="text" class="form-control form-control-sm" placeholder="Exact">
+			<input id="creditHourMin" type="text" class="form-control form-control-sm" placeholder="Min">
+			<input id="creditHourMax" type="text" class="form-control form-control-sm" placeholder="Max">
 		</div>
 
 		Professor
@@ -74,24 +66,16 @@
 		</div>
 	</div>
 
-	<div id="courses-col-wrapper" class="d-flex flex-column~/">
-		<div id="courses-col-wrapper-cover"></div>
-
-		<div id="sidebar-trigger-wrapper">
-			<span><a id="sidebar-trigger" href="javascript:openSidebar()">Options</a></span>
-		</div>
-
-		<div id="courses-col">
-			<div class="input-group mb-3">
-				<input id="q" type="text" class="form-control" placeholder="Class, subject, course number, CRN">
-				<div class="input-group-append">
-					<button class="btn btn-primary" type="button" onclick="update_courses()">Search</button>
-				</div>
+	<div id="overlay" onclick="sidebar()"></div>
+	<div id="results-col">
+		<div class="input-group mb-3">
+			<input id="q" type="text" class="form-control" placeholder="Class, subject, course number, CRN">
+			<div class="input-group-append">
+				<button id="open-sidebar-btn" class="btn btn-primary" type="button" onclick="sidebar()"><i class="fas fa-sliders-h"></i></button>
+				<button class="btn btn-primary" type="button" onclick="update_courses()"><i class="fas fa-search"></i></button>
 			</div>
-		
-			<div id="courses"></div>
 		</div>
+		<div id="courses"></div>
 	</div>
-
 </div>
 {% endblock content %}

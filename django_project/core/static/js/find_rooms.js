@@ -33,9 +33,9 @@ function update_rooms() {
 
 	// Don't allow empty searches (term will always be present)
 	if ([...searchParams].length < 2) {
-        $('#rooms').html('');
-        $('#rooms-header').addClass('hidden');
-        history.pushState(null, '', url);
+		$('#rooms').html('');
+		$('#rooms-header').addClass('d-none');
+		history.pushState(null, '', url);
 		return;
 	} // else..
 
@@ -43,22 +43,20 @@ function update_rooms() {
 	history.pushState(null, '', url + '?' + params);
 	$.getJSON(`/${url.split('/')[1]}/get-rooms/?${params}`).done(
 		response => {
-            responseHTML = "";
-            response['availableRoomIDs'].forEach(function(el, i) {
-                responseHTML += '<p class="border-right border-bottom">' + el + '</p>';
-            });
-            $('#rooms').html(responseHTML);
-            $('#available-count').html(response['availableCount']);
-            $('#rooms-header').removeClass('hidden');
+			let responseHTML = "";
+			response['availableRoomIDs'].forEach(function(el, i) {
+				responseHTML += `<div class="card bg-light shadow-sm">${el}</div>`;
+			});
+			$('#rooms').html(responseHTML);
+
+			let r = response['availableCount']
+			$('#num-of-rooms').html(`There ${r === 1? 'is' : 'are'} ${r} available room${r === 1? '' : 's'}${r === 0? '.' : ':'}`)
 		}
 	);
-}
 
-function openSidebar() {
-	$('main').addClass('sidebar-open');
-	$('main.sidebar-open #rooms-col-wrapper-cover').click(closeSidebar);
-}
-
-function closeSidebar() {
 	$('main').removeClass('sidebar-open');
+}
+
+function sidebar() {
+	 $('main').toggleClass('sidebar-open');
 }

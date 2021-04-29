@@ -17,11 +17,11 @@
 {% block title %}Find Rooms - {% endblock title %}
 
 {% block content %}
-<div id="content-wrapper" class="d-flex h-100">
+<div id="content-wrapper">
 	<div id="sidebar-col" class="border-right">
 		<div class="h5">
 			Options
-			<button id="apply" class="btn btn-link" onclick="closeSidebar(); update_rooms()">Apply</button>
+			<button id="apply" class="btn btn-link" onclick="sidebar(); update_rooms()">Apply</button>
 		</div>
 
 		Term
@@ -33,18 +33,12 @@
 
 		Days
 		<div id="days" class="btn-group btn-group-toggle btn-block" data-toggle="button" role="group">
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Monday">M</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Tuesday">T</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Wednesday">W</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Thursday">R</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Friday">F</button>
-			<button type="button" class="btn btn-sm btn-outline-primary"
-				data-placement="bottom" title="Saturday">S</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Monday">M</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Tuesday">T</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Wednesday">W</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Thursday">R</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Friday">F</button>
+			<button type="button" class="btn btn-sm btn-outline-primary" data-placement="bottom" title="Saturday">S</button>
 		</div>
 
 		Time Range
@@ -54,19 +48,14 @@
 		</div>
 	</div>
 
-	<div id="rooms-col-wrapper" class="d-flex flex-column~/">
-		<div id="rooms-col-wrapper-cover"></div>
-
-		<div id="sidebar-trigger-wrapper">
-			<span><a id="sidebar-trigger" href="javascript:openSidebar()">Options</a></span>
+	<div id="overlay" onclick="sidebar()"></div>
+	<div id="results-col">
+		<div>
+			<button id="open-sidebar-btn" class="btn btn-primary mb-2 mr-2" type="button" onclick="sidebar()"><i class="fas fa-sliders-h"></i></button>
+			<span class="h4">Find Rooms</span>
 		</div>
-
-		<div id="rooms-col">
-			<div id="rooms-header" class="h5 hidden">
-				Available Rooms &mdash; <span id="available-count"></span>
-			</div>
-			<div id="rooms"></div>
-		</div>
+		<p id="num-of-rooms">Search for rooms that have no scheduled meetings during the specified time.</p>
+		<div id="rooms"></div>
 	</div>
 </div>
 {% endblock content %}

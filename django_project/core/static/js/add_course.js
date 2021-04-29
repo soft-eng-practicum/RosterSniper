@@ -54,6 +54,8 @@ function update_courses() {
 			$('#courses td i.fa-star').on('click', favorite);
 		}
 	);
+
+	$('main').removeClass('sidebar-open');
 }
 
 function show_all() {
@@ -80,11 +82,6 @@ function favorite() {
 	}
 }
 
-function openSidebar() {
-	$('main').addClass('sidebar-open');
-	$('main.sidebar-open #courses-col-wrapper-cover').click(closeSidebar);
-}
-
-function closeSidebar() {
-	$('main').removeClass('sidebar-open');
+function sidebar() {
+	 $('main').toggleClass('sidebar-open');
 }

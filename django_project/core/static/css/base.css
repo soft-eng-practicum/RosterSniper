@@ -15,8 +15,8 @@ body {
 	padding-top: 0.1px; /* Prevent collapsing margin */
 }
 main {
-	margin-top: 58px;
-	height: calc(100% - 57.9px);
+	margin-top: 56px;
+	height: calc(100% - 55.9px);
 	overflow-x: auto;
 }
 
