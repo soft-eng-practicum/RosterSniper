@@ -11,16 +11,15 @@
 
 {% block content %}
 <h2 class="mb-3">Your Courses <span class="badge badge-secondary">{{ favorites|length }}</span></h2>
-{% if favorites %}
 
-{% regroup favorites by section.school as favorites_school %}
-{% for school in favorites_school %}
-<h4 class="mb-3">{{ school.grouper.name }}</h4>
+{% regroup favorites by section.school as favorites_by_school %}
+{% for school, favorites in favorites_by_school %}
+	<h4 class="mb-3">{{ school.name }}</h4>
 
-{% regroup school.list by section.term as favorites_term %}
-{% for term in favorites_term %}
-	<div class="card courses-card" data-term-id="{{ term.grouper.id }}">
-		<div class="card-header">{{ term.grouper }}</div>
+	{% regroup favorites by section.term as favorites_by_term %}
+	{% for term, favorites in favorites_by_term %}
+	<div class="card courses-card" data-term-id="{{ term.id }}">
+		<div class="card-header">{{ term }}</div>
 		<table class="table">
 			<thead><tr>
 				<th>Course Code</th>
@@ -31,7 +30,7 @@
 				<th class="section-options">Options</th>
 			</tr></thead>
 			<tbody>
-				{% for favorite in term.list %}{% with section=favorite.section %}{% spaceless %}
+				{% for favorite in favorites %}{% with section=favorite.section %}{% spaceless %}
 				<tr id="{{ section.crn }}">
 					<td class="section">{{ section.get_code }}</td>
 					<td class="title">{{ section.section_title }}</td>
@@ -47,9 +46,8 @@
 			</tbody>
 		</table>
 	</div>
+	{% endfor %}
+{% empty %}
+	Looks like you aren't watching any courses. Head on over to the <a href="{% url 'home' %}">home</a> page, select a school, and start searching! &#128578;
 {% endfor %}
-{% endfor %}
-{% else %}
-Looks like you aren't watching any courses. Head on over to the <a href="{% url 'home' %}">home</a> page, select a school, and start searching! &#128578;
-{% endif %}
 {% endblock content %}
