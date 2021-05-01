@@ -1,6 +1,11 @@
 from django.http import JsonResponse, Http404
+from django.shortcuts import render
 
-from .models import School, Professor, Term, Subject, Course, Section
+from ..models import School, Professor, Term, Subject, Course, Section
+
+
+def api_about(request):
+	return render(request, 'api_about.html')
 
 
 def schools(request):

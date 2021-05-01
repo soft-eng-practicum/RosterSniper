@@ -1,4 +1,3 @@
-from random import randint
 from functools import reduce
 import datetime
 import operator
@@ -7,46 +6,11 @@ import re
 from django.db.models import Q
 
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, JsonResponse, Http404
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.template.loader import render_to_string
 
-from .models import School, Term, Section, Favorite
-from .forms import SuggestedSchoolForm
-from users.models import User
-
-
-def home(request):
-	return render(
-		request,
-		'home.html',
-		{ 'schools': School.objects.filter(active=True) }
-	)
-
-
-def about(request):
-
-	if request.method == 'POST':
-		form = SuggestedSchoolForm(request.POST)
-		if form.is_valid():
-			form.save()
-			messages.info(request, 'Thank you for your submission.')
-			return redirect('about')
-
-	else:
-		form = SuggestedSchoolForm()
-
-	names = ('Ryan Cosentino', 'Shaun Mitchell')
-	temp = randint(0, 1)
-	context = {
-		'name1': names[temp],
-		'name2': names[1 - temp],
-		'form': form
-	}
-
-	return render(request, 'about.html', context)
+from core.models import School, Term, Section, Favorite
 
 
 # Helper function, not a view
@@ -88,7 +52,7 @@ def get_courses(request, school):
 				| Q(section_num__exact=term)
 				| Q(section_title__icontains=term)
 				| Q(course__number__exact=term)
-				| Q(course__subject__pk__iexact=term)
+				| Q(course__subject__short_title__iexact=term)
 			)
 
 	if days := request.GET.get('days'):
@@ -284,54 +248,3 @@ def my_courses(request):
 			'courses/my_courses.html',
 			{'favorites': request.user.favorite_set.all()}
 		)
-
-
-def unsubscribe(request, unsub_type, unsub_id):
-	"""
-	Unsubscribe requests contain an unsub_type and an unsub_id. The unsub_id is
-	used to safely allow users to unsubscribe without logging in by clicking a
-	link sent within an email, accessing a URL unique to the particular
-	unsubscribe request. Because there are 2^122 different version 4 UUIDs it is
-	unlikely that someone would guess a correct one or even want to.
-	"""
-
-	try:
-		if unsub_type == 'favorite':
-			unsub_object = Favorite.objects.get(email_unsub_id=unsub_id)
-			text = f'emails related to {unsub_object.section}'
-
-		elif unsub_type == 'all':
-			unsub_object = User.objects.get(email_unsub_id=unsub_id)
-			text = 'all emails'
-
-		else:
-			raise ObjectDoesNotExist()
-
-		# Ordinarily unsubscribe links sent in emails will not have the
-		# 'subscribe' parameter in the query string so the following will
-		# evaluate to False.
-		#
-		# This is meant to be used by a button on the unsubscribe page that lets
-		# users re subscribe by making a GET request in the background. It
-		# doesn't actually matter what the argument is, as long as it exists.
-		unsub_object.email_notify = request.GET.get('subscribe') is not None
-		unsub_object.save()
-
-		if request.is_ajax():
-			return HttpResponse('')
-		else:
-			return render(request, 'unsubscribe.html', { 'text': text })
-
-	except ObjectDoesNotExist:
-		return render(
-			request,
-			'base/message.html',
-			{
-				'title': 'Unsubscribe Error',
-				'message': 'Your unsubscribe link is invalid! 😕'
-			}
-		)
-
-
-def api_about(request):
-	return render(request, 'api_about.html')

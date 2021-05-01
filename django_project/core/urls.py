@@ -1,43 +1,43 @@
 from django.urls import path, include
-from . import views, views_api, views_drf
+from core.views import main_views, api_views, other_views
 
 
 urlpatterns = [
-	path('', views.home, name='home'),
-	path('about/', views.about, name='about'),
+	path('', other_views.home, name='home'),
+	path('about/', other_views.about, name='about'),
 
 	path('<str:school>/', include([
-		path('get-courses/', views.get_courses, name='get_courses'),
-		path('add-courses/', views.add_courses, name='add_courses'),
+		path('get-courses/', main_views.get_courses, name='get_courses'),
+		path('add-courses/', main_views.add_courses, name='add_courses'),
 
-		path('get-rooms/', views.get_rooms, name='get_rooms'),
-		path('find-rooms/', views.find_rooms, name='find_rooms'),
+		path('get-rooms/', main_views.get_rooms, name='get_rooms'),
+		path('find-rooms/', main_views.find_rooms, name='find_rooms'),
 	])),
 
-	path('add-courses/', views.add_courses_, name='add_courses_'),
-	path('find-rooms/', views.find_rooms_, name='find_rooms_'),
+	path('add-courses/', main_views.add_courses_, name='add_courses_'),
+	path('find-rooms/', main_views.find_rooms_, name='find_rooms_'),
 
-	path('my-courses/', views.my_courses, name='my_courses'),
-	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', views.unsubscribe, name='unsubscribe'),
+	path('my-courses/', main_views.my_courses, name='my_courses'),
+	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', other_views.unsubscribe, name='unsubscribe'),
 
 	# My API
-	path('api/', views.api_about, name='api_about'),
-	path('api/schools/', views_api.schools),
+	path('api/', api_views.api_about, name='api_about'),
+	path('api/schools/', api_views.schools),
 	path('api/<str:school>/', include([
-		path('professors/', views_api.professors),
-		path('terms/', views_api.terms),
-		path('subjects/', views_api.subjects),
-		path('courses/', views_api.courses),
-		path('sections/', views_api.sections),
+		path('professors/', api_views.professors),
+		path('terms/', api_views.terms),
+		path('subjects/', api_views.subjects),
+		path('courses/', api_views.courses),
+		path('sections/', api_views.sections),
 	])),
 
 	# DRF
-	path('drf/schools/', views_drf.Schools.as_view()),
-	path('drf/<str:school>/', include([
-		path('professors/', views_drf.Professors.as_view()),
-		path('terms/', views_drf.Terms.as_view()),
-		path('subjects/', views_drf.Subjects.as_view()),
-		path('courses/', views_drf.Courses.as_view()),
-		path('sections/', views_drf.Sections.as_view()),
-	]))
+	# path('drf/schools/', drf_views.Schools.as_view()),
+	# path('drf/<str:school>/', include([
+	# 	path('professors/', drf_views.Professors.as_view()),
+	# 	path('terms/', drf_views.Terms.as_view()),
+	# 	path('subjects/', drf_views.Subjects.as_view()),
+	# 	path('courses/', drf_views.Courses.as_view()),
+	# 	path('sections/', drf_views.Sections.as_view()),
+	# ]))
 ]
