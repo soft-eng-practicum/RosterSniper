@@ -33,7 +33,7 @@ def get_courses(request, school):
 		sections = (
 			Section.objects
 			.order_by('course', 'section_title', 'section_num')
-			.select_related('professor', 'course')
+			.select_related('professor', 'course', 'course__subject')
 			.filter(school=s, term=term)
 		)
 	else:
@@ -103,10 +103,12 @@ def add_courses(request, school):
 		request,
 		'courses/add_courses.html',
 		{
-			'terms': Term.objects.filter(school=s, display=True),
+			'terms': Term.objects.filter(school=s, display=True)
+				.values('id', 'default', 'description'),
 			'school': s
 		}
 	)
+
 
 def add_courses_(request):
 
@@ -208,6 +210,7 @@ def find_rooms(request, school):
 		}
 	)
 
+
 def find_rooms_(request):
 
 	return render(
@@ -246,5 +249,11 @@ def my_courses(request):
 		return render(
 			request,
 			'courses/my_courses.html',
-			{'favorites': request.user.favorite_set.all()}
+			{
+				'favorites': request.user.favorite_set.all().select_related(
+					'section', 'section__school',
+					'section__term', 'section__professor',
+					'section__course', 'section__course__subject'
+				)
+			}
 		)

@@ -120,7 +120,7 @@ class Term(HasSchool):
 		help_text="Whether this term is displayed on the add-courses page")
 
 	class Meta:
-		ordering = ['school', '-code_std']
+		ordering = ['-code_std']
 
 	def __str__(self):
 		return self.description
@@ -132,7 +132,7 @@ class Subject(HasSchool):
 	long_title = models.CharField(max_length=100, help_text='E.g. Information Technology')
 
 	class Meta:
-		ordering = ['school', 'short_title']
+		ordering = ['short_title']
 
 	@property
 	def full_str(self):
@@ -309,7 +309,7 @@ class Favorite(models.Model):
 
 	class Meta:
 		unique_together = ['user', 'section']
-		ordering = ['section']
+		ordering = ['section__school', 'section']
 
 	def __str__(self):
 		return f'{self.user.email} watching {self.section}'

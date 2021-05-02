@@ -14,7 +14,10 @@ def home(request):
 	return render(
 		request,
 		'home.html',
-		{ 'schools': School.objects.filter(active=True) }
+		{
+			'schools': School.objects.filter(active=True)
+				.values('short_name', 'name')
+		}
 	)
 
 
