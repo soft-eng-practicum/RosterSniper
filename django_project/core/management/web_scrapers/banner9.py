@@ -192,7 +192,9 @@ class Scrapper:
 				continue
 
 			section.section_num = s["sequenceNumber"]
-			section.section_title = s["courseTitle"]
+
+			# ' Digital Media', 'Digital Media.' etc.
+			section.section_title = s["courseTitle"].strip(" .")
 
 			if (credit_hours := s["creditHours"]) is None:
 				section.credit_hours = s["creditHourLow"]
