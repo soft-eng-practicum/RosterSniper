@@ -25,7 +25,7 @@
 						<td colspan="6">{{ title }}</td>
 					</tr>
 				{% endif %}
-				{% for s in sections %}{% with crn=section.crn %}
+				{% for s in sections %}{% with crn=s.crn %}
 				<tr>
 					<td class="section">{{ s.section_num }}</td>
 					<td class="crn">{{ crn }}</td>
