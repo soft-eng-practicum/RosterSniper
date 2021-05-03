@@ -38,5 +38,33 @@ DATABASES = {
 # Email
 EMAIL_HOST = '127.0.0.1'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+# EMAIL_HOST_{USER,PASSWORD} go in local.py
+
+LOGGING = {
+	'version': 1,
+	'disable_existing_loggers': False,
+	'formatters': {
+		'standard': {
+			'format': '%(asctime)s %(levelname)s %(name)s %(message)s'
+		},
+	},
+	'handlers': {
+		'file_error': {
+			'level': 'WARNING',
+			'class': 'logging.FileHandler',
+			'filename': 'logs/errors.log',
+			'formatter': 'standard'
+		},
+		# django/utils/log.py
+		'mail_admins': {
+			'level': 'ERROR',
+			'class': 'django.utils.log.AdminEmailHandler'
+		}
+	},
+	'loggers': {
+		'django': {
+			'handlers': ['file_error', 'mail_admins'],
+			'level': 'WARNING',
+		},
+	}
+}

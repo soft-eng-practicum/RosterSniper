@@ -61,7 +61,7 @@ AUTH_PASSWORD_VALIDATORS = [
 	{'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
@@ -94,6 +94,9 @@ LOGIN_REDIRECT_URL = 'home'
 # Production/development specific settings go in their respective setting modules
 # https://docs.djangoproject.com/en/3.0/topics/email/
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
+
+# DEFAULT_FROM_EMAIL - Default email address that regular emails are sent from
+# SERVER_EMAIL       - Email address that error messages are sent from
+DEFAULT_FROM_EMAIL = SERVER_EMAIL = 'RosterSniper <no-reply@rostersniper.com>'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
