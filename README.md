@@ -29,3 +29,4 @@ Our developer documentation can be found [here](docs) and a list of contributors
 - **Source Code** https://github.com/GGC-SD/RosterSniper.git
 - **Trello** https://trello.com/b/3nMqyVd0/roster-sniper
 1. Justin Sandman, Lead Developer and Team Manager
+2. Ian Dowlatkhah, Data Modeler and Client Liaison
