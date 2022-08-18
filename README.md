@@ -24,3 +24,8 @@ The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome, but they a
 The development web server is run using the command `python manage.py runserver`.
 
 Our developer documentation can be found [here](docs) and a list of contributors can be found [here](Contributors.md).
+
+# The Musketeers
+- **Source Code** https://github.com/GGC-SD/RosterSniper.git
+- **Trello** https://trello.com/b/3nMqyVd0/roster-sniper
+1. Justin Sandman, Lead Developer and Team Manager
