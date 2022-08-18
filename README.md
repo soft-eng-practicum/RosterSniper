@@ -31,3 +31,4 @@ Our developer documentation can be found [here](docs) and a list of contributors
 1. Justin Sandman, Lead Developer and Team Manager
 2. Ian Dowlatkhah, Data Modeler and Client Liaison
 3. Chenanniah Mac-Cephas, Code Aarchitecture and Testing Lead
+4. Joseph "Alex" Kolarik, UI/UX design and Documentation Lead
