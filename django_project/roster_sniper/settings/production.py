@@ -3,7 +3,7 @@ The production settings file is meant to be used in production. Some settings,
 like SECRET_KEY and the database password, are not included for security
 reasons. To specify them, see local_example.py for instructions.
 
-Checklist:  https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+Checklist:  https://docs.djangoproject.com/en/stable/howto/deployment/checklist/
 """
 
 from .base import *
@@ -23,7 +23,7 @@ CSRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
 
-# Database https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# Database https://docs.djangoproject.com/en/stable/ref/settings/#databases
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -52,7 +52,7 @@ LOGGING = {
 		'file_error': {
 			'level': 'WARNING',
 			'class': 'logging.FileHandler',
-			'filename': 'logs/errors.log',
+			'filename': '../../logs/errors.log',
 			'formatter': 'standard'
 		},
 		# django/utils/log.py

@@ -23,9 +23,6 @@ def get_school(school):
 
 def get_courses(request, school):
 
-	if not request.is_ajax():
-		raise Http404()
-
 	s = get_school(school)
 
 	if term := request.GET.get('term'):
@@ -50,7 +47,10 @@ def get_courses(request, school):
 			query &= (
 				Q(crn__exact=term)
 				| Q(section_num__exact=term)
-				| Q(section_title__icontains=term)
+				| (
+					Q(section_title__contains=term)
+					if term.isupper() else Q(section_title__icontains=term)
+				)
 				| Q(course__number__exact=term)
 				| Q(course__subject__short_title__iexact=term)
 			)
@@ -120,10 +120,6 @@ def add_courses_(request):
 
 
 def get_rooms(request, school):
-
-	# TODO: uncomment
-	# if not request.is_ajax():
-	# 	raise Http404()
 
 	s = get_school(school)
 
@@ -226,7 +222,7 @@ def my_courses(request):
 	enable / disable email notifications. """
 
 	if (
-		request.is_ajax()
+		request.method == 'GET'
 		and (term := request.GET.get('term'))
 		and (crn := request.GET.get('crn'))
 	):

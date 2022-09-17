@@ -2,7 +2,6 @@ from random import randint
 
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from core.forms import SuggestedSchoolForm
@@ -15,8 +14,7 @@ def home(request):
 		request,
 		'home.html',
 		{
-			'schools': School.objects.filter(active=True)
-				.values('short_name', 'name')
+			'schools': School.objects.filter(active=True).values('short_name', 'name')
 		}
 	)
 
@@ -75,10 +73,7 @@ def unsubscribe(request, unsub_type, unsub_id):
 		unsub_object.email_notify = request.GET.get('subscribe') is not None
 		unsub_object.save()
 
-		if request.is_ajax():
-			return HttpResponse('')
-		else:
-			return render(request, 'unsubscribe.html', { 'text': text })
+		return render(request, 'unsubscribe.html', {'text': text})
 
 	except ObjectDoesNotExist:
 		return render(

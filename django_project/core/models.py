@@ -204,8 +204,7 @@ class Section(HasSchool):
 	available = models.SmallIntegerField()  # Number of available seats
 	capacity  = models.SmallIntegerField()  # Total number of seats
 
-	# docs.djangoproject.com/en/dev/
-	# ref/models/fields/#django.db.models.ManyToManyField.through
+	# https://docs.djangoproject.com/en/stable/ref/models/fields/#django.db.models.ManyToManyField.through
 	watchers = models.ManyToManyField(User, through='Favorite')
 
 	class Meta:

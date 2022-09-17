@@ -16,3 +16,6 @@ __pycache__/
 
 # Keep any folder with a .keep file
 !.keep
+
+# IDEs and Editors
+.idea/

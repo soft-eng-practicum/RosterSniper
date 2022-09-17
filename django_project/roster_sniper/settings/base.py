@@ -2,10 +2,10 @@
 The base settings file is meant to be imported by the dev/prod settings files.
 """
 
-import os
+from pathlib import Path
 
-# Not an actual setting, only used to build paths eg os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Application definition
 INSTALLED_APPS = [
@@ -20,7 +20,7 @@ INSTALLED_APPS = [
 	'django.contrib.contenttypes',
 	'django.contrib.sessions',
 	'django.contrib.messages',
-	'django.contrib.staticfiles'
+	'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -35,24 +35,26 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'roster_sniper.urls'
 
-TEMPLATES = [{
-	'BACKEND': 'django.template.backends.django.DjangoTemplates',
-	'DIRS': [],
-	'APP_DIRS': True,
-	'OPTIONS': {
-		'context_processors': [
-			'django.template.context_processors.debug',
-			'django.template.context_processors.request',
-			'django.contrib.auth.context_processors.auth',
-			'django.contrib.messages.context_processors.messages',
-		]
+TEMPLATES = [
+	{
+		'BACKEND': 'django.template.backends.django.DjangoTemplates',
+		'DIRS': [],
+		'APP_DIRS': True,
+		'OPTIONS': {
+			'context_processors': [
+				'django.template.context_processors.debug',
+				'django.template.context_processors.request',
+				'django.contrib.auth.context_processors.auth',
+				'django.contrib.messages.context_processors.messages',
+			],
+		},
 	},
-}]
+]
 
 WSGI_APPLICATION = 'roster_sniper.wsgi.application'
 
 # Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/stable/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
 	{'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -65,19 +67,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
+# https://docs.djangoproject.com/en/stable/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
-USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
+# https://docs.djangoproject.com/en/stable/howto/static-files/
 
 # Where collectstatic files are placed
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = BASE_DIR / 'static'
 # URL that static files are served from
 STATIC_URL = '/static/'
 
@@ -92,7 +93,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 # Email
 # Production/development specific settings go in their respective setting modules
-# https://docs.djangoproject.com/en/3.0/topics/email/
+# https://docs.djangoproject.com/en/stable/topics/email/
 EMAIL_USE_TLS = True
 
 # DEFAULT_FROM_EMAIL - Default email address that regular emails are sent from
