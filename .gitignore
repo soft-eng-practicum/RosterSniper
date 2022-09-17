@@ -19,3 +19,6 @@ __pycache__/
 
 # IDEs and Editors
 .idea/
+
+# Venv
+venv/
