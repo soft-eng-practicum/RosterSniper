@@ -9,6 +9,7 @@ from users.models import User
 # School related classes
 ################################################################################
 
+
 class WebScraper(models.Model):
 
 	# This is also used for scrapper's filename
@@ -84,10 +85,10 @@ class SuggestedSchool(models.Model):
 	def __str__(self):
 		return self.school_name
 
-
 ################################################################################
 # School-specific classes
 ################################################################################
+
 
 class Professor(HasSchool):
 
@@ -235,21 +236,33 @@ class Section(HasSchool):
 	def set_enrollment(self, enrolled, capacity):
 
 		available = capacity - enrolled
-		favorites = self.favorite_set.filter(email_notify=True,
-			user__email_confirmed=True, user__email_notify=True)
 
-		# If there's a new opening or new closing
-		#
-		# We make sure favorites is non-empty first because if it's empty, the
-		# section might not exist in the DB, and self.available might be None,
-		# and None <= 0 causes an error.
-		if favorites and (
-			(self.available <= 0 and available > 0) or
-			(self.available > 0 and available <= 0)
+		'''
+		The following updates all watchers of availability changes.
+
+		First it checks if the section is in the database (i.e. don't run if
+		the section is just now being created).
+		https://docs.djangoproject.com/en/stable/ref/models/instances/#state
+
+		Then it checks if there's a new opening or new closing.
+
+		Finally it checks if there are users actually watching the section.
+		'''
+		if (
+			not self._state.adding
+		) and (
+			(self.available <= 0 < available) or
+			(self.available > 0 >= available)
+		) and (
+			favorites := self.favorite_set.filter(
+				email_notify=True,
+				user__email_confirmed=True,
+				user__email_notify=True
+			)
 		):
 
 			# Most of these could be calculated in the template but because
-			# there are two templates it is done here so it doesn't need to be
+			# there are two templates it is done here, so it doesn't need to be
 			# done twice.
 			#
 			# Also, the 'status' condition might look unintuitive but basically
@@ -261,6 +274,7 @@ class Section(HasSchool):
 				'professor': self.get_prof_name(),
 				'crn': self.crn
 			}
+
 			for favorite in favorites:
 
 				context['unsub_fav'] = full_reverse(
@@ -275,11 +289,9 @@ class Section(HasSchool):
 					context=context
 				)
 
-		# This condition is more general than the one above
-		if self.available != available:
-			self.enrolled = enrolled
-			self.available = available
-			self.capacity = capacity
+		self.enrolled = enrolled
+		self.available = available
+		self.capacity = capacity
 
 	def get_log_str(self):
 		return (
@@ -293,6 +305,7 @@ class Section(HasSchool):
 ################################################################################
 # Other
 ################################################################################
+
 
 class Favorite(models.Model):
 	""" Manually specified intermediary table for the many-to-many User-Section

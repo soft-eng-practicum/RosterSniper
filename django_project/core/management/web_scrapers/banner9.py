@@ -61,9 +61,9 @@ class Scrapper:
 
 	def update_terms(self):
 
-		# Get a list of the 100 most recent terms. The response looks like
+		# Get a list of the 50 most recent terms. The response looks like
 		# [{'code': '202105', 'description': 'Summer 2021'}, ...]
-		r = requests.get(self.url + "courseSearch/getTerms?offset=1&max=100", timeout=5).json()
+		r = requests.get(self.url + "courseSearch/getTerms?offset=1&max=50", timeout=5).json()
 
 		for json_term in r:
 
@@ -277,19 +277,21 @@ class Scrapper:
 				self.log(f"[{term}] Updated {section}")
 
 	def update_section_seats(self, section):
-
 		""" Example response:
 
-		<span class="status-bold">Enrollment Actual:</span> <span dir="ltr"> 39 </span><br/>
-		<span class="status-bold">Enrollment Maximum:</span> <span dir="ltr"> 40 </span><br/>
+		<span class="status-bold">Enrollment Actual:</span> <span
+				dir="ltr">42</span><br/>
+		<span class="status-bold">Enrollment Maximum:</span> <span
+				dir="ltr">40</span><br/>
 		"""
-		r = requests.get(
-			self.url + f"searchResults/getEnrollmentInfo?term={section.term_id}&courseReferenceNumber={section.crn}"
+		r = requests.post(
+			self.url + f"searchResults/getEnrollmentInfo",
+			data={"term": section.term.code, "courseReferenceNumber": section.crn},
 		)
 
 		# Regular expressions are a lot faster than BeautifulSoup,
 		# and this regex is 4x faster than "\d+" (from my tests)
-		matches = re.findall('<span dir="ltr"> (.*?) </span>', r.text)
+		matches = re.findall('dir="ltr">(.*?)</span>', r.text)
 
 		if len(matches) == 2:
 			# enrolled, capacity

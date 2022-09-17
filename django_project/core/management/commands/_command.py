@@ -4,6 +4,7 @@ from django.core.management.base import BaseCommand
 
 from core.models import School
 
+
 class MyBaseCommand(BaseCommand):
 
 	def log(self, msg):
