@@ -9,9 +9,11 @@ class MyBaseCommand(BaseCommand):
 
 	def log(self, msg):
 		self.stdout.write(msg)
+		self.stdout.flush()
 
 	def err(self, msg):
 		self.stdout.write(self.style.ERROR(msg))
+		self.stdout.flush()
 
 	def add_arguments(self, parser):
 

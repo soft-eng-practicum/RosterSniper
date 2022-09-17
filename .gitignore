@@ -8,7 +8,7 @@ __pycache__/
 .mypy_cache/
 
 # Django
-/django_project/db.sqlite3
+db.sqlite3
 /django_project/static/
 /django_project/roster_sniper/settings/local.py
 /django_project/@ emails/

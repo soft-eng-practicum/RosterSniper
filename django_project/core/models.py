@@ -220,7 +220,7 @@ class Section(HasSchool):
 
 	def get_meeting(self):
 		if self.days:
-			meeting = f"{self.days}, {self.start_time.strftime('%-I:%M')} - {self.end_time.strftime('%-I:%M %p')}"
+			meeting = f"{self.days}, {self.start_time.strftime('%#I:%M')} - {self.end_time.strftime('%#I:%M %p')}"
 			if self.room:
 				meeting += f", {self.room}"
 			return meeting
@@ -228,7 +228,7 @@ class Section(HasSchool):
 			return "NA"
 
 	def get_meeting_full(self):
-		return f"(Primary) {', '.join(Section.days_map[day] for day in self.days)} at {self.start_time.strftime('%-I:%M %p')} - {self.end_time.strftime('%-I:%M %p')}" if self.days else "NA"
+		return f"(Primary) {', '.join(Section.days_map[day] for day in self.days)} at {self.start_time.strftime('%#I:%M %p')} - {self.end_time.strftime('%#I:%M %p')}" if self.days else "NA"
 
 	def get_enrollment(self):
 		return f"{self.enrolled}/{self.capacity}"
