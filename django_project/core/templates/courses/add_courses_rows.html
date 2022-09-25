@@ -8,38 +8,45 @@
 		<div>{{ course.get_credit_hours }}</div>
 	</div>
 
-	<table class="table">
-		<thead><tr>
-			<th>Section</th>
-			<th>CRN</th>
-			<th>Meeting</th>
-			<th>Professor</th>
-			<th>Seats</th>
-			<th class="section-options">Track</th>
-		</tr></thead>
-		<tbody>
-			{% regroup sections by section_title as sections_by_title %}
-			{% for title, sections in sections_by_title %}
-				{% if not forloop.first or title != course.title %}
-					<tr class="section-title">
-						<td colspan="6">{{ title }}</td>
+	<button id="tog-course" type="button">Hide/Show Sections
+		<table class="table">
+			<thead><tr>
+				<th>Section</th>
+				<th>CRN</th>
+				<th>Meeting</th>
+				<th>Professor</th>
+				<th>Seats</th>
+				<th class="section-options">Track</th>
+			</tr></thead>
+			<tbody>
+				{% regroup sections by section_title as sections_by_title %}
+				{% for title, sections in sections_by_title %}
+					{% if not forloop.first or title != course.title %}
+						<tr class="section-title">
+							<td colspan="6">{{ title }}</td>
+						</tr>
+					{% endif %}
+					{% for s in sections %}{% with crn=s.crn %}
+					<tr>
+						<td class="section">{{ s.section_num }}</td>
+						<td class="crn">{{ crn }}</td>
+						<td class="meeting"><span title="{{ s.get_meeting_full }}">{{ s.get_meeting }}</span></td>
+						<td class="professor">{{ s.get_prof_name }}</td>
+						<td class="seats">{{ s.enrolled }}/{{ s.capacity }}</td>
+						<td class="section-options favorite">
+							<i id="{{ crn }}" title="Track?" class="{% if crn in crns %}fas{% else %}far{% endif %} fa-star pointer"></i>
+						</td>
 					</tr>
-				{% endif %}
-				{% for s in sections %}{% with crn=s.crn %}
-				<tr>
-					<td class="section">{{ s.section_num }}</td>
-					<td class="crn">{{ crn }}</td>
-					<td class="meeting"><span title="{{ s.get_meeting_full }}">{{ s.get_meeting }}</span></td>
-					<td class="professor">{{ s.get_prof_name }}</td>
-					<td class="seats">{{ s.enrolled }}/{{ s.capacity }}</td>
-					<td class="section-options favorite">
-						<i id="{{ crn }}" title="Track?" class="{% if crn in crns %}fas{% else %}far{% endif %} fa-star pointer"></i>
-					</td>
-				</tr>
-				{% endwith %}{% endfor %}
-			{% endfor %}
-		</tbody>
-	</table>
+					{% endwith %}{% endfor %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</button>
+	<script>
+		$("button#tog-course").click(function() {
+			    $(this).children().toggle();
+		});
+	</script>
 </div>
 {% endfor %}
 {% endspaceless %}
