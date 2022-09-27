@@ -13,6 +13,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  private_key: ${{ secrets.PRIVATE_KEY }}
+  public_key: ${{ secrets.PUBLIC_KEY }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -28,8 +32,8 @@ jobs:
       - name: Setup SSH Key
         run: |
           mkdir ~/.ssh/
-          echo ${{ secrets.PRIVATE_KEY }} ~/.ssh/id_rsa
-          echo ${{ secrets.PUBLIC_KEY }} ~/.ssh/id_rsa.pub
+          echo "$private_key" > ~/.ssh/id_rsa
+          echo "$public_key" > ~/.ssh/id_rsa.pub
           chmod -R 600 ~/.ssh/
 
       - name: Update development server
