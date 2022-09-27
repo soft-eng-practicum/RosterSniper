@@ -25,11 +25,12 @@ jobs:
 #       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #       - uses: actions/checkout@v3
 
+      - name: Setup SSH Key
+        run: |
+          mkdir ~/.ssh/
+          echo ${{ secrets.PRIVATE_KEY }} ~/.ssh/id_rsa
+          echo ${{ secrets.PUBLIC_KEY }} ~/.ssh/id_rsa.pub
+          chmod -R 600 ~/.ssh/
+
       - name: Update development server
-        uses: garygrossgarten/github-action-ssh@v0.6.3
-        with:
-          command: git -C /var/www/dev.rostersniper.com/RosterSniper/ pull
-          host: rostersniper.com
-          port: 774
-          username: guy
-          privateKey: ${{ secrets.PRIVATE_KEY }}
+        run: ssh guy@rostersniper.com -p 774 'git -C /var/www/dev.rostersniper.com/RosterSniper/ pull'
