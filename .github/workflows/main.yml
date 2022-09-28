@@ -35,4 +35,5 @@ jobs:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.PRIVATE_KEY }}
+          fingerprint: ${{ secrets.HOST_FINGERPRINT_RSA }}
           script: git -C /var/www/dev.rostersniper.com/RosterSniper/ pull
