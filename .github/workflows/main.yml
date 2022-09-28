@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "development" branch
+  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "development" ]
   pull_request:
@@ -16,11 +16,12 @@ on:
 env:
   private_key: ${{ secrets.PRIVATE_KEY }}
   public_key: ${{ secrets.PUBLIC_KEY }}
+  host_fingerprint: ${{ secrets.HOST_FINGERPRINT }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
-  deploy:
+  # This workflow contains a single job called "build"
+  build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,10 +31,11 @@ jobs:
 #       - uses: actions/checkout@v3
 
       - name: Update development server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          fingerprint: ${{ secrets.HOST_FINGERPRINT }}
-          script: git -C /var/www/dev.rostersniper.com/RosterSniper/ pull
+        run: |
+          echo "${private_key}" > id_rsa
+          echo "${public_key}" > id_rsa.pub
+          echo "${host_fingerprint}" > known_hosts
+          chmod 600 id_rsa
+          chmod 600 id_rsa.pub
+          chmod 600 known_hosts
+          ssh guy@rostersniper.com -o "UserKnownHostsFile=./known_hosts" -i id_rsa -p 774 'git -C /var/www/dev.rostersniper.com/RosterSniper/ pull'
