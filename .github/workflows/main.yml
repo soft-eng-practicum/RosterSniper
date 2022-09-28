@@ -6,17 +6,12 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "development" ]
+    branches: [ "development", "tm_dev" ]
   pull_request:
-    branches: [ "development" ]
+    branches: [ "development", "tm_dev" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-env:
-  private_key: ${{ secrets.PRIVATE_KEY }}
-  public_key: ${{ secrets.PUBLIC_KEY }}
-  host_fingerprint: ${{ secrets.HOST_FINGERPRINT }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,6 +26,14 @@ jobs:
 #       - uses: actions/checkout@v3
 
       - name: Update development server
+        env:
+          private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          public_key: ${{ secrets.SSH_PUBLIC_KEY }}
+          host_fingerprint: ${{ secrets.SSH_HOST_FINGERPRINT }}
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          user: ${{ secrets.SSH_USER }}
+          cmd: "git -C /var/www/dev.rostersniper.com/RosterSniper/ pull"
         run: |
           echo "${private_key}" > id_rsa
           echo "${public_key}" > id_rsa.pub
@@ -38,4 +41,4 @@ jobs:
           chmod 600 id_rsa
           chmod 600 id_rsa.pub
           chmod 600 known_hosts
-          ssh guy@rostersniper.com -o "UserKnownHostsFile=./known_hosts" -i id_rsa -p 774 'git -C /var/www/dev.rostersniper.com/RosterSniper/ pull'
+          ssh -p ${port} ${user}@${host} -o "UserKnownHostsFile=./known_hosts" -i id_rsa "${cmd}"
