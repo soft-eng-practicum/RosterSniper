@@ -11,6 +11,7 @@ __pycache__/
 db.sqlite3
 /django_project/static/
 /django_project/roster_sniper/settings/local.py
+/django_project/roster_sniper/@ emails
 /django_project/@ emails/
 /django_project/data/
 
