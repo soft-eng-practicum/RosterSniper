@@ -47,7 +47,7 @@ NOTE: You have to activate the venv every time you wish to utilize any manage.py
 ## PyCharm Setup
 
 Pycharm Community Edition can be utilized as the command prompt for the venv, but it requires some ExecutionPolicy changes for the scripts to work.
-Skip to `LOCALHOST SETUP` if you prefer the standard command console.
+Skip to `ROSTERSNIPER SETUP` if you prefer the standard command console.
 
 Open PyCharm, then the Terminal tab at the bottom.
 You should notice it saying something along the lines of
