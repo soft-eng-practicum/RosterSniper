@@ -4,14 +4,15 @@ $(function () {
 	$("#timeStart").wickedpicker({
 		now: "12:00",
 		timeSeperator: ":",
-		minutesInterval: 15
+		minutesInterval: 15,
+		twentyFour: false
 	});
 	$("#timeEnd").wickedpicker({
 		now: "18:00",
 		timeSeperator: ":",
-		minutesInterval: 15
+		minutesInterval: 15,
+		twentyFour: false
 	});
-
 	// update_rooms();
 })
 
@@ -60,3 +61,45 @@ function update_rooms() {
 function sidebar() {
 	 $('main').toggleClass('sidebar-open');
 }
+
+// Function to toggle time format
+var enabled = 1;
+$('#id_timeFormat').click(function(){
+$(".input-group")[1].innerHTML= "";
+var data = "\n\t\t\t<input id=\"timeStart\" type=\"text\" class=\"form-control form-control-sm timepicker hasWickedpicker\" placeholder=\"Start time\" onkeypress=\"return false;\" aria-showingpicker=\"false\" tabindex=\"0\">\n\t\t\t<input id=\"timeEnd\" type=\"text\" class=\"form-control form-control-sm timepicker hasWickedpicker\" placeholder=\"End time\" onkeypress=\"return false;\" aria-showingpicker=\"false\" tabindex=\"0\">\n\t\t"
+	if (enabled == 0){
+	enabled += 1;
+	console.log(enabled);
+	$(".input-group")[1].innerHTML= data;
+	// setup the time picker
+	$("#timeStart").wickedpicker({
+		now: "12:00",
+		timeSeperator: ":",
+		minutesInterval: 15,
+		twentyFour: false
+	});
+	$("#timeEnd").wickedpicker({
+		now: "18:00",
+		timeSeperator: ":",
+		minutesInterval: 15,
+		twentyFour: false
+	});}
+
+	else {
+	enabled -= 1;
+	console.log(enabled);
+	$(".input-group")[1].innerHTML= data;
+		$("#timeStart").wickedpicker({
+		now: "12:00",
+		timeSeperator: ":",
+		minutesInterval: 15,
+		twentyFour: true
+	});
+	$("#timeEnd").wickedpicker({
+		now: "18:00",
+		timeSeperator: ":",
+		minutesInterval: 15,
+		twentyFour: true
+	});
+	}
+});

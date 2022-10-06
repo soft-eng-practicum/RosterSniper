@@ -17,6 +17,8 @@ urlpatterns = [
 	path('add-courses/', main_views.add_courses_, name='add_courses_'),
 	path('find-rooms/', main_views.find_rooms_, name='find_rooms_'),
 
+	path('add-school/', other_views.add_school, name='add-school'),
+
 	path('my-courses/', main_views.my_courses, name='my_courses'),
 	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', other_views.unsubscribe, name='unsubscribe'),
 
