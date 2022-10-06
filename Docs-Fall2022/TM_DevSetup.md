@@ -72,7 +72,7 @@ Set-ExecutionPolicy -Scope CurrentUser unrestricted
 Set-ExecutionPolicy -Scope CurrentUser undefined (to undo it)
 ```
 
-## LOCALHOST SETUP
+## ROSTERSNIPER SETUP
 
 Activate the venv then navigate to the main rostersniper folder:
 ```
