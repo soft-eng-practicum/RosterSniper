@@ -84,6 +84,3 @@ def unsubscribe(request, unsub_type, unsub_id):
 				'message': 'Your unsubscribe link is invalid! 😕'
 			}
 		)
-
-def add_school(request):
-	return render(request,"add_school.html")
