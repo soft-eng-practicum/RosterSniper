@@ -1,12 +1,13 @@
 RosterSniper Development Environment Setup
 Utilised by Three Muskeeters+1 for development in Fall2022
 
-Please ensure you have Python 3.8 (or higher), and Git installed before continuing.
+First, please ensure you have Python 3.8 (or higher), and Git installed before continuing.
+Those are the only true requirements prior to starting, but an IDE such as PyCharm or Visual Studio Code is recommended.
 
-First. This guide is divided into several "Checkpoints" based upon key areas of the process.
-If you are stuck, double check you have done everything in prior categories.
+Regardless, this guide is divided into several "Checkpoints" based upon key areas of the process.
+If you are stuck, double check what you have or have not done in the prior section(s).
 
-## `Git & Local Repository Setup`
+## Git & Local Repository Setup
 
 Open open Git and navigate to your preferred repo storage location.
 ```
@@ -30,10 +31,18 @@ git init
 If you have PyCharm Community Edition, opening the main RosterSniper folder as a project should have it automatically create a venv.
 If not, open command prompt:
 ```
-cd "YOUR/STORAGE/PATH/RosterSniper/"
-python -m "PATH/TO/STORAGE/RosterSniper/venv"
+cd "PATH/TO/RosterSniper/"
+python -m "PATH/TO/RosterSniper/venv"
 ```
 This should create a new venv folder.
+
+To activate the venv, simply run the command
+```
+"PATH/TO/RosterSniper/venv/scripts/activate.bat"
+```
+You should notice the bar listing the current directory changes to have "(venvname)" infront of it. 
+To close the venv, you can close the command window.
+NOTE: You have to activate the venv every time you wish to utilize any manage.py commands.
 
 ## PyCharm Setup
 
@@ -43,7 +52,6 @@ Skip to `LOCALHOST SETUP` if you prefer the standard command console.
 Open PyCharm, then the Terminal tab at the bottom.
 You should notice it saying something along the lines of
 ".\RosterSniper\venv\Scripts\activate.ps1 cannot be loaded because running scripts is disabled on this system."
-
 ```
 Get-ExecutionPolicy -List
 ```
@@ -79,4 +87,4 @@ The update_sections command will take a minute, but once it is done:
 ```
 python manage.py runserver
 ```
-Open your preferred browser, url localhost:8000
+Open your preferred browser, enter localhost:8000 in the URL bar.
