@@ -33,6 +33,7 @@ class Migration(migrations.Migration):
                 ('email_unsub_id', models.UUIDField(default=uuid.uuid4)),
                 ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups')),
                 ('user_permissions', models.ManyToManyField(blank=True, help_text='Specific permissions for this user.', related_name='user_set', related_query_name='user', to='auth.Permission', verbose_name='user permissions')),
+				('military_time', models.BooleanField(default=False, help_text='Whether the user has enabled military time format')),
             ],
             options={
                 'verbose_name': 'user',
