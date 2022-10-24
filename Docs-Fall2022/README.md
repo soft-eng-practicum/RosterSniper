@@ -10,6 +10,8 @@ The project requires Python 3.8 or higher along with a few packages as described
 
 For a more in depth explanation and setup tutorial, please visit [this](TM_DevSetup.md) page.
 
+If you have the basics setup and are trying to update the db, visit [this](TM_UpdateDatabase.md) page.
+
 ## If you are a USER:
 
 To run the web application, simply go to the [RosterSniper](https://rostersniper.com/) website, but if you need a tutorial, go to the [about page](https://rostersniper.com/about/). Though, if you have NoScript - or any other security browser plugins that disable scripts - please ensure it is disabled - or RosterSniper is whitelisted - or the website may not work properly.
