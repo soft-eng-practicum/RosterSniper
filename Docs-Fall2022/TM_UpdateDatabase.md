@@ -1,28 +1,36 @@
-This document dictates what files need to be changed in order to update 
-the existing database structure.
-
-## Note:
-There are two separate areas for the database in the `core` and `users`
+Note: There are two separate areas for the database in the `core` and `users`
 folders, under the `django_project` folder. This document refers to the general
 process, not one or the other, so while the names might change,
 the process will not.
 
-# 1. ./migrations/0001_initial.py
-This creates the tables that will be utilized by the sqlite database.
-Name is the name, fields are the columns/variables of the table.
+# 1. Altering the code
 
-# 2. ./models.py
-### Prerequisites: 0001_initial.py
+### ./models.py
+This creates the classes that will be converted into tables for the database.
 
-This creates classes/objects to store variables in order to then
-update the database with them.
+### ./forms.py
+This handles the forms/text-boxes that will appear when called to edit a model.
 
-# 3. ./forms.py
-### Prerequisites: models.py | 0001_initial.py
-This handles the forms/text-boxes that will allow the user
-to enter information on the website, that will then be passed to
-the respective models, and then update the database.
+EX: "users/templates/registration/profile.html" 
 
+# 2. Updating the database
 
+The database - at least for localhost environments - is located at 
+"./django_project/rostersniper/db.sqlite3". It will not immediately update upon the code
+being changed. So, commands must be run to alter it.
 
+### py manage.py makemigrations
+
+This will take what is listed in models.py and convert it into code that will create/alter the
+database file. This code will be stored in new files under "./migrations/xxxx.py".
+If no migration files are present it will always be called 0001_initial.py, 
+otherwise it will be in sequential order and have a title based upon what it does. 
+
+EX: "0002_alter_military_time.py"
+
+### py manage.py migrate
+
+`makemigrations` must be done before this command will work, or at least, pycharm won't allow it.
+Regardless, this command will execute the migrations listed in the files created prior, and update
+the database.
 
