@@ -186,7 +186,6 @@ class Section(HasSchool):
 	credit_hours = models.SmallIntegerField()
 	professor = models.ForeignKey(Professor, on_delete=models.SET_NULL,
 		null=True, blank=True)
-
 	days_map = {
 		'M': 'Monday',
 		'T': 'Tuesday',
@@ -218,15 +217,18 @@ class Section(HasSchool):
 	def get_prof_name(self):
 		return str(self.professor) if self.professor else 'TBA'
 
-	def get_meeting(self):
+	def get_meeting(self, military_time = False):
+		format = '%#H:%M' if military_time else '%#I:%M'
 		if self.days:
-			meeting = f"{self.days}, {self.start_time.strftime('%#I:%M')} - {self.end_time.strftime('%#I:%M %p')}"
+			meeting = f"{self.days}, {self.start_time.strftime(format)} - {self.end_time.strftime(format)}"
 			if self.room:
 				meeting += f", {self.room}"
 			return meeting
 		else:
 			return "NA"
 
+	def get_meeting_military(self):
+		return self.get_meeting(military_time = True)
 	def get_meeting_full(self):
 		return f"(Primary) {', '.join(Section.days_map[day] for day in self.days)} at {self.start_time.strftime('%#I:%M %p')} - {self.end_time.strftime('%#I:%M %p')}" if self.days else "NA"
 
@@ -315,6 +317,7 @@ class Favorite(models.Model):
 	section = models.ForeignKey(Section, on_delete=models.CASCADE)
 
 	# Possibly add txt_notify in the future
+	phone_notify = models.BooleanField(default=False)
 	email_notify = models.BooleanField(default=True)
 	email_unsub_id = models.UUIDField(default=uuid.uuid4)
 	# I'd say unique=True is not necessary here.. ^^

@@ -10,28 +10,6 @@
 		<fieldset>
 			<legend class="border-bottom mb-4">Your Profile</legend>
 			{{ form|crispy }}
-
-			<div class="form-check">
-				<hr>
-				<p>
-					<input type="checkbox" name="sms_notify" class="checkboxinput form-check-input" id="id_sms_notify" value="user.sms_Notify">
-					<label for="id_sms_notify" class="form-check-label"> Receive SMS messages </label>
-					<br><sub>This enables/disables all sms from this site.</sub>
-				</p>
-				<hr>
-				<p>
-					<label for="id_smsNumber"> SMS Number </label>
-					<input type="text" name="smsNumber" class="form-control form-control-sm" id="id_smsNumber" placeholder="Your SMS number" value="user.smsNumber">
-					<sub></sub>
-				</p>
-				<hr>
-				<p>
-					<input type="checkbox" name="timeFormat" class="checkboxinput form-check-input" id="id_timeFormat">
-					<label for="id_timeFormat" class="form-check-label"> Use 24hr format.</label>
-					<br><sub>This enables/disables the 24 hour time format on the website. By default, it is disabled and uses the 12 hour format.</sub>
-				</p>
-
-			</div>
 			<hr>
 		</fieldset>
 		{% if not user.email_confirmed %}

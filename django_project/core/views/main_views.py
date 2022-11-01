@@ -87,8 +87,10 @@ def get_courses(request, school):
 					'all_sections': sections,
 					'crns': request.user.section_set.values_list('crn', flat=True)
 						if request.user.is_authenticated else None
-				}
+				},
+				request = request
 			)
+			# 'user': render_to_string( 'military_time': request.user.military_time;
 		},
 		safe=False
 	)

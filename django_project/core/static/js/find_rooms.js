@@ -2,15 +2,9 @@
 $(function () {
 	// setup the time picker
 	$("#timeStart").wickedpicker({
-		now: "12:00",
-		timeSeperator: ":",
-		minutesInterval: 15,
 		twentyFour: false
 	});
 	$("#timeEnd").wickedpicker({
-		now: "18:00",
-		timeSeperator: ":",
-		minutesInterval: 15,
 		twentyFour: false
 	});
 	// update_rooms();
