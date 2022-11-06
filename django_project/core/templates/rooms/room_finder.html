@@ -9,7 +9,7 @@
 
 	<style>
 		:root {
-			--main-color: #{{ school.color_hex }};
+			--main-color: {{ school.color_hex }};
 		}
 	</style>
 {% endblock %}
@@ -42,11 +42,38 @@
 		</div>
 
 		Time Range
-		<div class="input-group">
-			<input id="timeStart" type="text" class="form-control form-control-sm timepicker" placeholder="Start time">
-			<input id="timeEnd" type="text" class="form-control form-control-sm timepicker" placeholder="End time">
+		<br class="input-group">
+			<!--<input id="timeStart" type="text" class="form-control form-control-sm timepicker" placeholder="Start time"-->
+			<!--<input id="timeEnd" type="text" class="form-control form-control-sm timepicker" placeholder="End time">-->
+			<label for="timeStart" style="font-size: 13px; font-style: italic;">Time Start </label>
+			<input id="timeStart" type="time" min="01:00" max="24:00" > <!--<p>Start Time</p>-->
+			<br>
+			<label for="timeEnd" style="font-size: 13px; font-style: italic;">End Time</label>
+			<input id="timeEnd" type="time" id="timeEnd"  min="01:00" max="24:00"> <!--<p>End Time</p>-->
+			<br>
+
+			<label class="switch" >
+			   <input type="checkbox" checked />
+				 <span class="slider">
+					<span>OFF</span>
+					<span>ON</span>
+				 </span>
+			<a></a>
+			</label>
 		</div>
-	</div>
+
+
+
+		<script>
+			const date = new Date();
+			console.log(
+				date.toLocaleString('en-US', {
+					hour12: false,
+				})
+			);
+		</script>
+
+
 
 	<div id="overlay" onclick="sidebar()"></div>
 	<div id="results-col">
@@ -60,8 +87,4 @@
 </div>
 {% endblock content %}
 
-{% block foot %}
-	<!-- wickedpicker - time picker -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/wickedpicker@0.4.3/dist/wickedpicker.min.css">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/wickedpicker@0.4.3/dist/wickedpicker.min.js"></script>
-{% endblock %}
+

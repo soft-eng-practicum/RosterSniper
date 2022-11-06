@@ -17,6 +17,35 @@
 	line-height: 5rem;
 }
 
+.switch{
+	dispplay: inline-block;
+	width: 50px;
+	height: 60px;
+}
+
+.slider{
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+}
+
+.switch input {display:none}
+.slider:before{
+	height: 50px;
+	width: 50px;
+	left: 5px;
+	bottom: 5px;
+	background-color: white;
+	transiition: 0.4s;
+	border-radius: 50px;
+}
+
+input:checked + .slider{
+	background-color: #fff27c;
+}
+
+
+
 /* Firefox sometimes ignores bottom padding
  https://stackoverflow.com/q/29986977
  */
