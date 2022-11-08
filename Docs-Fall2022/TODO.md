@@ -1,7 +1,10 @@
-<s>24hour time format support</s>
+## TODO Three Musketeers+1
 
-<s>Manual typing time into Room Finder</s>
-
-SMS Notifications
-
-Push/Desktop Notifications (more QOL than Utility)
+- [x] Add 24hr time format support.
+  - [x] Profile settings
+  - [x] Add Courses Page
+  - [ ] Room Finder Page
+- [X] Manual time selection in Room Finder
+- [ ] Adding additional colleges
+- [ ] SMS Notifications
+- [ ] Desktop Notifications
