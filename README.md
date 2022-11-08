@@ -42,10 +42,3 @@ Once you have a venv created, please read [this](/Docs-Fall2022/TM_DevSetup.md) 
 ## If you are a USER:
 
 To run the web application, simply go to the rostersniper.com website. If you have NoScript - or any other security browser plugins that disable scripts - please ensure it is disabled, or has RosterSniper whitelisted.
-=======
-# The Musketeers
-- **Source Code** https://github.com/GGC-SD/RosterSniper.git
-1. Justin Sandman, Lead Developer and Team Manager
-2. Ian Dowlatkhah, Data Modeler and Client Liaison
-3. Chenanniah Mac-Cephas, Code Aarchitecture and Testing Lead
-4. Joseph "Alex" Kolarik, UI/UX design and Documentation Lead
