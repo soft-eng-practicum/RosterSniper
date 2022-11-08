@@ -43,35 +43,14 @@
 
 		Time Range
 		<br class="input-group">
-			<!--<input id="timeStart" type="text" class="form-control form-control-sm timepicker" placeholder="Start time"-->
-			<!--<input id="timeEnd" type="text" class="form-control form-control-sm timepicker" placeholder="End time">-->
 			<label for="timeStart" style="font-size: 13px; font-style: italic;">Time Start </label>
-			<input id="timeStart" type="time" min="01:00" max="24:00" > <!--<p>Start Time</p>-->
+			<input id="timeStart" type="time" timmeformat="auto"> <!--<p>Start Time</p>-->
 			<br>
 			<label for="timeEnd" style="font-size: 13px; font-style: italic;">End Time</label>
-			<input id="timeEnd" type="time" id="timeEnd"  min="01:00" max="24:00"> <!--<p>End Time</p>-->
+			<input id="timeEnd" type="time" id="timeEnd" timeformat="auto"> <!--<p>End Time</p>-->
 			<br>
-
-			<label class="switch" >
-			   <input type="checkbox" checked />
-				 <span class="slider">
-					<span>OFF</span>
-					<span>ON</span>
-				 </span>
-			<a></a>
-			</label>
 		</div>
 
-
-
-		<script>
-			const date = new Date();
-			console.log(
-				date.toLocaleString('en-US', {
-					hour12: false,
-				})
-			);
-		</script>
 
 
 
