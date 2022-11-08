@@ -4,9 +4,6 @@ As a part of our Software Development II course with Dr. Anca, our team has been
 
 For all features that are planned, or currently work in progress, please read [this](TODO.md).
 
-<b>List of implemented feature<s>s</s></b><br>
-Military Time Option
-
 ## If you are a DEVELOPER:
 
 The project requires Python 3.8 or higher along with a few packages as described in [requirements.txt](../requirements.txt). To install these packages, it is recommended that you first create a virtual environment using a tool such as `venv`. To install the packages listed in requirements.txt, run `pip install -r requirements.txt`. Then, activate the venv and type `python manage.py runserver` to activate the localhost version of RosterSniper - accessed in browser at localhost:8000.
