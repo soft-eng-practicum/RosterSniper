@@ -21,6 +21,7 @@ function update_rooms() {
 	// URL without query string
 	const url = window.location.pathname.split('?')[0]
 
+	// Appends room_finder.html's sidebar contents - term, days, time range - to the search params
 	$("#term, #sidebar-col input").each(function () {
 		if (x = $(this).val().trim()) searchParams.append($(this).attr('id'), x);
 	});

@@ -24,3 +24,7 @@ The website also uses jQuery, Popper.js, Bootstrap, and Font Awesome, but they a
 The development web server is run using the command `python manage.py runserver`.
 
 Our developer documentation can be found [here](docs) and a list of contributors can be found [here](Contributors.md).
+
+# Fall 2022 (Three Musketeers+1)
+
+For all information related to what was added/changed during Fall2022, please read [this](/Docs-Fall2022/README.md)

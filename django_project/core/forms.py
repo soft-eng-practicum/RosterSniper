@@ -11,3 +11,13 @@ class SuggestedSchoolForm(forms.ModelForm):
 		widgets = {
 			'notes': forms.Textarea(attrs={'rows': 4}),
 		}
+
+
+class AddSchoolForm(forms.ModelForm):
+
+	class Meta:
+		model = SuggestedSchool
+		fields = ('school_name', 'edu_site', 'registration_site', 'notes')
+		widgets = {
+			'notes': forms.Textarea(attrs={'rows': 4}),
+		}

@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
 
-from core.forms import SuggestedSchoolForm
+from core.forms import SuggestedSchoolForm, AddSchoolForm
 from core.models import School, Favorite
 from users.models import User
 
@@ -84,3 +84,17 @@ def unsubscribe(request, unsub_type, unsub_id):
 				'message': 'Your unsubscribe link is invalid! 😕'
 			}
 		)
+
+
+def add_school(request):
+	if request.method == 'POST':
+		form = AddSchoolForm(request.POST)
+		if form.is_valid():
+			form.save()
+			# messages.info(request, 'Thank you for your submission.')
+			return redirect('add_school')
+
+		else:
+			form = AddSchoolForm()
+
+	return render(request, "add_school.html")

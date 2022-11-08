@@ -10,18 +10,6 @@
 		<fieldset>
 			<legend class="border-bottom mb-4">Your Profile</legend>
 			{{ form|crispy }}
-
-			<div class="form-check">
-				<hr>
-				<p>
-					<label for="id_smsNumber"> SMS Number </label>
-					<input type="text" name="smsNumber" class="form-control form-control-sm" id="id_smsNumber" placeholder="Your SMS number" value="user.smsNumber">
-					<sub></sub>
-				</p>
-				<hr>
-
-			</div>
-			<hr>
 		</fieldset>
 		{% if not user.email_confirmed %}
 		<p>You must confirm your email to receive notifications. <button id="send_email" type="button" class="btn btn-link p-0 align-baseline">Resend confirmation email</button></p>

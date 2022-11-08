@@ -14,6 +14,18 @@
 	font-weight: 500;
 }
 
+#hide-sections, #show-sections {
+	background-color: white !important;
+	border-color: #ced4da !important;
+	color: #6c757d;
+}
+
+#hide-sections:hover, #show-sections:hover {
+	background-color: #b2b8bf !important;
+	border-color: #b2b8bf !important;
+	color: white;
+}
+
 /* The following is for classes with a long name on a tablet-like screen eg
 
 ACCT    Special Topics in Business:    1 Credit 

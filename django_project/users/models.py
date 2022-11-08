@@ -50,13 +50,10 @@ class User(AbstractUser):
 	email_notify = models.BooleanField(default=True,
 		help_text='Whether the user should receive emails')
 	email_unsub_id = models.UUIDField(default=uuid.uuid4)
-	
-	military_time = models.BooleanField(default=False,
-		help_text='Whether the 24hr time format is enabled')
-
-	sms_notify = models.BooleanField(default=False,
-		help_text='Whether the user should recieve sms messages')
-
+	phone = models.CharField(max_length=15, blank=True, default='')
+	phone_notify = models.BooleanField(default=False,
+		help_text='Whether the user should receive SMS')
+	military_time = models.BooleanField(default=False, help_text='Whether the user prefers military time')
 	objects = UserManager()
 
 	USERNAME_FIELD = 'email'

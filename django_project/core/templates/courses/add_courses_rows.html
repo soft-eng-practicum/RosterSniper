@@ -32,7 +32,13 @@
 			<tr>
 				<td class="section">{{ s.section_num }}</td>
 				<td class="crn">{{ crn }}</td>
-				<td class="meeting"><span title="{{ s.get_meeting_full }}">{{ s.get_meeting }}</span></td>
+				<td class="meeting"><span title="{{ s.get_meeting_full }}">
+					{% if user.military_time %}
+					{{ s.get_meeting_military }}
+					{% else %}
+				{{ s.get_meeting }}
+				{% endif %}
+				</span></td>
 				<td class="professor">{{ s.get_prof_name }}</td>
 				<td class="seats">{{ s.enrolled }}/{{ s.capacity }}</td>
 				<td class="section-options favorite">
@@ -50,13 +56,13 @@
 		$("button#hide-sections").click(function() {
 			    $(this).parent().find("button#show-sections").show();
 			    $(this).parent().find("button#hide-sections").hide();
-			    $(this).parent().find("table").hide("fast");
+			    $(this).parent().find("table").hide(250, "linear");
 		});
 
 		$("button#show-sections").click(function() {
 			    $(this).parent().find("button#hide-sections").show();
 			    $(this).parent().find("button#show-sections").hide();
-			    $(this).parent().find("table").show("fast");
+			    $(this).parent().find("table").show(250, "linear");
 		});
 
 	</script>
