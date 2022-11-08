@@ -1,6 +1,6 @@
-24hour time format support
+<s>24hour time format support</s>
 
-Manual typing time into Room Finder
+<s>Manual typing time into Room Finder</s>
 
 SMS Notifications
 
