@@ -13,12 +13,17 @@
 	font-size: 1.3rem;
 	font-weight: 500;
 }
-#show-sections{
-background-color: #ffffff;
-border: none;
+
+#hide-sections, #show-sections {
+	background-color: white !important;
+	border-color: #ced4da !important;
+	color: #6c757d;
 }
-#hide-sections{
-border: none;
+
+#hide-sections:hover, #show-sections:hover {
+	background-color: #b2b8bf !important;
+	border-color: #b2b8bf !important;
+	color: white;
 }
 
 /* The following is for classes with a long name on a tablet-like screen eg
