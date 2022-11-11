@@ -29,10 +29,10 @@
 		<div class="navbar-nav mr-auto">
 			<a class="nav-item nav-link" href="{% url 'about' %}">About</a>
 			{% if school %}
-				<a class="nav-item nav-link" href="{% url 'add_courses' school.short_name %}">Add Courses</a>
+				<a class="nav-item nav-link" href="{% url 'find_courses' school.short_name %}">Find Courses</a>
 				<a class="nav-item nav-link" href="{% url 'find_rooms' school.short_name %}">Find Rooms</a>
 			{% else %}
-				<a class="nav-item nav-link" href="{% url 'add_courses_' %}">Add Courses</a>
+				<a class="nav-item nav-link" href="{% url 'find_courses_' %}">Find Courses</a>
 				<a class="nav-item nav-link" href="{% url 'find_rooms_' %}">Find Rooms</a>
 			{% endif %}
 		</div>

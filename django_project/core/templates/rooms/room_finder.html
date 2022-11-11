@@ -4,12 +4,13 @@
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/find_rooms.css' %}?4">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}?4">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/time_range.css' %}?4">
 
 	<script type="text/javascript" src="{% static 'js/find_rooms.js' %}?10" defer></script>
 
 	<style>
 		:root {
-			--main-color: {{ school.color_hex }};
+			--main-color: #{{ school.color_hex }};
 		}
 	</style>
 {% endblock %}
@@ -42,14 +43,22 @@
 		</div>
 
 		Time Range
-		<br class="input-group">
-			<label for="timeStart" style="font-size: 13px; font-style: italic;">Time Start </label>
-			<input id="timeStart" type="time" timmeformat="auto"> <!--<p>Start Time</p>-->
-			<br>
-			<label for="timeEnd" style="font-size: 13px; font-style: italic;">End Time</label>
-			<input id="timeEnd" type="time" id="timeEnd" timeformat="auto"> <!--<p>End Time</p>-->
-			<br>
+	<div class="grid-container">
+
+		<div class="grid-item">
+			<label for="timeStart" style="font-size: 13px; font-style: italic;">Start Time</label>
 		</div>
+		<div class="grid-item">
+			<input id="timeStart" type="time" timmeformat="auto" onblur="(this.type='time')">
+		</div>
+		<div class="grid-item">
+			<label for="timeEnd" style="font-size: 13px; font-style: italic;">End Time</label>
+		</div>
+		<div class="grid-item">
+			<input id="timeEnd" type="time" id="timeEnd" timeformat="auto">
+		</div>
+	</div>
+</div>
 
 
 
