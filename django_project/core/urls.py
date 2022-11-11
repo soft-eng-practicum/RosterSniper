@@ -8,13 +8,13 @@ urlpatterns = [
 
 	path('<str:school>/', include([
 		path('get-courses/', main_views.get_courses, name='get_courses'),
-		path('add-courses/', main_views.add_courses, name='add_courses'),
+		path('find-courses/', main_views.add_courses, name='find_courses'),
 
 		path('get-rooms/', main_views.get_rooms, name='get_rooms'),
 		path('find-rooms/', main_views.find_rooms, name='find_rooms'),
 	])),
 
-	path('add-courses/', main_views.add_courses_, name='add_courses_'),
+	path('find-courses/', main_views.add_courses_, name='find_courses_'),
 	path('find-rooms/', main_views.find_rooms_, name='find_rooms_'),
 
 	path('my-courses/', main_views.my_courses, name='my_courses'),
