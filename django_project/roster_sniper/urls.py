@@ -27,7 +27,6 @@ handler500 = 'roster_sniper.error_views.handler500'
 urlpatterns = [
 	path('', include('core.urls')),
 	path('', include('users.urls')),
-
 	path('admin/', admin.site.urls),
 	path('teapot/', handler418),
 ]

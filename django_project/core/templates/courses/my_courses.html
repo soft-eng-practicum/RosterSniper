@@ -1,6 +1,8 @@
 {% extends "base/regular.html" %}
 {% load static %}
 
+{% load webpush_notifications %}
+
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
 
@@ -15,7 +17,6 @@
 {% regroup favorites by section.school as favorites_by_school %}
 {% for school, favorites in favorites_by_school %}
 	<h4 class="mb-3">{{ school.name }}</h4>
-
 	{% regroup favorites by section.term as favorites_by_term %}
 	{% for term, favorites in favorites_by_term %}
 	<div class="card courses-card" data-term-id="{{ term.id }}">
@@ -42,7 +43,8 @@
 					<td class="professor">{{ section.get_prof_name }}</td>
 					<td class="seats">{{ section.enrolled }}/{{ section.capacity }}</td>
 					<td class="section-options options">
-						<i data-type="phone" title="SMS?" class="{% if favorite.phone_notify %}fas{% else %}far{% endif %} fa-mobile pointer"></i>
+						{% webpush_button with_class="btn btn-light" %}
+						<i data-type="phone" title="SMS?" class="{% if favorite.phone_notify %} fas {% else %} far {% endif %} fa-mobile pointer"></i>
 						<i data-type="email" title="Emails?" class="{% if favorite.email_notify %}fas{% else %}far{% endif %} fa-envelope-open pointer"></i>
 						<i data-type="favorite" title="Untrack?" class="fas fa-star pointer"></i>
 					</td>

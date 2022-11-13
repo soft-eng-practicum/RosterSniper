@@ -14,7 +14,7 @@ def home(request):
 		request,
 		'home.html',
 		{
-			'schools': School.objects.filter(active=True).values('short_name', 'name')
+			'schools': School.objects.filter(active=True).values('short_name', 'name','color_hex')
 		}
 	)
 
@@ -87,14 +87,22 @@ def unsubscribe(request, unsub_type, unsub_id):
 
 
 def add_school(request):
+
 	if request.method == 'POST':
 		form = AddSchoolForm(request.POST)
+		form.name = "asas"
 		if form.is_valid():
 			form.save()
-			# messages.info(request, 'Thank you for your submission.')
-			return redirect('add_school')
+			# try:
+			#
+			# https://registration.gosolar.gsu.edu/StudentRegistrationSsb/ssb/classSearch/classSearch
+			return redirect('home')
 
-		else:
-			form = AddSchoolForm()
+	else:
+		form = AddSchoolForm()
 
-	return render(request, "add_school.html")
+		context = {
+			'form': form
+		}
+		return render(request, "add_school.html", context)
+

@@ -5,6 +5,9 @@ from django.db import models
 from core.utils import full_reverse, send_email
 from users.models import User
 
+from core.utils import send_push
+
+
 ################################################################################
 # School related classes
 ################################################################################
@@ -218,7 +221,7 @@ class Section(HasSchool):
 		return str(self.professor) if self.professor else 'TBA'
 
 	def get_meeting(self, military_time = False):
-		format = '%#H:%M' if military_time else '%#I:%M'
+		format = '%#H:%M' if military_time else '%#I:%M %p'
 		if self.days:
 			meeting = f"{self.days}, {self.start_time.strftime(format)} - {self.end_time.strftime(format)}"
 			if self.room:
@@ -290,6 +293,7 @@ class Section(HasSchool):
 					file='favorite',
 					context=context
 				)
+				send_push(favorite.user, "test", "subject")
 
 		self.enrolled = enrolled
 		self.available = available

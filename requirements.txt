@@ -9,6 +9,14 @@ requests>=2.28.0
 # PostgreSQL Python adapter, Django requires at least 2.5.4
 psycopg2-binary>=2.5.4
 
+# Selenium Unit Testing Framework
 selenium~=4.6.0
+
+# TO-Do
 users~=1.0.dev0
+
+# TO-Do
 djangorestframework~=3.14.0
+
+# Branch of Django PWA with Django 4.x support Python adapter
+django @ git+https://github.com/PetrDlouhy/django-pwa@6c585fe72041188e32747c1b1bfdb8e53197a508

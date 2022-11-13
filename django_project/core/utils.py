@@ -3,6 +3,7 @@ from django.template.loader import render_to_string
 from django.urls import reverse
 
 from django.core.mail import EmailMessage, EmailMultiAlternatives
+from webpush import send_user_notification
 
 
 # Based on https://stackoverflow.com/a/34992631
@@ -34,5 +35,16 @@ def send_admin_email(subject=None, body=None):
 			body=body,
 			to=[admin[1] for admin in settings.ADMINS]
 		).send()
+	else:
+		return settings.ADMINS[0][1]
+
+
+def send_push(user = None, head=None, body=None):
+	if head:
+		payload = {
+			'head': head,
+			'body': body
+		}
+		send_user_notification(user=user, payload=payload, ttl=1000)
 	else:
 		return settings.ADMINS[0][1]
