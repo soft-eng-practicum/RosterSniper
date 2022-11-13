@@ -39,7 +39,7 @@ def send_admin_email(subject=None, body=None):
 		return settings.ADMINS[0][1]
 
 
-def send_push(user = None, head=None, body=None):
+def send_push(user=None, head=None, body=None):
 	if head:
 		payload = {
 			'head': head,

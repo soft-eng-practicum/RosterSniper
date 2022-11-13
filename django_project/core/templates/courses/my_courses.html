@@ -2,7 +2,6 @@
 {% load static %}
 
 {% load webpush_notifications %}
-
 {% block head %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/courses_card.css' %}">
 
@@ -43,8 +42,7 @@
 					<td class="professor">{{ section.get_prof_name }}</td>
 					<td class="seats">{{ section.enrolled }}/{{ section.capacity }}</td>
 					<td class="section-options options">
-						{% webpush_button with_class="btn btn-light" %}
-						<i data-type="phone" title="SMS?" class="{% if favorite.phone_notify %} fas {% else %} far {% endif %} fa-mobile pointer"></i>
+<!--						{% webpush_button with_class="btn btn-light" %}-->
 						<i data-type="email" title="Emails?" class="{% if favorite.email_notify %}fas{% else %}far{% endif %} fa-envelope-open pointer"></i>
 						<i data-type="favorite" title="Untrack?" class="fas fa-star pointer"></i>
 					</td>
