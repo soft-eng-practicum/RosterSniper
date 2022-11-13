@@ -1,18 +1,27 @@
-{% extends "schools.html" %}
+
+{% extends "base/regular.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
-{% block school-pre %}
+{% block head %}
+{% endblock %}
+
+
+{% block title %}Adds school - {% endblock title %}
+
+{% block content %}
 <div class="jumbotron">
 	<h1 class="display-4 bold italic text-center pb-3">Add your school, help your comrades!</h1>
 	<form method="POST">
 		{% csrf_token %}
 		<fieldset class="form-group">
-			<legend class="border-bottom mb-4">From</legend>
+			<legend class="border-bottom mb-4">School Details</legend>
 			{{ form|crispy }}
 		</fieldset>
 		<div class="form-group">
-			<button class="btn btn-outline-info" type="submit">Login</button>
+			<button class="btn btn-primary  btn-block" type="submit">Submit</button>
 		</div>
 	</form>
+{% endblock content %}
 
 
 
@@ -45,11 +54,5 @@
 
 <!--		</div>-->
 
-<!--	<a style="margin-top: 35px;" class="btn btn-primary btn-lg" href="{% url 'about' %}" role="submit">Submit</a>-->
-</div>
-{% endblock %}
 
-<!--{% block school-buttons %}-->
-<!--	<a href="{% url 'add_courses' school.short_name %}" class="btn btn-primary btn-block">Add Courses</a>-->
-<!--	<a href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary btn-block">Room Finder</a>-->
-<!--{% endblock %}-->
+

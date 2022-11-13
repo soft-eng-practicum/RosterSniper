@@ -12,6 +12,7 @@ from django.template.loader import render_to_string
 
 from core.models import School, Term, Section, Favorite
 
+from webpush import send_user_notification
 
 # Helper function, not a view
 def get_school(school):
@@ -222,7 +223,9 @@ def find_rooms_(request):
 def my_courses(request):
 	""" Shows user their favorites, lets them remove favorites, and lets them
 	enable / disable email notifications. """
-
+	payload = {"head": "Welcome!", "body": "Hello World"}
+	send_user_notification(user=request.user, payload=payload, ttl=1000)
+	webpush = {"group": ""}
 	if (
 		request.method == 'GET'
 		and (term := request.GET.get('term'))
@@ -252,6 +255,7 @@ def my_courses(request):
 					'section', 'section__school',
 					'section__term', 'section__professor',
 					'section__course', 'section__course__subject'
-				)
+				),
+				"webpush": webpush,
 			}
 		)

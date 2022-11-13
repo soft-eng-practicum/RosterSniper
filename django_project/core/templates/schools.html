@@ -10,7 +10,10 @@
 			<img src="/static/img/schools/{{ school.short_name }}.jpg" class="card-img-top" alt="{{ school.name }}">
 			<div class="card-body">
 				<h5 class="card-title">{{ school.name }}</h5>
-				{% block school-buttons %}{% endblock %}
+					{% block school-buttons %}
+					<a style="background-color: #{{ school.color_hex }};" href="{% url 'add_courses' school.short_name %}" class="btn btn-primary  btn-block">Add Courses</a>
+					<a style="background-color: #{{ school.color_hex }};" href="{% url 'find_rooms' school.short_name %}" class="btn btn-primary btn-block">Room Finder</a>
+					{% endblock %}
 			</div>
 		</div>
 		{% endfor %}

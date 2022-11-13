@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 from core.views import main_views, api_views, other_views
 
 
@@ -17,7 +17,7 @@ urlpatterns = [
 	path('add-courses/', main_views.add_courses_, name='add_courses_'),
 	path('find-rooms/', main_views.find_rooms_, name='find_rooms_'),
 
-	path('add-school/', other_views.add_school, name='add-school'),
+	path('add-school/', other_views.add_school, name='add_school'),
 
 	path('my-courses/', main_views.my_courses, name='my_courses'),
 	path('unsubscribe/<str:unsub_type>/<uuid:unsub_id>/', other_views.unsubscribe, name='unsubscribe'),
@@ -32,6 +32,8 @@ urlpatterns = [
 		path('courses/', api_views.courses),
 		path('sections/', api_views.sections),
 	])),
+	re_path(r'^webpush/', include('webpush.urls')),
+	path('', include('pwa.urls')),
 
 	# DRF
 	# path('drf/schools/', drf_views.Schools.as_view()),

@@ -1,12 +1,10 @@
 """
 The base settings file is meant to be imported by the dev/prod settings files.
 """
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 # Application definition
 INSTALLED_APPS = [
 	# stackoverflow.com/a/34214067
@@ -14,6 +12,9 @@ INSTALLED_APPS = [
 	'users.apps.UsersConfig',
 
 	'crispy_forms',
+
+	'webpush',
+	'pwa',
 
 	'django.contrib.admin',
 	'django.contrib.auth',
